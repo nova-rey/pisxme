@@ -306,6 +306,14 @@
       "resolved_at": "2026-09-18T21:05:36.628102Z",
       "status": "RESOLVED"
     },
+    "unblocker:molex-nine-branch-tool-context": {
+      "created_at": "2026-09-18T21:22:20.702797Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/molex-nine-branch-producer-r3-stall-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:molex-protected-bus-corrective-stall": {
       "created_at": "2026-09-18T20:29:52.482576Z",
       "kind": "other",
@@ -3459,7 +3467,8 @@
         "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
         "unblocker:molex-protected-bus-corrective-stall",
         "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
-        "unblocker:molex-nine-branch-implementation-stall"
+        "unblocker:molex-nine-branch-implementation-stall",
+        "unblocker:molex-nine-branch-tool-context"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3472,7 +3481,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated r3 KiCad Engineer dispatch; fresh Light workspace /home/nyx/eda-workspaces/molex-nine-branch-producer-r3-20260918; sentinel then nine-branch producer.",
-      "owner": "root",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3489,12 +3498,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-molex-nine-branch-producer-r3-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T21:30:00Z",
+      "updated_at": "2026-09-18T21:22:20.702833Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3504,7 +3511,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:molex-nine-branch-tool-context"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -4274,5 +4283,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T21:30:00Z"
+  "updated_at": "2026-09-18T21:22:20.703111Z"
 }

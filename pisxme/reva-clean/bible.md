@@ -1480,3 +1480,7 @@ Supervisor inspection found no live contractor despite the package being marked 
 ## 2026-09-18 — Nine-branch source fixture survives worker library-context correction
 
 KiCad Light lacked the project-local `PiSXMeRevAClean` symbol library in the isolated worker context. A bounded tool-context correction generated an isolated source fixture using `Connector_Generic:Conn_02x03_Odd_Even` with the authorized `0039300060` value and project footprint name. Native netlist export proves J5/J6/J9, F1-F9 and B1-B9 labels; this is source-contract evidence only, not an integrated CAD candidate. PCB implementation, path budget, DRC and thermal/DFM gates remain open.
+
+## 2026-09-18 — r3 producer stall narrowed to worker tool context
+
+The r3 Light workspace launched and proved native source generation, but returned no PCB candidate. The first failure was the absent project-local symbol library; the generic-symbol correction produced a valid nine-branch source fixture and netlist. The protected-bus producer is parked only on `unblocker:molex-nine-branch-tool-context`; this is an implementation/tool-context dependency, not an external connector blocker. No canonical CAD changed.
