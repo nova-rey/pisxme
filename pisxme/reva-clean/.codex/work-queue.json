@@ -5125,6 +5125,118 @@
       },
       "waiting_on": [],
       "workstream": "phase24-library"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "c7c8cd88",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Current-head isolated candidate closes only the listed lower-edge findings without changing protected-bus or high-speed geometry, and returns candidate SHA, changed-scope hash and targeted Light/DFM evidence for serialized integration.",
+      "created_at": "2026-09-18T23:56:22.785777Z",
+      "dependencies": [],
+      "domain": "mechanics/DFM/CM5/Ethernet",
+      "edit_boundaries": [
+        "isolated producer workspace only",
+        "listed lower-edge regions only",
+        "no protected-bus edits",
+        "preserve anchors and validated corridors",
+        "no global rule relaxation",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required.",
+      "owner": null,
+      "priority": 5,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "DFM",
+        "edge_clearance",
+        "service_access"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
+      "session_ids": [],
+      "status": "READY",
+      "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
+      "updated_at": "2026-09-18T23:56:22.785777Z",
+      "validation": {
+        "required": [
+          "targeted native DRC",
+          "edge-clearance census",
+          "3D/assembly/service evidence"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "c7c8cd88",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Current-head isolated candidate moves L10 exactly as authorized, preserves protected/high-speed geometry, and returns candidate SHA, changed-scope hash, targeted Light evidence and assembly/DFM receipt for serialized integration.",
+      "created_at": "2026-09-18T23:56:32.423424Z",
+      "dependencies": [],
+      "domain": "mechanics/DFM/storage",
+      "edit_boundaries": [
+        "isolated producer workspace only",
+        "L10/U11 local region only",
+        "preserve U11/Y10 and all protected corridors",
+        "no protected-bus edits",
+        "no global rule relaxation",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required.",
+      "owner": "supervisor_mechanics_dfm",
+      "priority": 4,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "DFM",
+        "service_access",
+        "storage_corridor"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Implement and validate only the authorized L10 move to (143.00,127.80) required to clear the U11 courtyard, preserving U11/Y10, J1, protected-bus and high-speed corridors. Produce an isolated candidate and targeted mechanical/DFM evidence.",
+      "session_ids": [
+        "mech-l10-u11-20260918"
+      ],
+      "status": "RUNNING",
+      "title": "Correct L10/U11 storage-corridor mechanical conflict",
+      "updated_at": "2026-09-18T23:56:47.715093Z",
+      "validation": {
+        "required": [
+          "targeted native DRC",
+          "courtyard/edge clearance",
+          "3D and assembly/service envelope"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-mechanics-dfm"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -5139,5 +5251,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:50:08.117837Z"
+  "updated_at": "2026-09-18T23:56:47.715567Z"
 }

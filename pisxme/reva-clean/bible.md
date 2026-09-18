@@ -1648,3 +1648,6 @@ HPQ Issue #6 is `resolution-ready` with a durable normalized packet at `validati
 # 2026-09-18 — Protected-bus capability exhaustion receipt retained
 
 The aggregate receipt for the three bounded R2 producer routes is now preserved under `validation-receipts/protected-bus-root-mediated-source-author-stall-20260918/`. Deterministic source-first, mutation-capable KiCad, and root-mediated authoring each stopped before a producer command or candidate; no CAD or rule change is claimed. The R2 topology remains binding, and HPQ #7 owns only this implementation capability dependency.
+# 2026-09-18 — Split independent mechanics work from protected-bus wait
+
+The mechanics supervisor confirmed that L10/U11 and the CM5/Ethernet lower-edge findings are independent of HPQ #7 and protected-bus integration. The aggregate mechanics package remains waiting for integrated closure; two bounded packages were added. `P24-MECHANICS-L10-U11-LOCAL-CORRECTION` is RUNNING from `c7c8cd88` under `supervisor_mechanics_dfm`; `P24-MECHANICS-CM5-ETHERNET-EDGE-DFM` is READY for the next compatible worker. C5/C6 and J7/C14 remain dependent because they touch `12V_PROTECTED`.
