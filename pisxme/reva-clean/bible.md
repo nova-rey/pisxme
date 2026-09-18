@@ -1420,3 +1420,7 @@ Unblocker evidence showed prior Branch-B candidates never materialized the bindi
 ## 2026-09-18 — Binding MPA placement tested and contradicted
 
 The clean producer finally asserted the full binding MPA placement before routing. The resulting candidate preserved the released Molex geometry but returned 710 native DRC violations and 499 unconnected items, proving a structural contradiction in that placement/corridor plan. The candidate is rejected and retained. A single bounded MPA revision package now owns the authority decision; no canonical CAD changed.
+
+## 2026-09-18 — High-current input connector architecture reassessment dispatched
+
+The external vendor-footprint dependency is under bounded reassessment against the actual 40 A continuous / 45 A peak source requirement. Product/Power Authority is comparing one suitable high-current connector system with multiple conventional GPU/Tesla-style connectors; Footprint Authority is auditing released manufacturer dimensions for an internally authorized prototype footprint. The in-flight Molex MPA revision and footprint reconciliation are parked on this authority package; no new routing variant or canonical CAD edit is authorized until the connector architecture and footprint contract are bound.

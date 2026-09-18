@@ -18,6 +18,14 @@
       "resolved_at": "2026-09-17T23:30:52.135279Z",
       "status": "RESOLVED"
     },
+    "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT": {
+      "created_at": "2026-09-18T19:57:10.447749Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-input-connector-reassessment-20260918/REASSESSMENT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION": {
       "created_at": "2026-09-18T13:13:37.326692Z",
       "kind": "authority",
@@ -3645,7 +3653,8 @@
         "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE",
         "unblocker:molex-footprint-authority-stall",
         "unblocker:molex-mpa-corridor-stall",
-        "authority:P24-POWER-INPUT-MPA-REVISION"
+        "authority:P24-POWER-INPUT-MPA-REVISION",
+        "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT"
       ],
       "domain": "Footprint / Mechanical Authority",
       "edit_boundaries": [
@@ -3676,13 +3685,14 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:49:59.132895Z",
+      "updated_at": "2026-09-18T19:57:19.478813Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [
-        "authority:P24-POWER-INPUT-MPA-REVISION"
+        "authority:P24-POWER-INPUT-MPA-REVISION",
+        "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT"
       ],
       "workstream": "integrated-power"
     },
@@ -3857,7 +3867,9 @@
       "candidate": null,
       "completion_criterion": "One binding revised placement/corridor plan or minimum constraint-yield decision tied to the 710-violation candidate evidence.",
       "created_at": "2026-09-18T19:49:59.179580Z",
-      "dependencies": [],
+      "dependencies": [
+        "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT"
+      ],
       "domain": "Macro Placement Authority",
       "edit_boundaries": [
         "authority decision only",
@@ -3867,7 +3879,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-MPA-REVISION",
       "notes": "",
-      "owner": "molex_mpa_revision_authority",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3884,18 +3896,74 @@
         }
       ],
       "scope": "Review the first correctly materialized binding MPA candidate and decide one bounded placement/corridor revision or identify the minimum frozen constraint that must yield. Preserve connector geometry, product power contract, anchors unless evidence proves conflict. Read-only authority decision; no canonical CAD.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Review structural contradiction at binding MPA placement",
+      "updated_at": "2026-09-18T19:57:10.447771Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT"
+      ],
+      "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "ff9da674",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Binding Product/Power Authority decision plus Footprint Authority dimensional audit and receipt. Either (a) one connector architecture is rated/obtainable and footprintable from released data, external vendor-footprint dependency is removed, and protected-bus package is READY; or (b) only specific irreducible missing dimensions/ratings remain D with evidence.",
+      "created_at": "2026-09-18T19:56:50.581495Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-ARCHITECTURE",
+        "package:P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
+        "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH"
+      ],
+      "domain": "power/connector/footprint",
+      "edit_boundaries": [
+        "write only validation-receipts/power-input-connector-reassessment-20260918/ and queue/bible updates",
+        "no canonical CAD edits until Product/Power and Footprint Authority decisions are recorded",
+        "do not copy restricted/vendor material into public repository"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT",
+      "notes": "This reassessment supersedes any assumption that J5/J6 or a single Molex architecture is mandatory. It must not reopen unrelated validated work or start Phase 25/26.",
+      "owner": "connector_architecture_authority",
+      "priority": 95,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "power_source_40A_continuous",
+        "power_source_45A_peak",
+        "prototype_connector_architecture",
+        "footprint_authority",
+        "dfm_mechanical_serviceability"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Compare one suitable high-current connector system against multiple conventional GPU/Tesla-style connectors for 40 A continuous / 45 A peak source capability; use manufacturer-backed ratings and released dimensional data; select the simplest defensible prototype architecture; authorize exact project-local footprint if dimensions suffice; classify external vendor-footprint dependency.",
       "session_ids": [
-        "molex-mpa-revision-20260918"
+        "connector-architecture-20260918"
       ],
       "status": "RUNNING",
-      "title": "Review structural contradiction at binding MPA placement",
-      "updated_at": "2026-09-18T19:50:12.600965Z",
+      "title": "High-current input connector architecture and prototype footprint authority reassessment",
+      "updated_at": "2026-09-18T19:56:55.806077Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [],
-      "workstream": "integrated-power"
+      "workstream": "power-input"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -3910,5 +3978,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:50:12.601181Z"
+  "updated_at": "2026-09-18T19:57:19.479059Z"
 }
