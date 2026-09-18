@@ -4925,6 +4925,106 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Both authority dependencies P24-U12-PACKAGE-GEOMETRY and P24-U11-LAND-TREATMENT are explicitly resolved or narrowly escalated with retained evidence.",
+      "created_at": "2026-09-18T23:18:50.118120Z",
+      "dependencies": [],
+      "domain": "package/library/DFM authority",
+      "edit_boundaries": [
+        "private evidence/authority records only",
+        "no CAD edits",
+        "restricted reference bytes remain private"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PACKAGE-AUTHORITY-U12-U11",
+      "notes": "Created to advance existing library closure dependencies while protected-bus CAD is in progress.",
+      "owner": "supervisor_package_authority",
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "project_library_isolation",
+        "pin_mapping",
+        "dfm",
+        "critical_component_provenance"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Use Librarian first and package/DFM authority to resolve U12 TI RUA0042A pitch conflict and U11 paste/mask/courtyard treatment. Produce binding authority artifacts and exact evidence; no CAD edits and no global rule changes.",
+      "session_ids": [
+        "01a0b69b-u12u11"
+      ],
+      "status": "RUNNING",
+      "title": "Resolve U12 package pitch and U11 land treatment authority",
+      "updated_at": "2026-09-18T23:18:54.635235Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-library"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "A dimensioned placement/corridor authority packet identifies fixed/movable cohorts, reserved corridors, and exact dependency disposition for P24-STORAGE-PLACEMENT-CORRIDOR.",
+      "created_at": "2026-09-18T23:18:50.163112Z",
+      "dependencies": [],
+      "domain": "Macro Placement Authority and storage/SI",
+      "edit_boundaries": [
+        "authority artifacts only",
+        "no speculative CAD routing",
+        "preserve protected-bus and high-speed anchors unless contradictory evidence is demonstrated"
+      ],
+      "evidence_refs": [],
+      "id": "P24-STORAGE-PLACEMENT-CORRIDOR-AUTHORITY",
+      "notes": "Created to advance the existing mechanics/DFM waiting dependency independently of protected-bus integration.",
+      "owner": "supervisor_storage_corridor",
+      "priority": 3,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "DFM",
+        "storage_mode_behavior",
+        "route_metrics"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Issue one binding storage placement/corridor decision for the existing M-key/JMS581DL region, resolving L10/U11 and related mechanics/DFM coordination without reopening selected Path-A architecture or protected-bus corridors.",
+      "session_ids": [
+        "01a0b69b-storagecorridor"
+      ],
+      "status": "RUNNING",
+      "title": "Bind storage placement and corridor authority",
+      "updated_at": "2026-09-18T23:18:54.686645Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-mechanics-storage"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -4939,5 +5039,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:16:39.377048Z"
+  "updated_at": "2026-09-18T23:18:54.687086Z"
 }

@@ -1594,3 +1594,7 @@ contracts. No CAD was edited; rejected producer candidates remain non-authoritat
 # 2026-09-18 — HPQ Issue #6 reconciled and protected-bus producer redispatched
 
 HPQ Issue #6 `resolution-ready` was synchronized from `nova-rey/codex-config-backup#6`. Its rejected MPA R1 result remains evidence only; no candidate was integrated. The source-topology authority packet `31c090a9` was reconciled against current HEAD and accepted through the queue, authorizing one isolated R2 producer from the canonical Rev-A lineage. The sole dependent producer is now RUNNING; later integration, power, SI, thermal, firmware, and mechanics packages remain dependency-held. No Phase 25/26 work started.
+
+# 2026-09-18 — Refilled independent authority lanes during protected-bus production
+
+The HPQ #6 source-topology result released the protected-bus producer, which is running from current HEAD `2691d2c9`. Because the producer is the only CAD lane and later integration packages remain dependent on it, two independent authority packages were added and dispatched: U12/U11 package and land-treatment authority, and storage placement/corridor authority. They advance existing Phase 24 acceptance dependencies without reopening Path A or protected-bus architecture.
