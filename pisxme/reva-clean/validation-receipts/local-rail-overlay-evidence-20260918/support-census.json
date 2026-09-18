@@ -1,0 +1,3006 @@
+{
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "supports": {
+    "U3": {
+      "cohort": {
+        "C5": {
+          "footprint": "C_1206_3216Metric",
+          "origin_mm": [
+            52.0,
+            163.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                53.1,
+                163.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.1,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                50.9,
+                163.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.1,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.6
+              ]
+            }
+          ],
+          "reference": "C5",
+          "rotation_deg": 180.0,
+          "value": ""
+        },
+        "C6": {
+          "footprint": "C_1206_3216Metric",
+          "origin_mm": [
+            52.0,
+            165.25
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                53.1,
+                165.25
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.1,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                50.9,
+                165.25
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.1,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.6
+              ]
+            }
+          ],
+          "reference": "C6",
+          "rotation_deg": 180.0,
+          "value": ""
+        },
+        "C7": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            65.0,
+            168.5
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                63.65,
+                168.5
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "CM5_5V",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                66.35,
+                168.5
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C7",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C8": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            65.0,
+            170.5
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                63.65,
+                170.5
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "CM5_5V",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                66.35,
+                170.5
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C8",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C9": {
+          "footprint": "C_0805_2012Metric",
+          "origin_mm": [
+            81.0,
+            164.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                80.05,
+                164.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.95,
+                0.0
+              ],
+              "net": "FB_CM5_5V",
+              "number": "1",
+              "size_mm": [
+                1.1
+              ]
+            },
+            {
+              "absolute_mm": [
+                81.95,
+                164.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.95,
+                0.0
+              ],
+              "net": "CM5_5V",
+              "number": "2",
+              "size_mm": [
+                1.1
+              ]
+            }
+          ],
+          "reference": "C9",
+          "rotation_deg": 0.0,
+          "value": "C_0805_2012Metric"
+        },
+        "R3": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            86.0,
+            164.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                86.5,
+                164.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "CM5_5V",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                85.5,
+                164.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "FB_CM5_5V",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R3",
+          "rotation_deg": 180.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R4": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            90.0,
+            164.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                89.5,
+                164.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "FB_CM5_5V",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                90.5,
+                164.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R4",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R5": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            69.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                68.5,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "RT_CM5_5V",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                69.5,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R5",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R6": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            68.0,
+            160.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                68.5,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "CM5_5V",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                67.5,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "PG_CM5_5V",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R6",
+          "rotation_deg": 180.0,
+          "value": "R_0402_1005Metric"
+        }
+      },
+      "regulator": {
+        "footprint": "TPSM63606RDLR_RDL0020",
+        "origin_mm": [
+          60.0,
+          165.0
+        ],
+        "pads": [
+          {
+            "absolute_mm": [
+              57.75,
+              163.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -2.0
+            ],
+            "net": "12V_PROTECTED",
+            "number": "1",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              163.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -1.25
+            ],
+            "net": "SW_CM5_5V",
+            "number": "2",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              164.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -0.75
+            ],
+            "net": "CBOOT_CM5_5V",
+            "number": "3",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              164.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -0.25
+            ],
+            "net": "RBOOT_CM5_5V",
+            "number": "4",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              165.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              0.25
+            ],
+            "net": "CM5_5V",
+            "number": "5",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              165.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              0.75
+            ],
+            "net": "POWER_GND",
+            "number": "6",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              166.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              1.25
+            ],
+            "net": "VCC_U3_INTERNAL",
+            "number": "7",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              57.75,
+              167.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              2.0
+            ],
+            "net": "CM5_5V",
+            "number": "8",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              167.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              2.0
+            ],
+            "net": "CM5_5V",
+            "number": "9",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              166.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              1.25
+            ],
+            "net": "FB_CM5_5V",
+            "number": "10",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              165.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              0.75
+            ],
+            "net": "POWER_GND",
+            "number": "11",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              165.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              0.25
+            ],
+            "net": "RT_CM5_5V",
+            "number": "12",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              164.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -0.25
+            ],
+            "net": "PG_CM5_5V",
+            "number": "13",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              164.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -0.75
+            ],
+            "net": "12V_PROTECTED",
+            "number": "14",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              163.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -1.25
+            ],
+            "net": "NC",
+            "number": "15",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              62.25,
+              163.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -2.0
+            ],
+            "net": "12V_PROTECTED",
+            "number": "16",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              60.0,
+              163.875
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              -1.125
+            ],
+            "net": "POWER_GND",
+            "number": "17",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              60.0,
+              164.625
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              -0.375
+            ],
+            "net": "POWER_GND",
+            "number": "18",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              60.0,
+              165.375
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              0.375
+            ],
+            "net": "POWER_GND",
+            "number": "19",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              60.0,
+              166.125
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              1.125
+            ],
+            "net": "POWER_GND",
+            "number": "20",
+            "size_mm": [
+              1.58
+            ]
+          }
+        ],
+        "reference": "U3",
+        "rotation_deg": 0.0,
+        "value": "TPSM63606RDLR"
+      }
+    },
+    "U4": {
+      "cohort": {
+        "C14": {
+          "footprint": "C_1206_3216Metric",
+          "origin_mm": [
+            70.0,
+            120.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                68.9,
+                120.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.1,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                71.1,
+                120.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.1,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.6
+              ]
+            }
+          ],
+          "reference": "C14",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C15": {
+          "footprint": "C_1206_3216Metric",
+          "origin_mm": [
+            78.0,
+            120.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                76.9,
+                120.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.1,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                79.1,
+                120.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.1,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.6
+              ]
+            }
+          ],
+          "reference": "C15",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C16": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            95.0,
+            112.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                93.65,
+                112.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                96.35,
+                112.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C16",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C17": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            101.0,
+            112.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                99.65,
+                112.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                102.35,
+                112.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C17",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C18": {
+          "footprint": "C_0805_2012Metric",
+          "origin_mm": [
+            220.0,
+            95.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                219.05,
+                95.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.95,
+                0.0
+              ],
+              "net": "FB_BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                1.1
+              ]
+            },
+            {
+              "absolute_mm": [
+                220.95,
+                95.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.95,
+                0.0
+              ],
+              "net": "BRIDGE_3V3",
+              "number": "2",
+              "size_mm": [
+                1.1
+              ]
+            }
+          ],
+          "reference": "C18",
+          "rotation_deg": 0.0,
+          "value": "C_0805_2012Metric"
+        },
+        "C19": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            107.0,
+            112.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                105.65,
+                112.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                108.35,
+                112.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C19",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "R11": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            215.0,
+            95.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                214.5,
+                95.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                215.5,
+                95.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "FB_BRIDGE_3V3",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R11",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R12": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            215.0,
+            100.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                214.5,
+                100.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "FB_BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                215.5,
+                100.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R12",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R13": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            218.0,
+            115.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                217.5,
+                115.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "RT_BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                218.5,
+                115.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R13",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R14": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            220.0,
+            115.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                219.5,
+                115.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "BRIDGE_3V3",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                220.5,
+                115.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "PG_BRIDGE_3V3",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R14",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        }
+      },
+      "regulator": {
+        "footprint": "TPSM63606RDLR_RDL0020",
+        "origin_mm": [
+          225.0,
+          105.0
+        ],
+        "pads": [
+          {
+            "absolute_mm": [
+              222.75,
+              103.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -2.0
+            ],
+            "net": "12V_PROTECTED",
+            "number": "1",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              103.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -1.25
+            ],
+            "net": "SW_BRIDGE_3V3",
+            "number": "2",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              104.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -0.75
+            ],
+            "net": "CBOOT_BRIDGE_3V3",
+            "number": "3",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              104.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -0.25
+            ],
+            "net": "RBOOT_BRIDGE_3V3",
+            "number": "4",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              105.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              0.25
+            ],
+            "net": "BRIDGE_3V3",
+            "number": "5",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              105.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              0.75
+            ],
+            "net": "POWER_GND",
+            "number": "6",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              106.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              1.25
+            ],
+            "net": "VCC_U4_INTERNAL",
+            "number": "7",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              222.75,
+              107.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              2.0
+            ],
+            "net": "BRIDGE_3V3",
+            "number": "8",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              107.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              2.0
+            ],
+            "net": "BRIDGE_3V3",
+            "number": "9",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              106.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              1.25
+            ],
+            "net": "FB_BRIDGE_3V3",
+            "number": "10",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              105.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              0.75
+            ],
+            "net": "POWER_GND",
+            "number": "11",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              105.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              0.25
+            ],
+            "net": "RT_BRIDGE_3V3",
+            "number": "12",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              104.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -0.25
+            ],
+            "net": "PG_BRIDGE_3V3",
+            "number": "13",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              104.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -0.75
+            ],
+            "net": "12V_PROTECTED",
+            "number": "14",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              103.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -1.25
+            ],
+            "net": "NC",
+            "number": "15",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              227.25,
+              103.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -2.0
+            ],
+            "net": "12V_PROTECTED",
+            "number": "16",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              225.0,
+              103.875
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              -1.125
+            ],
+            "net": "POWER_GND",
+            "number": "17",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              225.0,
+              104.625
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              -0.375
+            ],
+            "net": "POWER_GND",
+            "number": "18",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              225.0,
+              105.375
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              0.375
+            ],
+            "net": "POWER_GND",
+            "number": "19",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              225.0,
+              106.125
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              1.125
+            ],
+            "net": "POWER_GND",
+            "number": "20",
+            "size_mm": [
+              1.58
+            ]
+          }
+        ],
+        "reference": "U4",
+        "rotation_deg": 0.0,
+        "value": "TPSM63606RDLR"
+      }
+    },
+    "U5": {
+      "cohort": {
+        "C23": {
+          "footprint": "C_1206_3216Metric",
+          "origin_mm": [
+            120.0,
+            170.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                118.9,
+                170.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.1,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                121.1,
+                170.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.1,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.6
+              ]
+            }
+          ],
+          "reference": "C23",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C24": {
+          "footprint": "C_0805_2012Metric",
+          "origin_mm": [
+            128.0,
+            170.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                127.05,
+                170.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.95,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.1
+              ]
+            },
+            {
+              "absolute_mm": [
+                128.95,
+                170.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.95,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.1
+              ]
+            }
+          ],
+          "reference": "C24",
+          "rotation_deg": 0.0,
+          "value": "C_0805_2012Metric"
+        },
+        "C25": {
+          "footprint": "C_1206_3216Metric",
+          "origin_mm": [
+            136.0,
+            170.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                134.9,
+                170.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.1,
+                0.0
+              ],
+              "net": "12V_PROTECTED",
+              "number": "1",
+              "size_mm": [
+                1.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                137.1,
+                170.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.1,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.6
+              ]
+            }
+          ],
+          "reference": "C25",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C26": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            150.0,
+            160.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                148.65,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                151.35,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C26",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C27": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            158.0,
+            160.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                156.65,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                159.35,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C27",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C28": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            166.0,
+            160.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                164.65,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                167.35,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C28",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C29": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            174.0,
+            160.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                172.65,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                175.35,
+                160.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C29",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C34": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            150.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                148.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                151.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C34",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C35": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            158.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                156.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                159.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C35",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C36": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            166.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                164.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                167.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C36",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C37": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            174.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                172.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                175.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C37",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C38": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            182.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                180.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                183.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C38",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C39": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            190.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                188.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                191.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C39",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C40": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            198.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                196.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                199.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C40",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C41": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            206.0,
+            168.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                204.65,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                207.35,
+                168.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C41",
+          "rotation_deg": 0.0,
+          "value": ""
+        },
+        "C44": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            250.0,
+            128.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                250.0,
+                126.65
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                250.0,
+                129.35
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C44",
+          "rotation_deg": 90.0,
+          "value": ""
+        },
+        "C45": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            258.0,
+            128.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                258.0,
+                126.65
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                258.0,
+                129.35
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C45",
+          "rotation_deg": 90.0,
+          "value": ""
+        },
+        "C46": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            250.0,
+            138.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                250.0,
+                136.65
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                250.0,
+                139.35
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C46",
+          "rotation_deg": 90.0,
+          "value": ""
+        },
+        "C47": {
+          "footprint": "C_1210_3225Metric",
+          "origin_mm": [
+            258.0,
+            138.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                258.0,
+                136.65
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                -1.35,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                1.7
+              ]
+            },
+            {
+              "absolute_mm": [
+                258.0,
+                139.35
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\"",
+              "local_mm": [
+                1.35,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                1.7
+              ]
+            }
+          ],
+          "reference": "C47",
+          "rotation_deg": 90.0,
+          "value": ""
+        },
+        "R19": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            242.0,
+            118.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                242.0,
+                117.5
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                242.0,
+                118.5
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "FB_BRIDGE_1V1",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R19",
+          "rotation_deg": 90.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R20": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            246.0,
+            118.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                245.5,
+                118.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "FB_BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                246.5,
+                118.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R20",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R21": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            246.0,
+            90.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                245.5,
+                90.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "RT_BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                246.5,
+                90.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "POWER_GND",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R21",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        },
+        "R22": {
+          "footprint": "R_0402_1005Metric",
+          "origin_mm": [
+            240.0,
+            115.0
+          ],
+          "pads": [
+            {
+              "absolute_mm": [
+                239.5,
+                115.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                -0.5,
+                0.0
+              ],
+              "net": "BRIDGE_1V1",
+              "number": "1",
+              "size_mm": [
+                0.6
+              ]
+            },
+            {
+              "absolute_mm": [
+                240.5,
+                115.0
+              ],
+              "drill_mm": null,
+              "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+              "local_mm": [
+                0.5,
+                0.0
+              ],
+              "net": "PG_BRIDGE_1V1",
+              "number": "2",
+              "size_mm": [
+                0.6
+              ]
+            }
+          ],
+          "reference": "R22",
+          "rotation_deg": 0.0,
+          "value": "R_0402_1005Metric"
+        }
+      },
+      "regulator": {
+        "footprint": "TPSM63606RDLR_RDL0020",
+        "origin_mm": [
+          235.0,
+          105.0
+        ],
+        "pads": [
+          {
+            "absolute_mm": [
+              232.75,
+              103.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -2.0
+            ],
+            "net": "12V_PROTECTED",
+            "number": "1",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              103.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -1.25
+            ],
+            "net": "SW_BRIDGE_1V1",
+            "number": "2",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              104.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -0.75
+            ],
+            "net": "CBOOT_BRIDGE_1V1",
+            "number": "3",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              104.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              -0.25
+            ],
+            "net": "RBOOT_BRIDGE_1V1",
+            "number": "4",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              105.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              0.25
+            ],
+            "net": "BRIDGE_1V1",
+            "number": "5",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              105.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              0.75
+            ],
+            "net": "POWER_GND",
+            "number": "6",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              106.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              1.25
+            ],
+            "net": "VCC_U5_INTERNAL",
+            "number": "7",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              232.75,
+              107.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              -2.25,
+              2.0
+            ],
+            "net": "BRIDGE_1V1",
+            "number": "8",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              107.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              2.0
+            ],
+            "net": "BRIDGE_1V1",
+            "number": "9",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              106.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              1.25
+            ],
+            "net": "FB_BRIDGE_1V1",
+            "number": "10",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              105.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              0.75
+            ],
+            "net": "POWER_GND",
+            "number": "11",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              105.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              0.25
+            ],
+            "net": "RT_BRIDGE_1V1",
+            "number": "12",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              104.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -0.25
+            ],
+            "net": "PG_BRIDGE_1V1",
+            "number": "13",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              104.25
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -0.75
+            ],
+            "net": "12V_PROTECTED",
+            "number": "14",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              103.75
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -1.25
+            ],
+            "net": "NC",
+            "number": "15",
+            "size_mm": [
+              0.9
+            ]
+          },
+          {
+            "absolute_mm": [
+              237.25,
+              103.0
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              2.25,
+              -2.0
+            ],
+            "net": "12V_PROTECTED",
+            "number": "16",
+            "size_mm": [
+              1.4
+            ]
+          },
+          {
+            "absolute_mm": [
+              235.0,
+              103.875
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              -1.125
+            ],
+            "net": "POWER_GND",
+            "number": "17",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              235.0,
+              104.625
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              -0.375
+            ],
+            "net": "POWER_GND",
+            "number": "18",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              235.0,
+              105.375
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              0.375
+            ],
+            "net": "POWER_GND",
+            "number": "19",
+            "size_mm": [
+              1.58
+            ]
+          },
+          {
+            "absolute_mm": [
+              235.0,
+              106.125
+            ],
+            "drill_mm": null,
+            "layers": "\"F.Cu\" \"F.Mask\" \"F.Paste\"",
+            "local_mm": [
+              0.0,
+              1.125
+            ],
+            "net": "POWER_GND",
+            "number": "20",
+            "size_mm": [
+              1.58
+            ]
+          }
+        ],
+        "reference": "U5",
+        "rotation_deg": 0.0,
+        "value": "TPSM63606RDLR"
+      }
+    }
+  }
+}

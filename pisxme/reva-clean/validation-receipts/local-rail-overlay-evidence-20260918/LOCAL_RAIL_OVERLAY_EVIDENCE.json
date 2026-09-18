@@ -1,0 +1,103 @@
+{
+  "package_id": "P24-LOCAL-RAIL-OVERLAY-EVIDENCE",
+  "result": "EVIDENCE_READY_INTEGRATED_OVERLAY_OPEN",
+  "scope": {
+    "included": ["U3", "U4", "U5", "local support", "capacitance", "current and thermal evidence", "TI reference geometry"],
+    "excluded": ["protected bus", "J5", "J6", "J9", "Branch-B", "source topology", "J1", "high-speed corridors", "schematic edits", "PCB edits", "footprint edits", "rule edits"]
+  },
+  "state": {
+    "recorded_package_base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+    "dispatch_named_base_sha": "45f78de58ff43d3d074c62d95a973cbf4419a17d",
+    "review_head_sha": "168998cb570cf4dbaaa1857c0f52d62d023fb500",
+    "producer_candidate": null,
+    "integration_candidate": null,
+    "cad_changed": false,
+    "protected_bus_touched": false
+  },
+  "source_hashes": {
+    "pcb": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "rules": "d5473e6262fdf3b53d5de051626f0ed76dedf7257ba591f79ab8ad55f5b411ec",
+    "project": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "root_schematic": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "regulators_schematic": "2b0a6adf1469f832548f2016b90c3d5baa501323b9d08efd6c86bc30a3b9992d",
+    "regulator_footprint": "be0541e2a1de26e301ebdc9e1e42930a0ee16e5e6f43a7b515753d0a7bd7c152"
+  },
+  "authority": {
+    "support_authority": {
+      "path": "authority-inventory/primary-docs/power/TPSM63606_SUPPORT_AUTHORITY.md",
+      "sha256": "6bc179162c0d42d089b6df0fd9cd2823ce77c1f5b9587d4b7178cac297d9341d"
+    },
+    "ti_overlay": {
+      "path": "PHASE15_TI_LAYOUT_OVERLAY.md",
+      "sha256": "13f2ded1b9d3f7ba8f0622dfa12fe757391553ae53ea46c0d2594fdfe526cf05"
+    },
+    "prior_layout_receipt": {
+      "path": "PHASE15_REGULATOR_LAYOUT_RECEIPT.md",
+      "sha256": "8d4f48134eb9b524cc8c5d6dfe9562af727aa64eded0fb6d80d6f4d8be3541ed"
+    },
+    "ti_evm_archive": {
+      "path": "authority-inventory/primary-docs/power/TPSM63606_EVM_Layout_Files_SLVRBI7.zip",
+      "sha256": "7ddcb1b8754445c99459b9e2eed72d6c4b833b3c0a7efcd6ad98f764ecffeb0c"
+    },
+    "requirements": [
+      "VIN1/VIN2 local bypass",
+      "VOUT1/VOUT2 local output bypass",
+      "localized top-side PGND return copper",
+      "lower-layer VOUT feed",
+      "short feedback route",
+      "solid ground reference below module",
+      "four ordinary PGND thermal vias per module",
+      "copper adequate for junction-temperature limit"
+    ],
+    "non_hard_numeric_reference": "TI EVM maximum regulator-to-output-capacitor center distance 5.85 mm; sanity reference only, not PiSXMe threshold"
+  },
+  "geometry": {
+    "U3": {
+      "rail": "CM5_5V",
+      "origin_mm": [60.0, 165.0],
+      "vin_support_distance_range_mm": [8.004, 8.246],
+      "vout_support_distance_range_mm": [6.103, 7.433],
+      "control_support_distance_range_mm": [9.434, 30.017],
+      "board_net_summary": {"12V_PROTECTED": {"segments": 6, "vias": 1}, "CM5_5V": {"segments": 37, "vias": 9}},
+      "local_power_ground_vias_within_4mm": 0
+    },
+    "U4": {
+      "rail": "BRIDGE_3V3",
+      "origin_mm": [225.0, 105.0],
+      "vin_support_distance_range_mm": [147.763, 155.724],
+      "vout_support_distance_range_mm": [118.207, 130.188],
+      "control_support_distance_range_mm": [11.18, 14.142],
+      "board_net_summary": {"BRIDGE_3V3": {"segments": 0, "vias": 0}, "FB_BRIDGE_3V3": {"segments": 0, "vias": 0}, "RT_BRIDGE_3V3": {"segments": 0, "vias": 0}, "PG_BRIDGE_3V3": {"segments": 0, "vias": 0}},
+      "local_power_ground_vias_within_4mm": 0
+    },
+    "U5": {
+      "rail": "BRIDGE_1V1",
+      "origin_mm": [235.0, 105.0],
+      "vin_support_distance_range_mm": [118.431, 132.098],
+      "vout_support_distance_range_mm": [27.459, 105.802],
+      "control_support_distance_range_mm": [11.18, 18.601],
+      "board_net_summary": {"BRIDGE_1V1": {"segments": 0, "vias": 0}, "FB_BRIDGE_1V1": {"segments": 0, "vias": 0}, "RT_BRIDGE_1V1": {"segments": 0, "vias": 0}, "PG_BRIDGE_1V1": {"segments": 0, "vias": 0}},
+      "local_power_ground_vias_within_4mm": 0
+    },
+    "board_power_return": {"POWER_GND": {"segments": 47, "vias": 11}, "12V_PROTECTED": {"segments": 6, "vias": 1}, "CM5_5V": {"segments": 37, "vias": 9}, "BRIDGE_3V3": {"segments": 0, "vias": 0}, "BRIDGE_1V1": {"segments": 0, "vias": 0}},
+    "power_ground_zones": ["F.Cu", "In1.Cu", "In4.Cu"],
+    "module_footprint": "TPSM63606RDLR_RDL0020",
+    "pad_count_each": 20,
+    "rotation_each_deg": 0
+  },
+  "capacitance_screen": {
+    "method": "native schematic netlist values with retained 90 percent design screen",
+    "U3_CM5_5V": {"input": ["C5=10uF 50V", "C6=10uF 50V"], "output": ["C7=22uF", "C8=22uF"], "nominal_uF": 44.0, "screen_uF": 39.6, "ti_minimum_reference_uF": 30.0},
+    "U4_BRIDGE_3V3": {"input": ["C14=10uF 50V", "C15=10uF 50V"], "output": ["C16=22uF", "C17=22uF", "C19=22uF"], "nominal_uF": 66.0, "screen_uF": 59.4, "ti_minimum_reference_uF": 50.0},
+    "U5_BRIDGE_1V1": {"input": ["C23=10uF 50V", "C24=1uF", "C25=10uF 50V"], "output_count": 16, "output_each_uF": 22.0, "nominal_uF": 352.0, "screen_uF": 316.8, "ti_minimum_reference": "no direct 1.1 V row; 1.0 V table row is 300 uF and cannot be silently interpolated"},
+    "limits": ["DC-bias/temperature derating not proven", "load-step response not measured", "board-specific PDN and thermal response not proven"]
+  },
+  "validation": {
+    "fresh_host_kicad": {"version": "10.0.5", "drc_return_code": 5, "violations": 300, "unconnected_items": 499, "receipt_dir": "validation-receipts/local-rail-overlay-evidence-20260918"},
+    "qualified_light": {"version": "10.0.6", "violations": 300, "unconnected_items": 499, "receipt_dir": "validation-receipts/si-power-reference-current-head-61085fe0", "scope": "same board SHA and exact source inputs"},
+    "violation_classes": {"clearance": 138, "track_width": 118, "copper_edge_clearance": 15, "track_dangling": 9, "via_dangling": 7, "courtyards_overlap": 6, "pth_inside_courtyard": 5, "tracks_crossing": 2},
+    "closure": "not a Phase 24 integrated pass"
+  },
+  "required_next_action": "Root-owned serialized producer/integration after protected-bus dependency resolves; preserve six-layer roles and protected-bus fence, implement/verify local VIN/VOUT/FB/RT/PG corridors, local PGND copper and four PGND thermal vias per module, then fresh KiCad Light validation at integrated SHA.",
+  "artifact_boundary": "No fabricated hardware, vendor approval, production qualification, thermal measurement, or integrated acceptance pass is claimed."
+}

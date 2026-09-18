@@ -4742,7 +4742,13 @@
       },
       "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/local-rail-overlay-evidence-20260918/RECEIPT.md",
+        "base_sha": "168998cb",
+        "returned_at": "2026-09-18T22:45:14.561448Z",
+        "returned_by": "supervisor_local_rails",
+        "sha": "168998cb"
+      },
       "completion_criterion": "Authority-reviewed local-rail overlay and support evidence closes independently actionable rows and identifies exact integrated-candidate checks still required.",
       "created_at": "2026-09-18T22:29:56.108251Z",
       "dependencies": [],
@@ -4753,10 +4759,12 @@
         "no source topology changes",
         "evidence/authority first"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/local-rail-overlay-evidence-20260918/RECEIPT.md"
+      ],
       "id": "P24-LOCAL-RAIL-OVERLAY-EVIDENCE",
       "notes": "Final power closure remains downstream of protected-bus integration.",
-      "owner": "supervisor_local_rails",
+      "owner": null,
       "priority": 7,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4772,12 +4780,10 @@
         }
       ],
       "scope": "Review U3/U4/U5 local support, capacitance, current, thermal and vendor-reference geometry without editing the HPQ-owned protected-bus region.",
-      "session_ids": [
-        "01a0b69b-local-rails"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Close independent local regulator overlay evidence",
-      "updated_at": "2026-09-18T22:37:30.719224Z",
+      "updated_at": "2026-09-18T22:45:14.663491Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4798,5 +4804,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:42:13.200951Z"
+  "updated_at": "2026-09-18T22:45:14.663768Z"
 }
