@@ -1400,3 +1400,7 @@ Librarian evidence review recorded the Anderson contact-land-pattern gap after c
 ## 2026-09-18 — Molex footprint authority stall routed through Unblocker
 
 The second footprint-authority attempt returned no candidate or evidence after bounded prompts. The package is parked on `unblocker:molex-footprint-authority-stall` while Unblocker classifies the stall and selects the next capability. No geometry is promoted and canonical CAD remains unchanged.
+
+## 2026-09-18 — Unblocker made explicit in the Main Work Queue
+
+The Molex footprint stall now has a durable queue package with Unblocker ownership, so the campaign census reflects active blocker classification rather than falsely idling with an untracked service. The dependent footprint package remains WAITING on the same narrow dependency.
