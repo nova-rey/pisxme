@@ -1448,3 +1448,7 @@ Product/Power Authority corrected the multi-connector contract: three Molex 2x3 
 ## 2026-09-18 — Three-header Molex prototype validation plan returned
 
 `P24-POWER-INPUT-MOLEX-PROTOTYPE-VALIDATION` returned a design-only candidate under corrected authority V2 at base `ec980aa2`. The plan reconciles the earlier queue shorthand of three 15 A connector branches: V2 rejects a single 15 A fuse per header and requires nine independently current-limited or fault-isolated positive/return contact-pair paths across the three `39-30-0060 / 0039300060` headers. It defines 4.444 A/contact-pair continuous and 5.000 A/contact-pair peak targets, the 7 A loaded-circuit screen, a derived 10% balance screen, effective hot resistance, 40 A thermal, controlled 45 A/100 ms, fault/protection and staged first-power evidence. All hardware results remain `REQUIRES PROTOTYPE VALIDATION`; no CAD or hardware changed.
+
+## 2026-09-18 — Drawing-defined Molex footprint authorized; protected-bus producer resumed
+
+Footprint Authority produced the isolated `Molex_5569-06A2_2x03_P4.20mm_Horizontal.kicad_mod` candidate (SHA-256 `014a8f9b4ad6a1583aec43a5c0fb2a603e305970adf463eea26cd6afa54c7051`) matching the released 5569 drawing: six 1.80 mm PTH contacts on a 4.20 mm grid, 3.00 mm mounting holes, 5.50 mm row spacing and 13.80 x 8.40 mm envelope. Derived pad/mask/stack choices remain scoped DFM checks. The footprint authority package is closed and the corrected protected-bus producer is dispatched with the nine independently protected contact-pair contract.

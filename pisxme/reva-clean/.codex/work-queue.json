@@ -37,10 +37,10 @@
     "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION": {
       "created_at": "2026-09-18T13:13:37.326692Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/power-input-molex-5569-footprint-20260918/RECEIPT.md",
       "reference": "validation-receipts/power-bus-producer-footprint-blocker-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T20:21:42.631435Z",
+      "status": "RESOLVED"
     },
     "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY": {
       "created_at": "2026-09-17T23:42:24.323277Z",
@@ -3445,7 +3445,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "molex_protected_bus_corrective_supervisor",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3462,10 +3462,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-protected-bus-corrective-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T13:13:37.326717Z",
+      "updated_at": "2026-09-18T20:21:54.069726Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3475,9 +3477,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3655,11 +3655,11 @@
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/power-input-connector-reassessment-20260918/ANDERSON_FOOTPRINT_AUTHORITY_FAILURE.md",
-        "base_sha": "415e782e",
-        "returned_at": "2026-09-18T20:04:14.283170Z",
+        "artifact": "validation-receipts/power-input-molex-5569-footprint-20260918/RECEIPT.md",
+        "base_sha": "ec980aa2",
+        "returned_at": "2026-09-18T20:21:36.375146Z",
         "returned_by": "connector_footprint_authority_reassessment",
-        "sha": null
+        "sha": "014a8f9b4ad6a1583aec43a5c0fb2a603e305970adf463eea26cd6afa54c7051"
       },
       "completion_criterion": "One footprint route is dimensionally audited against released manufacturer data and passes focused native DRC/DFM checks, or returns an exact unresolved geometry contradiction.",
       "created_at": "2026-09-18T13:13:37.367633Z",
@@ -3679,11 +3679,12 @@
         "return source hash and dimensional audit"
       ],
       "evidence_refs": [
-        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY_V2.md"
+        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY_V2.md",
+        "validation-receipts/power-input-molex-5569-footprint-20260918/RECEIPT.md"
       ],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": "connector_footprint_authority_reassessment",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3699,12 +3700,10 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [
-        "molex-footprint-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T20:12:07.476032Z",
+      "updated_at": "2026-09-18T20:21:36.473146Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4139,10 +4138,12 @@
         "no CAD or hardware operation",
         "do not fabricate measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-input-molex-prototype-validation-20260918/RECEIPT.md"
+      ],
       "id": "P24-POWER-INPUT-MOLEX-PROTOTYPE-VALIDATION",
       "notes": "Supersedes the earlier Anderson-only validation plan for the active architecture; preserves that plan as historical evidence.",
-      "owner": "prototype_connector_validation_supervisor",
+      "owner": null,
       "priority": 75,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4161,12 +4162,10 @@
         }
       ],
       "scope": "Define prototype validation for three 15 A independently protected Molex 2x3 source branches: current balance, harness/crimp resistance, connector/fuse thermal rise, 40 A continuous, controlled 45 A transient, protection action and first-power procedure.",
-      "session_ids": [
-        "molex-prototype-validation-20260918"
-      ],
-      "status": "VALIDATING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Prototype validation plan for three-branch Molex source architecture",
-      "updated_at": "2026-09-18T20:18:26.255748Z",
+      "updated_at": "2026-09-18T20:19:26.291092Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4187,5 +4186,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:18:26.255748Z"
+  "updated_at": "2026-09-18T20:21:54.069961Z"
 }
