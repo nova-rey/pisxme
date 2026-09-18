@@ -1,0 +1,49 @@
+{
+  "decision_id": "PISXME-P24-STORAGE-PLACEMENT-CORRIDOR-20260918-R1",
+  "originating_package": "P24-STORAGE-PLACEMENT-CORRIDOR-AUTHORITY",
+  "status": "BINDING_DECISION",
+  "authority": "Macro Placement Authority / Storage-SI placement scope",
+  "base_sha": "ac16d1c4",
+  "pcb": {
+    "path": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"
+  },
+  "selected_storage": "Path A CM5 USB -> HD3SS6126 -> TUSB9261/JMS583 -> HD3SS3412 -> fixed TE M-key J3",
+  "path_b": {"implementation": "RTL9210B", "status": "isolated_unpromoted_evidence"},
+  "placement": {
+    "U11": {"position_mm": [140.0, 135.0], "side": "top", "rotation_deg": 0, "disposition": "fixed"},
+    "Y10": {"position_mm": [138.2, 126.4], "side": "top", "rotation_deg": 0, "disposition": "fixed"},
+    "L10": {"position_mm": [143.0, 127.8], "side": "top", "rotation_deg": 0, "disposition": "move_and_freeze"}
+  },
+  "native_pad_positions_mm": {
+    "U11.64_LXO": [143.0, 131.4],
+    "U11.1_JMS_VDDREG_5V": [136.35, 132.0],
+    "U12.1_JMS_VDDREG_5V": [163.5, 131.8],
+    "L10.1_LXO": [141.85, 127.8],
+    "L10.2_JMS_VDDREG_5V": [144.15, 127.8]
+  },
+  "courtyard_audit_mm": {
+    "U11": [135.4, 144.6, 130.4, 139.6],
+    "L10_old": [140.4, 143.6, 128.6, 131.4],
+    "L10_new": [141.4, 144.6, 126.4, 129.2],
+    "Y10": [136.5, 139.9, 125.05, 127.75],
+    "old_overlap_mm2": 3.2,
+    "new_to_U11_gap_mm": 1.2,
+    "new_to_Y10_gap_mm": 1.5,
+    "all_defined_courtyards_overlap": false
+  },
+  "fixed_refs": ["J1", "J3", "J7", "U7", "U11", "U12", "U13", "U14", "Y10", "C80-C93", "R80-R83"],
+  "protected_structures": ["board_outline", "six_layer_stack", "J1_PCIe_REFCLK_RESET", "CM5_USB3_PERST", "J3_storage_power", "protected_bus", "planes_zones"],
+  "reserved_corridors": {
+    "LXO": "U11.64 local authorized escape -> north/east outside U11/Y10 courtyards -> L10.1",
+    "JMS_VDDREG_5V": "U11.1 and U12.1 via dedicated north handoff to L10.2; normal geometry outside local pad escape",
+    "U11_clock": "U11.50/U11.51 paired monotonic north-west corridor -> Y10",
+    "U11_USB3": "south edge into U12/CM5 corridor, protected",
+    "U11_PCIe_REFCLK": "east edge toward selector/M-key side, protected",
+    "U7_U13_J3": "SATA/PCIe differential corridors and M-key keepouts, protected",
+    "mode_control": "U14 east/lower corridor, protected"
+  },
+  "constraints": ["ordinary_through_vias_only", "no_synthetic_connections", "no_global_rule_relaxation", "no_controlled_impedance_width_change", "no_unapproved_support_relocation", "no_orientation_search"],
+  "implementation_required": ["U11.64_to_L10.1_connectivity", "U11.1_to_L10.2_connectivity", "U12.1_to_L10.2_connectivity", "trace_removal_negative_controls", "focused_native_drc", "fresh_light_storage_usb3_patha_dfm_recheck"],
+  "closure": "authority decision only; route/DRC/integrated closure remains open"
+}

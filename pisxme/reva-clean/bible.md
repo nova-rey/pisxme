@@ -1618,3 +1618,7 @@ The explicit qualified Light route ran successfully: KiCad 10.0.6 exported the n
 # 2026-09-18 — U12/U11 package authority reconciled
 
 The Librarian/package authority lane completed its evidence packet. U11 land treatment is resolved with an explicit prototype disposition requiring approximately 50–70% exposed-pad paste windowing and DFM/reflow/inspection validation. U12 is confirmed against TI RUA0042A at 0.50 mm pitch; the current 0.40 mm project footprint is rejected for routing and requires an isolated footprint producer. The U12/U11 package is parked only on U12 geometry, and a dedicated U12 footprint producer is now running. Private Library provenance was pushed separately by the Librarian (`nova-rey/pisxme-private` commit `79f53da7`).
+
+# 2026-09-18 — Storage corridor authority closed; protected-bus producer self-unblocked
+
+Macro Placement Authority issued `PISXME-P24-STORAGE-PLACEMENT-CORRIDOR-20260918-R1`: Path A remains selected, U11/Y10 stay fixed, and only L10 moves to `(143.00,127.80)` to clear the measured U11 courtyard collision. The mechanics/DFM dependency is resolved; routing/DRC validation remains open. Tier-2 Unblocker then classified the protected-bus direct stall as a workflow failure and selected a deterministic source-first producer using the retained nine-branch schematic fixture as an oracle. The protected-bus producer is RUNNING again from current HEAD; no CAD candidate exists yet.

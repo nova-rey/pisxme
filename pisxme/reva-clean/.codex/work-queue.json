@@ -93,10 +93,10 @@
     "authority:P24-STORAGE-PLACEMENT-CORRIDOR": {
       "created_at": "2026-09-18T22:38:50.765386Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/storage-placement-corridor-authority-20260918/RECEIPT.md",
       "reference": "validation-receipts/mechanics-dfm-independent-subset-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T23:29:41.408833Z",
+      "status": "RESOLVED"
     },
     "authority:P24-U11-LAND-TREATMENT": {
       "created_at": "2026-09-18T22:39:20.099589Z",
@@ -349,10 +349,10 @@
     "protected-bus-direct-producer-stall": {
       "created_at": "2026-09-18T23:27:23.369988Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/protected-bus-r2-direct-stall-20260918/RECEIPT.md",
       "reference": "validation-receipts/protected-bus-r2-direct-stall-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T23:29:54.001279Z",
+      "status": "RESOLVED"
     },
     "unblocker:molex-footprint-authority-stall": {
       "created_at": "2026-09-18T19:23:14.660062Z",
@@ -3601,7 +3601,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": null,
+      "owner": "deterministic_source_first_r2",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3618,10 +3618,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "01a0b69b-r2deterministic"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:27:23.370028Z",
+      "updated_at": "2026-09-18T23:29:54.054899Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3652,9 +3654,7 @@
           }
         }
       },
-      "waiting_on": [
-        "protected-bus-direct-producer-stall"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4708,8 +4708,7 @@
         "results": {}
       },
       "waiting_on": [
-        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
-        "authority:P24-STORAGE-PLACEMENT-CORRIDOR"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "workstream": "phase24-mechanics-dfm"
     },
@@ -5001,7 +5000,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/storage-placement-corridor-authority-20260918/DECISION.md",
+        "base_sha": "ac16d1c4",
+        "returned_at": "2026-09-18T23:29:41.296921Z",
+        "returned_by": "supervisor_storage_corridor",
+        "sha": "a2eedee0"
+      },
       "completion_criterion": "A dimensioned placement/corridor authority packet identifies fixed/movable cohorts, reserved corridors, and exact dependency disposition for P24-STORAGE-PLACEMENT-CORRIDOR.",
       "created_at": "2026-09-18T23:18:50.163112Z",
       "dependencies": [],
@@ -5011,10 +5016,12 @@
         "no speculative CAD routing",
         "preserve protected-bus and high-speed anchors unless contradictory evidence is demonstrated"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/storage-placement-corridor-authority-20260918/RECEIPT.md"
+      ],
       "id": "P24-STORAGE-PLACEMENT-CORRIDOR-AUTHORITY",
       "notes": "Created to advance the existing mechanics/DFM waiting dependency independently of protected-bus integration.",
-      "owner": "supervisor_storage_corridor",
+      "owner": null,
       "priority": 3,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5031,12 +5038,10 @@
         }
       ],
       "scope": "Issue one binding storage placement/corridor decision for the existing M-key/JMS581DL region, resolving L10/U11 and related mechanics/DFM coordination without reopening selected Path-A architecture or protected-bus corridors.",
-      "session_ids": [
-        "01a0b69b-storagecorridor"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Bind storage placement and corridor authority",
-      "updated_at": "2026-09-18T23:18:54.686645Z",
+      "updated_at": "2026-09-18T23:29:41.359889Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5107,5 +5112,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:28:28.865068Z"
+  "updated_at": "2026-09-18T23:29:54.055186Z"
 }
