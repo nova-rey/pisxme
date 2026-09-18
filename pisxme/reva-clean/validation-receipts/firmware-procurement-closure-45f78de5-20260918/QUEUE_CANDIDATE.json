@@ -1,0 +1,23 @@
+{
+  "package_id": "P24-FIRMWARE-PROCUREMENT-PROVENANCE-CLOSURE",
+  "assigned_base_sha": "45f78de58ff43d3d074c62d95a973cbf4419a17d",
+  "base_sha": "95429738d7f3476a58fe687755c7a3d6e7c97a98",
+  "returned_by": "supervisor_firmware",
+  "result": "CANDIDATE_READY",
+  "candidate_artifact": "validation-receipts/firmware-procurement-closure-45f78de5-20260918/RECEIPT.md",
+  "machine_artifact": "validation-receipts/firmware-procurement-closure-45f78de5-20260918/RECEIPT.json",
+  "changed_scope": ["evidence receipt", "machine-readable disposition", "artifact hashes"],
+  "cad_changed": false,
+  "validation": [
+    "python3 -m json.tool RECEIPT.json",
+    "sha256sum -c SHA256SUMS",
+    "exact source and authority SHA-256 rechecked at base_sha"
+  ],
+  "completion_criterion_status": "satisfied: every unavailable item explicitly classified as prototype validation, release-time evidence, or external evidence gap",
+  "remaining_acceptance_findings": [
+    "component_firmware_provenance remains OPEN at integrated campaign level until release/prototype evidence exists",
+    "storage_mode_behavior and integrated sequencing remain owned by their dependent packages",
+    "no hardware operation, firmware redistribution authorization, or Path-B promotion is claimed"
+  ],
+  "recommended_root_transition": "Move package to VALIDATING, verify against current HEAD, then DONE if receipt is accepted; retain campaign acceptance rows OPEN for listed dispositions."
+}
