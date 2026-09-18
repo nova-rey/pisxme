@@ -1368,3 +1368,7 @@ Released manufacturer dimensions were judged sufficient for prototype footprint 
 ## 2026-09-18 — Corrective protected-bus producer retried from clean base
 
 The first producer workspace was discarded because it contained unrelated recovery-tree material. A fresh isolated producer was dispatched from current HEAD `57821130` using the authorized prototype input-footprint receipt. Canonical CAD remains unchanged until a scoped candidate and exact validation return.
+
+## 2026-09-18 — Protected-bus producer workspace method blocker
+
+Two producer attempts resolved into legacy recovery-tree workspaces instead of a clean checkout of current `reva-clean`. No canonical CAD changed. The producer package is parked behind a bounded Unblocker review of the installed EDA worker dispatch; this is an implementation-method issue, not a connector-architecture conclusion.
