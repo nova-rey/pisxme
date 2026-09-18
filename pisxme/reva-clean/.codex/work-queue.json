@@ -338,6 +338,14 @@
       "resolved_at": "2026-09-14T00:26:01.405961Z",
       "status": "RESOLVED"
     },
+    "protected-bus-direct-producer-stall": {
+      "created_at": "2026-09-18T23:27:23.369988Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-r2-direct-stall-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:molex-footprint-authority-stall": {
       "created_at": "2026-09-18T19:23:14.660062Z",
       "kind": "other",
@@ -3571,7 +3579,8 @@
         "hpq:nova-rey/codex-config-backup#6",
         "package:P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION",
         "unblocker:protected-bus-r2-producer-stall",
-        "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION"
+        "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION",
+        "protected-bus-direct-producer-stall"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3584,7 +3593,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": "kicad_r2_direct",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3601,12 +3610,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "01a0b69b-r2direct"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:25:02.816115Z",
+      "updated_at": "2026-09-18T23:27:23.370028Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3637,7 +3644,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "protected-bus-direct-producer-stall"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -5039,5 +5048,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:25:02.816610Z"
+  "updated_at": "2026-09-18T23:27:23.370295Z"
 }

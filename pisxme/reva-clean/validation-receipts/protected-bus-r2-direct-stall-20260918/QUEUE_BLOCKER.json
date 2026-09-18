@@ -1,0 +1,10 @@
+{
+  "package":"P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "classification":"IMPLEMENTATION",
+  "state":"BLOCKED",
+  "workspace":"/home/nyx/eda-workspaces/protected-bus-r2-rootdispatch",
+  "sentinel_exit":0,
+  "baseline_drc_violations":300,
+  "candidate":null,
+  "next_route":"unblocker:protected-bus-direct-producer-stall"
+}

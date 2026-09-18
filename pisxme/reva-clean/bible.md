@@ -1610,3 +1610,7 @@ The root-mediated Light producer remained silent after its bounded attempt and w
 # 2026-09-18 — Direct KiCad capability escalation
 
 The second root-mediated R2 execution route also had no returned command receipt within its bounded attempt. Root released that owner and assigned `kicad_r2_direct`, requiring explicit qualified-launcher invocation and an auditable sentinel or command-level failure. This is a capability escalation only; no R1 retry, global rule change, or CAD closure is claimed.
+
+# 2026-09-18 — Direct R2 sentinel succeeded; producer remains method-blocked
+
+The explicit qualified Light route ran successfully: KiCad 10.0.6 exported the native source-topology netlist and produced the untouched baseline DRC report (300 violations). No R2 producer result, candidate PCB, connectivity, resistance, or thermal artifact was returned in the bounded attempt. The protected-bus producer is parked on `protected-bus-direct-producer-stall`; raw sentinel/baseline outputs are retained under `validation-receipts/protected-bus-r2-direct-stall-20260918/`. A new Tier-2 Unblocker review is active. This is not a campaign hard block because U12/U11 and storage-corridor authority lanes remain active.
