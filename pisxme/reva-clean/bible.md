@@ -1634,3 +1634,7 @@ The isolated U12 producer candidate `8e7d5a8b` was reconciled into canonical com
 # 2026-09-18 — Protected-bus producer capability changed after deterministic stall
 
 The deterministic source-first R2 attempt returned no candidate or command receipt and was released. The protected-bus package is now assigned to a fresh mutation-capable KiCad engineer from canonical `06942ee2`, with the same binding R2 authority and a bounded candidate/blocker return requirement. No R1 replay or global rule change is authorized.
+
+# 2026-09-18 — Second protected-bus capability stall routed to Unblocker
+
+The fresh mutation-capable KiCad-engineer attempt allocated `/home/nyx/eda-workspaces/protected-bus-r2-kicad-engineer` but emitted only the committed-base clone and no authoring command, candidate, or raw tool failure. The package is retained as an implementation-workflow issue, not a topology rejection. Root released the silent worker and commissioned one bounded Unblocker reassessment; no R1 replay or global rule change occurred.

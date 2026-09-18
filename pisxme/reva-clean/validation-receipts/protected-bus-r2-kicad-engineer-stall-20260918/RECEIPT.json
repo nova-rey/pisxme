@@ -1,0 +1,12 @@
+{
+  "schema": "pisxme.p24.protected-bus-producer-stall.v1",
+  "package": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "capability": "kicad_engineer",
+  "canonical_base": "44d3b9fb",
+  "workspace": "/home/nyx/eda-workspaces/protected-bus-r2-kicad-engineer/project",
+  "workspace_head_file": "06942ee2ad542233ba93964c2188b060a76488e5",
+  "result": "NO_CANDIDATE_NO_COMMAND_RECEIPT",
+  "candidate": null,
+  "native_reports": false,
+  "next_action": "change capability or root-mediated deterministic authoring; do not replay R1"
+}
