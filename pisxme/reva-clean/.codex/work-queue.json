@@ -3678,7 +3678,9 @@
         "released manufacturer dimensions only",
         "return source hash and dimensional audit"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY_V2.md"
+      ],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
       "owner": "connector_footprint_authority_reassessment",
@@ -4077,10 +4079,11 @@
         "preserve Anderson and Molex source hashes"
       ],
       "evidence_refs": [
-        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY.md"
+        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY.md",
+        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY_V2.md"
       ],
       "id": "P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-CORRECTION",
-      "notes": "This is a bounded correction, not an open-ended connector survey. Do not begin CAD until the exact architecture/footprint contract is recorded.",
+      "notes": "Binding correction: nine independently protected contact-pair branches; one connector-level fuse is rejected.",
       "owner": null,
       "priority": 98,
       "project": "nova-rey/pisxme",

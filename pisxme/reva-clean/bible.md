@@ -1440,3 +1440,7 @@ Footprint Authority found that Anderson B02021S Rev. 6 and DS-PP1545 do not full
 ## 2026-09-18 — Connector architecture corrected to drawing-defined multi-branch Molex input
 
 Anderson PP15/45 remains electrically credible but cannot receive an exact first-party land-pattern footprint from the retained drawings. Product/Power therefore superseded it for Rev A CAD with three Molex Mini-Fit Jr. 2x3 (`39-30-0060` / `0039300060`) headers. Each header is an independently protected 15 A branch; three positive and three return contacts per header provide a conservative 63 A per-polarity screen across nine contacts, while the 40 A continuous / 45 A peak source contract is enforced by branch protection, harness, copper and thermal checks. The Molex drawing defines the project-local footprint interface. Anderson evidence and the failed exact-footprint attempt remain preserved; no external vendor-footprint blocker remains.
+
+## 2026-09-18 — Molex source contract corrected to nine protected contact-pair branches
+
+Product/Power Authority corrected the multi-connector contract: three Molex 2x3 headers provide nine positive and nine return paths, and each positive/return pair must be independently current-limited or fault-isolated. A single 15 A fuse per connector is rejected because passive current-sharing credit is prohibited. The governing screen is 4.444 A/contact continuous and 5.000 A/contact at the 45 A peak screen against 7 A per loaded circuit, with a 63 A aggregate screen. All three headers and nine branches are required; no N-1 credit is allowed.
