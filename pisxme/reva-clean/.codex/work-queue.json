@@ -74,6 +74,30 @@
       "resolved_at": "2026-09-17T23:32:18.619604Z",
       "status": "RESOLVED"
     },
+    "authority:P24-STORAGE-PLACEMENT-CORRIDOR": {
+      "created_at": "2026-09-18T22:38:50.765386Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/mechanics-dfm-independent-subset-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
+    "authority:P24-U11-LAND-TREATMENT": {
+      "created_at": "2026-09-18T22:39:20.099589Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/library-pin-provenance-closure-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
+    "authority:P24-U12-PACKAGE-GEOMETRY": {
+      "created_at": "2026-09-18T22:39:20.052085Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/library-pin-provenance-closure-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:exact-nFET-and-energy-coordination": {
       "created_at": "2026-09-14T00:29:05.092973Z",
       "kind": "authority",
@@ -4497,7 +4521,10 @@
       "candidate": null,
       "completion_criterion": "Authority-backed mapping and provenance receipt covers every open critical package/pin/model item, with exact source hashes or explicit prototype disposition; no unresolved required library/link finding remains.",
       "created_at": "2026-09-18T22:29:55.924877Z",
-      "dependencies": [],
+      "dependencies": [
+        "authority:P24-U12-PACKAGE-GEOMETRY",
+        "authority:P24-U11-LAND-TREATMENT"
+      ],
       "domain": "library/package/provenance",
       "edit_boundaries": [
         "authority/evidence and project-library records only",
@@ -4508,7 +4535,7 @@
       "evidence_refs": [],
       "id": "P24-LIBRARY-PIN-PROVENANCE-CLOSURE",
       "notes": "Independent evidence lane; implementation changes require serialized integration if any.",
-      "owner": "supervisor_library",
+      "owner": null,
       "priority": 3,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4525,17 +4552,18 @@
         }
       ],
       "scope": "Resolve U12 pitch conflict, U11 paste/mask/courtyard, U6/U9 system-library identity, embedded TP1-TP13 disposition, and critical component/procurement records using Library and authority evidence.",
-      "session_ids": [
-        "01a0b69b-library"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Close library, footprint, pin and procurement provenance gaps",
-      "updated_at": "2026-09-18T22:30:09.329449Z",
+      "updated_at": "2026-09-18T22:39:20.099610Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:P24-U12-PACKAGE-GEOMETRY",
+        "authority:P24-U11-LAND-TREATMENT"
+      ],
       "workstream": "phase24-library"
     },
     {
@@ -4605,7 +4633,10 @@
       "candidate": null,
       "completion_criterion": "Scoped producer/evidence packet resolves all mechanically disjoint required findings with native targeted DRC/3D/assembly receipts; protected-bus findings remain separately tracked.",
       "created_at": "2026-09-18T22:29:56.019531Z",
-      "dependencies": [],
+      "dependencies": [
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+        "authority:P24-STORAGE-PLACEMENT-CORRIDOR"
+      ],
       "domain": "mechanics/DFM",
       "edit_boundaries": [
         "listed regions only",
@@ -4616,7 +4647,7 @@
       "evidence_refs": [],
       "id": "P24-MECHANICS-DFM-INDEPENDENT-SUBSET",
       "notes": "Material CAD candidates require serialized integration and fresh Light validation.",
-      "owner": "supervisor_mechanics_dfm",
+      "owner": null,
       "priority": 5,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4633,17 +4664,18 @@
         }
       ],
       "scope": "Resolve mechanically disjoint DFM/mechanics issues outside the protected-bus corridor: J3/MECH_M2_2280, J8, C5/C6, C7/C8, J7/C14, L10/U11, board edge, assembly and service access.",
-      "session_ids": [
-        "01a0b69b-mech-dfm"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Close mechanically disjoint DFM and service findings",
-      "updated_at": "2026-09-18T22:30:09.434780Z",
+      "updated_at": "2026-09-18T22:39:04.075685Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+        "authority:P24-STORAGE-PLACEMENT-CORRIDOR"
+      ],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -4760,5 +4792,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:37:30.719451Z"
+  "updated_at": "2026-09-18T22:39:20.099837Z"
 }
