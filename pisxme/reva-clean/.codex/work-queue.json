@@ -5149,7 +5149,7 @@
       "evidence_refs": [],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required.",
-      "owner": null,
+      "owner": "supervisor_local_rails",
       "priority": 5,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5166,10 +5166,12 @@
         }
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
-      "session_ids": [],
-      "status": "READY",
+      "session_ids": [
+        "cm5-ethernet-edge-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-18T23:56:22.785777Z",
+      "updated_at": "2026-09-18T23:57:10.241027Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5251,5 +5253,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:56:47.715567Z"
+  "updated_at": "2026-09-18T23:57:10.241490Z"
 }

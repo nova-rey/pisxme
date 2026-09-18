@@ -1651,3 +1651,6 @@ The aggregate receipt for the three bounded R2 producer routes is now preserved 
 # 2026-09-18 — Split independent mechanics work from protected-bus wait
 
 The mechanics supervisor confirmed that L10/U11 and the CM5/Ethernet lower-edge findings are independent of HPQ #7 and protected-bus integration. The aggregate mechanics package remains waiting for integrated closure; two bounded packages were added. `P24-MECHANICS-L10-U11-LOCAL-CORRECTION` is RUNNING from `c7c8cd88` under `supervisor_mechanics_dfm`; `P24-MECHANICS-CM5-ETHERNET-EDGE-DFM` is READY for the next compatible worker. C5/C6 and J7/C14 remain dependent because they touch `12V_PROTECTED`.
+# 2026-09-18 — Filled second independent mechanics worker
+
+`P24-MECHANICS-CM5-ETHERNET-EDGE-DFM` is now RUNNING under `supervisor_local_rails` from the same committed base. It is limited to C7/C8 CM5 lower-edge and Ethernet C48–C51 edge findings plus evidence preparation; it does not touch the protected-bus corridor. Two independent mechanics packages are now active while HPQ #7 remains confined to the protected-bus producer.
