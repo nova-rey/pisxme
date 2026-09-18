@@ -69,10 +69,10 @@
     "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION": {
       "created_at": "2026-09-18T23:11:50.397649Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/protected-bus-source-topology-authority-20260918/SOURCE_TOPOLOGY_AUTHORITY.md",
       "reference": "R2 requires J9/F3-F9 and nine branch contracts absent from assigned native PCB/schematic; authority must reconcile source topology before any CAD producer.",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T23:16:26.441874Z",
+      "status": "RESOLVED"
     },
     "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY": {
       "created_at": "2026-09-17T23:31:12.748834Z",
@@ -261,9 +261,9 @@
     "hpq:nova-rey/codex-config-backup#6": {
       "created_at": "2026-09-18T22:19:53.580592Z",
       "kind": "hpq",
-      "receipt": "https://github.com/nova-rey/codex-config-backup/issues/6",
+      "receipt": "validation-receipts/hpq-issue6-resolution-20260918/RESOLUTION.md",
       "reference": "https://github.com/nova-rey/codex-config-backup/issues/6",
-      "resolved_at": "2026-09-18T22:49:48.989215Z",
+      "resolved_at": "2026-09-18T23:15:25.089423Z",
       "status": "RESOLVED"
     },
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
@@ -3584,7 +3584,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": null,
+      "owner": "protected_bus_r2_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3601,10 +3601,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "01a0b69b-r2producer2"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:11:50.397684Z",
+      "updated_at": "2026-09-18T23:16:39.376717Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3635,9 +3637,7 @@
           }
         }
       },
-      "waiting_on": [
-        "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4876,7 +4876,13 @@
       },
       "base_sha": "a6461fc7",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-source-topology-authority-20260918/SOURCE_TOPOLOGY_AUTHORITY.md",
+        "base_sha": "02bb6e63",
+        "returned_at": "2026-09-18T23:16:09.865623Z",
+        "returned_by": "supervisor_protected_bus_topology",
+        "sha": "31c090a9ceae2870347dbec1a53b57e2b8bba509"
+      },
       "completion_criterion": "One binding authority packet identifies the authoritative source topology and exact next producer base/scope, or explicitly escalates the minimum product/architecture decision with evidence.",
       "created_at": "2026-09-18T23:11:50.471551Z",
       "dependencies": [],
@@ -4888,7 +4894,9 @@
         "no global rule changes",
         "no Phase 25/26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-source-topology-authority-20260918/SOURCE_TOPOLOGY_AUTHORITY.md"
+      ],
       "id": "P24-PROTECTED-BUS-SOURCE-TOPOLOGY-AUTHORITY",
       "notes": "Created from protected-bus R2 producer blocker receipt c53d2fe6; this is a source-topology contradiction, not a routing failure.",
       "owner": null,
@@ -4908,9 +4916,9 @@
       ],
       "scope": "Reconcile the producer evidence that the selected native PCB/schematic contain only J5/J6 and F1/F2, while R2 requires J5/J6/J9 and F1-F9 nine-branch contracts. Decide whether the source of truth must change, whether R2 must be reissued against a different authorized candidate lineage, or whether a narrowly authorized topology correction is required. Preserve 300 W/330 W, 40 A/45 A, six-layer roles, J1 and unrelated macro geography. Do not invent symbols/nets/footprints in the producer and do not retry R1.",
       "session_ids": [],
-      "status": "READY",
+      "status": "DONE",
       "title": "Reconcile protected-bus source topology before R2 CAD",
-      "updated_at": "2026-09-18T23:11:50.471551Z",
+      "updated_at": "2026-09-18T23:16:20.788141Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4931,5 +4939,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:11:50.472459Z"
+  "updated_at": "2026-09-18T23:16:39.377048Z"
 }

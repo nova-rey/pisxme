@@ -1590,3 +1590,7 @@ canonical Rev-A PCB/schematic lineage remains authoritative for J1, six-layer
 roles, and unrelated macro geography, while a narrowly scoped next-producer
 correction is authorized for exactly J5/J6/J9, F1-F9, and the nine named branch
 contracts. No CAD was edited; rejected producer candidates remain non-authoritative.
+
+# 2026-09-18 — HPQ Issue #6 reconciled and protected-bus producer redispatched
+
+HPQ Issue #6 `resolution-ready` was synchronized from `nova-rey/codex-config-backup#6`. Its rejected MPA R1 result remains evidence only; no candidate was integrated. The source-topology authority packet `31c090a9` was reconciled against current HEAD and accepted through the queue, authorizing one isolated R2 producer from the canonical Rev-A lineage. The sole dependent producer is now RUNNING; later integration, power, SI, thermal, firmware, and mechanics packages remain dependency-held. No Phase 25/26 work started.
