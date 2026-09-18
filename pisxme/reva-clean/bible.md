@@ -1416,3 +1416,7 @@ Three isolated Molex MPA corridor candidates remained at 418–419 native DRC vi
 ## 2026-09-18 — MPA placement assertion corrected the corridor method
 
 Unblocker evidence showed prior Branch-B candidates never materialized the binding MPA placement: Q1 remained at (32.54,78.00) instead of the required (61,22), and Q2 was likewise not asserted. The footprint package is now re-dispatched to one clean producer that asserts all MPA coordinates and fixed anchors before routing; the prior DRC failures are retained as method evidence, not corridor impossibility.
+
+## 2026-09-18 — Binding MPA placement tested and contradicted
+
+The clean producer finally asserted the full binding MPA placement before routing. The resulting candidate preserved the released Molex geometry but returned 710 native DRC violations and 499 unconnected items, proving a structural contradiction in that placement/corridor plan. The candidate is rejected and retained. A single bounded MPA revision package now owns the authority decision; no canonical CAD changed.
