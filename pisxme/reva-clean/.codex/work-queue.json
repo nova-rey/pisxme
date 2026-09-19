@@ -5179,9 +5179,13 @@
         "no global rule relaxation",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "private-Library:ae118fb2:Library/briefs/mechanical-3d-envelope-l10-u11-20260918.md",
+        "private-Library:ae118fb2:Library/indexes/mechanical-3d-envelope-l10-u11-20260918.json",
+        "private-Library:ae118fb2:Library/provenance/mechanical-3d-envelope-l10-u11-20260918.json"
+      ],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
-      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required.",
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope.",
       "owner": null,
       "priority": 5,
       "project": "nova-rey/pisxme",
@@ -5255,9 +5259,13 @@
         "no global rule relaxation",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "private-Library:ae118fb2:Library/briefs/mechanical-3d-envelope-l10-u11-20260918.md",
+        "private-Library:ae118fb2:Library/indexes/mechanical-3d-envelope-l10-u11-20260918.json",
+        "private-Library:ae118fb2:Library/provenance/mechanical-3d-envelope-l10-u11-20260918.json"
+      ],
       "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
-      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required.",
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope.",
       "owner": null,
       "priority": 4,
       "project": "nova-rey/pisxme",

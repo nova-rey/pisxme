@@ -1691,3 +1691,7 @@ The corrected CM5/Ethernet candidate was serialized onto canonical `reva-clean` 
 # 2026-09-19 — CM5/Ethernet 2D closure retained; shared 3D evidence remains open
 
 The CM5/Ethernet r3 candidate is canonically integrated and its targeted native DRC and edge-clearance rows pass. The package is parked only on the shared `knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES` dependency because full assembly/service evidence remains unproven for the affected mechanical envelope; no 3D pass was fabricated.
+
+# 2026-09-19 — Mechanical envelope evidence indexed; dependency remains open
+
+Private Library commit `ae118fb2` now indexes the mechanical 3D/assembly/service brief, machine index, and provenance record. U11, J1, and J3 package facts are established, while exact L10/Y10 package data, J8 hardware/service contract, and named cooler/backplate/service envelope remain unresolved. Both mechanics packages retain the shared knowledge dependency and now reference the private evidence directly.
