@@ -5150,11 +5150,11 @@
       "base_sha": "c7c8cd88",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/candidate.kicad_pcb",
-        "base_sha": "ef1dcbfb2fe44a33b80d0a6c2f73f91f045854ab",
-        "returned_at": "2026-09-19T00:26:49.936214Z",
+        "artifact": "validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/candidate.kicad_pcb",
+        "base_sha": "ab9e8c7350371760169296a201783a315438e6a6",
+        "returned_at": "2026-09-19T00:33:45.428947Z",
         "returned_by": "supervisor_local_rails",
-        "sha": "a09c181b1dc065ac4711026f897b984baad73e48"
+        "sha": "d0fc415f9b9b5542ea10f6eae21c509f07843404"
       },
       "completion_criterion": "Current-head isolated candidate closes only the listed lower-edge findings without changing protected-bus or high-speed geometry, and returns candidate SHA, changed-scope hash and targeted Light/DFM evidence for serialized integration.",
       "created_at": "2026-09-18T23:56:22.785777Z",
@@ -5191,11 +5191,11 @@
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
       "session_ids": [
-        "cm5-ethernet-edge-r3-context-reconciliation-20260919"
+        "cm5-ethernet-edge-r3-integration-validation-20260919"
       ],
-      "status": "RUNNING",
+      "status": "VALIDATING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:29:46.596491Z",
+      "updated_at": "2026-09-19T00:33:45.478582Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5307,5 +5307,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:29:46.596790Z"
+  "updated_at": "2026-09-19T00:33:45.478895Z"
 }

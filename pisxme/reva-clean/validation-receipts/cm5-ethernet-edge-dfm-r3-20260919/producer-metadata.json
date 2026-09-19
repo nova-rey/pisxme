@@ -1,0 +1,267 @@
+{
+  "base_board": "/workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "candidate_board": "/workspace/output/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED_R3_CANDIDATE.kicad_pcb",
+  "base_sha256": "770e2cd43cf88f1d329d0623c890939f4ec4a2f0230552bbbadeacf32817683d",
+  "changes": [
+    {
+      "ref": "C48",
+      "before": [
+        220.0,
+        180.0
+      ],
+      "after": [
+        220.0,
+        178.5
+      ],
+      "reason": "board-edge clearance"
+    },
+    {
+      "ref": "C49",
+      "before": [
+        224.0,
+        180.0
+      ],
+      "after": [
+        224.0,
+        178.5
+      ],
+      "reason": "board-edge clearance"
+    },
+    {
+      "ref": "C50",
+      "before": [
+        228.0,
+        180.0
+      ],
+      "after": [
+        228.0,
+        178.5
+      ],
+      "reason": "board-edge clearance"
+    },
+    {
+      "ref": "C51",
+      "before": [
+        232.0,
+        180.0
+      ],
+      "after": [
+        232.0,
+        178.5
+      ],
+      "reason": "board-edge clearance"
+    },
+    {
+      "ref": "C8",
+      "before": [
+        65.0,
+        170.5
+      ],
+      "after": [
+        65.0,
+        172.5
+      ],
+      "reason": "courtyard separation / local CM5 support"
+    }
+  ],
+  "cm5_track_changes": [
+    {
+      "before": [
+        [
+          83.0,
+          164.0
+        ],
+        [
+          83.0,
+          180.0
+        ]
+      ],
+      "after": [
+        [
+          83.0,
+          164.0
+        ],
+        [
+          83.0,
+          177.0
+        ]
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "before": [
+        [
+          63.65,
+          168.5
+        ],
+        [
+          63.65,
+          170.5
+        ]
+      ],
+      "after": [
+        [
+          63.65,
+          168.5
+        ],
+        [
+          63.65,
+          172.5
+        ]
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "before": [
+        [
+          63.65,
+          170.5
+        ],
+        [
+          60.0,
+          180.0
+        ]
+      ],
+      "after": [
+        [
+          63.65,
+          172.5
+        ],
+        [
+          60.0,
+          177.0
+        ]
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "before": [
+        [
+          83.0,
+          180.0
+        ],
+        [
+          78.0,
+          180.0
+        ]
+      ],
+      "after": [
+        [
+          83.0,
+          177.0
+        ],
+        [
+          78.0,
+          177.0
+        ]
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "before": [
+        [
+          78.0,
+          180.0
+        ],
+        [
+          81.5,
+          180.0
+        ]
+      ],
+      "after": [
+        [
+          78.0,
+          177.0
+        ],
+        [
+          81.5,
+          177.0
+        ]
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "before": [
+        [
+          62.25,
+          170.5
+        ],
+        [
+          63.65,
+          170.5
+        ]
+      ],
+      "after": [
+        [
+          62.25,
+          170.5
+        ],
+        [
+          63.65,
+          172.5
+        ]
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "before": [
+        [
+          60.0,
+          180.0
+        ],
+        [
+          78.0,
+          180.0
+        ]
+      ],
+      "after": [
+        [
+          60.0,
+          177.0
+        ],
+        [
+          78.0,
+          177.0
+        ]
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.25
+    }
+  ],
+  "cm5_via_changes": [
+    {
+      "before": [
+        60.0,
+        180.0
+      ],
+      "after": [
+        60.0,
+        177.0
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "before": [
+        78.0,
+        180.0
+      ],
+      "after": [
+        78.0,
+        177.0
+      ],
+      "drill_mm": 0.3
+    }
+  ],
+  "zone_fill": "native pcbnew.ZONE_FILLER before save",
+  "protected_regions_touched": false,
+  "high_speed_corridors_touched": false,
+  "rule_file": "/workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru",
+  "fp_lib_table": "/workspace/project/pisxme/reva-clean/fp-lib-table",
+  "sym_lib_table": "/workspace/project/pisxme/reva-clean/sym-lib-table"
+}
