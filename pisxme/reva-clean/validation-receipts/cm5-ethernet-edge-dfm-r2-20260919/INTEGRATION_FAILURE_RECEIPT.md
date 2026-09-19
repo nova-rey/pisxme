@@ -1,0 +1,3 @@
+# CM5/Ethernet edge serialized integration failure
+
+Integrated candidate `78c4cc2a` was checked in a fresh KiCad Light 10.0.6 worker with the canonical project context. The report contains 298 violations and 393 unconnected items. It reintroduces the C48–C51/C8 lower-edge solder-mask and clearance findings plus CM5_5V clearance/hole findings that were absent from the producer receipt (264 violations). This is a context/reconciliation failure requiring the owning supervisor to reconcile rule/zone-fill context; it is not evidence to relax rules or alter protected geometry. The candidate is not promoted to canonical `reva-clean`.

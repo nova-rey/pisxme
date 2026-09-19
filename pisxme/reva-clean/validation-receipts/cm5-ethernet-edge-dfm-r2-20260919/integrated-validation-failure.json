@@ -1,0 +1,12 @@
+{
+  "candidate_commit": "78c4cc2a",
+  "command": "/usr/bin/kicad-cli pcb drc --severity-all --format json --output /workspace/output/cm5-integrated-drc.json /workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "image": "pisxme-kicad-light:v1",
+  "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "kicad_version": "10.0.6",
+  "violations": 298,
+  "unconnected_items": 393,
+  "targeted_failure": "Integrated fresh Light context reintroduced the lower-edge/zone findings absent from the producer receipt; no canonical promotion authorized.",
+  "sha256": "629f6dc435b786a9f8bae391e5f193081b753e49ceeef5e1964785b006ff4dcc",
+  "validated_at": "2026-09-19T00:29:20.361560+00:00"
+}

@@ -5173,7 +5173,7 @@
       "evidence_refs": [],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required.",
-      "owner": "supervisor_local_rails",
+      "owner": null,
       "priority": 5,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5190,19 +5190,28 @@
         }
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
-      "session_ids": [
-        "cm5-ethernet-edge-r2-validation-20260919"
-      ],
-      "status": "VALIDATING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:26:50.007302Z",
+      "updated_at": "2026-09-19T00:29:33.928466Z",
       "validation": {
         "required": [
           "targeted native DRC",
           "edge-clearance census",
           "3D/assembly/service evidence"
         ],
-        "results": {}
+        "results": {
+          "edge-clearance census": {
+            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/INTEGRATION_FAILURE_RECEIPT.md",
+            "recorded_at": "2026-09-19T00:29:20.445547Z",
+            "status": "FAIL"
+          },
+          "targeted native DRC": {
+            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/INTEGRATION_FAILURE_RECEIPT.md",
+            "recorded_at": "2026-09-19T00:29:20.399375Z",
+            "status": "FAIL"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
@@ -5296,5 +5305,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:26:50.007761Z"
+  "updated_at": "2026-09-19T00:29:33.928946Z"
 }

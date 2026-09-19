@@ -1675,3 +1675,7 @@ The integrated L10/U11 geometry passed 2D courtyard/edge checks and rendered und
 # 2026-09-19 — CM5/Ethernet edge candidate returned for serialized validation
 
 The reconciled CM5/Ethernet edge candidate `a09c181b` is recorded as VALIDATING in the Main Work Queue from current canonical state. Its retained receipt `validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/` records zero shorts, zero library-footprint issues, zero XIN/XOUT width findings, zero copper-edge-clearance findings, and clearance of the C7/C8 courtyard overlap; only the scoped C48–C51, C8, and CM5_5V delta is included. Canonical integration and fresh Light validation remain pending.
+
+# 2026-09-19 — CM5/Ethernet integrated validation rejected
+
+Fresh canonical-context KiCad Light validation of integrated candidate `78c4cc2a` returned 298 violations and 393 unconnected items, reintroducing lower-edge/zone findings absent from the producer receipt. The raw report and failure receipt are retained under `validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/`; no board promotion occurred. The package was released back to its owning supervisor for bounded rule/zone-fill context reconciliation, with no global rule relaxation or protected-bus edits authorized.
