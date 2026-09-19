@@ -1,0 +1,21 @@
+{
+  "originating_work_package": "P24-MPA-M2-SERVICE-CORRIDOR",
+  "decision": "BINDING_DECISION",
+  "authority": "Macro Placement Authority",
+  "base_sha": "3d95d6c08f60b667d8d3d061fefcb1dfda269b53",
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256": "9d874cb56f7a7f2a11481f1bed893775d741a073763b8297c94c82ec9e3d119f",
+  "placements": {
+    "J3": {"position_mm": [220.0,165.0],"rotation_deg":0.0,"side":"F.Cu","state":"FIXED","identity":"TE 1-2199230-4 M-key"},
+    "MECH_M2_2280": {"position_mm":[260.0,160.0],"rotation_deg":0.0,"side":"B.Cu","state":"FIXED","envelope_mm":[220.0,149.0,300.0,171.0],"retention_datum_mm":[297.5,160.0],"interpretation":"FULL_CARD_INSERTION_SERVICE_ENVELOPE"},
+    "J8": {"from_mm":[245.0,150.0],"to_mm":[205.0,140.0],"rotation_deg":0.0,"side":"F.Cu","state":"MOVE_ONLY_LOCAL_CHANGE","population":"IN_BOM_ON_BOARD_DNP_FALSE"},
+    "U14": {"position_mm":[210.0,150.0],"rotation_deg":0.0,"state":"FIXED"}
+  },
+  "fixed_anchors": {"J1":[150.0,90.0],"J5":[12.0,25.0],"J6":[12.0,45.0],"J7":[35.0,130.0],"U7":[96.0,124.0],"U11":[140.0,135.0],"U12":[165.0,135.0],"U13":[180.0,135.0],"U14":[210.0,150.0],"J3":[220.0,165.0]},
+  "measured_findings": {"j8_mech_overlap_mm":[4.09,3.14],"j3_mech_overlap_mm":[30.64,11.09],"j8_pth_inside_courtyard":4,"j3_pth_inside_courtyard":1},
+  "corridors": {"card_insertion":"right_edge_to_J3_along_x_220_to_300_y_149_to_171","j8_mode_control":"short_local_north_west_of_U14_then_east_or_control_corridor","protected":["U13-to-J3 high-speed corridors","J3 STORAGE_3V3 launches","U11/U12 support copper","CM5 USB3","CM5_PERST","J1 PCIe/reference copper","power and ground planes"]},
+  "contract_correction": {"state":"REQUIRED","issue":"signed mechanical contract names stale JAE SM3ZS067U410ABR1000 B-key while current selected Path-A board and storage authority use TE 1-2199230-4 M-key","action":"correct provenance through Storage/Mechanical Authority before closure","does_not_authorize":"replacing current J3 with stale JAE/B-key"},
+  "constraints": ["preserve Path-A dual-mode topology","J8 remains populated DNP=false","no simultaneous FORCE_SATA and FORCE_NVME","preserve full card envelope and retention datum","no global rule relaxation","no synthetic connectivity","no DRC suppression","no silent envelope shrink","no Phase 26"],
+  "next_validation": ["isolated producer implements J8 move and explicit card-versus-connector mechanical representation","targeted Light DRC/connectivity","Heavy insertion/removal/retention/service check"],
+  "authoritative_baseline": "J3 and full 2280 envelope fixed at current Path-A datum; J8 bound to 205.000,140.000,0 deg,top side; only permitted local placement change is J8 relocation; associated connector/card overlap requires explicit mechanical representation and stack validation."
+}

@@ -1727,3 +1727,7 @@ The bounded M2 service-envelope attempt produced no candidate or terminal eviden
 ## 2026-09-19 HPQ #6 reconciliation and M2 corridor authority dispatch
 
 HPQ Issue #6 `resolution-ready` was reconciled at the current campaign boundary. Its normalized packet confirms the prior protected-bus R1 fuse/corridor geometry is superseded; the binding R2 upstream authority packet `validation-receipts/protected-bus-upstream-authority-revision-20260918/` remains the producer handoff, while Issue #7 continues to gate the protected-bus producer. The independent M2 mechanical package is parked only on a new Macro Placement Authority decision (`P24-MPA-M2-SERVICE-CORRIDOR`); no CAD changes were made.
+
+## 2026-09-19 MPA M2 service-corridor decision
+
+Macro Placement Authority closed `P24-MPA-M2-SERVICE-CORRIDOR` with a binding decision at board base `3d95d6c08f60b667d8d3d061fefcb1dfda269b53`. J3 remains the selected TE `1-2199230-4` M-key at (220,165); the complete 2280 card/insertion envelope remains fixed at (260,160) with right-edge insertion; J8 is the sole local placement change, moving to (205,140), 0° top side. The J3/card overlap is intrinsic mating geometry and requires explicit connector-mating versus full-card representation plus stack/retention validation; no waiver or envelope shrink is authorized. The existing mechanical contract's JAE/B-key J3 identity is stale and must be corrected to the TE M-key provenance before closure. M2 was released for isolated implementation.
