@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "decision_id": "PISXME-P24-PROTECTED-BUS-CORRECTIVE-20260919-R3",
+  "package_id": "P24-PROTECTED-BUS-AUTHORITY-R3",
+  "originating_package_id": "P24-PROTECTED-BUS-AUTHORITY-R3",
+  "status": "BINDING_DECISION_FOR_PRODUCER_REQUIRES_PROTOTYPE_VALIDATION",
+  "authority": "Product / Power Authority",
+  "signed_by": "/root/power_authority_r3",
+  "signed_date": "2026-09-19",
+  "canonical_head_reviewed": "0b1b08af2b036bceb916f8984c8bebe365e31178",
+  "cad_changed": false,
+  "hardware_operated": false,
+  "production_qualification_claimed": false,
+  "decision": {
+    "route": "REALLOCATE_COMPLETE_HOT_PATH_BUDGET",
+    "common_topology": "LM74700QDBVRQ1 + CSD19536KCS + SMBJ18A + 100nF common protected stage",
+    "replacement_device_selected": false,
+    "complete_hot_path_max_mohm": 10.0,
+    "r3_implementation_cap_mohm": 8.5,
+    "no_six_loop_revival": true,
+    "no_parallel_u2_q2_credit": true,
+    "no_passive_sharing_credit": true
+  },
+  "product_contract": {
+    "source_nominal_v": 12.0,
+    "source_window_v": [11.4, 12.6],
+    "sustained_product_w": 300.0,
+    "peak_product_w": 330.0,
+    "peak_duration_ms": 100,
+    "source_continuous_a": 40.0,
+    "source_peak_a": 45.0,
+    "protected_min_v": {"sustained": 11.05, "peak": 11.0},
+    "protected_max_v": 12.6,
+    "declared_low_voltage_load_w": 22.7,
+    "conversion_efficiency": 0.9,
+    "temperature_design": {"ambient_c": 40.0, "q1_case_max_c": 125.0}
+  },
+  "calculations": {
+    "product_input_current_a": {"sustained": 31.452, "peak": 34.376},
+    "source_margin_a": {"continuous": 8.548, "peak": 10.624},
+    "drop_at_source_cap_v": {"40a": 0.34, "45a": 0.3825, "product_sustained": 0.267342, "product_peak": 0.292196},
+    "protected_voltage_at_11_4v": {"40a": 11.06, "45a": 11.0175, "product_sustained": 11.132658, "product_peak": 11.107804},
+    "q1_loss_w_at_r3_bound": {"40a_continuous": 6.912, "45a_100ms": 8.748, "product_sustained": 4.269, "product_peak": 5.103},
+    "q1_hot_bound_derivation": "2.70 mOhm TI maximum at 25 C x 1.60 normalized RDS(on) factor from Figure 4-8 at Tc=125 C = 4.32 mOhm"
+  },
+  "resistance_budget_mohm": [
+    {"term": "source_harness_connector_crimp_loop", "max_hot": 1.8, "path": "one worst positive-plus-return branch"},
+    {"term": "branch_fuse_holder_contacts", "max_hot": 0.55, "path": "one worst branch F1-F9"},
+    {"term": "raw_branch_pcb_positive_return", "max_hot": 0.65, "path": "branch necks through join"},
+    {"term": "positive_return_join_and_transition_vias", "max_hot": 0.45, "path": "12V_BRANCH_JOIN + POWER_RETURN_JOIN"},
+    {"term": "q1_csd19536kcs_channel", "max_hot": 4.32, "path": "common positive path; Q1 Tc <=125 C"},
+    {"term": "q1_package_leads_pads_transition", "max_hot": 0.15, "path": "not included in RDS(on)"},
+    {"term": "protected_bus_to_j1_field", "max_hot": 0.25, "path": "positive plus return copper and vias"},
+    {"term": "j1_contacts_and_spreading", "max_hot": 0.25, "path": "mapped J1 positive and return field"},
+    {"term": "explicit_residual_accounting_margin", "max_hot": 0.08, "path": "uncertainty allowance; no unidentified term"}
+  ],
+  "resistance_budget_total_mohm": 8.5,
+  "branch_contract": {
+    "headers": ["J5", "J6", "J9"],
+    "fuse_refs": ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9"],
+    "connector_mpn": "Molex 0039300060 / 39-30-0060",
+    "positive_pads": [1, 2, 3],
+    "return_pads": [4, 5, 6],
+    "pairing": [[1, 4], [2, 5], [3, 6]],
+    "branch_continuous_target_a": 4.4444444444,
+    "branch_peak_target_a": 5.0,
+    "contact_screen_a": 7.0,
+    "balance_screen_fraction": 0.10,
+    "fuse_is_fault_isolation_only": true,
+    "enforcement": "Independent branch current and four-wire resistance observation required; reject aggregate credit if any energized branch exceeds 7 A, balance exceeds 10 percent of mean, or branch hot loop exceeds 1.80 mOhm.",
+    "n_minus_1_credit": false,
+    "passive_sharing_credit": false
+  },
+  "protection": {
+    "controller": "TI LM74700QDBVRQ1",
+    "pass_fet": "TI CSD19536KCS",
+    "tvs": "SMBJ18A",
+    "vcap": "Murata GRM188R71H104KA93D 100 nF",
+    "q1_datasheet": {"rds_on_max_25c_mohm": 2.7, "rds_on_typ_25c_mohm": 2.3, "vgs_basis_v": 10.0, "id_basis_a": 100.0, "normalized_hot_factor": 1.6, "hot_design_bound_mohm": 4.32},
+    "q1_thermal": {"rtheta_jc_max_c_per_w": 0.4, "rtheta_ja_max_c_per_w": 62.0, "case_limit_c": 125.0, "installed_heatsink_or_copper_required": true},
+    "u2_q2_parallel_credit": false,
+    "tvsa_clamp_and_energy": "Requires declared waveform, source impedance, fuse I2t, Q1 SOA, and TVS pulse-energy calculation; no automotive load-dump claim."
+  },
+  "rail_review": {
+    "raw_source": {"status": "REQUIRES_PROTOTYPE_VALIDATION", "points": ["source Kelvin", "connector Kelvin", "branch current"], "risks": ["source impedance", "harness inductance", "contact bounce", "crimp heating"]},
+    "12v_protected": {"status": "REQUIRES_PROTOTYPE_VALIDATION", "static_drop": "I*Rhot", "transient_model": "dI*ESR + Lloop*dI/dt + control response", "risks": ["PDN impedance", "package inductance", "ground bounce", "Q1 SOA", "TVS energy"]},
+    "cm5_5v": {"nominal_v": 5.0, "design_load_a": 3.0, "regulator": "TPSM63606", "regulator_rating_a": 6.0, "utilization": 0.5, "effective_output_cap_min_uf": 30.0, "status": "UNPROVEN"},
+    "bridge_3v3": {"nominal_v": 3.3, "design_load_a": 2.0, "regulator": "TPSM63606", "regulator_rating_a": 6.0, "utilization": 0.3333333333, "effective_output_cap_min_uf": 50.0, "status": "UNPROVEN", "current_census_gap": "zero serialized bridge copper/vias in retained canonical census"},
+    "bridge_1v1": {"nominal_v": 1.1, "design_load_a": 1.0, "regulator": "TPSM63606", "regulator_rating_a": 6.0, "utilization": 0.1666666667, "conservative_effective_cap_screen_uf": 300.0, "prior_effective_cap_screen_uf": 253.44, "status": "UNPROVEN", "current_census_gap": "zero serialized bridge copper/vias in retained canonical census"},
+    "power_gnd_return": {"status": "REQUIRES_PROTOTYPE_VALIDATION", "join": "nine distinct returns -> POWER_RETURN_JOIN -> POWER_GND -> mapped J1 returns", "ground_bounce": "I*Zreturn; Zreturn not extracted"}
+  },
+  "sequencing": {
+    "v100_inhibit_when": ["source/protected bus outside 11.00-12.60 V", "branch or protection fault", "fuse/return continuity failure", "controlled shutdown"],
+    "reset_policy": "hold endpoint reset until protected bus and required local rails are in range and power-good is stable",
+    "brownout_restart": "remove endpoint enable, preserve inhibit, discharge, capture fault, then requalify before restart",
+    "status": "REQUIRES_PROTOTYPE_VALIDATION",
+    "missing": ["SXM2 endpoint timing", "brownout hysteresis", "reset polarity/timing", "firmware restart waveform"]
+  },
+  "confidence_limits": ["no load-step amplitude or slew", "no complete PDN/package impedance", "no capacitor ESR/ESL versus bias and temperature", "no connector/harness hot measurement", "no via-current or plane impedance extraction", "no fuse-clearing waveform", "no fabricated thermal or SXM2 measurements"],
+  "producer_scope": ["implement only authorized nine-branch source topology and R2 corridors", "return native netlist/ERC/DRC and branch census", "return every resistance term and total <=8.50 mOhm hot", "return Q1 gate/VDS/SOA/thermal and TVS/fuse coordination", "return source/protected/J1 Kelvin points and synchronized validation plan"],
+  "prohibited": ["six-loop limiter revival", "U2/Q2 parallel credit", "passive-sharing credit", "15 A fuse treated as 5 A limiter", "global rule relaxation", "J1 remapping", "unbounded routing retries"],
+  "provenance": {
+    "hpq7_result": "/home/nyx/.local/state/codex-hard-problems/runs/20260919T175244Z-7-sol/result.json",
+    "hpq7_artifact_manifest_sha256": "7c9ab32f02fd703744a5f8d750c0d0c532d457b8d078be464780b253803e7b7b",
+    "csd19536kcs_pdf_sha256": "046e4114e22acea247ff45074005c749c498012656cd69f2c79922549df0534e",
+    "lm74700_q1_pdf_sha256": "e16b3a8c0023201fafa5825436f5f2dd6f885b92b84e65602b3f50d741c58b6f",
+    "smbj18a_authority_sha256": "4e63353741e69f7f6186e314f8caf93b4b62265166f97e2a32445d1d25280158",
+    "r2_upstream_authority": "validation-receipts/protected-bus-upstream-authority-revision-20260918/",
+    "nine_branch_contract": "validation-receipts/power-input-nine-branch-contract-20260918/",
+    "integrated_failure": "validation-receipts/protected-bus-integrated-validation-20c9cb12/"
+  }
+}
