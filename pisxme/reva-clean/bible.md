@@ -1755,3 +1755,7 @@ The supported R2 worker prepared the exact detached workspace and reproduced the
 ## 2026-09-19 M2 R3 implementation capability stall
 
 The direct implementer also returned no process, mutation, candidate, or terminal command evidence. The result is retained at `validation-receipts/m2-producer-r3-stall-20260919/`; M2 is parked on `unblocker:m2-implementation-capability-r3`. This is a localized execution-capability blocker, not an architecture or product decision. No candidate, waiver, or Phase 26 work was introduced.
+
+## 2026-09-19 M2 candidate integrated for fresh validation
+
+The M2 producer artifact was reconciled against current HEAD `18fc2461`: existing pad/net signatures match all 1,270 pads; J8 is at (205,140); TE M-key J3 remains fixed; separate full-card and connector-mating mechanical representations are present. The stale JAE/B-key contract field was corrected in `validation-receipts/mechanical-3d-envelope-authority-correction-20260919/`. The candidate is now the serialized integration candidate pending fresh Light and Heavy validation.
