@@ -1739,3 +1739,7 @@ The MPA dependency resolved and `P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE` was 
 ## 2026-09-19 M2 producer capability change
 
 The first M2 Supervisor remained live without a candidate or terminal state across bounded checks, so Root released it and changed capability level. Direct KiCad producer `kicad_m2_service_producer` now owns the same isolated scope: J8 relocation to (205,140), TE M-key provenance correction, explicit connector-mating/full-card representation, and targeted Light/Heavy validation. No architecture or DRC relaxation changed.
+
+## 2026-09-19 M2 implementation stall routed to Unblocker
+
+The M2 Supervisor and direct KiCad producer both failed to produce a process or terminal artifact in bounded attempts. Root released both and created `P24-M2-IMPLEMENTATION-UNBLOCKER`, parking only the dependent M2 package. Unblocker must identify one supported implementation route for the unchanged MPA scope; no architecture reopening, DRC waiver, or Phase 26 work is permitted.
