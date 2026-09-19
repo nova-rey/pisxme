@@ -1767,3 +1767,7 @@ M2 integrated validation at `9c2a6df5` removed its J8/card-body courtyard and PT
 ## 2026-09-19 Mechanical dependency split after M2
 
 Fresh current-head Light evidence at `f90e7a75` confirms L10 is already at its authorized `(143,127.8)` placement with no L10/U11 DRC references. Its 2D closure is retained, while 3D/assembly/service remains waiting on the shared unresolved mechanical model-envelope dependency. CM5/Ethernet edge DFM was dispatched to a read-only current-head verifier; it remains independent of the protected-bus and L10 evidence gap.
+
+## 2026-09-19 CM5/Ethernet current-head DFM verification
+
+Current-head Light verification at `f90e7a75` confirms the integrated r3 CM5/Ethernet scoped geometry: zero shorts, zero copper-edge-clearance violations, zero C7/C8 courtyard overlap, and no C48–C51 edge-clearance violations. Full 3D assembly/service evidence remains UNPROVEN under the shared mechanical model-envelope dependency, so only the scoped 2D work is retained and the package is parked on that dependency.

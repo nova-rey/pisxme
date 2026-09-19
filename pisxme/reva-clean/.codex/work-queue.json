@@ -5174,17 +5174,18 @@
       "base_sha": "c7c8cd88",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/candidate.kicad_pcb",
-        "base_sha": "ab9e8c7350371760169296a201783a315438e6a6",
-        "returned_at": "2026-09-19T00:33:45.428947Z",
-        "returned_by": "supervisor_local_rails",
-        "sha": "d0fc415f9b9b5542ea10f6eae21c509f07843404"
+        "artifact": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
+        "base_sha": "f90e7a7566dc80960fdb6fcbf23e418cbe5315ea",
+        "returned_at": "2026-09-19T02:06:37.679394Z",
+        "returned_by": "verifier_cm5_edge_current",
+        "sha": "338ab87eda178e9569b2230f855219011479bdab47b18637d6d26087cbe2c799"
       },
       "completion_criterion": "Current-head isolated candidate closes only the listed lower-edge findings without changing protected-bus or high-speed geometry, and returns candidate SHA, changed-scope hash and targeted Light/DFM evidence for serialized integration.",
       "created_at": "2026-09-18T23:56:22.785777Z",
       "dependencies": [
         "unblocker:cm5-ethernet-edge-dfm-reconciliation",
-        "package:P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE"
+        "package:P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
+        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
       ],
       "domain": "mechanics/DFM/CM5/Ethernet",
       "edit_boundaries": [
@@ -5203,7 +5204,7 @@
       ],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required. Authority contract package completed at eff269f2; downstream Heavy 3D/assembly validation is now READY. Heavy validation retained 2D pass but found open J3/J8/M.2 service-envelope requirements; waiting on bounded closure package.",
-      "owner": "verifier_cm5_edge_current",
+      "owner": null,
       "priority": 5,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5220,12 +5221,10 @@
         }
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
-      "session_ids": [
-        "root-cm5-current-20260919T0320Z"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T02:03:13.243330Z",
+      "updated_at": "2026-09-19T02:06:43.097926Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5233,19 +5232,26 @@
           "3D/assembly/service evidence"
         ],
         "results": {
+          "3D/assembly/service evidence": {
+            "receipt": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T02:06:37.875223Z",
+            "status": "FAIL"
+          },
           "edge-clearance census": {
-            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/INTEGRATED_VALIDATION_RECEIPT.md",
-            "recorded_at": "2026-09-19T00:34:49.134896Z",
+            "receipt": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T02:06:37.826995Z",
             "status": "PASS"
           },
           "targeted native DRC": {
-            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/INTEGRATED_VALIDATION_RECEIPT.md",
-            "recorded_at": "2026-09-19T00:34:49.085824Z",
+            "receipt": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T02:06:37.776491Z",
             "status": "PASS"
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+      ],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5581,5 +5587,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T02:03:13.243609Z"
+  "updated_at": "2026-09-19T02:06:43.098219Z"
 }
