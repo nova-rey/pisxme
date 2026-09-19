@@ -1703,3 +1703,7 @@ A bounded follow-up acquisition attempt found no new authoritative package or co
 # 2026-09-19 — Mechanical 3D envelope authority package dispatched
 
 Unblocker classified the remaining mechanical evidence gap as an internal Mechanical/DFM Authority dependency. New package `P24-MECHANICAL-3D-ENVELOPE-AUTHORITY` is dispatched to `supervisor_mechanics_dfm` to issue one signed machine-readable contract covering L10/Y10/J8, J1/J3 service boundaries, and the Rev-A cooler/backplate boundary. The CM5 and L10 packages now wait on this package; their validated 2D evidence remains preserved.
+
+# 2026-09-19 — Signed mechanical 3D envelope authority contract
+
+Mechanical/DFM Authority contract `PISXME-P24-MECHANICAL-3D-ENVELOPE-20260919-R1` is retained under `validation-receipts/mechanical-3d-envelope-authority-20260919/`. It binds L10/Y10 XY envelopes, J8 population/mode topology, J1/J3 manufacturer and service boundaries, and the Rev-A module-mounted cooler boundary. Exact Z heights, accessory fit, and selected cooler assembly remain explicitly UNPROVEN or prototype-validation dispositions; no waivers or CAD edits are claimed.
