@@ -1731,3 +1731,7 @@ HPQ Issue #6 `resolution-ready` was reconciled at the current campaign boundary.
 ## 2026-09-19 MPA M2 service-corridor decision
 
 Macro Placement Authority closed `P24-MPA-M2-SERVICE-CORRIDOR` with a binding decision at board base `3d95d6c08f60b667d8d3d061fefcb1dfda269b53`. J3 remains the selected TE `1-2199230-4` M-key at (220,165); the complete 2280 card/insertion envelope remains fixed at (260,160) with right-edge insertion; J8 is the sole local placement change, moving to (205,140), 0° top side. The J3/card overlap is intrinsic mating geometry and requires explicit connector-mating versus full-card representation plus stack/retention validation; no waiver or envelope shrink is authorized. The existing mechanical contract's JAE/B-key J3 identity is stale and must be corrected to the TE M-key provenance before closure. M2 was released for isolated implementation.
+
+## 2026-09-19 M2 implementation released
+
+The MPA dependency resolved and `P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE` was claimed by `supervisor_m2_service_corridor`. Its isolated implementation must apply only the J8 relocation and explicit connector-mating/full-card representation, with TE M-key provenance correction and targeted Light/Heavy validation.
