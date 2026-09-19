@@ -1654,3 +1654,6 @@ The mechanics supervisor confirmed that L10/U11 and the CM5/Ethernet lower-edge 
 # 2026-09-18 — Filled second independent mechanics worker
 
 `P24-MECHANICS-CM5-ETHERNET-EDGE-DFM` is now RUNNING under `supervisor_local_rails` from the same committed base. It is limited to C7/C8 CM5 lower-edge and Ethernet C48–C51 edge findings plus evidence preparation; it does not touch the protected-bus corridor. Two independent mechanics packages are now active while HPQ #7 remains confined to the protected-bus producer.
+# 2026-09-19 — L10/U11 candidate integrated for fresh validation
+
+The producer candidate `f069f2cf` was reconciled from base `c7c8cd88` onto current canonical `HEAD` without CAD overlap from intervening commits. Its authorized L10 move to `(143.00,127.80)` and local LXO/VDDREG support routes were promoted into `PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb` in this integration worktree. Producer receipts and the candidate board are retained; this commit is an integration candidate only and requires fresh KiCad Light validation before queue completion.

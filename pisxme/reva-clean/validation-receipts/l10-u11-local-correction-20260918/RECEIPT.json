@@ -1,0 +1,13 @@
+{
+  "package_id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "base_sha": "c7c8cd885259bcb17a4a76b7ba9809d57cc96b0d",
+  "authority": "PISXME-P24-STORAGE-PLACEMENT-CORRIDOR-20260918-R1",
+  "candidate": "PHASE24_L10_U11_LOCAL_CORRECTION.kicad_pcb",
+  "scope": {"L10_position_mm": [143.0,127.8], "protected_bus_edits": false, "global_rule_changes": false},
+  "targets": ["U11.64 LXO -> L10.1", "U11.1 JMS_VDDREG_5V -> L10.2", "U12.1 JMS_VDDREG_5V -> L10.2"],
+  "baseline": {"violations": 300, "unconnected": 499},
+  "candidate": {"violations": 289, "unconnected": 393, "courtyard_overlap": 5, "tracks_crossing": 2},
+  "validation": "KiCad Light 10.0.6 native DRC plus LXO/VDDREG negative controls",
+  "light_image_digest": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "status": "CANDIDATE_READY"
+}
