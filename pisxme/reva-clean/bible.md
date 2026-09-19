@@ -1687,3 +1687,7 @@ The CM5/Ethernet Supervisor returned r3 candidate `d0fc415f` from current base `
 # 2026-09-19 — CM5/Ethernet r3 candidate integrated and validated
 
 The corrected CM5/Ethernet candidate was serialized onto canonical `reva-clean` as integration commit `ff4dd1dd` and independently checked in KiCad Light 10.0.6 with the standard no-refill command. The report matches the producer result at 264 violations and 393 unconnected items and preserves the scoped zero-short, library-context, edge-clearance, and courtyard conditions. The integrated validation receipt is retained under `validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/`; no protected-bus, J1, high-speed, or global-rule changes occurred.
+
+# 2026-09-19 — CM5/Ethernet 2D closure retained; shared 3D evidence remains open
+
+The CM5/Ethernet r3 candidate is canonically integrated and its targeted native DRC and edge-clearance rows pass. The package is parked only on the shared `knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES` dependency because full assembly/service evidence remains unproven for the affected mechanical envelope; no 3D pass was fabricated.
