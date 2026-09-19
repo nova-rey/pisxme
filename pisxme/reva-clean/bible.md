@@ -1763,3 +1763,7 @@ The M2 producer artifact was reconciled against current HEAD `18fc2461`: existin
 ## 2026-09-19 M2 closure unlocks mechanical queue
 
 M2 integrated validation at `9c2a6df5` removed its J8/card-body courtyard and PTH findings and retained the full-card/mating representation. Heavy rendering passed as a representation check; exact insertion/retention remains explicitly `REQUIRES_PROTOTYPE_VALIDATION`. The M2 package is closed at scoped design-validation level, unlocking L10/U11 and CM5/Ethernet DFM packages. L10 rebase/validation is dispatched first under the one-CAD-container policy; CM5/Ethernet remains READY for refill after that CAD slot returns.
+
+## 2026-09-19 Mechanical dependency split after M2
+
+Fresh current-head Light evidence at `f90e7a75` confirms L10 is already at its authorized `(143,127.8)` placement with no L10/U11 DRC references. Its 2D closure is retained, while 3D/assembly/service remains waiting on the shared unresolved mechanical model-envelope dependency. CM5/Ethernet edge DFM was dispatched to a read-only current-head verifier; it remains independent of the protected-bus and L10 evidence gap.
