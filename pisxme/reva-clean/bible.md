@@ -1719,3 +1719,7 @@ Current-head Heavy/Light validation against board `eedf9e72` and authority `eff2
 # 2026-09-19 — Open J3/J8 M.2 service envelope package
 
 Heavy validation confirms L10/Y10 XY bounds and J1 2D bounds, but the integrated board still has J8/M.2 and J3/M.2 envelope conflicts, with J3/PTH/courtyard findings explicitly unwaived. New package `P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE` is dispatched to resolve those mechanical/service requirements without touching protected or high-speed corridors. The L10 and CM5 packages retain their 2D passes and wait on this bounded closure.
+
+# 2026-09-19 — M2 service-envelope attempt routed to Unblocker
+
+The bounded M2 service-envelope attempt produced no candidate or terminal evidence within its execution window. Root released the stale Supervisor claim and routed the implementation stall to Unblocker for a capability-level disposition; no CAD was changed and no J3/J8 finding was waived.

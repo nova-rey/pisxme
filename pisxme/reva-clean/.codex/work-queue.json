@@ -5390,7 +5390,7 @@
       "evidence_refs": [],
       "id": "P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
       "notes": "Created from mechanical Heavy validation receipt 0dba465e; no existing J3/J8 finding is waived. Preserve current storage electrical contract.",
-      "owner": "supervisor_mechanics_dfm",
+      "owner": null,
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5407,12 +5407,10 @@
         }
       ],
       "scope": "Resolve the integrated J3 2280 socket versus MECH_M2_2280 envelope/courtyard/PTH conflicts and J8 mode-service access contract. Produce one authority-bounded placement/correction candidate or an explicit product/authority escalation. Preserve J1, protected bus, high-speed corridors, storage electrical topology, and no global rule changes.",
-      "session_ids": [
-        "mech-m2-service-envelope-20260919"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Close J3/J8 M.2 insertion and storage-mode service envelope",
-      "updated_at": "2026-09-19T00:56:59.154413Z",
+      "updated_at": "2026-09-19T01:00:29.358742Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5433,5 +5431,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:56:59.154664Z"
+  "updated_at": "2026-09-19T01:00:29.359211Z"
 }
