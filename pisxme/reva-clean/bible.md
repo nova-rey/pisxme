@@ -1699,3 +1699,7 @@ Private Library commit `ae118fb2` now indexes the mechanical 3D/assembly/service
 # 2026-09-19 — Mechanical 3D evidence bounded gap recorded
 
 A bounded follow-up acquisition attempt found no new authoritative package or cooler/service evidence beyond private Library commit `ae118fb2`. The remaining L10/Y10, J8, and named cooler/backplate/service-envelope gaps are recorded under `validation-receipts/mechanical-3d-evidence-gap-20260919/` as UNPROVEN; Unblocker review is requested. No CAD waiver or fabricated 3D pass is claimed.
+
+# 2026-09-19 — Mechanical 3D envelope authority package dispatched
+
+Unblocker classified the remaining mechanical evidence gap as an internal Mechanical/DFM Authority dependency. New package `P24-MECHANICAL-3D-ENVELOPE-AUTHORITY` is dispatched to `supervisor_mechanics_dfm` to issue one signed machine-readable contract covering L10/Y10/J8, J1/J3 service boundaries, and the Rev-A cooler/backplate boundary. The CM5 and L10 packages now wait on this package; their validated 2D evidence remains preserved.

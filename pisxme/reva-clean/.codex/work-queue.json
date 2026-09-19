@@ -5168,7 +5168,7 @@
       "created_at": "2026-09-18T23:56:22.785777Z",
       "dependencies": [
         "unblocker:cm5-ethernet-edge-dfm-reconciliation",
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "package:P24-MECHANICAL-3D-ENVELOPE-AUTHORITY"
       ],
       "domain": "mechanics/DFM/CM5/Ethernet",
       "edit_boundaries": [
@@ -5186,7 +5186,7 @@
         "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
-      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested.",
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required.",
       "owner": null,
       "priority": 5,
       "project": "nova-rey/pisxme",
@@ -5228,7 +5228,7 @@
         }
       },
       "waiting_on": [
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "package:P24-MECHANICAL-3D-ENVELOPE-AUTHORITY"
       ],
       "workstream": "phase24-mechanics-dfm"
     },
@@ -5249,7 +5249,7 @@
       "completion_criterion": "Current-head isolated candidate moves L10 exactly as authorized, preserves protected/high-speed geometry, and returns candidate SHA, changed-scope hash, targeted Light evidence and assembly/DFM receipt for serialized integration.",
       "created_at": "2026-09-18T23:56:32.423424Z",
       "dependencies": [
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "package:P24-MECHANICAL-3D-ENVELOPE-AUTHORITY"
       ],
       "domain": "mechanics/DFM/storage",
       "edit_boundaries": [
@@ -5267,7 +5267,7 @@
         "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
-      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested.",
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required.",
       "owner": null,
       "priority": 4,
       "project": "nova-rey/pisxme",
@@ -5309,8 +5309,58 @@
         }
       },
       "waiting_on": [
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "package:P24-MECHANICAL-3D-ENVELOPE-AUTHORITY"
       ],
+      "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed machine-readable authority artifact is indexed with provenance and explicitly covers every requested envelope field or records an approved prototype-validation disposition for any deferred empirical dimension.",
+      "created_at": "2026-09-19T00:45:14.459088Z",
+      "dependencies": [],
+      "domain": "mechanical/DFM authority",
+      "edit_boundaries": [
+        "authority artifact only",
+        "private Library and public queue receipt as permitted",
+        "no CAD edits",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-MECHANICAL-3D-ENVELOPE-AUTHORITY",
+      "notes": "Created from Unblocker INTERNAL_ROUTE at bounded receipt mechanical-3d-evidence-gap-20260919; downstream mechanics packages must wait on authority:P24-MECHANICAL-3D-ENVELOPE-CONTRACT.",
+      "owner": "supervisor_mechanics_dfm",
+      "priority": 3,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "service_access",
+        "DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Issue one signed machine-readable Rev-A envelope contract covering L10 exact MPN/package and height or authorized bounded generic envelope; Y10 crystal variant, pad numbering, load and height; J8 DNP solder-link versus populated header/service contract; J1/J3 mating/service boundaries; and the Rev-A cooler/backplate boundary. Record source revisions, hashes, assumptions, derived bounding models, and prototype-validation dispositions. Do not change CAD.",
+      "session_ids": [
+        "mech-3d-envelope-authority-20260919"
+      ],
+      "status": "RUNNING",
+      "title": "Establish signed mechanical 3D assembly/service envelope contract",
+      "updated_at": "2026-09-19T00:45:42.135959Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     }
   ],
@@ -5326,5 +5376,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:35:22.353589Z"
+  "updated_at": "2026-09-19T00:45:42.136250Z"
 }
