@@ -1659,3 +1659,6 @@ The mechanics supervisor confirmed that L10/U11 and the CM5/Ethernet lower-edge 
 The L10/U11 producer candidate `f069f2cf` is now recorded as `VALIDATING` in the Main Work Queue. Its serialized integration candidate is `4ab178cc`, pushed to the temporary validation ref; the fresh Light run completed with 280 violations and 393 unconnected items using KiCad 10.0.6, with raw output retained on that integration ref. Canonical `reva-clean` has not yet promoted the integration commit; Root will cherry-pick it only after the validation receipt is imported and reconciled.
 
 The independent CM5/Ethernet edge producer cleared its target C48–C51 and C7/C8 findings but introduced two library-footprint and seven track-width regressions. It is parked on one bounded Unblocker reconciliation; no candidate is authorized for integration.
+# 2026-09-19 — L10/U11 integration candidate reconciled
+
+Producer commit `f069f2cf` was reconciled from base `c7c8cd88` onto current canonical state. The candidate board and producer receipts are retained, and the authorized L10 move plus local LXO/VDDREG support routes are staged in the canonical integration candidate. Fresh Light validation is recorded separately; queue promotion remains pending final result processing.
