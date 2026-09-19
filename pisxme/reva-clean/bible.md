@@ -1735,3 +1735,7 @@ Macro Placement Authority closed `P24-MPA-M2-SERVICE-CORRIDOR` with a binding de
 ## 2026-09-19 M2 implementation released
 
 The MPA dependency resolved and `P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE` was claimed by `supervisor_m2_service_corridor`. Its isolated implementation must apply only the J8 relocation and explicit connector-mating/full-card representation, with TE M-key provenance correction and targeted Light/Heavy validation.
+
+## 2026-09-19 M2 producer capability change
+
+The first M2 Supervisor remained live without a candidate or terminal state across bounded checks, so Root released it and changed capability level. Direct KiCad producer `kicad_m2_service_producer` now owns the same isolated scope: J8 relocation to (205,140), TE M-key provenance correction, explicit connector-mating/full-card representation, and targeted Light/Heavy validation. No architecture or DRC relaxation changed.
