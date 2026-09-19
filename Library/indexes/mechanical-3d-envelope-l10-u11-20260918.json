@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "mechanical-3d-envelope-l10-u11-20260918",
+  "retrieved": "2026-09-18",
+  "queue_package": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "candidate": "51e712ce4b794758ba48fa1f36fba48d2e83890e",
+  "question": "Can authoritative 3D, height, mating, cooler, assembly, and service evidence close the L10/U11/Y10/J1/J3/J8 mechanical row?",
+  "sources": [
+    {"id":"jms583-pds17001-rev2.1","tier":1,"revision":"PDS-17001 Rev 2.1 Figure 4","local":"pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/jms583/JMS583-datasheet-rev2.1.pdf","sha256":"27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529","facts":["QFN64 8 x 8 mm","A max 0.900 mm","0.400 mm pitch","25 MHz, +/-30 ppm, ESR <=55 ohm"]},
+    {"id":"jms583-u11-footprint","tier":3,"revision":"current integrated candidate","local":"pisxme/reva-clean/PiSXMe_RevA_Clean.pretty/JMS583_QFN64_8x8.kicad_mod","sha256":"11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05","facts":["64 signal pads plus EP65","EP 4.46 x 4.46 mm","9.2 x 9.2 mm courtyard"]},
+    {"id":"amphenol-74221-rev-w","tier":1,"revision":"74221 Rev W; product page current","local":null,"sha256":null,"facts":["400 contacts","10 x 40 at 1.27 mm","4.00 mm receptacle/mated stack","5.10 mm rework guidance from GS-20-033"]},
+    {"id":"sxm2-j1-project-footprint","tier":3,"revision":"current integrated candidate","local":"pisxme/reva-clean/PiSXMe_RevA_Clean.pretty/PiSXMeRevAClean_SXM2_74221_101LF.kicad_mod","sha256":"d67e826c787d498b8459d51197d300904504ec3ace7c505fc08821d3c4d99305","facts":["400-pad A1-K40 project pattern","project-derived courtyard"]},
+    {"id":"te-2199230-4-application","tier":1,"revision":"114-115006 Rev C; 04 Jan 2023","local":"pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/connectors/te/TE-114-115006-application-spec-revC.pdf","sha256":"3919d7af08573732ab864840b67a9a8520405a29e90d886ae5fef236d76586eb","facts":["2199230 is 4.2H family","M.2 insertion/removal and process guidance"]},
+    {"id":"te-2199230-4-customer-dxf","tier":1,"revision":"c-1-2199230-4-b3-2d","local":"pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/connectors/te/cad/TE-1-2199230-4-2d-dxf.zip","sha256":"89ab400716590e16d7b43165ecb0e4e7835bb6b0b077d00ecca7c9af1150b787","facts":["customer 2D PCB/package drawing basis"]},
+    {"id":"v100-cooler-backplate-reva-contract","tier":3,"revision":"checked 2026-08-29","local":"pisxme/reva-clean/authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md","sha256":"0e35f6adeea4af1a8b01c9b0dfc2a9b57c0ad91a045eee7e5fd732fe255e4797","facts":["module-mounted cooler assumed","carrier cooler/backplate pattern not authoritative"]},
+    {"id":"pisxme-mechanical-envelope-receipt","tier":3,"revision":"integrated candidate 51e712ce","local":"pisxme/reva-clean/validation-receipts/l10-u11-3d-assembly-service-20260918/RECEIPT.json","sha256":"8070073ee07643a9d3e618148e53846f28c6152ec09d3b250dd9dae9b42f7283","facts":["2D PASS","no models for L10/U11/Y10/J1/J3/J8","3D/mating/cooler/service UNPROVEN"]}
+  ],
+  "status": {
+    "l10": "UNPROVEN_NO_SELECTED_MPN_OR_HEIGHT",
+    "u11": "PARTIAL_PASS_PACKAGE_HEIGHT_0.900_MM_MAX",
+    "y10": "UNPROVEN_NO_SELECTED_MPN_OR_HEIGHT",
+    "j1": "PASS_CONNECTOR_HEIGHT_IDENTITY_FULL_MATING_UNPROVEN",
+    "j3": "PASS_4.2H_AND_2D_DRAWING_FULL_CABLE_SERVICE_UNPROVEN",
+    "j8": "UNPROVEN_GENERIC_MODE_STRAP_NO_MATING_CONTRACT",
+    "cooler_backplate": "SCOPE_BOUNDARY_CLOSED_NAMED_FIT_UNPROVEN",
+    "acceptance_row": "OPEN"
+  },
+  "gaps": [
+    "MECH-3D-GAP-L10-Y10 exact vendor MPN, body, maximum height and lawful model/drawing",
+    "MECH-3D-GAP-J8 selected strap/header part and service-access envelope",
+    "named V100 cooler/backplate and complete mated/service assembly envelope"
+  ],
+  "limits": [
+    "No manufacturer CAD was copied into the public development repository.",
+    "Project footprints and 2D courtyards prove board geometry only, not part height or mating clearance.",
+    "A successful Heavy render without models is not a 3D assembly pass."
+  ],
+  "brief": "Library/briefs/mechanical-3d-envelope-l10-u11-20260918.md"
+}

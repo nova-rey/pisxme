@@ -5603,3 +5603,17 @@ Librarian indexed manufacturer evidence for replacement prototype source assembl
 ## 2026-09-18 — P24 U11/U12 package authority reconciliation
 
 Indexed TI SLAS975A/RUA0042A and JMicron PDS-17001 Rev 2.1 package evidence plus TI SLUA271C QFN assembly guidance in `package-authority-u11-u12-20260918`. The PiSXMe U12 footprint's 0.40 mm pitch conflicts with TI's 0.50 mm contract and is rejected for routing pending isolated regeneration. U11 QFN64 geometry is compatible as a derived prototype land; exposed-pad stencil windowing, DFM, reflow, and inspection remain prototype gates. No public repository receives restricted/reference CAD.
+
+# 2026-09-18 — mechanical 3D envelope evidence indexed
+
+Librarian indexed `mechanical-3d-envelope-l10-u11-20260918` for
+`P24-MECHANICS-L10-U11-LOCAL-CORRECTION`. JMicron PDS-17001 closes U11's
+QFN64 body and 0.900 mm maximum package height; Amphenol 74221 Rev-W
+metadata closes J1 identity and 4.00 mm connector stack; TE 114-115006 Rev C
+and the retained customer DXF close the J3 4.2H/2D basis. L10 and Y10 remain
+UNPROVEN because the project has only generic values and no selected MPN or
+height/model. J8 remains UNPROVEN because its mode-strap hardware and service
+contract are unspecified. The Rev-A cooler/backplate authority closes scope,
+not fit for a named cooler. The complete mechanical 3D/assembly/service row
+remains OPEN. Bounded Researcher gaps `MECH-3D-GAP-L10-Y10` and
+`MECH-3D-GAP-J8` were recorded; no CAD or public repository material changed.

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "mechanical-3d-envelope-l10-u11-20260918",
+  "owner": "Librarian",
+  "retrieved": "2026-09-18",
+  "package_id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "project": "nova-rey/pisxme",
+  "public_repo": "reva-clean",
+  "integrated_candidate": "51e712ce4b794758ba48fa1f36fba48d2e83890e",
+  "access_disposition": "Private Library metadata and lawful local project-source hashes only; no restricted or manufacturer CAD copied to public development history.",
+  "source_records": [
+    {"id":"jms583-pds17001-rev2.1","publisher":"JMicron Technology Corporation","revision":"PDS-17001 Rev 2.1 Figure 4","url":"https://www.jmicron.com/file/download/1046/JMS583.pdf","local_reference":"pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/jms583/JMS583-datasheet-rev2.1.pdf","sha256":"27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529","tier":1,"class":"primary manufacturer package authority"},
+    {"id":"amphenol-74221-rev-w","publisher":"Amphenol Communications Solutions / FCI","revision":"74221 Rev W; product page current","url":"https://www.amphenol-cs.com/product/74221101lf.html","local_reference":null,"sha256":null,"tier":1,"class":"primary manufacturer connector authority","access_note":"Manufacturer CDN drawing direct capture returned HTTP 403; retain metadata and extracted facts only."},
+    {"id":"te-2199230-4-application","publisher":"TE Connectivity / Tyco Electronics AMP","revision":"114-115006 Rev C, 04 Jan 2023","url":null,"local_reference":"pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/connectors/te/TE-114-115006-application-spec-revC.pdf","sha256":"3919d7af08573732ab864840b67a9a8520405a29e90d886ae5fef236d76586eb","tier":1,"class":"primary manufacturer application specification"},
+    {"id":"te-2199230-4-customer-dxf","publisher":"TE Connectivity","revision":"c-1-2199230-4-b3-2d","url":null,"local_reference":"pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/connectors/te/cad/TE-1-2199230-4-2d-dxf.zip","sha256":"89ab400716590e16d7b43165ecb0e4e7835bb6b0b077d00ecca7c9af1150b787","tier":1,"class":"manufacturer customer 2D CAD"},
+    {"id":"v100-cooler-backplate-reva-contract","publisher":"PiSXMe Mechanical Authority","revision":"checked 2026-08-29","url":null,"local_reference":"pisxme/reva-clean/authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md","sha256":"0e35f6adeea4af1a8b01c9b0dfc2a9b57c0ad91a045eee7e5fd732fe255e4797","tier":3,"class":"project authority boundary"},
+    {"id":"pisxme-mechanical-envelope-receipt","publisher":"PiSXMe","revision":"integrated candidate 51e712ce","url":null,"local_reference":"pisxme/reva-clean/validation-receipts/l10-u11-3d-assembly-service-20260918/RECEIPT.json","sha256":"8070073ee07643a9d3e618148e53846f28c6152ec09d3b250dd9dae9b42f7283","tier":3,"class":"project-derived validation receipt"}
+  ],
+  "result": "Acquisition and indexing are sufficient for authority reassessment and continued independent work, but not for closing the full mechanical_3d_assembly_service acceptance row.",
+  "unresolved": [
+    "L10 exact MPN and package height/model",
+    "Y10 exact MPN and package height/model",
+    "J8 selected mode-strap hardware and service/mating envelope",
+    "named V100 cooler/backplate and complete mated service envelope"
+  ],
+  "research_commissions": [
+    {"id":"MECH-3D-GAP-L10-Y10","status":"REQUESTED_FROM_RESEARCHER","scope":"Find exact project-intended inductor/crystal MPNs and primary dimensional sources; return NOT_FOUND with search coverage if absent."},
+    {"id":"MECH-3D-GAP-J8","status":"REQUESTED_FROM_RESEARCHER","scope":"Find the intended mode strap/header part and any service-access decision; do not select a substitute."}
+  ]
+}

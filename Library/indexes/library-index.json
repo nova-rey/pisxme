@@ -561,6 +561,24 @@
         "solder-mask",
         "assembly"
       ]
+    },
+    {
+      "id": "index-mechanical-3d-envelope-l10-u11-20260918",
+      "kind": "mechanical-3d-envelope-index",
+      "path": "Library/indexes/mechanical-3d-envelope-l10-u11-20260918.json",
+      "tags": [
+        "Phase24",
+        "mechanics",
+        "3D",
+        "assembly",
+        "service",
+        "L10",
+        "U11",
+        "Y10",
+        "J1",
+        "J3",
+        "J8"
+      ]
     }
   ]
 }
