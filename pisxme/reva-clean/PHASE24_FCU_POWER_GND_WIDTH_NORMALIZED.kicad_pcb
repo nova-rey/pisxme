@@ -1954,7 +1954,7 @@
 	(footprint "C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "0652700a-7531-41da-badd-a3e1df7a4d50")
-		(at 232 180)
+		(at 232 178.5)
 		(property "Reference" "C51"
 			(at 0 -1.5 0)
 			(layer "F.SilkS")
@@ -2410,7 +2410,7 @@
 	(footprint "C_1210_3225Metric"
 		(layer "F.Cu")
 		(uuid "0ed87e57-80a6-4ba0-be22-0955eff82175")
-		(at 65 170.5)
+		(at 65 172.5)
 		(property "Reference" "C8"
 			(at 0 2.5 0)
 			(layer "F.SilkS")
@@ -8505,7 +8505,7 @@
 	(footprint "C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "90e3697e-ed0c-4271-b1fa-d03e83b97447")
-		(at 228 180)
+		(at 228 178.5)
 		(property "Reference" "C50"
 			(at 0 -1.5 0)
 			(layer "F.SilkS")
@@ -8839,7 +8839,7 @@
 	(footprint "C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "9891bebd-f7b2-4127-8120-2a21d005f4d4")
-		(at 224 180)
+		(at 224 178.5)
 		(property "Reference" "C49"
 			(at 0 -1.5 0)
 			(layer "F.SilkS")
@@ -15492,7 +15492,7 @@
 	(footprint "C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "ebaf33c5-6c94-4109-9f11-f84b46200850")
-		(at 220 180)
+		(at 220 178.5)
 		(property "Reference" "C48"
 			(at 0 -1.5 0)
 			(layer "F.SilkS")
@@ -21162,7 +21162,7 @@
 	)
 	(segment
 		(start 83 164)
-		(end 83 180)
+		(end 83 177)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "CM5_5V")
@@ -21178,7 +21178,7 @@
 	)
 	(segment
 		(start 63.65 168.5)
-		(end 63.65 170.5)
+		(end 63.65 172.5)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "CM5_5V")
@@ -21233,8 +21233,8 @@
 		(uuid "3d7523f7-c7c1-486e-b24c-72b8abdab2ae")
 	)
 	(segment
-		(start 63.65 170.5)
-		(end 60 180)
+		(start 63.65 172.5)
+		(end 60 177)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "CM5_5V")
@@ -21313,16 +21313,16 @@
 		(uuid "b99aa04a-6f53-46b4-8618-a1997f398776")
 	)
 	(segment
-		(start 83 180)
-		(end 78 180)
+		(start 83 177)
+		(end 78 177)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "CM5_5V")
 		(uuid "c16d6ab9-0b0f-483c-a6a3-383270f3c4b4")
 	)
 	(segment
-		(start 78 180)
-		(end 81.5 180)
+		(start 78 177)
+		(end 81.5 177)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "CM5_5V")
@@ -21370,7 +21370,7 @@
 	)
 	(segment
 		(start 62.25 170.5)
-		(end 63.65 170.5)
+		(end 63.65 172.5)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "CM5_5V")
@@ -21401,7 +21401,7 @@
 		(uuid "1b9f2a4b-3275-464c-b99f-fa104489a519")
 	)
 	(via
-		(at 60 180)
+		(at 60 177)
 		(size 0.5)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
@@ -21441,7 +21441,7 @@
 		(uuid "cb058eff-688b-472d-a0af-0b133e6f57c3")
 	)
 	(via
-		(at 78 180)
+		(at 78 177)
 		(size 0.5)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
@@ -21513,8 +21513,8 @@
 		(uuid "cf3526ad-11cf-4e97-b4cd-55dca7b864b9")
 	)
 	(segment
-		(start 60 180)
-		(end 78 180)
+		(start 60 177)
+		(end 78 177)
 		(width 0.25)
 		(layer "B.Cu")
 		(net "CM5_5V")
