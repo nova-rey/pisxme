@@ -365,10 +365,10 @@
     "unblocker:cm5-ethernet-edge-dfm-reconciliation": {
       "created_at": "2026-09-19T00:13:25.494610Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/cm5-ethernet-edge-dfm-unblocker-20260919/RECEIPT.md",
       "reference": "validation-receipts/cm5-ethernet-edge-dfm-boundary-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-19T00:17:47.057752Z",
+      "status": "RESOLVED"
     },
     "unblocker:molex-footprint-authority-stall": {
       "created_at": "2026-09-18T19:23:14.660062Z",
@@ -5159,7 +5159,7 @@
       "evidence_refs": [],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required.",
-      "owner": null,
+      "owner": "supervisor_local_rails",
       "priority": 5,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5176,10 +5176,12 @@
         }
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "cm5-ethernet-edge-r2-20260919"
+      ],
+      "status": "RUNNING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:13:25.494642Z",
+      "updated_at": "2026-09-19T00:17:47.118898Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5188,9 +5190,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "unblocker:cm5-ethernet-edge-dfm-reconciliation"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5280,5 +5280,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:14:30.868060Z"
+  "updated_at": "2026-09-19T00:17:47.119194Z"
 }

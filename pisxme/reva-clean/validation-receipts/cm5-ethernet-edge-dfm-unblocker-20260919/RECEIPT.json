@@ -1,0 +1,1 @@
+{"package":"P24-MECHANICS-CM5-ETHERNET-EDGE-DFM","outcome":"SELF_UNBLOCK","stale_base":"b483f077","current_head":"7280badc","dependency":"unblocker:cm5-ethernet-edge-dfm-reconciliation","resume":"READY","required_context":["fp-lib-table","sym-lib-table","PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru"],"protected_bus_edits":false}

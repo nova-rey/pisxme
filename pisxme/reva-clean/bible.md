@@ -1665,3 +1665,6 @@ Producer commit `f069f2cf` was reconciled from base `c7c8cd88` onto current cano
 # 2026-09-19 — L10/U11 serialized integration and fresh Light result
 
 The L10/U11 candidate is now integrated on canonical `reva-clean` at `51e712ce`. Fresh KiCad Light 10.0.6 validation at integration SHA `4ab178cc` completed with 280 violations and 393 unconnected items; the targeted DRC and courtyard/edge rows are recorded PASS. The package remains VALIDATING until the required 3D/assembly/service evidence is returned. No full-board closure is claimed.
+# 2026-09-19 — CM5/Ethernet edge validation context self-unblocked
+
+The CM5/Ethernet edge candidate failure was classified as a validation-context/current-head reconciliation issue. The stale candidate is rejected; the package is READY again and has been dispatched to `supervisor_local_rails` from current `7280badc` with canonical library tables and local fine-escape rules bound. No protected-bus or HPQ work is duplicated.
