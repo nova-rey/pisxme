@@ -1,0 +1,3 @@
+# L10/U11 integration validation context failure
+
+The integration candidate `4ab178ccbd840735551c5e73f6b652cfb669c17a` was pushed to the temporary validation ref. The first qualified Light invocation failed before KiCad started because the direct command form was not resolvable by the image entrypoint. A shell probe also failed at image command resolution. The healthcheck invocation then failed while cloning the repository because the host filesystem reached 100% usage (`df -h`: 351G filesystem, 0 bytes available), before validation began. No CAD result is claimed. Stale disposable validation clones are being released through `pisxme-worker release`; the candidate and integration commit remain preserved for rerun.
