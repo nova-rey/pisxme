@@ -1668,3 +1668,6 @@ The L10/U11 candidate is now integrated on canonical `reva-clean` at `51e712ce`.
 # 2026-09-19 — CM5/Ethernet edge validation context self-unblocked
 
 The CM5/Ethernet edge candidate failure was classified as a validation-context/current-head reconciliation issue. The stale candidate is rejected; the package is READY again and has been dispatched to `supervisor_local_rails` from current `7280badc` with canonical library tables and local fine-escape rules bound. No protected-bus or HPQ work is duplicated.
+# 2026-09-19 — L10/U11 3D closure parked on evidence acquisition
+
+The integrated L10/U11 geometry passed 2D courtyard/edge checks and rendered under KiCad Heavy 10.0.6, but full 3D assembly/service closure is UNPROVEN because project-local models or authoritative height/envelope data are absent for L10, U11, Y10, J1, J3 and J8. The package is waiting only on `knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES`; Librarian is acquiring that bounded evidence. No mechanical geometry was changed.

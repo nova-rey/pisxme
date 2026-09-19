@@ -282,6 +282,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES": {
+      "created_at": "2026-09-19T00:18:45.517573Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "validation-receipts/l10-u11-3d-assembly-service-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
       "created_at": "2026-09-18T19:10:47.982044Z",
       "kind": "knowledge",
@@ -5209,7 +5217,9 @@
       },
       "completion_criterion": "Current-head isolated candidate moves L10 exactly as authorized, preserves protected/high-speed geometry, and returns candidate SHA, changed-scope hash, targeted Light evidence and assembly/DFM receipt for serialized integration.",
       "created_at": "2026-09-18T23:56:32.423424Z",
-      "dependencies": [],
+      "dependencies": [
+        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+      ],
       "domain": "mechanics/DFM/storage",
       "edit_boundaries": [
         "isolated producer workspace only",
@@ -5222,7 +5232,7 @@
       "evidence_refs": [],
       "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required.",
-      "owner": "supervisor_mechanics_dfm",
+      "owner": null,
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5239,12 +5249,10 @@
         }
       ],
       "scope": "Implement and validate only the authorized L10 move to (143.00,127.80) required to clear the U11 courtyard, preserving U11/Y10, J1, protected-bus and high-speed corridors. Produce an isolated candidate and targeted mechanical/DFM evidence.",
-      "session_ids": [
-        "mech-l10-u11-validation-20260918"
-      ],
-      "status": "VALIDATING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Correct L10/U11 storage-corridor mechanical conflict",
-      "updated_at": "2026-09-19T00:14:30.867624Z",
+      "updated_at": "2026-09-19T00:18:45.517592Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5264,7 +5272,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+      ],
       "workstream": "phase24-mechanics-dfm"
     }
   ],
@@ -5280,5 +5290,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:17:47.119194Z"
+  "updated_at": "2026-09-19T00:18:45.517824Z"
 }
