@@ -1,0 +1,9 @@
+{
+  "candidate_sha": "4ab178ccbd840735551c5e73f6b652cfb669c17a",
+  "status": "PASS",
+  "toolchain": "pisxme-kicad-light:v1",
+  "kicad": "10.0.6",
+  "violations": 280,
+  "unconnected": 393,
+  "report": "integrated-drc.json"
+}
