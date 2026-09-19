@@ -1771,3 +1771,7 @@ Fresh current-head Light evidence at `f90e7a75` confirms L10 is already at its a
 ## 2026-09-19 CM5/Ethernet current-head DFM verification
 
 Current-head Light verification at `f90e7a75` confirms the integrated r3 CM5/Ethernet scoped geometry: zero shorts, zero copper-edge-clearance violations, zero C7/C8 courtyard overlap, and no C48–C51 edge-clearance violations. Full 3D assembly/service evidence remains UNPROVEN under the shared mechanical model-envelope dependency, so only the scoped 2D work is retained and the package is parked on that dependency.
+
+## 2026-09-19 Shared mechanical evidence package staffed
+
+The shared 3D/model-envelope dependency is now a bounded Librarian package `P24-MECHANICAL-3D-MODEL-EVIDENCE`, claimed by `librarian_mechanical_3d_evidence`. It will search the private Library first and commission only targeted evidence acquisition; no CAD mutation or restricted-reference publication is authorized. L10 and CM5/Ethernet 3D/service rows remain parked until this evidence is indexed.

@@ -5573,6 +5573,56 @@
       },
       "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Indexed provenance brief with source revisions/hashes, applicability, exact dimensions/heights/models where available, and explicit UNPROVEN/REQUIRES_PROTOTYPE_VALIDATION rows for irreducible gaps; resolve or update the shared knowledge dependency.",
+      "created_at": "2026-09-19T02:07:12.254323Z",
+      "dependencies": [],
+      "domain": "Librarian/mechanical evidence",
+      "edit_boundaries": [
+        "private Library/index and public receipt only",
+        "no CAD mutation",
+        "no DRC waiver",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-MECHANICAL-3D-MODEL-EVIDENCE",
+      "notes": "Unlocks L10/U11 and CM5/Ethernet 3D/service rows when sufficient; current mechanical authority eff269f2 and MPA correction 20260919 govern selected identities.",
+      "owner": "librarian_mechanical_3d_evidence",
+      "priority": 3,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "service_access",
+        "DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Bounded Library-first evidence reconciliation for exact L10/Y10/U11/J1/J3/J8/MECH_M2_2280 and selected cooler/backplate/service envelopes. Retrieve existing private Library records first; commission Researcher only for specific missing authoritative dimensions/models. Do not edit CAD or copy restricted material into public repo.",
+      "session_ids": [
+        "root-mech-evidence-20260919T0345Z"
+      ],
+      "status": "RUNNING",
+      "title": "Acquire shared mechanical 3D/model-envelope evidence",
+      "updated_at": "2026-09-19T02:07:12.326176Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-mechanics-dfm"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -5587,5 +5637,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T02:06:43.098219Z"
+  "updated_at": "2026-09-19T02:07:12.326709Z"
 }
