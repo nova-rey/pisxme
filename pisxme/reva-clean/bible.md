@@ -1775,3 +1775,7 @@ Current-head Light verification at `f90e7a75` confirms the integrated r3 CM5/Eth
 ## 2026-09-19 Shared mechanical evidence package staffed
 
 The shared 3D/model-envelope dependency is now a bounded Librarian package `P24-MECHANICAL-3D-MODEL-EVIDENCE`, claimed by `librarian_mechanical_3d_evidence`. It will search the private Library first and commission only targeted evidence acquisition; no CAD mutation or restricted-reference publication is authorized. L10 and CM5/Ethernet 3D/service rows remain parked until this evidence is indexed.
+
+## 2026-09-19 Mechanical model evidence reconciled
+
+The private Library packet `a0e68bdc822bad2eca47471649fa3f9417518f1b` resolved the shared knowledge dependency and confirmed the selected geometry/provenance, while retaining exact model, mating, and cooler gaps as `REQUIRES_PROTOTYPE_VALIDATION`. L10/U11 and CM5/Ethernet current-head 2D receipts are preserved; their full 3D/assembly rows are explicitly parked on `other:prototype-mechanical-validation` rather than claimed PASS.

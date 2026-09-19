@@ -301,10 +301,10 @@
     "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES": {
       "created_at": "2026-09-19T00:18:45.517573Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/mechanical-3d-model-evidence-20260919/RECEIPT.md",
       "reference": "validation-receipts/l10-u11-3d-assembly-service-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-19T02:13:03.870257Z",
+      "status": "RESOLVED"
     },
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
       "created_at": "2026-09-18T19:10:47.982044Z",
@@ -377,6 +377,14 @@
       "reference": "validation-receipts/power-authority-signoff-20260914/RECEIPT.md",
       "resolved_at": "2026-09-14T00:26:01.405961Z",
       "status": "RESOLVED"
+    },
+    "other:prototype-mechanical-validation": {
+      "created_at": "2026-09-19T02:13:42.280169Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
     },
     "protected-bus-direct-producer-stall": {
       "created_at": "2026-09-18T23:27:23.369988Z",
@@ -5174,10 +5182,10 @@
       "base_sha": "c7c8cd88",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
-        "base_sha": "f90e7a7566dc80960fdb6fcbf23e418cbe5315ea",
-        "returned_at": "2026-09-19T02:06:37.679394Z",
-        "returned_by": "verifier_cm5_edge_current",
+        "artifact": "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md",
+        "base_sha": "3bd7a8c6",
+        "returned_at": "2026-09-19T02:13:33.470911Z",
+        "returned_by": "root_cm5_model_reconcile",
         "sha": "338ab87eda178e9569b2230f855219011479bdab47b18637d6d26087cbe2c799"
       },
       "completion_criterion": "Current-head isolated candidate closes only the listed lower-edge findings without changing protected-bus or high-speed geometry, and returns candidate SHA, changed-scope hash and targeted Light/DFM evidence for serialized integration.",
@@ -5185,7 +5193,8 @@
       "dependencies": [
         "unblocker:cm5-ethernet-edge-dfm-reconciliation",
         "package:P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES",
+        "other:prototype-mechanical-validation"
       ],
       "domain": "mechanics/DFM/CM5/Ethernet",
       "edit_boundaries": [
@@ -5224,7 +5233,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T02:06:43.097926Z",
+      "updated_at": "2026-09-19T02:13:42.377196Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5250,7 +5259,7 @@
         }
       },
       "waiting_on": [
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "other:prototype-mechanical-validation"
       ],
       "workstream": "phase24-mechanics-dfm"
     },
@@ -5262,17 +5271,18 @@
       "base_sha": "c7c8cd88",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "pisxme/reva-clean/validation-receipts/l10-u11-local-correction-20260918/PHASE24_L10_U11_LOCAL_CORRECTION.kicad_pcb",
-        "base_sha": "c7c8cd885259bcb17a4a76b7ba9809d57cc96b0d",
-        "returned_at": "2026-09-19T00:06:34.460798Z",
-        "returned_by": "supervisor_mechanics_dfm",
-        "sha": "f069f2cf5cea4bba954cf9dc7849a4107fc73bc4"
+        "artifact": "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md",
+        "base_sha": "3bd7a8c6",
+        "returned_at": "2026-09-19T02:13:33.278678Z",
+        "returned_by": "root_l10_model_reconcile",
+        "sha": "338ab87eda178e9569b2230f855219011479bdab47b18637d6d26087cbe2c799"
       },
       "completion_criterion": "Current-head isolated candidate moves L10 exactly as authorized, preserves protected/high-speed geometry, and returns candidate SHA, changed-scope hash, targeted Light evidence and assembly/DFM receipt for serialized integration.",
       "created_at": "2026-09-18T23:56:32.423424Z",
       "dependencies": [
         "package:P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES",
+        "other:prototype-mechanical-validation"
       ],
       "domain": "mechanics/DFM/storage",
       "edit_boundaries": [
@@ -5311,7 +5321,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Correct L10/U11 storage-corridor mechanical conflict",
-      "updated_at": "2026-09-19T02:03:04.446502Z",
+      "updated_at": "2026-09-19T02:13:42.280193Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5337,7 +5347,7 @@
         }
       },
       "waiting_on": [
-        "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES"
+        "other:prototype-mechanical-validation"
       ],
       "workstream": "phase24-mechanics-dfm"
     },
@@ -5581,7 +5591,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/mechanical-3d-model-evidence-20260919/RECEIPT.md",
+        "base_sha": "3bd7a8c6",
+        "returned_at": "2026-09-19T02:13:03.725327Z",
+        "returned_by": "librarian_mechanical_3d_evidence",
+        "sha": "a0e68bdc822bad2eca47471649fa3f9417518f1b"
+      },
       "completion_criterion": "Indexed provenance brief with source revisions/hashes, applicability, exact dimensions/heights/models where available, and explicit UNPROVEN/REQUIRES_PROTOTYPE_VALIDATION rows for irreducible gaps; resolve or update the shared knowledge dependency.",
       "created_at": "2026-09-19T02:07:12.254323Z",
       "dependencies": [],
@@ -5592,10 +5608,12 @@
         "no DRC waiver",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/mechanical-3d-model-evidence-20260919/RECEIPT.md"
+      ],
       "id": "P24-MECHANICAL-3D-MODEL-EVIDENCE",
       "notes": "Unlocks L10/U11 and CM5/Ethernet 3D/service rows when sufficient; current mechanical authority eff269f2 and MPA correction 20260919 govern selected identities.",
-      "owner": "librarian_mechanical_3d_evidence",
+      "owner": null,
       "priority": 3,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5611,12 +5629,10 @@
         }
       ],
       "scope": "Bounded Library-first evidence reconciliation for exact L10/Y10/U11/J1/J3/J8/MECH_M2_2280 and selected cooler/backplate/service envelopes. Retrieve existing private Library records first; commission Researcher only for specific missing authoritative dimensions/models. Do not edit CAD or copy restricted material into public repo.",
-      "session_ids": [
-        "root-mech-evidence-20260919T0345Z"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Acquire shared mechanical 3D/model-envelope evidence",
-      "updated_at": "2026-09-19T02:07:12.326176Z",
+      "updated_at": "2026-09-19T02:13:03.823236Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5637,5 +5653,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T02:07:12.326709Z"
+  "updated_at": "2026-09-19T02:13:42.377699Z"
 }
