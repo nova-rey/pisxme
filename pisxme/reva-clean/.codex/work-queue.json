@@ -5404,7 +5404,7 @@
       ],
       "id": "P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
       "notes": "Created from mechanical Heavy validation receipt 0dba465e; no existing J3/J8 finding is waived. Preserve current storage electrical contract. MPA binding decision 2026-09-19: keep TE 1-2199230-4 M-key J3 and full card envelope; move J8 to (205,140); correct stale JAE/B-key mechanical contract provenance before closure; separate connector mating volume from full card envelope and validate stack/retention/service.",
-      "owner": "kicad_m2_service_producer_r2",
+      "owner": "implementer_m2_service_r3",
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5422,11 +5422,11 @@
       ],
       "scope": "Resolve the integrated J3 2280 socket versus MECH_M2_2280 envelope/courtyard/PTH conflicts and J8 mode-service access contract. Produce one authority-bounded placement/correction candidate or an explicit product/authority escalation. Preserve J1, protected bus, high-speed corridors, storage electrical topology, and no global rule changes.",
       "session_ids": [
-        "root-m2-kicad-r2-20260919T0145Z"
+        "root-m2-impl-r3-20260919T0215Z"
       ],
       "status": "RUNNING",
       "title": "Close J3/J8 M.2 insertion and storage-mode service envelope",
-      "updated_at": "2026-09-19T01:29:51.318568Z",
+      "updated_at": "2026-09-19T01:41:47.143351Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5561,5 +5561,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T01:29:51.318830Z"
+  "updated_at": "2026-09-19T01:41:47.143643Z"
 }

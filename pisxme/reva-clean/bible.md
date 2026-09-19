@@ -1747,3 +1747,7 @@ The M2 Supervisor and direct KiCad producer both failed to produce a process or 
 ## 2026-09-19 M2 Unblocker route dispatched
 
 Unblocker classified the prior M2 stalls as implementation-method failures and bound one supported return path: fresh detached `kicad-light` from current HEAD `be293bb7`, launched by `/home/nyx/pisxme-eda-workers/scripts/pisxme-worker` at 1 CPU/1 GiB with image `pisxme-kicad-light:v1` (`sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9`). The M2 package was released and redispatched to `kicad_m2_service_producer_r2` with the unchanged MPA scope.
+
+## 2026-09-19 M2 R2 baseline-only attempt recorded
+
+The supported R2 worker prepared the exact detached workspace and reproduced the native Light baseline (KiCad 10.0.6, 264 violations/393 unconnected), but its follow-on mutation produced no candidate or terminal manifest. The baseline-only result is retained at `validation-receipts/m2-producer-r2-baseline-stall-20260919/`; no candidate is promoted. Root changed capability to one bounded direct implementer attempt.
