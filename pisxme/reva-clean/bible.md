@@ -1662,3 +1662,6 @@ The independent CM5/Ethernet edge producer cleared its target C48–C51 and C7/C
 # 2026-09-19 — L10/U11 integration candidate reconciled
 
 Producer commit `f069f2cf` was reconciled from base `c7c8cd88` onto current canonical state. The candidate board and producer receipts are retained, and the authorized L10 move plus local LXO/VDDREG support routes are staged in the canonical integration candidate. Fresh Light validation is recorded separately; queue promotion remains pending final result processing.
+# 2026-09-19 — L10/U11 serialized integration and fresh Light result
+
+The L10/U11 candidate is now integrated on canonical `reva-clean` at `51e712ce`. Fresh KiCad Light 10.0.6 validation at integration SHA `4ab178cc` completed with 280 violations and 393 unconnected items; the targeted DRC and courtyard/edge rows are recorded PASS. The package remains VALIDATING until the required 3D/assembly/service evidence is returned. No full-board closure is claimed.

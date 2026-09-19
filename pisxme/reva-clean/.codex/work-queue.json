@@ -5244,14 +5244,25 @@
       ],
       "status": "VALIDATING",
       "title": "Correct L10/U11 storage-corridor mechanical conflict",
-      "updated_at": "2026-09-19T00:06:34.516781Z",
+      "updated_at": "2026-09-19T00:14:30.867624Z",
       "validation": {
         "required": [
           "targeted native DRC",
           "courtyard/edge clearance",
           "3D and assembly/service envelope"
         ],
-        "results": {}
+        "results": {
+          "courtyard/edge clearance": {
+            "receipt": "validation-receipts/l10-u11-local-correction-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-19T00:14:30.867598Z",
+            "status": "PASS"
+          },
+          "targeted native DRC": {
+            "receipt": "validation-receipts/l10-u11-integrated-fresh-light-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T00:14:30.819140Z",
+            "status": "PASS"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
@@ -5269,5 +5280,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:13:25.495114Z"
+  "updated_at": "2026-09-19T00:14:30.868060Z"
 }
