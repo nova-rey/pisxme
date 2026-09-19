@@ -1,0 +1,10 @@
+{
+  "library_commit": "ae118fb2",
+  "gaps": [
+    "MECH-3D-GAP-L10-Y10",
+    "MECH-3D-GAP-J8",
+    "named-cooler-backplate-service-envelope"
+  ],
+  "status": "UNPROVEN",
+  "recorded_at": "2026-09-19T00:43:31.764787+00:00"
+}

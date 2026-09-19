@@ -1695,3 +1695,7 @@ The CM5/Ethernet r3 candidate is canonically integrated and its targeted native 
 # 2026-09-19 — Mechanical envelope evidence indexed; dependency remains open
 
 Private Library commit `ae118fb2` now indexes the mechanical 3D/assembly/service brief, machine index, and provenance record. U11, J1, and J3 package facts are established, while exact L10/Y10 package data, J8 hardware/service contract, and named cooler/backplate/service envelope remain unresolved. Both mechanics packages retain the shared knowledge dependency and now reference the private evidence directly.
+
+# 2026-09-19 — Mechanical 3D evidence bounded gap recorded
+
+A bounded follow-up acquisition attempt found no new authoritative package or cooler/service evidence beyond private Library commit `ae118fb2`. The remaining L10/Y10, J8, and named cooler/backplate/service-envelope gaps are recorded under `validation-receipts/mechanical-3d-evidence-gap-20260919/` as UNPROVEN; Unblocker review is requested. No CAD waiver or fabricated 3D pass is claimed.
