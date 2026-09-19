@@ -580,5 +580,47 @@
         "J8"
       ]
     }
+  ],
+  "entries": [
+    {
+      "id": "brief-mechanical-3d-envelope-gap-followup-20260918",
+      "kind": "mechanical-3d-envelope-followup-brief",
+      "path": "Library/briefs/mechanical-3d-envelope-gap-followup-20260918.md",
+      "tags": [
+        "Phase24",
+        "mechanics",
+        "3D",
+        "L10",
+        "Y10",
+        "J8",
+        "cooler",
+        "package"
+      ]
+    },
+    {
+      "id": "index-mechanical-3d-envelope-gap-followup-20260918",
+      "kind": "mechanical-3d-envelope-followup-index",
+      "path": "Library/indexes/mechanical-3d-envelope-gap-followup-20260918.json",
+      "tags": [
+        "Phase24",
+        "mechanics",
+        "L10",
+        "Y10",
+        "J8",
+        "manufacturer",
+        "package"
+      ]
+    },
+    {
+      "id": "provenance-mechanical-3d-envelope-gap-followup-20260918",
+      "kind": "provenance-source",
+      "path": "Library/provenance/mechanical-3d-envelope-gap-followup-20260918.json",
+      "tags": [
+        "Phase24",
+        "mechanics",
+        "manufacturer",
+        "provenance"
+      ]
+    }
   ]
 }

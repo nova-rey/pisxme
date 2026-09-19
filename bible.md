@@ -5617,3 +5617,7 @@ contract are unspecified. The Rev-A cooler/backplate authority closes scope,
 not fit for a named cooler. The complete mechanical 3D/assembly/service row
 remains OPEN. Bounded Researcher gaps `MECH-3D-GAP-L10-Y10` and
 `MECH-3D-GAP-J8` were recorded; no CAD or public repository material changed.
+
+# 2026-09-18 — Mechanical 3D gap evidence narrowed
+
+Librarian completed the bounded follow-up for `P24-MECHANICS-L10-U11-LOCAL-CORRECTION` in `mechanical-3d-envelope-gap-followup-20260918`. GOTREND's primary `GNR-SERIES-AE-V1R1` source and the retained JMS583 reference drawing narrow L10 to `GNR2512PA-4R7M` with a 2.20 x 2.70 x 1.20 mm package and published current limits; ECS's primary ECX-32 source narrows Y10 to a 3.20 x 2.50 mm 25 MHz / 10 pF / +/-30 ppm-stability candidate. Neither generic current schematic identity is promoted without Package Authority overlay and load/pad checks. The JMS583 reference's 2.54-mm 1x4 DNP header narrows J8 mechanically but does not choose a populated connector versus solder strap. No authoritative named carrier cooler/backplate/service assembly was found; the Rev-A module-mounted cooler boundary remains the project authority. No public CAD changed.

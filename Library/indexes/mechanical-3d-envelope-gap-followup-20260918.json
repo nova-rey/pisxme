@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "mechanical-3d-envelope-gap-followup-20260918",
+  "retrieved": "2026-09-18",
+  "queue_package": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "knowledge_dependency": "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES",
+  "candidate": "51e712ce4b794758ba48fa1f36fba48d2e83890e",
+  "scope": ["MECH-3D-GAP-L10-Y10", "MECH-3D-GAP-J8", "named V100 cooler/backplate/service envelope"],
+  "sources": [
+    {"id":"gotrend-gnr-series-ae-v1r1","tier":1,"class":"primary manufacturer","revision":"GNR-SERIES-AE-V1R1; latest edit 2022-12-08","url":"https://www.gotrend.com.tw/rwd1606/store/F2/GNR-SERIES-AE-V1R1.pdf","local":"Library/sources/public/gotrend-gnr2512pa-20260918/GNR-SERIES-AE-V1R1.pdf","sha256":"1e47446de74a906df44dfa98ade75c8e80c3b021eacac5bc0aa500b5998a5c93","facts":["GNR2512PA-4R7 family","4.70 uH","2.20 x 2.70 mm maximum body","1.20 mm maximum height","1.700 A typical saturation current","1.500 A typical 40-C-rise current","240 mOhm maximum DCR"]},
+    {"id":"ecs-ecx32","tier":1,"class":"primary manufacturer","revision":"ECX-32 datasheet","url":"https://ecsxtal.com/store/pdf/ecx-32.pdf","local":"Library/sources/public/ecs-ecx32-20260918/ecx-32.pdf","sha256":"7f56a768dd3d45948b254a36510ee2158a57ecbdf1b3cdcaaff2c6d49b0e6ee3","facts":["ECX-32 package code 33","3.20 x 2.50 mm","25 MHz candidate","20 ppm tolerance","30 ppm stability","10 pF load capacitance","40 ohm ESR"]},
+    {"id":"ecs-250-10-33-jgn-tr","tier":1,"class":"primary manufacturer product record","revision":"current record retrieved 2026-09-18","url":"https://ecsxtal.com/products/crystals/surface-mount-crystals/ecs-250-10-33-jgn-tr/","local":null,"sha256":null,"facts":["ECS-250-10-33-JGN-TR","25 MHz","20 ppm tolerance","30 ppm stability","10 pF load","3.20 x 2.50 mm","40 ohm ESR"]},
+    {"id":"jms583-reference-web-mirror","tier":2,"class":"secondary web mirror of reference design","revision":"JMS583 QFN64-8X8-BUS POWER Rev 1.8 material","url":"https://www.scribd.com/document/1042530297/Jms583-Qfn64-8x8-Bus-Power-v1-8","local":null,"sha256":null,"access_note":"Reference CAD and copyrighted drawing bytes not copied.","facts":["L10 reference text GNR2512PA-4R7M / 1.7A@Imax / NM","Y1 reference text 25 MHz / CL=10 pF","reference J45 DIP-2.54-1X4 / NM"]},
+    {"id":"v100-cooler-backplate-reva-contract","tier":3,"class":"project authority boundary","revision":"checked 2026-08-29","url":null,"local":"pisxme/reva-clean/authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md","sha256":"0e35f6adeea4af1a8b01c9b0dfc2a9b57c0ad91a045eee7e5fd732fe255e4797","facts":["module-mounted cooler boundary","no authoritative carrier-mounted cooler/backplate pattern"]}
+  ],
+  "disposition": {
+    "l10": "NARROWED_CANDIDATE_FOUND_PACKAGE_AUTHORITY_CHECK_OPEN",
+    "y10": "NARROWED_CANDIDATE_FOUND_PACKAGE_AND_LOAD_CHECK_OPEN",
+    "j8": "NARROWED_FUNCTION_ONLY_HARDWARE_SERVICE_CONTRACT_OPEN",
+    "cooler_backplate_service": "PROJECT_AUTHORITY_BOUNDARY_NO_NAMED_EXTERNAL_SOURCE",
+    "acceptance_row": "OPEN",
+    "knowledge_dependency": "OPEN"
+  },
+  "required_next_owner": "Package/Mechanical Authority",
+  "limits": [
+    "Current schematic/PCB retain generic L10/Y10/J8 identities; no selection was made.",
+    "JMS583 reference source is a remote secondary mirror and is precedent, not binding PiSXMe authority.",
+    "No public manufacturer or NVIDIA source found for a named complete carrier cooler/backplate/service assembly."
+  ],
+  "brief": "Library/briefs/mechanical-3d-envelope-gap-followup-20260918.md"
+}

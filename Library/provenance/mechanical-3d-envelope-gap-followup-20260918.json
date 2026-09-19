@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "mechanical-3d-envelope-gap-followup-20260918",
+  "owner": "Librarian",
+  "retrieved": "2026-09-18",
+  "package_id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "knowledge_dependency": "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES",
+  "search_scope": [
+    "private Library source/index/brief search for L10, Y10, J8, JMS583, cooler, backplate, service and exact MPNs",
+    "current reva-clean schematic, PCB, native netlist and retained receipts",
+    "public manufacturer package/product records for GNR2512PA-4R7 and ECS ECX-32",
+    "public JMS583 reference-design search by exact board title, component identifiers and footprint family",
+    "public V100/SXM2 cooler/backplate searches for named authoritative assembly data"
+  ],
+  "source_records": [
+    {"id":"gotrend-gnr-series-ae-v1r1","publisher":"GOTREND","revision":"GNR-SERIES-AE-V1R1","url":"https://www.gotrend.com.tw/rwd1606/store/F2/GNR-SERIES-AE-V1R1.pdf","local_reference":"Library/sources/public/gotrend-gnr2512pa-20260918/GNR-SERIES-AE-V1R1.pdf","sha256":"1e47446de74a906df44dfa98ade75c8e80c3b021eacac5bc0aa500b5998a5c93","tier":1,"class":"primary manufacturer"},
+    {"id":"ecs-ecx32","publisher":"ECS Inc.","revision":"ECX-32","url":"https://ecsxtal.com/store/pdf/ecx-32.pdf","local_reference":"Library/sources/public/ecs-ecx32-20260918/ecx-32.pdf","sha256":"7f56a768dd3d45948b254a36510ee2158a57ecbdf1b3cdcaaff2c6d49b0e6ee3","tier":1,"class":"primary manufacturer"},
+    {"id":"ecs-250-10-33-jgn-tr","publisher":"ECS Inc.","revision":"current product record","url":"https://ecsxtal.com/products/crystals/surface-mount-crystals/ecs-250-10-33-jgn-tr/","local_reference":null,"sha256":null,"tier":1,"class":"primary manufacturer product page"},
+    {"id":"jms583-reference-web-mirror","publisher":"JMicron Technology Corp. reference material, mirrored by Scribd","revision":"JMS583 QFN64-8X8-BUS POWER Rev 1.8","url":"https://www.scribd.com/document/1042530297/Jms583-Qfn64-8x8-Bus-Power-v1-8","local_reference":null,"sha256":null,"tier":2,"class":"secondary reference mirror","access_note":"No reference CAD or copyrighted drawing bytes retained."},
+    {"id":"v100-cooler-backplate-reva-contract","publisher":"PiSXMe Mechanical Authority","revision":"checked 2026-08-29","url":null,"local_reference":"pisxme/reva-clean/authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md","sha256":"0e35f6adeea4af1a8b01c9b0dfc2a9b57c0ad91a045eee7e5fd732fe255e4797","tier":3,"class":"project authority boundary"}
+  ],
+  "result":"Bounded evidence narrows L10 and Y10 to manufacturer-backed candidates and narrows J8 to a 2.54-mm strap/header contract. No component selection, CAD change, or named cooler contract is authorized. Full mechanical 3D/assembly/service row remains open.",
+  "remaining_gaps":[
+    "Package Authority must overlay current L10 pads/courtyard against GNR2512PA-4R7M drawing and confirm intended MPN.",
+    "Package/SI Authority must select Y10 exact variant, verify load capacitance/pad numbering and record height/model.",
+    "Mechanical/DFM Authority must record J8 DNP solder-link or exact populated header/mating/service contract.",
+    "Mechanical/Thermal Authority must either retain the module-mounted cooler boundary or define a named cooler/backplate/service product contract."
+  ],
+  "access_disposition":"Public manufacturer PDFs retained in private Library with hashes; no restricted/reference CAD copied to public development history."
+}
