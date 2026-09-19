@@ -5186,8 +5186,8 @@
         "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
-      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required.",
-      "owner": null,
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required. Authority contract package completed at eff269f2; downstream Heavy 3D/assembly validation is now READY.",
+      "owner": "supervisor_local_rails",
       "priority": 5,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5204,10 +5204,12 @@
         }
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "cm5-edge-authority-service-review-20260919"
+      ],
+      "status": "RUNNING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:35:22.353355Z",
+      "updated_at": "2026-09-19T00:51:56.353381Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5227,9 +5229,7 @@
           }
         }
       },
-      "waiting_on": [
-        "package:P24-MECHANICAL-3D-ENVELOPE-AUTHORITY"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5267,8 +5267,8 @@
         "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
-      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required.",
-      "owner": null,
+      "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required. Authority contract package completed at eff269f2; downstream Heavy 3D/assembly validation is now READY.",
+      "owner": "supervisor_mechanics_dfm",
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5285,10 +5285,12 @@
         }
       ],
       "scope": "Implement and validate only the authorized L10 move to (143.00,127.80) required to clear the U11 courtyard, preserving U11/Y10, J1, protected-bus and high-speed corridors. Produce an isolated candidate and targeted mechanical/DFM evidence.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "mech-l10-u11-authority-heavy-20260919"
+      ],
+      "status": "RUNNING",
       "title": "Correct L10/U11 storage-corridor mechanical conflict",
-      "updated_at": "2026-09-19T00:18:45.517592Z",
+      "updated_at": "2026-09-19T00:51:56.296710Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5308,9 +5310,7 @@
           }
         }
       },
-      "waiting_on": [
-        "package:P24-MECHANICAL-3D-ENVELOPE-AUTHORITY"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5320,7 +5320,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/mechanical-3d-envelope-authority-20260919/MECHANICAL_3D_ENVELOPE_AUTHORITY.json",
+        "base_sha": "dd3fe9591758a617d26cc347849e75ddea18fd73",
+        "returned_at": "2026-09-19T00:50:18.541931Z",
+        "returned_by": "supervisor_mechanics_dfm",
+        "sha": "1da13b73b2a9a0ddbae082c69cf1cdf337ea045a"
+      },
       "completion_criterion": "Signed machine-readable authority artifact is indexed with provenance and explicitly covers every requested envelope field or records an approved prototype-validation disposition for any deferred empirical dimension.",
       "created_at": "2026-09-19T00:45:14.459088Z",
       "dependencies": [],
@@ -5331,10 +5337,12 @@
         "no CAD edits",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/mechanical-3d-envelope-authority-20260919/RECEIPT.md"
+      ],
       "id": "P24-MECHANICAL-3D-ENVELOPE-AUTHORITY",
       "notes": "Created from Unblocker INTERNAL_ROUTE at bounded receipt mechanical-3d-evidence-gap-20260919; downstream mechanics packages must wait on authority:P24-MECHANICAL-3D-ENVELOPE-CONTRACT.",
-      "owner": "supervisor_mechanics_dfm",
+      "owner": null,
       "priority": 3,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5350,12 +5358,10 @@
         }
       ],
       "scope": "Issue one signed machine-readable Rev-A envelope contract covering L10 exact MPN/package and height or authorized bounded generic envelope; Y10 crystal variant, pad numbering, load and height; J8 DNP solder-link versus populated header/service contract; J1/J3 mating/service boundaries; and the Rev-A cooler/backplate boundary. Record source revisions, hashes, assumptions, derived bounding models, and prototype-validation dispositions. Do not change CAD.",
-      "session_ids": [
-        "mech-3d-envelope-authority-20260919"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Establish signed mechanical 3D assembly/service envelope contract",
-      "updated_at": "2026-09-19T00:45:42.135959Z",
+      "updated_at": "2026-09-19T00:51:42.021713Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5376,5 +5382,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:45:42.136250Z"
+  "updated_at": "2026-09-19T00:51:56.353693Z"
 }
