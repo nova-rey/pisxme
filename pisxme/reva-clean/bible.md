@@ -1671,3 +1671,7 @@ The CM5/Ethernet edge candidate failure was classified as a validation-context/c
 # 2026-09-19 — L10/U11 3D closure parked on evidence acquisition
 
 The integrated L10/U11 geometry passed 2D courtyard/edge checks and rendered under KiCad Heavy 10.0.6, but full 3D assembly/service closure is UNPROVEN because project-local models or authoritative height/envelope data are absent for L10, U11, Y10, J1, J3 and J8. The package is waiting only on `knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES`; Librarian is acquiring that bounded evidence. No mechanical geometry was changed.
+
+# 2026-09-19 — CM5/Ethernet edge candidate returned for serialized validation
+
+The reconciled CM5/Ethernet edge candidate `a09c181b` is recorded as VALIDATING in the Main Work Queue from current canonical state. Its retained receipt `validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/` records zero shorts, zero library-footprint issues, zero XIN/XOUT width findings, zero copper-edge-clearance findings, and clearance of the C7/C8 courtyard overlap; only the scoped C48–C51, C8, and CM5_5V delta is included. Canonical integration and fresh Light validation remain pending.

@@ -1,0 +1,5 @@
+(version 1)
+(rule "jms583 local qfn escape"
+  (condition "A.NetName == 'XIN' || A.NetName == 'XOUT' || B.NetName == 'XIN' || B.NetName == 'XOUT'")
+  (constraint clearance (min 0.10mm))
+  (constraint track_width (min 0.10mm)))

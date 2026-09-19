@@ -1,0 +1,55 @@
+{
+  "package": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
+  "dispatch_base_recorded": "7280badc",
+  "actual_current_base": "ef1dcbfb2fe44a33b80d0a6c2f73f91f045854ab",
+  "candidate_commit": "a09c181b1dc065ac4711026f897b984baad73e48",
+  "candidate_board_sha256": "5bd896bfaa1f56717c2f11166b3aad6e00418900820cc0b69c2d679851da2f57",
+  "qualified_image": "pisxme-kicad-light:v1",
+  "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "rule_sha256": "d5473e6262fdf3b53d5de051626f0ed76dedf7257ba591f79ab8ad55f5b411ec",
+  "fp_lib_table_sha256": "864698c14e65cd70a5b5a08d23a22477919bf29f167d26fc0eda73dd43b3be61",
+  "sym_lib_table_sha256": "3bb180e251be1f62b2be5bbe486b29263c56c6a49b7a26103a27bef29b80c311",
+  "metrics": {
+    "baseline_context": {
+      "violations": 280,
+      "unconnected": 393,
+      "classes": {
+        "track_width": 117,
+        "copper_edge_clearance": 15,
+        "courtyards_overlap": 5,
+        "pth_inside_courtyard": 5,
+        "clearance": 120,
+        "tracks_crossing": 2,
+        "track_dangling": 9,
+        "via_dangling": 7
+      }
+    },
+    "fresh_candidate": {
+      "violations": 264,
+      "unconnected": 393,
+      "classes": {
+        "track_width": 117,
+        "courtyards_overlap": 4,
+        "pth_inside_courtyard": 5,
+        "clearance": 120,
+        "tracks_crossing": 2,
+        "track_dangling": 9,
+        "via_dangling": 7
+      }
+    }
+  },
+  "scope": [
+    "C48",
+    "C49",
+    "C50",
+    "C51",
+    "C8",
+    "CM5_5V local lower-edge tracks and vias"
+  ],
+  "protected_bus_changed": false,
+  "j1_changed": false,
+  "high_speed_changed": false,
+  "global_rules_changed": false,
+  "status": "CANDIDATE_READY",
+  "changed_scope_sha256": "5a4ea81ce45985cc018b655939617599ecbc4372ef95bf32d112b329ada2ad8a"
+}

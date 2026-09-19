@@ -5149,7 +5149,13 @@
       },
       "base_sha": "c7c8cd88",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/candidate.kicad_pcb",
+        "base_sha": "ef1dcbfb2fe44a33b80d0a6c2f73f91f045854ab",
+        "returned_at": "2026-09-19T00:26:49.936214Z",
+        "returned_by": "supervisor_local_rails",
+        "sha": "a09c181b1dc065ac4711026f897b984baad73e48"
+      },
       "completion_criterion": "Current-head isolated candidate closes only the listed lower-edge findings without changing protected-bus or high-speed geometry, and returns candidate SHA, changed-scope hash and targeted Light/DFM evidence for serialized integration.",
       "created_at": "2026-09-18T23:56:22.785777Z",
       "dependencies": [
@@ -5185,11 +5191,11 @@
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
       "session_ids": [
-        "cm5-ethernet-edge-r2-20260919"
+        "cm5-ethernet-edge-r2-validation-20260919"
       ],
-      "status": "RUNNING",
+      "status": "VALIDATING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:17:47.118898Z",
+      "updated_at": "2026-09-19T00:26:50.007302Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5290,5 +5296,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:18:45.517824Z"
+  "updated_at": "2026-09-19T00:26:50.007761Z"
 }
