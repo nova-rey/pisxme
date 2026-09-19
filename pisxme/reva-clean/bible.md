@@ -1759,3 +1759,7 @@ The direct implementer also returned no process, mutation, candidate, or termina
 ## 2026-09-19 M2 candidate integrated for fresh validation
 
 The M2 producer artifact was reconciled against current HEAD `18fc2461`: existing pad/net signatures match all 1,270 pads; J8 is at (205,140); TE M-key J3 remains fixed; separate full-card and connector-mating mechanical representations are present. The stale JAE/B-key contract field was corrected in `validation-receipts/mechanical-3d-envelope-authority-correction-20260919/`. The candidate is now the serialized integration candidate pending fresh Light and Heavy validation.
+
+## 2026-09-19 M2 closure unlocks mechanical queue
+
+M2 integrated validation at `9c2a6df5` removed its J8/card-body courtyard and PTH findings and retained the full-card/mating representation. Heavy rendering passed as a representation check; exact insertion/retention remains explicitly `REQUIRES_PROTOTYPE_VALIDATION`. The M2 package is closed at scoped design-validation level, unlocking L10/U11 and CM5/Ethernet DFM packages. L10 rebase/validation is dispatched first under the one-CAD-container policy; CM5/Ethernet remains READY for refill after that CAD slot returns.

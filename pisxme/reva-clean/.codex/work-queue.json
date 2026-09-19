@@ -397,10 +397,10 @@
     "unblocker:m2-implementation-capability-r3": {
       "created_at": "2026-09-19T01:49:54.065436Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/m2-producer-candidate-20260919/PRODUCER_RECEIPT.md",
       "reference": "validation-receipts/m2-producer-r3-stall-20260919/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-19T01:53:22.235670Z",
+      "status": "RESOLVED"
     },
     "unblocker:molex-footprint-authority-stall": {
       "created_at": "2026-09-18T19:23:14.660062Z",
@@ -5221,9 +5221,9 @@
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:56:49.641588Z",
+      "updated_at": "2026-09-19T01:56:07.559509Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5243,9 +5243,7 @@
           }
         }
       },
-      "waiting_on": [
-        "package:P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5284,7 +5282,7 @@
       ],
       "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required. Authority contract package completed at eff269f2; downstream Heavy 3D/assembly validation is now READY. Heavy validation retained 2D pass but found open J3/J8/M.2 service-envelope requirements; waiting on bounded closure package.",
-      "owner": null,
+      "owner": "kicad_l10_rebase",
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5301,10 +5299,12 @@
         }
       ],
       "scope": "Implement and validate only the authorized L10 move to (143.00,127.80) required to clear the U11 courtyard, preserving U11/Y10, J1, protected-bus and high-speed corridors. Produce an isolated candidate and targeted mechanical/DFM evidence.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-l10-rebase-20260919T0300Z"
+      ],
+      "status": "RUNNING",
       "title": "Correct L10/U11 storage-corridor mechanical conflict",
-      "updated_at": "2026-09-19T00:56:49.641622Z",
+      "updated_at": "2026-09-19T01:56:18.835095Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5324,9 +5324,7 @@
           }
         }
       },
-      "waiting_on": [
-        "package:P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5392,7 +5390,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/m2-producer-candidate-20260919/PHASE24_M2_SERVICE_PRODUCER.kicad_pcb",
+        "base_sha": "be293bb74b7cb85d40ee4b25edc43075be7391b3",
+        "returned_at": "2026-09-19T01:53:22.347369Z",
+        "returned_by": "root_m2_candidate_reconcile",
+        "sha": "338ab87eda178e9569b2230f855219011479bdab47b18637d6d26087cbe2c799"
+      },
       "completion_criterion": "Current-head candidate and authority receipt close or explicitly disposition every J3/J8/M.2 overlap, PTH/courtyard, insertion/retention, and service-access requirement with fresh Heavy/Light validation.",
       "created_at": "2026-09-19T00:56:49.456230Z",
       "dependencies": [
@@ -5409,7 +5413,8 @@
       ],
       "evidence_refs": [
         "validation-receipts/mpa-m2-service-corridor-20260919/MPA_DECISION.md",
-        "validation-receipts/mechanical-3d-envelope-authority-20260919/MECHANICAL_3D_ENVELOPE_AUTHORITY.json"
+        "validation-receipts/mechanical-3d-envelope-authority-20260919/MECHANICAL_3D_ENVELOPE_AUTHORITY.json",
+        "validation-receipts/m2-integrated-validation-9c2a6df5-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
       "notes": "Created from mechanical Heavy validation receipt 0dba465e; no existing J3/J8 finding is waived. Preserve current storage electrical contract. MPA binding decision 2026-09-19: keep TE 1-2199230-4 M-key J3 and full card envelope; move J8 to (205,140); correct stale JAE/B-key mechanical contract provenance before closure; separate connector mating volume from full card envelope and validate stack/retention/service.",
@@ -5431,16 +5436,14 @@
       ],
       "scope": "Resolve the integrated J3 2280 socket versus MECH_M2_2280 envelope/courtyard/PTH conflicts and J8 mode-service access contract. Produce one authority-bounded placement/correction candidate or an explicit product/authority escalation. Preserve J1, protected bus, high-speed corridors, storage electrical topology, and no global rule changes.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Close J3/J8 M.2 insertion and storage-mode service envelope",
-      "updated_at": "2026-09-19T01:49:54.065468Z",
+      "updated_at": "2026-09-19T01:56:07.559432Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "unblocker:m2-implementation-capability-r3"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5570,5 +5573,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T01:49:54.065775Z"
+  "updated_at": "2026-09-19T01:56:18.835594Z"
 }
