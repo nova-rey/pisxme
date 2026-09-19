@@ -394,6 +394,14 @@
       "resolved_at": "2026-09-19T00:17:47.057752Z",
       "status": "RESOLVED"
     },
+    "unblocker:m2-implementation-capability-r3": {
+      "created_at": "2026-09-19T01:49:54.065436Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/m2-producer-r3-stall-20260919/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:molex-footprint-authority-stall": {
       "created_at": "2026-09-18T19:23:14.660062Z",
       "kind": "other",
@@ -5389,7 +5397,8 @@
       "created_at": "2026-09-19T00:56:49.456230Z",
       "dependencies": [
         "authority:P24-MPA-M2-SERVICE-CORRIDOR",
-        "package:P24-M2-IMPLEMENTATION-UNBLOCKER"
+        "package:P24-M2-IMPLEMENTATION-UNBLOCKER",
+        "unblocker:m2-implementation-capability-r3"
       ],
       "domain": "mechanical/DFM/storage",
       "edit_boundaries": [
@@ -5404,7 +5413,7 @@
       ],
       "id": "P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
       "notes": "Created from mechanical Heavy validation receipt 0dba465e; no existing J3/J8 finding is waived. Preserve current storage electrical contract. MPA binding decision 2026-09-19: keep TE 1-2199230-4 M-key J3 and full card envelope; move J8 to (205,140); correct stale JAE/B-key mechanical contract provenance before closure; separate connector mating volume from full card envelope and validate stack/retention/service.",
-      "owner": "implementer_m2_service_r3",
+      "owner": null,
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5421,17 +5430,17 @@
         }
       ],
       "scope": "Resolve the integrated J3 2280 socket versus MECH_M2_2280 envelope/courtyard/PTH conflicts and J8 mode-service access contract. Produce one authority-bounded placement/correction candidate or an explicit product/authority escalation. Preserve J1, protected bus, high-speed corridors, storage electrical topology, and no global rule changes.",
-      "session_ids": [
-        "root-m2-impl-r3-20260919T0215Z"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Close J3/J8 M.2 insertion and storage-mode service envelope",
-      "updated_at": "2026-09-19T01:41:47.143351Z",
+      "updated_at": "2026-09-19T01:49:54.065468Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:m2-implementation-capability-r3"
+      ],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5561,5 +5570,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T01:41:47.143643Z"
+  "updated_at": "2026-09-19T01:49:54.065775Z"
 }
