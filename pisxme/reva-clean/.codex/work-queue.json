@@ -26,6 +26,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:P24-MPA-M2-SERVICE-CORRIDOR": {
+      "created_at": "2026-09-19T01:03:15.525597Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "Unblocker receipt: J3/J8/MECH_M2_2280 placement and service corridor decision required",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT": {
       "created_at": "2026-09-17T23:28:57.421215Z",
       "kind": "authority",
@@ -5379,7 +5387,9 @@
       "candidate": null,
       "completion_criterion": "Current-head candidate and authority receipt close or explicitly disposition every J3/J8/M.2 overlap, PTH/courtyard, insertion/retention, and service-access requirement with fresh Heavy/Light validation.",
       "created_at": "2026-09-19T00:56:49.456230Z",
-      "dependencies": [],
+      "dependencies": [
+        "authority:P24-MPA-M2-SERVICE-CORRIDOR"
+      ],
       "domain": "mechanical/DFM/storage",
       "edit_boundaries": [
         "J3/J8/M.2 mechanical region only",
@@ -5408,9 +5418,62 @@
       ],
       "scope": "Resolve the integrated J3 2280 socket versus MECH_M2_2280 envelope/courtyard/PTH conflicts and J8 mode-service access contract. Produce one authority-bounded placement/correction candidate or an explicit product/authority escalation. Preserve J1, protected bus, high-speed corridors, storage electrical topology, and no global rule changes.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Close J3/J8 M.2 insertion and storage-mode service envelope",
-      "updated_at": "2026-09-19T01:00:29.358742Z",
+      "updated_at": "2026-09-19T01:03:15.525626Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "authority:P24-MPA-M2-SERVICE-CORRIDOR"
+      ],
+      "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed MPA/Storage/Mechanical authority packet binds one legal local placement/corridor plan or identifies the minimum frozen constraint that must yield with measured evidence.",
+      "created_at": "2026-09-19T01:03:15.479139Z",
+      "dependencies": [],
+      "domain": "macro placement authority/mechanical/storage",
+      "edit_boundaries": [
+        "authority decision only",
+        "no CAD mutation",
+        "no global rule changes",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-MPA-M2-SERVICE-CORRIDOR",
+      "notes": "Created from Unblocker INTERNAL_ROUTE; evidence base eedf9e72 and authority contract eff269f2. Dependent M2 package waits on authority: P24-MPA-M2-SERVICE-CORRIDOR.",
+      "owner": "mpa_m2_service_corridor",
+      "priority": 3,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "service_access",
+        "storage_corridor",
+        "DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Issue one binding placement/corridor plan for J3, J8, and MECH_M2_2280. Identify immutable anchors; movable J3/J8/retention geometry; insertion/removal and retention/service corridors; layer/mechanical intent; protected existing geometry; and whether MECH_M2_2280 is a full card/service envelope or an overlapping proxy. Preserve selected storage-mode topology, populated J8 contract, J1, protected bus, high-speed corridors, and electrical intent. No CAD edits.",
+      "session_ids": [
+        "root-mpa-m2-20260919T0110Z"
+      ],
+      "status": "RUNNING",
+      "title": "Bind J3/J8/M.2 insertion and service corridor",
+      "updated_at": "2026-09-19T01:05:39.088293Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5431,5 +5494,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T01:00:29.359211Z"
+  "updated_at": "2026-09-19T01:05:39.088766Z"
 }

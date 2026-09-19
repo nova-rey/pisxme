@@ -1723,3 +1723,7 @@ Heavy validation confirms L10/Y10 XY bounds and J1 2D bounds, but the integrated
 # 2026-09-19 — M2 service-envelope attempt routed to Unblocker
 
 The bounded M2 service-envelope attempt produced no candidate or terminal evidence within its execution window. Root released the stale Supervisor claim and routed the implementation stall to Unblocker for a capability-level disposition; no CAD was changed and no J3/J8 finding was waived.
+
+## 2026-09-19 HPQ #6 reconciliation and M2 corridor authority dispatch
+
+HPQ Issue #6 `resolution-ready` was reconciled at the current campaign boundary. Its normalized packet confirms the prior protected-bus R1 fuse/corridor geometry is superseded; the binding R2 upstream authority packet `validation-receipts/protected-bus-upstream-authority-revision-20260918/` remains the producer handoff, while Issue #7 continues to gate the protected-bus producer. The independent M2 mechanical package is parked only on a new Macro Placement Authority decision (`P24-MPA-M2-SERVICE-CORRIDOR`); no CAD changes were made.
