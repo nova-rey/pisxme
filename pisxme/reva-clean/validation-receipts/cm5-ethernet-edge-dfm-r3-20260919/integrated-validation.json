@@ -1,0 +1,11 @@
+{
+  "integration_commit": "ff4dd1dd",
+  "image": "pisxme-kicad-light:v1",
+  "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "kicad_version": "10.0.6",
+  "violations": 264,
+  "unconnected_items": 393,
+  "zero_shorting_items": true,
+  "report_sha256": "32fc564bfd6d8ed3b9cde9a9df82d1a4d319360c7e46e773e33900c59eefae91",
+  "validated_at": "2026-09-19T00:34:49.050349+00:00"
+}

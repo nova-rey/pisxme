@@ -5195,7 +5195,7 @@
       ],
       "status": "VALIDATING",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T00:33:45.478582Z",
+      "updated_at": "2026-09-19T00:34:49.134914Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5204,14 +5204,14 @@
         ],
         "results": {
           "edge-clearance census": {
-            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/INTEGRATION_FAILURE_RECEIPT.md",
-            "recorded_at": "2026-09-19T00:29:20.445547Z",
-            "status": "FAIL"
+            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/INTEGRATED_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-19T00:34:49.134896Z",
+            "status": "PASS"
           },
           "targeted native DRC": {
-            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r2-20260919/INTEGRATION_FAILURE_RECEIPT.md",
-            "recorded_at": "2026-09-19T00:29:20.399375Z",
-            "status": "FAIL"
+            "receipt": "validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/INTEGRATED_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-19T00:34:49.085824Z",
+            "status": "PASS"
           }
         }
       },
@@ -5307,5 +5307,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T00:33:45.478895Z"
+  "updated_at": "2026-09-19T00:34:49.135194Z"
 }

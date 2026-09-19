@@ -1683,3 +1683,7 @@ Fresh canonical-context KiCad Light validation of integrated candidate `78c4cc2a
 # 2026-09-19 — CM5/Ethernet r3 candidate reconciles stale-zone context
 
 The CM5/Ethernet Supervisor returned r3 candidate `d0fc415f` from current base `ab9e8c73`. The r2 integrated failure was a saved-board zone-context defect: producer validation had refilled zones only in memory. r3 persisted `pcbnew.ZONE_FILLER` output while preserving the exact scoped C48–C51/C8/CM5_5V delta. Fresh Light 10.0.6 evidence reports 264 violations and 393 unconnected items, with zero shorts, library-footprint issues, XIN/XOUT width findings, solder-mask bridges, hole-clearance findings, and copper-edge-clearance findings. Canonical integration and independent validation remain required.
+
+# 2026-09-19 — CM5/Ethernet r3 candidate integrated and validated
+
+The corrected CM5/Ethernet candidate was serialized onto canonical `reva-clean` as integration commit `ff4dd1dd` and independently checked in KiCad Light 10.0.6 with the standard no-refill command. The report matches the producer result at 264 violations and 393 unconnected items and preserves the scoped zero-short, library-context, edge-clearance, and courtyard conditions. The integrated validation receipt is retained under `validation-receipts/cm5-ethernet-edge-dfm-r3-20260919/`; no protected-bus, J1, high-speed, or global-rule changes occurred.
