@@ -1,0 +1,83 @@
+{
+  "package": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
+  "dispatch_base": "eedf9e723b5069fcbb495834b1f8cb9b15a7ec4e",
+  "integrated_board_commit": "ff4dd1dd3edc0f62b64b22a776f26336e2e0de96",
+  "integrated_board_sha256": "9d874cb56f7a7f2a11481f1bed893775d741a073763b8297c94c82ec9e3d119f",
+  "authority_contract": "PISXME-P24-MECHANICAL-3D-ENVELOPE-20260919-R1",
+  "authority_contract_sha256": "f0e4bac4de05479ace818a591cff4cdf8beebb843bd85ec1fd0dbf9c3828b0e5",
+  "status": "UNPROVEN",
+  "matrix": [
+    {
+      "id": "CM5-2D-EDGE-001",
+      "requirement": "C48-C51 copper-edge clearance on integrated r3 board",
+      "state": "PASS",
+      "evidence": "cm5-integrated-validation.json; cm5-integrated-drc.json",
+      "disposition": "0 copper-edge-clearance findings in fresh Light 10.0.6 report."
+    },
+    {
+      "id": "CM5-2D-COURTYARD-001",
+      "requirement": "C7/C8 courtyard separation",
+      "state": "PASS",
+      "evidence": "cm5-integrated-validation.json; cm5-integrated-drc.json",
+      "disposition": "Target courtyard overlap absent; no waiver used."
+    },
+    {
+      "id": "CM5-2D-NET-001",
+      "requirement": "Target local routing has no new shorts/unconnected regression",
+      "state": "PASS",
+      "evidence": "cm5-integrated-validation.json",
+      "disposition": "264 violations, 393 unconnected, zero shorting items; remaining findings are outside this package."
+    },
+    {
+      "id": "CM5-3D-Z-001",
+      "requirement": "C7/C8 and C48-C51 component height/3D body envelope",
+      "state": "UNPROVEN",
+      "evidence": "authority-contract.json; prior-RECEIPT.json; prior-mech_audit.json",
+      "disposition": "No project-local 3D models for these local passives; XY/edge geometry is evidenced, Z/body height is not."
+    },
+    {
+      "id": "MECH-L10-Y10-Z",
+      "requirement": "L10/Y10 exact package height and 3D clearance",
+      "state": "UNPROVEN",
+      "evidence": "authority-contract.json; mechanical-3d-evidence-gap-20260919/STATUS.json",
+      "disposition": "Exact MPN/body height/model absent; contract binds XY only."
+    },
+    {
+      "id": "MECH-J8-SERVICE",
+      "requirement": "J8 populated mode/service accessory, keying, access, and height",
+      "state": "UNPROVEN",
+      "evidence": "authority-contract.json",
+      "disposition": "J8 remains in-BOM/on-board/DNP=false; exact accessory, operator procedure, keying, and height are absent. Simultaneous FORCE_SATA/FORCE_NVME remains prohibited."
+    },
+    {
+      "id": "MECH-J1-SERVICE",
+      "requirement": "J1 mating/rework/assembly boundary",
+      "state": "UNPROVEN",
+      "evidence": "authority-contract.json; authority-source-manifest.sha256",
+      "disposition": "Connector contract is bound, but exact local 3D mating/rework assembly and prototype mating evidence are absent."
+    },
+    {
+      "id": "MECH-J3-SERVICE",
+      "requirement": "J3 populated 2280 insertion/retention/service envelope",
+      "state": "UNPROVEN",
+      "evidence": "authority-contract.json; cm5-integrated-drc.json",
+      "disposition": "J3/MECH_M2_2280 courtyard and PTH/courtyard findings remain; no 2280 card sweep/retention/service evidence or waiver exists."
+    },
+    {
+      "id": "MECH-COOLER-SERVICE",
+      "requirement": "Selected V100/SXM2 cooler/backplate and service assembly",
+      "state": "UNPROVEN",
+      "evidence": "authority-contract.json; authority-source-manifest.sha256",
+      "disposition": "Only module-mounted cooler boundary is authorized; selected cooler/backplate fit, thermal path, airflow/liquid routing, and enclosure/service fit require prototype validation."
+    },
+    {
+      "id": "MECH-BOM-001",
+      "requirement": "Current candidate assembly/BOM/service release reconciliation",
+      "state": "UNPROVEN",
+      "evidence": "prior-mech_audit.json",
+      "disposition": "Retained audit identifies a stale BOM mismatch; current candidate BOM/CPL/assembly release artifacts are not reconciled by this bounded read-only pass."
+    }
+  ],
+  "no_cad_edits": true,
+  "remaining_action": "Acquire or establish exact package heights/models, J8 accessory/service procedure, J1/J3 mating/service assembly evidence, selected cooler/backplate fit, and current BOM/CPL reconciliation; then run the exact-board mechanical assembly/service gate."
+}

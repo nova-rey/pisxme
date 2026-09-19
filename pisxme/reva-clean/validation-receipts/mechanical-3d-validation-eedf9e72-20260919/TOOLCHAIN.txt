@@ -1,0 +1,8 @@
+base_sha=eedf9e723b5069fcbb495834b1f8cb9b15a7ec4e
+authority_commit=eff269f2b84044ca521c55116b1971a23558a873
+board_sha256=9d874cb56f7a7f2a11481f1bed893775d741a073763b8297c94c82ec9e3d119f
+light_image=pisxme-kicad-light:v1 sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9
+heavy_image=pisxme-kicad-heavy:v1 sha256:be9cfe7295fe16a3196cd45fa26fa3aa8acbd7e1121ab55504eb2fc5f2034a8e
+light_command=kicad-cli pcb drc --severity-all --format json --output /workspace/output/current-head-drc.json /workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+heavy_top_command=kicad-cli pcb render --output /workspace/output/current-head-3d-top.png --width 2400 --height 1440 --quality basic --background opaque /workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+heavy_iso_command=kicad-cli pcb render --output /workspace/output/current-head-3d-iso.png --width 2400 --height 1440 --quality basic --background opaque --rotate '-45,0,45' --perspective /workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb

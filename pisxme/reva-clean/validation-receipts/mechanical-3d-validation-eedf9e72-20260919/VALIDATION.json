@@ -1,0 +1,21 @@
+{
+  "package_id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "validation_id": "PISXME-P24-MECHANICAL-3D-VALIDATION-20260919-R2",
+  "status": "WAITING_ON_EXPLICIT_MECHANICAL_EVIDENCE_AND_OPEN_INTEGRATED_FINDINGS",
+  "base_sha": "eedf9e723b5069fcbb495834b1f8cb9b15a7ec4e",
+  "authority_commit": "eff269f2b84044ca521c55116b1971a23558a873",
+  "board_sha256": "9d874cb56f7a7f2a11481f1bed893775d741a073763b8297c94c82ec9e3d119f",
+  "checks": {
+    "l10_xy_bound": {"state":"PASS", "position_mm":[143.0,127.8], "courtyard_bbox_mm":[141.355,126.355,144.645,129.245], "min_edge_margin_mm":50.805, "z_height": "UNPROVEN"},
+    "y10_xy_bound": {"state":"PASS", "position_mm":[138.2,126.4], "courtyard_bbox_mm":[136.455,125.005,139.945,127.795], "min_edge_margin_mm":52.255, "z_height": "UNPROVEN"},
+    "u11_local_clearance": {"state":"PASS", "l10_u11_courtyard_gap_mm":1.11, "l10_y10_courtyard_gap_mm":1.41},
+    "j8_service": {"state":"UNPROVEN_WITH_CURRENT_OVERLAP", "source_state":"in_bom_on_board_dnp_false", "courtyard_bbox_mm":[242.955,147.955,247.045,152.045], "mech_m2_overlap_mm":[4.09,3.14], "missing":["selected MPN", "mating jumper/shunt or harness", "keying and operator access", "height envelope", "service procedure"]},
+    "j1_service": {"state":"PASS_2D_BOUND_UNPROVEN_3D", "mpn":"74221-101LF", "courtyard_bbox_mm":[116.455,76.185,183.545,103.815], "rework_guidance_mm":5.10, "expanded_guidance_intersections":[], "missing":["exact connector model", "hidden-joint assembly proof", "mating validation"]},
+    "j3_service": {"state":"OPEN", "mpn":"SM3ZS067U410ABR1000", "body_height_mm":4.10, "mech_m2_overlap_mm":[30.64,11.09], "missing":["card insertion/removal sweep", "retention datum assembly proof", "cable/service access proof"]},
+    "cooler_backplate": {"state":"PASS_REV_A_CONTRACT_ONLY_REQUIRES_PROTOTYPE_VALIDATION", "carrier_mounted_cooler_reserved":false, "missing":["selected module cooler", "standoff/backplate assembly", "thermal and enclosure service validation"]}
+  },
+  "native_drc": {"violations":264,"unconnected_items":393,"shorting_items":0,"courtyards_overlap":4,"pth_inside_courtyard":5,"copper_edge_clearance":0},
+  "model_census": {"model_records":4,"existing_records":2,"missing_records":2,"target_refs_without_models":["L10","Y10","U11","J1","J3","J8","MECH_M2_2280"]},
+  "render": {"state":"PASS_RENDER_ONLY","top_sha256":"e51ad4c78051c1540f0b2a991c7fe97418150311106016c4549c6b20884a3260","iso_sha256":"9b1521a5f4934000ccc3c1e32ba9330abe9c15e3776e2f477bcc3b74aa78fe63"},
+  "prototype_validation_required":["L10/Y10 exact body-height and installed-clearance measurement", "J8 selected service accessory and mode procedure", "J1 mating/rework validation", "J3 populated 2280 retention and insertion/removal validation", "selected module cooler/backplate/standoff fit and thermal validation"]
+}

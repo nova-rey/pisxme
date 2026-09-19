@@ -1711,3 +1711,7 @@ Mechanical/DFM Authority contract `PISXME-P24-MECHANICAL-3D-ENVELOPE-20260919-R1
 # 2026-09-19 — Mechanical authority unlocked 3D validation packages
 
 The signed Mechanical/DFM envelope contract was committed at `eff269f2` and completed its queue package. `P24-MECHANICS-L10-U11-LOCAL-CORRECTION` is dispatched to `supervisor_mechanics_dfm` for current-head Heavy 3D/assembly validation; `P24-MECHANICS-CM5-ETHERNET-EDGE-DFM` is dispatched to `supervisor_local_rails` for its bounded service/assembly reconciliation. No authority field was silently promoted to a fabricated measurement.
+
+# 2026-09-19 — Mechanical Heavy validation returns bounded gaps
+
+Current-head Heavy/Light validation against board `eedf9e72` and authority `eff269f2` is retained under `validation-receipts/mechanical-3d-validation-eedf9e72-20260919/`; CM5 assembly/service reconciliation is retained under `validation-receipts/cm5-ethernet-edge-assembly-service-20260919/`. L10/Y10 XY and J1 2D bounds pass, but exact Z/model evidence remains unproven. J8 overlaps the explicit M.2 envelope by 4.09 x 3.14 mm and J3 overlaps it by 30.64 x 11.09 mm; these are open integrated mechanical findings, not waivers.

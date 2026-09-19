@@ -1,0 +1,27 @@
+{
+  "package_id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
+  "integrated_candidate_sha": "51e712ce4b794758ba48fa1f36fba48d2e83890e",
+  "cad_edits": false,
+  "geometry": {
+    "L10_position_mm": [143.0,127.8],
+    "L10_U11_courtyard_gap_mm": 1.11,
+    "L10_Y10_courtyard_gap_mm": 1.41,
+    "L10_min_edge_margin_mm": 50.805,
+    "U11_min_edge_margin_mm": 40.405,
+    "Y10_min_edge_margin_mm": 52.255,
+    "local_courtyard_overlap": false
+  },
+  "render": {
+    "status": "PASS_RENDER_ONLY",
+    "artifact": "INTEGRATED_3D_TOP.png",
+    "sha256": "ea907458d77a8aca656c23b9bccbe70e23f904f6c198f1bb81c42bb89a45214c",
+    "toolchain": "KiCad Heavy 10.0.6",
+    "image": "pisxme-kicad-heavy:v1",
+    "image_digest": "sha256:be9cfe7295fe16a3196cd45fa26fa3aa8acbd7e1121ab55504eb2fc5f2034a8e"
+  },
+  "assembly_service": {
+    "2d_courtyard_edge": "PASS_FOR_LOCAL_CORRECTION",
+    "3d_mating_height_cooler_backplate_service": "UNPROVEN",
+    "gap": "L10/U11/Y10/J1/J3/J8 project-local 3D models or authoritative mechanical height/envelope data are absent"
+  }
+}

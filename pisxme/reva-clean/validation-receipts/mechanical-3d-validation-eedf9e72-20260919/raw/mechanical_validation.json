@@ -1,0 +1,645 @@
+{
+  "board": {
+    "edge_bbox": {
+      "left": -0.05,
+      "top": -0.05,
+      "right": 300.05,
+      "bottom": 180.05,
+      "width": 300.1,
+      "height": 180.1
+    }
+  },
+  "footprints": {
+    "L10": {
+      "value": "4.7uH",
+      "fp_id": "L_2520_6332Metric",
+      "position_mm": [
+        143.0,
+        127.8
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 141.15,
+        "top": 125.1214,
+        "right": 144.85,
+        "bottom": 129.225,
+        "width": 3.7,
+        "height": 4.1036
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 141.355,
+          "top": 126.355,
+          "right": 144.645,
+          "bottom": 129.245,
+          "width": 3.29,
+          "height": 2.89
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 141.405,
+        "top": 126.405,
+        "right": 155.405,
+        "bottom": 50.80500000000001
+      }
+    },
+    "Y10": {
+      "value": "25MHz",
+      "fp_id": "Crystal_3225_4Pad",
+      "position_mm": [
+        138.2,
+        126.4
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 136.475,
+        "top": 123.7214,
+        "right": 139.925,
+        "bottom": 127.775,
+        "width": 3.45,
+        "height": 4.0536
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 136.455,
+          "top": 125.005,
+          "right": 139.945,
+          "bottom": 127.795,
+          "width": 3.49,
+          "height": 2.79
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 136.50500000000002,
+        "top": 125.05499999999999,
+        "right": 160.10500000000002,
+        "bottom": 52.25500000000001
+      }
+    },
+    "U11": {
+      "value": "",
+      "fp_id": "JMS583_QFN64_8x8",
+      "position_mm": [
+        140.0,
+        135.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 2,
+      "footprint_bbox": {
+        "left": 133.719048,
+        "top": 128.9214,
+        "right": 144.625,
+        "bottom": 139.625,
+        "width": 10.905952,
+        "height": 10.7036
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 135.355,
+          "top": 130.355,
+          "right": 144.645,
+          "bottom": 139.645,
+          "width": 9.29,
+          "height": 9.29
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 135.405,
+        "top": 130.405,
+        "right": 155.405,
+        "bottom": 40.405
+      }
+    },
+    "J1": {
+      "value": "74221-101LF",
+      "fp_id": "PiSXMeRevAClean_SXM2_74221_101LF",
+      "position_mm": [
+        150.0,
+        90.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 2,
+      "footprint_bbox": {
+        "left": 116.475,
+        "top": 76.205,
+        "right": 183.525,
+        "bottom": 103.795,
+        "width": 67.05,
+        "height": 27.59
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 116.455,
+          "top": 76.185,
+          "right": 183.545,
+          "bottom": 103.815,
+          "width": 67.09,
+          "height": 27.63
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 116.505,
+        "top": 76.235,
+        "right": 116.50500000000002,
+        "bottom": 76.23500000000001
+      }
+    },
+    "J3": {
+      "value": "1-2199230-4",
+      "fp_id": "TE_1-2199230-4_MKEY",
+      "position_mm": [
+        220.0,
+        165.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 2,
+      "footprint_bbox": {
+        "left": 208.825,
+        "top": 157.5214,
+        "right": 250.525,
+        "bottom": 170.525,
+        "width": 41.7,
+        "height": 13.0036
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 218.955,
+          "top": 159.455,
+          "right": 250.545,
+          "bottom": 170.545,
+          "width": 31.59,
+          "height": 11.09
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 219.00500000000002,
+        "top": 159.50500000000002,
+        "right": 49.505000000000024,
+        "bottom": 9.505000000000024
+      }
+    },
+    "J8": {
+      "value": "",
+      "fp_id": "MODE_JUMPER_1x04",
+      "position_mm": [
+        245.0,
+        150.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 1,
+      "footprint_bbox": {
+        "left": 242.88,
+        "top": 146.3214,
+        "right": 247.12,
+        "bottom": 152.12,
+        "width": 4.24,
+        "height": 5.7986
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 242.955,
+          "top": 147.955,
+          "right": 247.045,
+          "bottom": 152.045,
+          "width": 4.09,
+          "height": 4.09
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 243.00500000000002,
+        "top": 148.00500000000002,
+        "right": 53.005000000000024,
+        "bottom": 28.005000000000024
+      }
+    },
+    "MECH_M2_2280": {
+      "value": "JAE SM3ZS067U410ABR1000 / 2280 card envelope",
+      "fp_id": "M2_2280_RETENTION_ENVELOPE",
+      "position_mm": [
+        260.0,
+        160.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 28,
+      "footprint_bbox": {
+        "left": 219.95,
+        "top": 148.95,
+        "right": 300.05,
+        "bottom": 171.05,
+        "width": 80.1,
+        "height": 22.1
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 219.905,
+          "top": 148.905,
+          "right": 300.095,
+          "bottom": 171.095,
+          "width": 80.19,
+          "height": 22.19
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 219.955,
+        "top": 148.955,
+        "right": -0.045000000000015916,
+        "bottom": 8.955000000000013
+      }
+    },
+    "J7": {
+      "value": "Raspberry-Pi-5-Compute-Module",
+      "fp_id": "PiSXMeRevAClean_Raspberry_Pi_5_Compute_Module",
+      "position_mm": [
+        35.0,
+        130.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 2,
+      "footprint_bbox": {
+        "left": 31.44,
+        "top": 78.44,
+        "right": 71.56,
+        "bottom": 133.56,
+        "width": 40.12,
+        "height": 55.12
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 32.695,
+          "top": 96.985,
+          "right": 70.505,
+          "bottom": 120.015,
+          "width": 37.81,
+          "height": 23.03
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [
+        {
+          "path": "${KIPRJMOD}/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+          "resolved": "/workspace/project/pisxme/reva-clean/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+          "exists": true
+        },
+        {
+          "path": "${KIPRJMOD}/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+          "resolved": "/workspace/project/pisxme/reva-clean/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+          "exists": true
+        }
+      ],
+      "edge_margins_mm": {
+        "left": 32.745,
+        "top": 97.035,
+        "right": 229.54500000000002,
+        "bottom": 60.03500000000001
+      }
+    },
+    "C14": {
+      "value": "",
+      "fp_id": "C_1206_3216Metric",
+      "position_mm": [
+        70.0,
+        120.0
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 68.1,
+        "top": 118.79,
+        "right": 75.955649,
+        "bottom": 121.21,
+        "width": 7.855649,
+        "height": 2.42
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 68.385,
+          "top": 118.735,
+          "right": 71.615,
+          "bottom": 121.265,
+          "width": 3.23,
+          "height": 2.53
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 68.435,
+        "top": 118.785,
+        "right": 228.435,
+        "bottom": 58.78500000000001
+      }
+    },
+    "C5": {
+      "value": "",
+      "fp_id": "C_1206_3216Metric",
+      "position_mm": [
+        52.0,
+        163.0
+      ],
+      "orientation_deg": 180.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 50.1,
+        "top": 161.79,
+        "right": 56.350887,
+        "bottom": 164.21,
+        "width": 6.250887,
+        "height": 2.42
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 50.385,
+          "top": 161.735,
+          "right": 53.615,
+          "bottom": 164.265,
+          "width": 3.23,
+          "height": 2.53
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 50.434999999999995,
+        "top": 161.78500000000003,
+        "right": 246.435,
+        "bottom": 15.785000000000025
+      }
+    },
+    "C6": {
+      "value": "",
+      "fp_id": "C_1206_3216Metric",
+      "position_mm": [
+        52.0,
+        165.25
+      ],
+      "orientation_deg": 180.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 47.649113,
+        "top": 164.04,
+        "right": 53.9,
+        "bottom": 166.46,
+        "width": 6.250887,
+        "height": 2.42
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 50.385,
+          "top": 163.985,
+          "right": 53.615,
+          "bottom": 166.515,
+          "width": 3.23,
+          "height": 2.53
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 50.434999999999995,
+        "top": 164.03500000000003,
+        "right": 246.435,
+        "bottom": 13.535000000000025
+      }
+    },
+    "C7": {
+      "value": "",
+      "fp_id": "C_1210_3225Metric",
+      "position_mm": [
+        65.0,
+        168.5
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 62.8,
+        "top": 164.978444,
+        "right": 67.2,
+        "bottom": 169.91,
+        "width": 4.4,
+        "height": 4.931556
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 63.185,
+          "top": 167.035,
+          "right": 66.815,
+          "bottom": 169.965,
+          "width": 3.63,
+          "height": 2.93
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 63.235,
+        "top": 167.085,
+        "right": 233.235,
+        "bottom": 10.085000000000008
+      }
+    },
+    "C8": {
+      "value": "",
+      "fp_id": "C_1210_3225Metric",
+      "position_mm": [
+        65.0,
+        172.5
+      ],
+      "orientation_deg": 0.0,
+      "attributes": 0,
+      "footprint_bbox": {
+        "left": 62.8,
+        "top": 171.09,
+        "right": 67.2,
+        "bottom": 176.021557,
+        "width": 4.4,
+        "height": 4.931557
+      },
+      "courtyard": {
+        "F.CrtYd": {
+          "left": 63.185,
+          "top": 171.035,
+          "right": 66.815,
+          "bottom": 173.965,
+          "width": 3.63,
+          "height": 2.93
+        },
+        "B.CrtYd": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0,
+          "width": 0.0,
+          "height": 0.0
+        }
+      },
+      "models": [],
+      "edge_margins_mm": {
+        "left": 63.235,
+        "top": 171.085,
+        "right": 233.235,
+        "bottom": 6.085000000000008
+      }
+    }
+  },
+  "model_census": {
+    "records": 4,
+    "existing": 2,
+    "missing": 2,
+    "paths": [
+      {
+        "ref": "J7",
+        "path": "${KIPRJMOD}/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+        "exists": true
+      },
+      {
+        "ref": "J7",
+        "path": "${KIPRJMOD}/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+        "exists": true
+      },
+      {
+        "ref": "U9",
+        "path": "${KICAD8_3DMODEL_DIR}/Package_SON.3dshapes/USON-10_2.5x1.0mm_P0.5mm.wrl",
+        "exists": false
+      },
+      {
+        "ref": "U6",
+        "path": "${KICAD8_3DMODEL_DIR}/Package_SON.3dshapes/USON-10_2.5x1.0mm_P0.5mm.wrl",
+        "exists": false
+      }
+    ]
+  },
+  "courtyard_overlaps": [
+    {
+      "a": "J3",
+      "b": "MECH_M2_2280",
+      "overlap_mm": [
+        30.639999999999986,
+        11.089999999999975
+      ]
+    },
+    {
+      "a": "J8",
+      "b": "MECH_M2_2280",
+      "overlap_mm": [
+        4.089999999999975,
+        3.1399999999999864
+      ]
+    },
+    {
+      "a": "J7",
+      "b": "C14",
+      "overlap_mm": [
+        2.1199999999999903,
+        1.2800000000000011
+      ]
+    },
+    {
+      "a": "C5",
+      "b": "C6",
+      "overlap_mm": [
+        3.230000000000004,
+        0.2799999999999727
+      ]
+    }
+  ]
+}

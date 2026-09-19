@@ -1,0 +1,107 @@
+{
+  "contract_id": "PISXME-P24-MECHANICAL-3D-ENVELOPE-20260919-R1",
+  "package_id": "P24-MECHANICAL-3D-ENVELOPE-AUTHORITY",
+  "status": "SIGNED_BOUNDED_AUTHORITY_CONTRACT_WITH_EXPLICIT_UNPROVEN_FIELDS",
+  "base_sha": "dd3fe9591758a617d26cc347849e75ddea18fd73",
+  "design_branch": "reva-clean",
+  "board": {
+    "path": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "sha256": "9d874cb56f7a7f2a11481f1bed893775d741a073763b8297c94c82ec9e3d119f"
+  },
+  "authority": {
+    "domain": "Mechanical / DFM / assembly-service envelope",
+    "owner_role": "Mechanical/DFM Authority",
+    "recorded_by": "supervisor_mechanics_dfm",
+    "decision_scope": "Bound mechanical constraints and explicit evidence dispositions; no CAD edits, no electrical rearchitecture, no fabricated-hardware claim",
+    "authority_class": "derived from external package contracts plus existing Rev-A product decisions"
+  },
+  "signature": {
+    "signer_role": "Mechanical/DFM Authority delegate",
+    "signer_session": "supervisor_mechanics_dfm",
+    "signed_at": "2026-09-19",
+    "scheme": "SHA256-content-attestation",
+    "status": "SIGNED",
+    "contract_digest_file": "CONTRACT_SHA256"
+  },
+  "invariants": [
+    {
+      "id": "MECH-L10-001",
+      "subject": "L10 4.7uH inductor",
+      "statement": "The integrated L10 XY occupancy is bounded by its current project footprint and courtyard; future package changes must fit the same or smaller bounded envelope unless Mechanical Authority reopens it.",
+      "cad_identity": {"reference": "L10", "value": "4.7uH", "footprint": "L_2520_6332Metric", "position_mm": [143.0, 127.8], "rotation_deg": 0.0},
+      "bounded_envelope_mm": {"footprint_bbox": [141.15, 125.1214, 144.85, 129.225], "front_courtyard_bbox": [141.355, 126.355, 144.645, 129.245], "dimensions": [3.29, 2.89]},
+      "z_envelope": {"state": "UNPROVEN", "height_max_mm": null, "reason": "exact L10 MPN/package drawing/3D model is absent"},
+      "authority_class": "D_DERIVED_ENGINEERING_BOUND",
+      "provenance": ["board geometry at base SHA", "l10-u11-3d-assembly-service-20260918/RECEIPT.json", "mechanical-3d-evidence-gap-20260919/STATUS.json"],
+      "verification": "native courtyard/edge DRC plus exact MPN/model or dimensioned drawing before assembly release",
+      "current_disposition": "PASS_XY_BOUND_UNPROVEN_Z",
+      "prototype_validation": "Confirm installed inductor body height and adjacent clearance during first article assembly."
+    },
+    {
+      "id": "MECH-Y10-001",
+      "subject": "Y10 25 MHz crystal",
+      "statement": "The integrated Y10 XY occupancy is bounded by its current project footprint and courtyard; any replacement must fit the same or smaller bounded envelope and preserve the XIN/XOUT/ground pad arrangement.",
+      "cad_identity": {"reference": "Y10", "value": "25MHz", "footprint": "Crystal_3225_4Pad", "position_mm": [138.2, 126.4], "rotation_deg": 0.0},
+      "bounded_envelope_mm": {"footprint_bbox": [136.475, 123.7214, 139.925, 127.775], "front_courtyard_bbox": [136.455, 125.005, 139.945, 127.795], "dimensions": [3.49, 2.79]},
+      "z_envelope": {"state": "UNPROVEN", "height_max_mm": null, "reason": "exact Y10 MPN/package drawing/3D model is absent"},
+      "authority_class": "D_DERIVED_ENGINEERING_BOUND",
+      "provenance": ["board geometry at base SHA", "l10-u11-3d-assembly-service-20260918/RECEIPT.json", "mechanical-3d-evidence-gap-20260919/STATUS.json"],
+      "verification": "native courtyard/edge DRC plus exact MPN/model or dimensioned drawing before assembly release",
+      "current_disposition": "PASS_XY_BOUND_UNPROVEN_Z",
+      "prototype_validation": "Confirm crystal body height and keepout during first article assembly; preserve oscillator electrical layout."
+    },
+    {
+      "id": "MECH-J8-001",
+      "subject": "J8 storage mode service interface",
+      "statement": "J8 remains a four-contact on-board mode/service interface. The current schematic marks it in-BOM and on-board with DNP=false; DNP conversion is not authorized by this contract. The exact mating jumper/header accessory and service procedure remain required before release.",
+      "cad_identity": {"reference": "J8", "value": "AUTO / FORCE SATA / FORCE NVMe", "footprint": "MODE_JUMPER_1x04", "position_mm": [245.0, 150.0], "rotation_deg": 0.0, "pads": {"1": "FORCE_SATA", "2": "AUTO_PEDET", "3": "FORCE_NVME", "4": "MODE_IN"}},
+      "xy_envelope_mm": {"front_courtyard_bbox": [242.955, 147.955, 247.045, 152.045], "dimensions": [4.09, 4.09], "minimum_board_edge_margin": 28.005},
+      "population_contract": {"schematic_dnp": false, "in_bom": true, "on_board": true, "default": "POPULATED_FOOTPRINT_SERVICE_ACCESS", "DNP_requires": "new schematic/BOM authority and explicit service procedure", "simultaneous_force_sata_and_force_nvme": "PROHIBITED"},
+      "mating_and_service": {"state": "UNPROVEN", "missing": ["selected J8 MPN", "mating jumper/shunt or harness MPN", "operator access and keying", "mode-selection procedure", "height envelope"]},
+      "authority_class": "C_USER_PRODUCT_MODE_SERVICE_CONTRACT_PLUS_D_DERIVED_BOUND",
+      "provenance": ["STORAGE.kicad_sch at base SHA", "PHASE24_CURRENT_NATIVE_NETLIST_20260912.xml", "PHASE24_DUAL_MODE_STORAGE_IMPLEMENTATION.md", "mechanical-3d-evidence-gap-20260919/STATUS.json"],
+      "verification": "native schematic/PCB parity, selected accessory drawing, service-access review, and mode-control negative tests",
+      "current_disposition": "PASS_TOPOLOGY_UNPROVEN_ACCESSORY_AND_SERVICE"
+    },
+    {
+      "id": "MECH-J1-001",
+      "subject": "J1 SXM2 mating/rework boundary",
+      "statement": "J1 is Amphenol/FCI 74221-101LF on the top side. Preserve the manufacturer mated stack height, connector courtyard, SXM2 insertion/mating direction, and the manufacturer rework boundary around the hidden-joint array.",
+      "component_contract": {"mpn": "74221-101LF", "contacts": 400, "array": "40x10", "pitch_mm": 1.27, "mated_stack_height_mm": 4.0, "contact_rating_a": 0.45, "mating_cycles": 50, "rework_perimeter_guidance_mm": 5.10},
+      "service_boundary": {"state": "BOUNDARY_DEFINED_2D_UNPROVEN_ASSEMBLY", "rule": "Keep access/rework ring and insertion path free of incompatible obstructions; no connector-height or mating claim from footprint alone."},
+      "authority_class": "B_EXTERNAL_COMPONENT_CONTRACT",
+      "provenance": ["authority-inventory/primary-docs/sxm2/SXM2_74221-101LF_AUTHORITY.md", "Amphenol drawing basis recorded there", "l10-u11-3d-assembly-service-20260918/RECEIPT.json"],
+      "verification": "pad/courtyard overlay, exact connector model or dimensioned drawing, assembly/rework review, prototype mating validation",
+      "current_disposition": "PASS_IDENTITY_CONTRACT_UNPROVEN_LOCAL_MATING_AND_SERVICE"
+    },
+    {
+      "id": "MECH-J3-001",
+      "subject": "J3 B-key M.2 mating/retention/service boundary",
+      "statement": "J3 is the selected JAE B-key 2280 socket. Preserve its card insertion axis, 4.10 mm body height, B-key contact geometry, 2280 end datum, retention feature, underside component allowance, and service access for card insertion/removal.",
+      "component_contract": {"mpn": "SM3ZS067U410ABR1000", "key": "B", "contacts": 67, "pitch_mm": 0.5, "body_height_mm": 4.10, "contact_rating_a": 0.5, "mating_cycles": 60, "primary_card": "2280", "optional_card": "2242 retention study only"},
+      "service_boundary": {"state": "BOUNDARY_DEFINED_CURRENT_BOARD_OPEN", "required": ["2280 card/enclosure envelope", "retention screw/standoff datum", "insertion/removal sweep", "cable/SSD access"], "known_current_issue": "existing retained DRC census records J3/MECH_M2_2280 overlap and PTH-in-courtyard findings; this contract does not waive them"},
+      "authority_class": "B_EXTERNAL_COMPONENT_CONTRACT_PLUS_D_DERIVED_SERVICE_BOUND",
+      "provenance": ["authority-inventory/primary-docs/m2-jse/M2_SOCKET_AUTHORITY.md", "JAE-SM3ZS067U410-drawing.pdf", "JAE-SM3-series-bulletin.pdf", "SATA-IO-TP053v11-M2-card-format.pdf", "mechanics-dfm-consolidated-61085fe0-20260913/RECEIPT.md"],
+      "verification": "native DRC against explicit 2280 envelope, exact drawing/model audit, populated-card insertion/removal review, prototype card fit",
+      "current_disposition": "PASS_COMPONENT_CONTRACT_FAIL_OR_UNPROVEN_INTEGRATED_SERVICE"
+    },
+    {
+      "id": "MECH-COOLER-001",
+      "subject": "Rev-A V100 cooler/backplate boundary",
+      "statement": "Rev-A uses a module-mounted air or liquid cooler on the V100/SXM2 module. No carrier-mounted cooler, carrier backplate, proprietary cooler CAD, or generic underside exclusion is part of the current product contract.",
+      "carrier_reservation": {"state": "NONE_BEYOND_VERIFIED_GEOMETRY", "reserved": ["SXM2 module", "mounting-hole/standoff geometry", "CM5/M.2/enclosure-floor geometry", "connector access"], "not_reserved": ["generic 150x95 mm carrier cooler area", "unverified carrier backplate keepout"]},
+      "prototype_validation": {"required": ["confirm selected module cooler/backplate does not conflict with carrier standoffs/connectors", "confirm thermal path and airflow/liquid routing before first power", "confirm enclosure-floor and service access"], "status": "REQUIRES_PROTOTYPE_VALIDATION"},
+      "authority_class": "C_USER_PRODUCT_REV_A_CONTRACT_PLUS_D_DERIVED_BOUND",
+      "provenance": ["authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md", "NVIDIA-Tesla-V100-datasheet.pdf", "foundational-invariants/thermal-mechanics-20260914/THERMAL_MECHANICS_PACKET.md"],
+      "verification": "mechanical assembly review against selected cooler/module/standoff evidence and prototype bring-up thermal procedure",
+      "current_disposition": "PASS_REV_A_BOUNDARY_UNPROVEN_SELECTED_ASSEMBLY"
+    }
+  ],
+  "global_disposition": {
+    "what_is_bound": ["L10/Y10 XY courtyard limits", "J8 topology/population source state", "J1/J3 manufacturer mating dimensions and service rules", "Rev-A module-mounted cooler contract"],
+    "what_remains_unproven": ["L10/Y10 exact MPN and Z heights", "J8 exact hardware/mating/service accessory", "J1 exact local 3D/mating/rework assembly", "J3 integrated 2280 retention/service sweep", "selected cooler/backplate fit and thermal assembly"],
+    "no_waivers": true,
+    "no_cad_edits": true,
+    "prototype_validation_required": true
+  }
+}

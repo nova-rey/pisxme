@@ -1,0 +1,15 @@
+{
+  "J1_courtyard": [
+    116.455,
+    76.185,
+    183.545,
+    103.815
+  ],
+  "J1_rework_guidance_expanded_bbox": [
+    111.355,
+    71.08500000000001,
+    188.64499999999998,
+    108.91499999999999
+  ],
+  "courtyards_intersecting_guidance_bbox": []
+}
