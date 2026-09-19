@@ -1743,3 +1743,7 @@ The first M2 Supervisor remained live without a candidate or terminal state acro
 ## 2026-09-19 M2 implementation stall routed to Unblocker
 
 The M2 Supervisor and direct KiCad producer both failed to produce a process or terminal artifact in bounded attempts. Root released both and created `P24-M2-IMPLEMENTATION-UNBLOCKER`, parking only the dependent M2 package. Unblocker must identify one supported implementation route for the unchanged MPA scope; no architecture reopening, DRC waiver, or Phase 26 work is permitted.
+
+## 2026-09-19 M2 Unblocker route dispatched
+
+Unblocker classified the prior M2 stalls as implementation-method failures and bound one supported return path: fresh detached `kicad-light` from current HEAD `be293bb7`, launched by `/home/nyx/pisxme-eda-workers/scripts/pisxme-worker` at 1 CPU/1 GiB with image `pisxme-kicad-light:v1` (`sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9`). The M2 package was released and redispatched to `kicad_m2_service_producer_r2` with the unchanged MPA scope.

@@ -5404,7 +5404,7 @@
       ],
       "id": "P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE",
       "notes": "Created from mechanical Heavy validation receipt 0dba465e; no existing J3/J8 finding is waived. Preserve current storage electrical contract. MPA binding decision 2026-09-19: keep TE 1-2199230-4 M-key J3 and full card envelope; move J8 to (205,140); correct stale JAE/B-key mechanical contract provenance before closure; separate connector mating volume from full card envelope and validate stack/retention/service.",
-      "owner": null,
+      "owner": "kicad_m2_service_producer_r2",
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5421,17 +5421,17 @@
         }
       ],
       "scope": "Resolve the integrated J3 2280 socket versus MECH_M2_2280 envelope/courtyard/PTH conflicts and J8 mode-service access contract. Produce one authority-bounded placement/correction candidate or an explicit product/authority escalation. Preserve J1, protected bus, high-speed corridors, storage electrical topology, and no global rule changes.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-m2-kicad-r2-20260919T0145Z"
+      ],
+      "status": "RUNNING",
       "title": "Close J3/J8 M.2 insertion and storage-mode service envelope",
-      "updated_at": "2026-09-19T01:26:27.873494Z",
+      "updated_at": "2026-09-19T01:29:51.318568Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-M2-IMPLEMENTATION-UNBLOCKER"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5498,7 +5498,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/m2-implementation-unblocker-20260919/RECEIPT.json",
+        "base_sha": "be293bb7",
+        "returned_at": "2026-09-19T01:29:47.156329Z",
+        "returned_by": "unblocker_m2_method",
+        "sha": "1ad43cea5feee46db32476733ed416f9ce9ad851b83bf10197358ee78bb3642f"
+      },
       "completion_criterion": "Terminal unblocker disposition with evidence, requested service, and exact return path; no open-ended route campaign.",
       "created_at": "2026-09-19T01:26:27.823772Z",
       "dependencies": [],
@@ -5509,10 +5515,12 @@
         "no DRC waivers",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/m2-implementation-unblocker-20260919/RECEIPT.md"
+      ],
       "id": "P24-M2-IMPLEMENTATION-UNBLOCKER",
       "notes": "MPA packet: validation-receipts/mpa-m2-service-corridor-20260919/MPA_DECISION.md; failed attempts: supervisor_m2_service_corridor and kicad_m2_service_producer.",
-      "owner": "unblocker_m2_method",
+      "owner": null,
       "priority": 3,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5529,12 +5537,10 @@
         }
       ],
       "scope": "Classify the bounded M2 implementation stall after MPA decision and direct KiCad producer emitted no process/artifact. Identify one concrete supported implementation route or capability-level change that can apply the frozen J8 relocation and explicit connector-mating/full-card representation without changing architecture.",
-      "session_ids": [
-        "root-m2-unblocker-20260919T0135Z"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Unblock M2 mechanical producer method",
-      "updated_at": "2026-09-19T01:26:31.438813Z",
+      "updated_at": "2026-09-19T01:29:47.246723Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5555,5 +5561,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T01:26:31.439073Z"
+  "updated_at": "2026-09-19T01:29:51.318830Z"
 }
