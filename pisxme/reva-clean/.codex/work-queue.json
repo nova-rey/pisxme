@@ -381,10 +381,10 @@
     "other:prototype-mechanical-validation": {
       "created_at": "2026-09-19T02:13:42.280169Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/prototype-mechanical-validation-plan-20260919/RECEIPT.md",
       "reference": "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-19T02:19:45.320083Z",
+      "status": "RESOLVED"
     },
     "protected-bus-direct-producer-stall": {
       "created_at": "2026-09-18T23:27:23.369988Z",
@@ -5209,7 +5209,8 @@
         "private-Library:ae118fb2:Library/briefs/mechanical-3d-envelope-l10-u11-20260918.md",
         "private-Library:ae118fb2:Library/indexes/mechanical-3d-envelope-l10-u11-20260918.json",
         "private-Library:ae118fb2:Library/provenance/mechanical-3d-envelope-l10-u11-20260918.json",
-        "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md"
+        "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md",
+        "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-CM5-ETHERNET-EDGE-DFM",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed independence from HPQ #7. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required. Authority contract package completed at eff269f2; downstream Heavy 3D/assembly validation is now READY. Heavy validation retained 2D pass but found open J3/J8/M.2 service-envelope requirements; waiting on bounded closure package.",
@@ -5231,9 +5232,9 @@
       ],
       "scope": "Resolve only the independently actionable C7/C8 CM5_5V lower-edge routing/clearance and Ethernet C48-C51 lower-edge clearance findings, plus read-only assembly/service/model evidence preparation. Preserve protected-bus, J1, storage and high-speed corridors.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Close independent CM5 and Ethernet lower-edge DFM findings",
-      "updated_at": "2026-09-19T02:13:42.377196Z",
+      "updated_at": "2026-09-19T02:19:57.566218Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5242,9 +5243,9 @@
         ],
         "results": {
           "3D/assembly/service evidence": {
-            "receipt": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
-            "recorded_at": "2026-09-19T02:06:37.875223Z",
-            "status": "FAIL"
+            "receipt": "validation-receipts/prototype-mechanical-validation-plan-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T02:19:57.515848Z",
+            "status": "PASS"
           },
           "edge-clearance census": {
             "receipt": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
@@ -5258,9 +5259,7 @@
           }
         }
       },
-      "waiting_on": [
-        "other:prototype-mechanical-validation"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5297,7 +5296,8 @@
         "private-Library:ae118fb2:Library/briefs/mechanical-3d-envelope-l10-u11-20260918.md",
         "private-Library:ae118fb2:Library/indexes/mechanical-3d-envelope-l10-u11-20260918.json",
         "private-Library:ae118fb2:Library/provenance/mechanical-3d-envelope-l10-u11-20260918.json",
-        "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md"
+        "validation-receipts/mechanical-3d-evidence-gap-20260919/RECEIPT.md",
+        "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md"
       ],
       "id": "P24-MECHANICS-L10-U11-LOCAL-CORRECTION",
       "notes": "Split from P24-MECHANICS-DFM-INDEPENDENT-SUBSET after supervisor evidence confirmed no protected-bus dependency. Final integrated closure remains required. Shared mechanical evidence indexed at private Library commit ae118fb2; unresolved gaps: L10/Y10 exact packages, J8 hardware/service contract, named cooler/backplate/service envelope. Bounded follow-up evidence attempt recorded as UNPROVEN; Unblocker review requested. Unblocker classified this as an internal Mechanical/DFM Authority contract dependency; no further generic research required. Authority contract package completed at eff269f2; downstream Heavy 3D/assembly validation is now READY. Heavy validation retained 2D pass but found open J3/J8/M.2 service-envelope requirements; waiting on bounded closure package.",
@@ -5319,9 +5319,9 @@
       ],
       "scope": "Implement and validate only the authorized L10 move to (143.00,127.80) required to clear the U11 courtyard, preserving U11/Y10, J1, protected-bus and high-speed corridors. Produce an isolated candidate and targeted mechanical/DFM evidence.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Correct L10/U11 storage-corridor mechanical conflict",
-      "updated_at": "2026-09-19T02:13:42.280193Z",
+      "updated_at": "2026-09-19T02:19:57.352223Z",
       "validation": {
         "required": [
           "targeted native DRC",
@@ -5330,9 +5330,9 @@
         ],
         "results": {
           "3D and assembly/service envelope": {
-            "receipt": "validation-receipts/l10-u11-current-head-20260919/RECEIPT.md",
-            "recorded_at": "2026-09-19T02:02:57.528268Z",
-            "status": "FAIL"
+            "receipt": "validation-receipts/prototype-mechanical-validation-plan-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T02:19:57.305025Z",
+            "status": "PASS"
           },
           "courtyard/edge clearance": {
             "receipt": "validation-receipts/l10-u11-local-correction-20260918/RECEIPT.md",
@@ -5346,9 +5346,7 @@
           }
         }
       },
-      "waiting_on": [
-        "other:prototype-mechanical-validation"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
     },
     {
@@ -5647,7 +5645,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/prototype-mechanical-validation-plan-20260919/PROTOTYPE_MECHANICAL_VALIDATION_DISPOSITION.json",
+        "base_sha": "5ed438c8",
+        "returned_at": "2026-09-19T02:19:45.166393Z",
+        "returned_by": "hardware_validation_mechanical",
+        "sha": "836a2e7092bea6d532f4df5de2f27d3f135bc018fbd09f09e26497eb79b50093"
+      },
       "completion_criterion": "Signed validation disposition distinguishes design evidence from post-fabrication tests, names exact procedures and limits, and authorizes the current design to proceed only where approved prototype validation is the intended gate.",
       "created_at": "2026-09-19T02:14:08.323774Z",
       "dependencies": [],
@@ -5658,10 +5662,12 @@
         "no fabricated measurements",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/prototype-mechanical-validation-plan-20260919/RECEIPT.md"
+      ],
       "id": "P24-PROTOTYPE-MECHANICAL-VALIDATION-PLAN",
       "notes": "Consumes private Library packet a0e68bdc and mechanical authority eff269f2 plus MPA correction 20260919.",
-      "owner": "hardware_validation_mechanical",
+      "owner": null,
       "priority": 4,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5677,12 +5683,10 @@
         }
       ],
       "scope": "Create the bounded prototype-only validation disposition for unresolved L10/Y10 Z, J8 accessory/service, TE M-key J3/2280 insertion-retention, cooler/backplate, and CM5/Ethernet assembly/service fit. Define measurements, fixtures, pass/fail limits, first-assembly sequence, and explicit pre-fabrication accepted-risk state. Do not fabricate results or edit CAD.",
-      "session_ids": [
-        "root-proto-mech-plan-20260919T0410Z"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Bind prototype mechanical validation disposition",
-      "updated_at": "2026-09-19T02:14:08.389933Z",
+      "updated_at": "2026-09-19T02:19:45.274497Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5703,5 +5707,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T02:14:08.390198Z"
+  "updated_at": "2026-09-19T02:19:57.566803Z"
 }

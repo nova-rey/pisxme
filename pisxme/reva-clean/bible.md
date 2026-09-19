@@ -1783,3 +1783,7 @@ The private Library packet `a0e68bdc822bad2eca47471649fa3f9417518f1b` resolved t
 ## 2026-09-19 Prototype mechanical validation plan dispatched
 
 The unresolved 3D/assembly/service fields are now owned by `P24-PROTOTYPE-MECHANICAL-VALIDATION-PLAN`. Hardware Validation will define the exact post-fabrication checks and pre-fabrication accepted-risk disposition without inventing measurements or changing CAD. L10 and CM5/Ethernet remain parked on the prototype mechanical validation dependency until that authority artifact returns.
+
+## 2026-09-19 Prototype mechanical gate dispositioned
+
+Hardware Validation issued `validation-receipts/prototype-mechanical-validation-plan-20260919/`, defining post-fabrication fixtures, measurements, limits, safety stops, and data retention for unresolved mechanical/assembly fields. It explicitly claims no hardware measurements. That approved prototype disposition resolved the shared mechanical dependency; L10/U11 and CM5/Ethernet packages now close their design-validation rows with prototype validation retained as the required empirical follow-up.

@@ -1,0 +1,249 @@
+{
+  "artifact_id": "PISXME-P24-PROTOTYPE-MECHANICAL-VALIDATION-20260919-R1",
+  "authority_basis": [
+    {
+      "id": "private-library-mechanical-evidence",
+      "reference": "validation-receipts/mechanical-3d-model-evidence-20260919/RECEIPT.md",
+      "revision": "a0e68bdc822bad2eca47471649fa3f9417518f1b"
+    },
+    {
+      "id": "mechanical-envelope-authority",
+      "reference": "validation-receipts/mechanical-3d-envelope-authority-20260919/MECHANICAL_3D_ENVELOPE_AUTHORITY.json",
+      "revision": "eff269f2b84044ca521c55116b1971a23558a873"
+    },
+    {
+      "id": "mpa-m2-service-corridor",
+      "reference": "validation-receipts/mpa-m2-service-corridor-20260919/MPA_DECISION.json",
+      "revision": "a37a95b6f808eb79175eb45389a6b12343dfaee823eb36ee8932412edbb36091"
+    },
+    {
+      "id": "m2-integrated-evidence",
+      "reference": "validation-receipts/m2-integrated-validation-9c2a6df5-20260919/RECEIPT.md",
+      "revision": "9c2a6df5"
+    },
+    {
+      "id": "l10-current-head-evidence",
+      "reference": "validation-receipts/l10-u11-current-head-20260919/RECEIPT.md",
+      "revision": "f90e7a7566dc80960fdb6fcbf23e418cbe5315ea"
+    },
+    {
+      "id": "cm5-edge-current-head-evidence",
+      "reference": "validation-receipts/cm5-ethernet-edge-current-head-20260919/RECEIPT.md",
+      "revision": "f90e7a7566dc80960fdb6fcbf23e418cbe5315ea"
+    }
+  ],
+  "campaign": "phase24-phase25-acreage",
+  "canonical_state": {
+    "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "board_sha256": "338ab87eda178e9569b2230f855219011479bdab47b18637d6d26087cbe2c799",
+    "branch": "reva-clean",
+    "current_evidence_is_not_revalidated_by_this_plan": true,
+    "head": "5ed438c87451d6208ab7f99481ac557e547be322",
+    "toolchain_context": "KiCad 10.0.6; prior Light image sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9; prior Heavy image sha256:be9cfe7295fe16a3196cd45fa26fa3aa8acbd7e1121ab55504eb2fc5f2034a8e"
+  },
+  "closure_criteria": {
+    "phase24_mechanical_row": "May be dispositioned for pre-fabrication only where current design evidence is closed and the remaining empirical item is explicitly `REQUIRES_PROTOTYPE_VALIDATION` with this executable procedure, limits, safety controls, and owner. Do not claim the empirical item passed.",
+    "phase24_overall": "Root must still close all unrelated Phase 24 acceptance rows on one integrated SHA; this artifact neither waives native DRC/connectivity nor closes power, interface, or manufacturing rows.",
+    "phase25": "No Phase 25 freeze is authorized by this artifact; freeze still requires the complete Phase 24 acceptance matrix and one integrated validated design.",
+    "this_package": "DONE when this signed plan and hash manifest are integrated as the bounded prototype disposition; it is not a hardware result."
+  },
+  "current_evidence_boundary": {
+    "design_evidence": {
+      "cm5_ethernet": "Scoped 2D DFM/edge checks pass at current evidence; full 3D assembly/service fit remains unproven.",
+      "cooler": "Rev-A module-mounted cooler boundary is binding; selected cooler/backplate/standoff/enclosure fit and thermal assembly remain prototype gates.",
+      "j1": "74221-101LF identity, 2D courtyard and 5.10 mm rework guidance are bounded; exact mating/hidden-joint service remains unproven and is a linked check below.",
+      "j3_m2": "TE 1-2199230-4 M-key J3 and full card envelope [220,149]-[300,171] are bound; M2-specific Light/Heavy representation checks pass within scope, physical insertion/retention/service remains unproven.",
+      "j8": "MPA position (205,140), in-BOM/on-board/DNP=false topology is bound; accessory, keying, height and service procedure remain unproven.",
+      "l10_y10": "2D XY bounds pass; exact selected MPN/body height/3D Z remain unproven."
+    },
+    "not_claimed": [
+      "fabricated hardware operation",
+      "mating success",
+      "insertion force",
+      "retention life",
+      "thermal performance",
+      "production qualification",
+      "field reliability",
+      "calibrated measurement results"
+    ]
+  },
+  "failure_triage_global": {
+    "escalation": "Mechanical/package contradiction -> Mechanical/DFM or Package Authority; storage/J8/J3 contract -> Storage Authority; power/thermal -> Power/V100 Authority; method/data-quality failure -> owner then Unblocker. User escalation is reserved for a genuine product decision after internal authority review.",
+    "immediate_stop_conditions": [
+      "mis-keyed or binding connector/card",
+      "visible connector/contact/PCB damage",
+      "unexpected short or continuity path",
+      "force above released manufacturer limit",
+      "cooling loss, leakage, smoke, abnormal heating, or current outside first-power limits",
+      "fixture or instrument calibration invalid"
+    ],
+    "triage_rule": "Stop, preserve state, photograph, record board/part/fixture identities, and route only the affected requirement to its domain authority. A failed physical test does not authorize a waiver or silent CAD change."
+  },
+  "package_id": "P24-PROTOTYPE-MECHANICAL-VALIDATION-PLAN",
+  "queue_mapping": {
+    "candidate_artifact": "validation-receipts/prototype-mechanical-validation-plan-20260919/PROTOTYPE_MECHANICAL_VALIDATION_DISPOSITION.json",
+    "owner_return": "Root Foreman",
+    "package_id": "P24-PROTOTYPE-MECHANICAL-VALIDATION-PLAN",
+    "remaining_dependencies": [
+      "exact selected L10/Y10 package identities and Z allowances",
+      "J8 accessory/keying/service authority",
+      "TE M-key J3 contract correction and physical card retention evidence",
+      "selected cooler/backplate/enclosure assembly",
+      "CM5/Ethernet 3D/service fit",
+      "J1 mating/rework evidence"
+    ],
+    "return_state": "CANDIDATE_READY",
+    "unlocks": "Provides bounded disposition for mechanical/DFM rows; does not itself close empirical hardware gates or dependents."
+  },
+  "regression_policy": {
+    "design_change": "Any CAD/BOM/MPN/fixture-affecting change triggers current-head reconciliation, exact source/rule/library/toolchain record, targeted Light/Heavy checks for affected geometry, and re-run only of dependent rows.",
+    "integrated_gate": "No isolated or renderer-only pass closes its integrated counterpart; a material candidate requires serialized integration and fresh Light validation at its exact SHA.",
+    "unchanged_evidence": "Do not repeatedly rerun unchanged green scoped fixtures; preserve their hashes and scope."
+  },
+  "scope": "Pre-fabrication validation plan for unresolved mechanical and service evidence. It defines tests and disposition only; it contains no fabricated measurements, no hardware result, no CAD mutation, and no Phase 26 work.",
+  "signature": {
+    "content_hash_excludes_signature": true,
+    "scheme": "SHA256-content-attestation via adjacent SHA256SUMS; not a cryptographic hardware test result",
+    "signed_at": "2026-09-19",
+    "signer_id": "hardware_validation_mechanical",
+    "signer_role": "Hardware Validation / Mechanical package owner",
+    "statement": "I attest that this is a bounded verification disposition and that no measurement, hardware operation, production qualification, or field observation is claimed without a retained record."
+  },
+  "status": "SIGNED_BOUNDED_PROTOTYPE_VALIDATION_DISPOSITION",
+  "test_sequence": [
+    "1. Verify current board SHA, selected BOM/MPNs, authority revisions, and fixture identities; quarantine any stale JAE/B-key J3 record and use TE 1-2199230-4 M-key.",
+    "2. Perform unpowered dimensional and dry-fit inspection: L10/Y10, J1, J3/2280, J8, CM5/Ethernet, cooler/backplate/enclosure.",
+    "3. Perform J8 passive continuity/keying and mode truth-table check only after accessory authority selects the mating hardware.",
+    "4. Perform first-article assembly inspection and record workmanship, seating, hidden-joint and retention evidence.",
+    "5. Perform the separate authorized V100 first-power/thermal characterization only after all dry-fit, continuity, and safety prechecks pass.",
+    "6. Freeze raw records, hashes, photos, calibration and failure disposition; route any CAD-affecting correction through isolated producer, serialized integration, and fresh Light/Heavy validation."
+  ],
+  "traceability": [
+    {
+      "calibration_uncertainty": "Use current traceable calibration. Record U95 or instrument manufacturer uncertainty; pass only after applying measurement uncertainty to the applicable package/assembly limit. Do not invent a Z limit: Package/Mechanical Authority must provide the selected part maximum and receiving-stack allowance.",
+      "closure": "Prototype record PASS plus authority acceptance of the exact part/height closes this row; otherwise retain UNPROVEN/REQUIRES_PROTOTYPE_VALIDATION.",
+      "conditions": "Unpowered bare assembled PCB at controlled room condition; exact installed L10/Y10 MPNs and package drawings recorded before measurement; board supported on a datum plane.",
+      "data_retention": "Raw CSV, instrument IDs/calibration dates, board serial, MPN/lot records, three readings, photos, fixture drawing, and SHA256 manifest.",
+      "failure_triage": "Part identity/package evidence -> Package Authority; physical interference -> Mechanical/DFM Authority; PCB damage -> assembly process review. No footprint or CAD change is made by this validation package.",
+      "fixture": "Flat datum fixture, board support, calibrated height gauge or optical comparator, gauge blocks, and adjacent-component clearance reference overlay.",
+      "id": "MECH-PROT-L10-Y10-Z",
+      "instrument": "Calibrated height gauge/optical metrology; 0.01 mm readout or better where available; calibration certificate and stated U95 uncertainty retained. Feeler gauge may corroborate contact/no-contact only.",
+      "measurements": "Record body top height, body-to-board datum, nearest adjacent-body/keepout gap, package identity, lot/date code, and photographs from orthogonal views.",
+      "pass_fail": "PASS only when exact part identity is recorded, measured height plus uncertainty is within the signed assembly/enclosure allowance, all required adjacent gaps are non-contact and within their released limits, and no solder/joint damage occurs. FAIL on any interference, unidentified part, or limit exceedance. Until the selected MPN and Z allowance are bound, status remains UNPROVEN.",
+      "pre_fabrication_state": "UNPROVEN_Z_ACCEPTED_AS_REQUIRES_PROTOTYPE_VALIDATION",
+      "regression_scope": "If CAD or package identity changes, re-run current-board hash/footprint census, targeted L10/U11/Y10 DRC, and fresh Light validation on the integrated candidate; unrelated DRC history is not re-run for documentation changes.",
+      "requirement": "Installed L10 and Y10 bodies fit the selected package/enclosure stack without violating adjacent U11/Y10/L10 or board service clearances; retain current XY land/pad arrangement.",
+      "safety_limits": "No powered test; do not press on bodies or bend the PCB. Stop for cracked ceramic, lifted termination, board flex, or unexplained contact.",
+      "sample_count": "n=1 first article; 3 independent height/clearance readings per feature; no statistical lot claim",
+      "verification_class": "prototype design verification / first-article measurement"
+    },
+    {
+      "calibration_uncertainty": "Continuity test is qualitative after instrument self-check; dimensional readings use calibrated optical/height measurement with recorded uncertainty. Do not infer contact force or mating cycles from a footprint.",
+      "closure": "Close only with authority-selected accessory and recorded prototype service/mode evidence; until then retain the explicit accepted risk and no operational mode claim.",
+      "conditions": "Exact header/shunt/harness MPN and drawing selected by Storage/Mechanical Authority; unpowered passive continuity first, then only authority-approved current-limited logic test.",
+      "data_retention": "Accessory drawing/hash, BOM line, pin matrix, truth-table worksheet, photos, raw continuity log, instrument record, and SHA256 manifest.",
+      "failure_triage": "Accessory identity/keying -> Storage/Mechanical Authority; logic contradiction -> Storage/Schematic Authority; physical access -> MPA/Mechanical Authority. No silent DNP or schematic rewrite.",
+      "fixture": "J8 service-access fixture or enclosure mock-up, operator approach gauge, pin-1/keying marker, DMM continuity fixture, and mode-state truth table from the selected schematic.",
+      "id": "MECH-PROT-J8-SERVICE",
+      "instrument": "Calibrated DMM for continuity/open checks; optical measurement for height and access; low-voltage source/current limit only if the V100/storage bring-up authority authorizes it. Record calibration and source limit.",
+      "measurements": "Record accessory MPN/revision, keying/pin-1 orientation, height, operator approach, mode truth table, continuity/open matrix, and whether the enclosure/cooler/cable boundary obstructs service.",
+      "pass_fail": "PASS only if the selected accessory keys correctly, all four nets map as authorized, AUTO/FORCE states match the signed truth table, simultaneous FORCE_SATA and FORCE_NVME is impossible or positively rejected, and the operator can service it without touching adjacent parts. FAIL on reversed keying, ambiguous mode, inaccessible service, or unapproved accessory. DNP conversion is not an allowed disposition here.",
+      "pre_fabrication_state": "TOPOLOGY_AND_POSITION_BOUND; ACCESSORY_AND_SERVICE_UNPROVEN",
+      "regression_scope": "Any J8 schematic, footprint, accessory, or placement change requires schematic/netlist parity, pad ownership audit, targeted Light DRC, and fresh Heavy service render/inspection.",
+      "requirement": "J8 remains the populated four-contact mode/service interface at the MPA position and permits keyed operator service without an illegal simultaneous FORCE_SATA and FORCE_NVME selection.",
+      "safety_limits": "Do not connect storage or GPU power during mode probing. No energized test with an unknown accessory. Stop on any contradictory mode indication or unintended simultaneous force state.",
+      "sample_count": "n=1 first article with one authority-selected accessory; 3 insert/remove operations and one check of each permitted mode state; no cycle-life claim",
+      "verification_class": "design verification plus prototype functional/service check"
+    },
+    {
+      "calibration_uncertainty": "Record coordinate/height/force uncertainty and compare against released TE/application/card limits. If no manufacturer force or torque limit exists, record force/torque only as characterization; do not create a local limit.",
+      "closure": "Close after the TE M-key contract is corrected from stale JAE/B-key text, representation/stack audit is accepted, and prototype fit evidence passes. Before hardware exists, retain `REQUIRES_PROTOTYPE_VALIDATION`.",
+      "conditions": "Board unpowered and supported; actual TE M-key connector, populated 2280 card, retention screw/standoff/datum, and any enclosure/cable hardware present. Use right-edge insertion direction and no forceful workaround.",
+      "data_retention": "Card/connector MPNs and revisions, fixture datum drawing, raw coordinate/force/height data, torque record, three-cycle photos/video, operator/date, and SHA256 manifest.",
+      "failure_triage": "Connector/card identity or stack conflict -> Storage/Mechanical Authority; placement/corridor conflict -> MPA; retention hardware conflict -> Mechanical/DFM Authority. Preserve current board and report measured feature; do not shrink the full card envelope.",
+      "fixture": "Rigid board support, card insertion guide aligned to `[220,149]-[300,171]` envelope, retention-datum fixture, connector mating-height gauge, and force gauge only when manufacturer/application limits are available.",
+      "id": "MECH-PROT-J3-M2-INSERT-RETENTION",
+      "instrument": "Optical comparator or calibrated camera/coordinate measurement for axis and envelope; height gauge/feeler gauges for stack; calibrated force gauge if a released TE/card force limit exists; torque driver with released hardware setting.",
+      "measurements": "Record keying, full insertion depth, connector/card alignment, card edge and retention datum, insertion/removal force where specified, mated height, hardware engagement, cable access, and photographs at seated/removed states.",
+      "pass_fail": "PASS only when the card seats fully with correct keying, retention hardware engages at the authority datum, removal follows the designated corridor, no unrelated part or cable obstructs service, and all measured values meet released limits. The intentional J3/card mating volume is not a DRC failure; any unrelated overlap, PTH conflict, connector damage, or missing retention is FAIL. No waiver is granted by this plan.",
+      "pre_fabrication_state": "REPRESENTATION_BOUND; PHYSICAL INSERTION_RETENTION_UNPROVEN",
+      "regression_scope": "Any J3/card representation or placement change requires fresh Heavy top/isometric render, targeted mechanical DRC, full card-envelope audit, and current integrated Light validation; re-check protected U13/J3 high-speed and storage power corridors.",
+      "requirement": "A populated 2280 card mates to TE 1-2199230-4 M-key J3 along the fixed right-edge axis, seats against the retention datum, and can be removed without collision; the full card envelope remains intact and separate from connector mating volume.",
+      "safety_limits": "Never force a mis-keyed card or exceed released insertion force. Stop on binding, scraping, cracked connector, pad damage, retention misalignment, or card flex.",
+      "sample_count": "n=1 first article board, one authority-selected 2280 card, and one retention hardware set; minimum 3 complete insertion/removal cycles; no connector-life claim",
+      "verification_class": "design verification plus prototype mechanical/interface validation"
+    },
+    {
+      "calibration_uncertainty": "Record optical/height uncertainty; apply it to the 4.00 mm stack and any manufacturer dimensional tolerance. Do not claim footprint geometry proves mating.",
+      "closure": "This linked row remains prototype-gated until actual mating/service evidence exists; it must not be silently treated as closed by the current 2D pass.",
+      "conditions": "Use the manufacturer 4.00 mm mated stack and 5.10 mm rework guidance; board unpowered; module and any service hardware identified.",
+      "data_retention": "Mating fixture identity, drawing revision, raw height/fit notes, close-up photos, operator/date, and hashes.",
+      "failure_triage": "Package or mating issue -> J1 Package/Mechanical Authority; board obstruction -> Mechanical/DFM/MPA; damaged array -> assembly/process review.",
+      "fixture": "Rigid board/module alignment fixture, connector mating guide, 4.00 mm stack gauge, 5.10 mm rework-boundary template, and service-tool access gauge.",
+      "id": "MECH-PROT-J1-SXM2-SERVICE-LINKED",
+      "instrument": "Calibrated optical/height measurement; microscope for contact/land damage; manufacturer drawing and current package records.",
+      "measurements": "Record module seating, mated height, insertion direction, visible obstruction, rework-tool access, and any contact damage after controlled cycles.",
+      "pass_fail": "PASS only when mating is complete and repeatable, the service/rework boundary remains usable, and no connector/contact damage occurs. Otherwise FAIL and route to J1 Package/Mechanical Authority.",
+      "pre_fabrication_state": "2D_BOUND; LOCAL_MATING_AND_SERVICE_UNPROVEN",
+      "regression_scope": "J1 footprint, location, rework ring, or module-anchor change requires fresh pad/geometry audit and current integrated Light/Heavy validation.",
+      "requirement": "The Amphenol/FCI 74221-101LF J1 mating stack and hidden-joint rework boundary remain usable with the SXM2 module and service path.",
+      "safety_limits": "No powered module during fit check; no levering on the 400-contact array; stop on incomplete seating or contact deformation.",
+      "sample_count": "n=1 first article board and one compatible SXM2 module or approved mating fixture; 3 controlled mate/unmate operations; no 50-cycle life claim",
+      "verification_class": "linked interface/mechanical validation (supports the package; not a new architecture decision)"
+    },
+    {
+      "calibration_uncertainty": "Record calibration certificates, sensor placement, emissivity assumptions, ambient condition, and uncertainty. Thermal pass/fail must use the signed power/thermal authority limits; no limit is invented here.",
+      "closure": "Close mechanical and thermal rows only with selected assembly and retained prototype records. Until then the Rev-A module-mounted boundary is accepted as a scope decision, while fit/thermal remain `REQUIRES_PROTOTYPE_VALIDATION`.",
+      "conditions": "Exact cooler, backplate, standoffs, fasteners, enclosure floor and airflow/liquid path identified from released drawings. Mechanical dry fit precedes any powered test. Thermal run follows the separate current-limited V100 first-power contract.",
+      "data_retention": "Exact cooler/backplate/standoff/enclosure MPNs and drawings, torque sheet, clearance worksheet, raw thermal/current logs, sensor calibration, ambient conditions, photos/video, and hashes.",
+      "failure_triage": "Hardware fit -> Mechanical/Thermal Authority; thermal or current limit -> Power/V100 Bring-up Authority; enclosure/cable conflict -> Mechanical/MPA. Do not introduce a carrier-mounted cooler requirement or generic underside waiver.",
+      "fixture": "Flat carrier/module assembly fixture, cooler/backplate/standoff hardware, enclosure mock-up or production enclosure, torque driver, clearance gauges, airflow/liquid routing guide, and thermocouple attachment fixtures.",
+      "id": "MECH-PROT-COOLER-BACKPLATE",
+      "instrument": "Calibrated height/optical measurement, torque tool with released setting, thermocouples and/or calibrated thermal camera, current/voltage logging equipment from the V100 bring-up authority, and airflow/flow instrumentation when applicable.",
+      "measurements": "Record fastener engagement/torque, all mating clearances, connector/cable access, cooler contact/mounting flatness, airflow/liquid path, ambient, rail/current/temperature traces, and shutdown behavior if powered.",
+      "pass_fail": "Mechanical PASS requires full fastener engagement, no interference, serviceable connectors/cables, and no forced fit. Thermal PASS requires the separate power authority's current/temperature/shutdown limits to be met with margin. A dry-fit or render cannot close thermal operation.",
+      "pre_fabrication_state": "REV-A-BOUNDARY-ONLY; SELECTED-ASSEMBLY_UNPROVEN",
+      "regression_scope": "Any cooler, standoff, backplate, enclosure, anchor, or connector change requires fresh mechanical envelope review, Heavy rendering, and targeted Light DRC/edge/courtyard validation.",
+      "requirement": "The selected module-mounted cooler/backplate/standoff and enclosure assembly fit the V100/SXM2 module and carrier without connector, CM5, M.2, harness, or service interference, and the thermal path is safe for first power.",
+      "safety_limits": "Power off for all installation changes. Use current-limited first power only after dry-fit and continuity checks. Stop on over-temperature, abnormal current, loss of cooling, leakage, smell, visible heating, or connector/cable interference.",
+      "sample_count": "n=1 first article carrier/module/cooler/backplate/enclosure assembly; 3 controlled install/remove cycles for standoffs or service hardware; one thermal characterization run after mechanical fit; no production reliability claim",
+      "verification_class": "prototype mechanical assembly validation plus thermal characterization"
+    },
+    {
+      "calibration_uncertainty": "Record instrument resolution/uncertainty and manufacturer cable/connector tolerances. Do not infer service fit from 2D DRC or a renderer-only pass.",
+      "closure": "Close only on retained first-article fit/service evidence. Current 2D edge receipt remains scoped evidence; it does not close the 3D row.",
+      "conditions": "Actual CM5 module, Ethernet connector/harness, service cable bend/strain-relief geometry and enclosure boundary identified. Board unpowered for fit checks.",
+      "data_retention": "CM5/Ethernet/cable/enclosure identities, dimensional worksheet, photos, mate/unmate log, any separate functional receipt, instrument record, and hashes.",
+      "failure_triage": "Module/connector/package issue -> Package/Mechanical Authority; cable/service conflict -> Mechanical/DFM/MPA; electrical link issue -> Interface authority. No CAD changes from this plan.",
+      "fixture": "Carrier/module alignment fixture, CM5 standoff/fastener set, Ethernet cable/harness and bend-radius guide, enclosure/edge mock-up, service-tool access gauge.",
+      "id": "MECH-PROT-CM5-ETH-SERVICE",
+      "instrument": "Calibrated optical measurement, feeler gauges, microscope for connector seating, and cable bend-radius template; optional low-risk post-fit link test belongs to interface validation, not this mechanical result.",
+      "measurements": "Record module seating, edge clearances, connector coplanarity/engagement, cable insertion/removal, bend radius, strain relief, enclosure closure, and service tool access. If the linked functional smoke test is run, retain its separate interface receipt.",
+      "pass_fail": "PASS when the module and edge connector seat without force, the cable meets its released bend/strain limits, enclosure/service access is maintained, and no component/edge collision occurs. Functional Ethernet boot/link evidence is separate and cannot substitute for fit evidence.",
+      "pre_fabrication_state": "2D_EDGE_CHECKS_SCOPED_PASS; 3D_ASSEMBLY_SERVICE_UNPROVEN",
+      "regression_scope": "Any edge placement, connector, cable envelope, CM5 footprint, or enclosure change requires current-head targeted edge DRC, courtyard/edge census, fresh Light validation, and Heavy service inspection.",
+      "requirement": "CM5 and Ethernet edge hardware seat on the carrier, remain within the documented edge/courtyard/connector envelopes, and allow cable insertion, removal, strain relief, and service without collision.",
+      "safety_limits": "No powered fit manipulation; stop on connector deformation, cable over-bend, module flex, enclosure pinch, or inaccessible release latch.",
+      "sample_count": "n=1 first article carrier with one CM5 module, Ethernet connector/cable set, and enclosure/service fixture; 3 controlled mate/unmate operations; no production process capability claim",
+      "verification_class": "design verification plus first-article assembly/service validation; optional functional handoff"
+    },
+    {
+      "calibration_uncertainty": "Use each instrument's current certificate and record image scale/resolution. Inspection acceptance follows the approved assembly/DFM criteria; no production capability estimate is made.",
+      "closure": "This row is a prototype preparation gate and is not production qualification. A retained first-article inspection record is required before claiming assembly closure.",
+      "conditions": "Use the exact released BOM/MPNs, stencil/paste data, board fab stackup, and assembly work instructions; identify substitutions before build.",
+      "data_retention": "Assembly traveler, AOI/X-ray images, board serial, BOM/lot/substitution record, operator, equipment calibration, NCR/failure record, and hashes.",
+      "failure_triage": "Workmanship -> assembly/DFM; package identity -> Package Authority; design fit -> Mechanical/MPA; electrical defect -> relevant interface/power authority.",
+      "fixture": "Assembly drawing, microscope/AOI, connector seating gauge, X-ray access for hidden J1/J3/U11 joints when required, and ESD-safe handling fixture.",
+      "id": "MECH-PROT-FIRST-ARTICLE-DFM",
+      "instrument": "Calibrated optical/AOI/X-ray equipment and assembly torque/height tools as applicable; retain equipment IDs and calibration.",
+      "measurements": "Record solder/land wetting, connector coplanarity/seating, hole and retention hardware fit, body heights, visible damage, and all substitutions/lot codes.",
+      "pass_fail": "PASS only when all interfaces are assembled per drawing and no defect affects mating, service, electrical isolation, or thermal attachment. Any identity mismatch or workmanship defect is FAIL/HOLD for authority disposition.",
+      "pre_fabrication_state": "PLAN_DEFINED; NO FIRST-ARTICLE RESULT",
+      "regression_scope": "A design or BOM change affecting an interface requires repeat first-article inspection for that interface and current integrated Light/Heavy checks; documentation-only changes do not trigger physical regression.",
+      "requirement": "The first fabricated board can be assembled and inspected at the unresolved mechanical interfaces without relying on production-volume assumptions.",
+      "safety_limits": "ESD controls, no powered board before continuity and visual inspection, and no rework that changes the frozen design without serialized authority/integration.",
+      "sample_count": "n=1 first article; AOI/optical inspection of all listed interfaces; X-ray only where hidden joints or package/connector construction requires it",
+      "verification_class": "prototype manufacturing/assembly verification"
+    }
+  ]
+}
