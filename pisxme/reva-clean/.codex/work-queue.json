@@ -5639,6 +5639,56 @@
       },
       "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed validation disposition distinguishes design evidence from post-fabrication tests, names exact procedures and limits, and authorizes the current design to proceed only where approved prototype validation is the intended gate.",
+      "created_at": "2026-09-19T02:14:08.323774Z",
+      "dependencies": [],
+      "domain": "hardware validation/mechanical",
+      "edit_boundaries": [
+        "authority/validation artifact only",
+        "no CAD mutation",
+        "no fabricated measurements",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTOTYPE-MECHANICAL-VALIDATION-PLAN",
+      "notes": "Consumes private Library packet a0e68bdc and mechanical authority eff269f2 plus MPA correction 20260919.",
+      "owner": "hardware_validation_mechanical",
+      "priority": 4,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "service_access",
+        "DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Create the bounded prototype-only validation disposition for unresolved L10/Y10 Z, J8 accessory/service, TE M-key J3/2280 insertion-retention, cooler/backplate, and CM5/Ethernet assembly/service fit. Define measurements, fixtures, pass/fail limits, first-assembly sequence, and explicit pre-fabrication accepted-risk state. Do not fabricate results or edit CAD.",
+      "session_ids": [
+        "root-proto-mech-plan-20260919T0410Z"
+      ],
+      "status": "RUNNING",
+      "title": "Bind prototype mechanical validation disposition",
+      "updated_at": "2026-09-19T02:14:08.389933Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-mechanics-dfm"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -5653,5 +5703,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T02:13:42.377699Z"
+  "updated_at": "2026-09-19T02:14:08.390198Z"
 }

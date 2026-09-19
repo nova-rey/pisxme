@@ -1779,3 +1779,7 @@ The shared 3D/model-envelope dependency is now a bounded Librarian package `P24-
 ## 2026-09-19 Mechanical model evidence reconciled
 
 The private Library packet `a0e68bdc822bad2eca47471649fa3f9417518f1b` resolved the shared knowledge dependency and confirmed the selected geometry/provenance, while retaining exact model, mating, and cooler gaps as `REQUIRES_PROTOTYPE_VALIDATION`. L10/U11 and CM5/Ethernet current-head 2D receipts are preserved; their full 3D/assembly rows are explicitly parked on `other:prototype-mechanical-validation` rather than claimed PASS.
+
+## 2026-09-19 Prototype mechanical validation plan dispatched
+
+The unresolved 3D/assembly/service fields are now owned by `P24-PROTOTYPE-MECHANICAL-VALIDATION-PLAN`. Hardware Validation will define the exact post-fabrication checks and pre-fabrication accepted-risk disposition without inventing measurements or changing CAD. L10 and CM5/Ethernet remain parked on the prototype mechanical validation dependency until that authority artifact returns.
