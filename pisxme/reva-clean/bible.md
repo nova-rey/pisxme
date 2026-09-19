@@ -1715,3 +1715,7 @@ The signed Mechanical/DFM envelope contract was committed at `eff269f2` and comp
 # 2026-09-19 — Mechanical Heavy validation returns bounded gaps
 
 Current-head Heavy/Light validation against board `eedf9e72` and authority `eff269f2` is retained under `validation-receipts/mechanical-3d-validation-eedf9e72-20260919/`; CM5 assembly/service reconciliation is retained under `validation-receipts/cm5-ethernet-edge-assembly-service-20260919/`. L10/Y10 XY and J1 2D bounds pass, but exact Z/model evidence remains unproven. J8 overlaps the explicit M.2 envelope by 4.09 x 3.14 mm and J3 overlaps it by 30.64 x 11.09 mm; these are open integrated mechanical findings, not waivers.
+
+# 2026-09-19 — Open J3/J8 M.2 service envelope package
+
+Heavy validation confirms L10/Y10 XY bounds and J1 2D bounds, but the integrated board still has J8/M.2 and J3/M.2 envelope conflicts, with J3/PTH/courtyard findings explicitly unwaived. New package `P24-MECHANICS-M2-SERVICE-ENVELOPE-CLOSURE` is dispatched to resolve those mechanical/service requirements without touching protected or high-speed corridors. The L10 and CM5 packages retain their 2D passes and wait on this bounded closure.
