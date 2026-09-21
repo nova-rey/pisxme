@@ -1,0 +1,19 @@
+{
+  "originating_work_package":"P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "decision_id":"PISXME-P24-PROTECTED-BUS-MPA-EFFECTIVE-NETWORK-20260921-R1",
+  "authority":"Macro Placement Authority",
+  "status":"BINDING_DECISION_FOR_PRODUCER; REQUIRES_PROTOTYPE_VALIDATION",
+  "source_authority":"PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260921-R2",
+  "architecture":"distributed laminated copper mesh",
+  "placement_scope":"inherit existing source-entry fuse pad islands; no new y-row placement selected",
+  "positive_layers":["F.Cu","B.Cu","In2.Cu"],
+  "return_layers":["In1.Cu","In4.Cu"],
+  "positive_width_after_pad_fanout_mm":4.0,
+  "minimum_via_pattern":{"branch_transition":"2x3 ordinary 0.60/0.30 mm vias at connector and fuse launches","positive_join":"4 columns x 2x4 ordinary 0.60/0.30 mm vias","return_join":"offset matching 4-column stitch field"},
+  "network_constraints":{"effective_pcb_neck_max_mOhm":0.65,"complete_hot_path_max_mOhm":8.5,"source_continuous_A":40,"source_peak_A":45,"sustained_W":300,"peak_W":330,"peak_ms":100,"passive_sharing_credit":false,"n_minus_one_credit":false},
+  "join_fields":{"positive":"distributed In2 12V_BRANCH_JOIN field with four feed columns","return":"separate In4 POWER_RETURN_JOIN field with offset In1 stitches"},
+  "required_extraction":["nine-port resistor/field model","branch positive and return resistance","pad/barrel/annulus/via/copper thickness","current density and temperature rise","complete R3 budget"],
+  "fallback_decision_if_extraction_fails":"Product/Power must authorize heavier-copper or busbar source-field fabrication, or a lower-resistance fuse/holder package",
+  "cad_changed":false,
+  "hardware_operated":false
+}

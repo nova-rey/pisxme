@@ -1819,3 +1819,7 @@ Candidate `2bb75c9` applied the R3 relocation plan but fresh Light validation re
 ### 2026-09-21 — Effective network budget correction
 
 Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260921-R2` supersedes the per-branch 0.650 mOhm raw-neck and derived 1.80 mOhm per-branch hot-loop rules. The 8.50 mOhm budget is retained as an effective network contract; the rejected candidate's 1.43 mOhm extracted PCB network requires a materially new architecture/corridor plan before further routing.
+
+### 2026-09-21 — Effective-network mesh architecture authority
+
+MPA decision PISXME-P24-PROTECTED-BUS-MPA-EFFECTIVE-NETWORK-20260921-R1 binds a distributed laminated copper mesh: branch-independent fuse cells, parallel F.Cu/B.Cu/In2 positive paths, dedicated In1/In4 return mesh, branch-owned via arrays, distributed joins, and a four-column Q1-to-In3 transition. Same-geometry replay, passive-sharing, N-1 credit, J1 remap, and global rule changes remain prohibited.
