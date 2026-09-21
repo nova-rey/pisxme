@@ -3814,7 +3814,7 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "40ec2d21",
+      "base_sha": "93da8062",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
         "artifact": null,
@@ -3888,10 +3888,11 @@
         "validation-receipts/protected-bus-r3-support-cohort-placement-20260921/RECEIPT.md",
         "validation-receipts/protected-bus-r3-support-local-links-20260921/RECEIPT.md",
         "validation-receipts/protected-bus-source-drc-unblocker-20260921/RECEIPT.md",
-        "validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md"
+        "validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
+        "validation-receipts/protected-bus-r3-support-local-links-20260921/DELTA.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Canonical B1 source/topology integration remains commit 7a623b22; current canonical HEAD 40ec2d21 contains evidence-only commits after that integration. Fresh B1 Light was 919/435/29. Support cohort mismatch and isolated support-link/D1 primitive candidates are recorded; next producer must branch from current HEAD and preserve all authority evidence.",
+      "notes": "Canonical B1 source/topology integration remains 7a623b22; current HEAD 93da8062 contains evidence-only commits. Support local-link delta identified 593 new violations, dominated by local F.Cu/zone clearance and gate/fused pad crossings. Next producer must branch from current HEAD and use layer-aware support escapes.",
       "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",

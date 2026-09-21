@@ -2060,3 +2060,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Refreshed producer queue base to current canonical HEAD 40ec2d21 after D1 primitive evidence commit.
 
 - 2026-09-21: Compared support-local candidate against fresh current-head baseline; 593 new violations are dominated by local F.Cu/zone clearance and gate/fused pad crossings, identifying the next layer/escape correction.
+
+- 2026-09-21: Refreshed producer queue base to current HEAD 93da8062 after support-local delta analysis.
