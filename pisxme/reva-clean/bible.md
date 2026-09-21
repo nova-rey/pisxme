@@ -2074,3 +2074,7 @@ The gate-layer producer candidate from `97a2c01e` was passed through a fresh det
 ### 2026-09-21 — Via-in-pad gate method dispatched
 
 After fresh Light rejected the prior gate-layer candidate, Root dispatched a materially different via-in-pad/B.Cu gate method from current HEAD. The isolated producer reports 980 DRC violations and 434 unconnected items; it remains a candidate pending exact-SHA fresh validation. The package remains RUNNING under `root-mediated-gate-via-pad`; Issue #7 remains open and no acceptance row is closed.
+
+### 2026-09-21 — Via-in-pad gate candidate rejected
+
+The via-in-pad/B.Cu gate candidate was independently validated at exact SHA and reported 982 DRC violations and 434 unconnected items. It failed all producer acceptance requirements and was released; the package is READY for a further changed method. No Issue #7 closure or Phase 24 acceptance claim was made.
