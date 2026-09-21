@@ -2246,3 +2246,7 @@ The native F2 probe ran in qualified Light without the rejected transform, but t
 ### 2026-09-21 — Unblocker changes protected-bus capability to Heavy router
 
 The native F2 authority is consistent; scripted P2 geometry is the failure. Unblocker retained the failure census and required a fresh isolated KiCad Heavy interactive-router one-branch fixture. The queue is READY for that capability change; no scripted route geometry may be inherited.
+
+### 2026-09-21 — Heavy interactive-router fixture dispatched
+
+The protected-bus producer is claimed by `protected_bus_r3_heavy_router_fixture` from canonical HEAD `4681272f`. The isolated fixture must use KiCad Heavy's obstacle-aware interactive router for one native-F2 branch; scripted P2 geometry and all rejected transforms remain excluded.
