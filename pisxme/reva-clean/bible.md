@@ -1808,3 +1808,7 @@ Candidate `426bc7e` applied the complete R1 fuse grid and layer plan but fresh L
 ### 2026-09-21 — R1 fuse geometry superseded by resistance invariant
 
 Product/Power Authority decision `PISXME-P24-PROTOTYPE-POWER-BUS-POWER-AUTHORITY-20260921` retains the nine-branch R3 topology and product envelope but supersedes the exact R1 fuse grid and long ordered In2 raw lanes because they contradict the 0.65 mOhm raw branch positive-plus-return allocation. A revised local MPA plan is required; no topology reduction or global rule relaxation is authorized.
+
+### 2026-09-21 — R3 fuse-bank relocation authority
+
+MPA decision PISXME-P24-PROTECTED-BUS-MPA-20260921-R3 supersedes the R1 grid and binds the nine fuse positions near J5/J6/J9 at y=15/40/65, short local F.Cu raw escapes, distinct In2 fused joins, ordered In4 returns, and the existing Q1-to-J1 transition. The 0.65 mOhm raw branch allocation and all R3 product invariants remain governing.
