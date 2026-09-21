@@ -6772,7 +6772,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-CAD-AUTHORING-UNBLOCKER",
       "notes": "",
-      "owner": "protected_bus_cad_authoring_unblocker",
+      "owner": "protected_bus_runtime_inspector",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6789,11 +6789,11 @@
       ],
       "scope": "Review the two bounded producer launch failures and identify one supported, reproducible authoring method for the protected-bus producer and corridor. Preserve exact worker/runtime evidence; do not edit CAD or global configuration.",
       "session_ids": [
-        "/root/protected_bus_cad_authoring_unblocker"
+        "/root/protected_bus_runtime_inspector"
       ],
       "status": "RUNNING",
       "title": "Classify protected-bus CAD authoring runtime failure",
-      "updated_at": "2026-09-21T05:52:06.862966Z",
+      "updated_at": "2026-09-21T05:56:18.266421Z",
       "validation": {
         "required": [
           "failure_classification",
@@ -6818,5 +6818,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:52:06.863862Z"
+  "updated_at": "2026-09-21T05:56:18.267767Z"
 }

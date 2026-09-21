@@ -1960,3 +1960,7 @@ The existing signed Product/Power Authority R3 artifact and the 2026-09-21 effec
 ### 2026-09-21 — Parked phantom CAD claims and dispatched runtime Unblocker
 
 Both fresh R3 producer handoffs were stopped after bounded observation showed no KiCad authoring process or candidate; only setup/baseline artifacts existed. Their packages are WAITING on shared `unblocker:protected-bus-cad-authoring-runtime`. A tracked `P24-PROTECTED-BUS-CAD-AUTHORING-UNBLOCKER` package is RUNNING to classify the supported launcher/runtime path. No CAD claim or hard block was made.
+
+### 2026-09-21 — Changed capability level for CAD launch diagnosis
+
+The Unblocker handoff did not return a packet during its bounded window. Root released it and reassigned the tracked runtime package to `protected_bus_runtime_inspector` (Build Engineer) for one supported-launcher inspection. The producer packages remain WAITING on the shared runtime dependency; no global configuration or CAD was changed.
