@@ -3880,11 +3880,12 @@
       ],
       "evidence_refs": [
         "validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/RECEIPT.md",
-        "validation-receipts/protected-bus-r3-mpa-reassessment-20260921/RECEIPT.md"
+        "validation-receipts/protected-bus-r3-mpa-reassessment-20260921/RECEIPT.md",
+        "validation-receipts/protected-bus-r3-issue7-unblocker-20260921/RECEIPT.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Issue #7 resolved to authority correction; signed nine-branch source topology materialized and validated. B1/B2 native micro-batches executed and rejected at 1055/499 and 1090/499. Continue with corridor-aware R3 microbatch method; no straight replay.",
-      "owner": "root_protected_bus_r3_producer",
+      "notes": "Unblocker SELF_UNBLOCK: implementation-method failure. Straight B1/B2 escapes rejected; next method is one complete branch pair with R3 corridor-aware F.Cu/ordinary-via/In4 return, save/reload, targeted validation.",
+      "owner": "protected_bus_r3_corridor_execution",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3902,11 +3903,11 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [
-        "root-protected-bus-r3-20260921-r2"
+        "protected_bus_r3_corridor_execution-20260921"
       ],
       "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T07:16:00Z",
+      "updated_at": "2026-09-21T07:24:00Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -7180,5 +7181,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T07:17:11.821537Z"
+  "updated_at": "2026-09-21T07:20:50.858588Z"
 }
