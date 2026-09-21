@@ -3879,10 +3879,11 @@
         "return candidate SHA and raw reports"
       ],
       "evidence_refs": [
-        "validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/RECEIPT.md"
+        "validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/RECEIPT.md",
+        "validation-receipts/protected-bus-r3-mpa-reassessment-20260921/RECEIPT.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Issue #7 resolution-ready authority packet reconciled on 627ec337; fresh Light producer now active. Probe found canonical source lacks J9/F3-F9; retained nine-branch seed materialized and rejected at 1077/499. Continue explicit per-branch native micro-batch from topology seed.",
+      "notes": "Issue #7 resolved to authority correction; signed nine-branch source topology materialized and validated. B1/B2 native micro-batches executed and rejected at 1055/499 and 1090/499. Continue with corridor-aware R3 microbatch method; no straight replay.",
       "owner": "root_protected_bus_r3_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
@@ -3905,7 +3906,7 @@
       ],
       "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T07:11:59.194030Z",
+      "updated_at": "2026-09-21T07:16:00Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -7040,7 +7041,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-r3-mpa-reassessment-20260921/RECEIPT.md",
+        "base_sha": "627ec337a28ce0c732df7744dc3ba360414464db",
+        "returned_at": "2026-09-21T07:17:06.003409Z",
+        "returned_by": "protected_bus_r3_mpa_reassessment",
+        "sha": null
+      },
       "completion_criterion": "Binding decision: R2 remains valid or one bounded corridor revision with evidence.",
       "created_at": "2026-09-21T06:45:03.678404Z",
       "dependencies": [],
@@ -7049,10 +7056,12 @@
         "read-only authority decision",
         "no CAD edits"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-r3-mpa-reassessment-20260921/RECEIPT.md"
+      ],
       "id": "P24-PROTECTED-BUS-R3-MPA-REASSESSMENT",
       "notes": "",
-      "owner": "protected_bus_r3_mpa_reassessment",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -7068,12 +7077,10 @@
         }
       ],
       "scope": "Read-only authority assessment of R2 corridor geometry against retained implementation failures; no CAD edits.",
-      "session_ids": [
-        "/root/protected_bus_r3_mpa_reassessment"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Assess geometric contradiction after bounded R3 implementation failures",
-      "updated_at": "2026-09-21T06:45:03.884521Z",
+      "updated_at": "2026-09-21T07:17:11.820252Z",
       "validation": {
         "required": [],
         "results": {}
@@ -7142,18 +7149,18 @@
         "results": {
           "exact_topology": {
             "receipt": "validation-receipts/protected-bus-source-topology-materialization-20260921/signed_source_topology.json",
-            "status": "PASS",
-            "recorded_at": "2026-09-21T07:11:00Z"
+            "recorded_at": "2026-09-21T07:11:00Z",
+            "status": "PASS"
           },
           "native_netlist": {
             "receipt": "validation-receipts/protected-bus-source-topology-materialization-20260921/native_net_census.json",
-            "status": "PASS",
-            "recorded_at": "2026-09-21T07:11:05Z"
+            "recorded_at": "2026-09-21T07:11:05Z",
+            "status": "PASS"
           },
           "source_contract_parity": {
             "receipt": "validation-receipts/protected-bus-source-topology-materialization-20260921/RECEIPT.md",
-            "status": "PASS",
-            "recorded_at": "2026-09-21T07:11:10Z"
+            "recorded_at": "2026-09-21T07:11:10Z",
+            "status": "PASS"
           }
         }
       },
@@ -7173,5 +7180,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T07:11:59.195132Z"
+  "updated_at": "2026-09-21T07:17:11.821537Z"
 }
