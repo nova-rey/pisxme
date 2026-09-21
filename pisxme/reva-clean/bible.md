@@ -2090,3 +2090,7 @@ Following the authority review, Root stopped the repeated via/B.Cu gate class an
 ### 2026-09-21 — F.Cu-only gate loops rejected by fresh Light
 
 The authority-directed F.Cu-only gate-loop candidate was independently validated at exact SHA and reported 982 DRC violations and 434 unconnected items. All producer acceptance rows remain FAIL; the candidate was released and no integrated change was accepted. The next step is capability escalation to Unblocker/MPA, not another same-class gate route.
+
+### 2026-09-21 — Unblocker escalated from gate loops to complete branch-pair authoring
+
+Unblocker classified the four fresh gate-loop failures as one exhausted local implementation class, not a placement contradiction or runtime blocker. The producer dependency is resolved with `SELF_UNBLOCK`; the next method is one exact-current-HEAD corridor-aware R3 source branch pair with ordered positive escape, fused In2 handoff, distinct In4 returns, save/reload, and targeted net validation. No further gate variants are authorized.
