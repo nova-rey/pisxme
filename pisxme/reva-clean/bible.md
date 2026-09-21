@@ -2186,3 +2186,7 @@ MPA issued the required current-head binding revision: F.Cu is limited to local 
 ### 2026-09-21 — Focused P2 diagnostic retained
 
 Under the bound MPA corridor, a focused J5.2/F2 positive-return probe reported 961 DRC violations and 434 unconnected items. Omitting fuse pad-field bridges reduced incremental DRC burden but did not close the branch. The evidence is routed to Unblocker for a structural contradiction assessment; no candidate was integrated.
+
+### 2026-09-21 — Topology-first one-branch probe authorized
+
+Unblocker found no structural contradiction in the binding MPA corridor. The next producer must use exact SHA `57332e98`, prove one branch with pcbnew net-graph and occupancy checks, reserve it, and only then expand to the remaining lanes.

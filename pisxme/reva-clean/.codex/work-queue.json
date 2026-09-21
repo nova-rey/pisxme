@@ -357,10 +357,10 @@
     "authority:unblocker-r3-structural-20260921": {
       "created_at": "2026-09-21T10:31:11.871409Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-structural-unblocker-20260921/UNBLOCKER_REPORT.md",
       "reference": "Clone/native/focused branch evidence requires bounded structural contradiction assessment",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T10:33:07.588189Z",
+      "status": "RESOLVED"
     },
     "external:vendor-footprint-authorization": {
       "created_at": "2026-09-17T23:49:13.591794Z",
@@ -3965,9 +3965,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:31:11.871552Z",
+      "updated_at": "2026-09-21T10:33:07.588405Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3998,9 +3998,7 @@
           }
         }
       },
-      "waiting_on": [
-        "authority:unblocker-r3-structural-20260921"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -7260,5 +7258,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T10:31:11.872662Z"
+  "updated_at": "2026-09-21T10:33:07.589385Z"
 }
