@@ -2258,3 +2258,7 @@ The qualified Heavy image and Xvfb/pcbnew runtime launch successfully, but the H
 ### 2026-09-21 — Heavy interaction dependency bound in queue
 
 The Heavy GUI-control receipt is now an explicit producer dependency, so the queue no longer reports a false READY item while the interactive capability is unresolved. No campaign hard-block decision is made; the supported Unblocker path remains active.
+
+### 2026-09-21 — Heavy interactive-control runtime diagnosis
+
+Issue #7 remains OPEN with `resolution-ready`; its Sol authority result is already reconciled into the signed R3 power authority and is not the active queue dependency. The current protected-bus producer stall is a separate Heavy runtime capability gap: KiCad 10.0.6 launches under Xvfb and opens the disposable board, but the available bridge exposes no supported obstacle-aware interactive-router cursor/path control. No CAD candidate was produced or accepted. The package remains waiting on `other:protected-bus-r3-heavy-interactive-control-20260921` while a bounded capability task tests a qualified local control path; prior scripted geometry is not replayed.
