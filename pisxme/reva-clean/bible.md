@@ -2008,3 +2008,5 @@ The corridor producer is also parked behind the source producer because its prio
 ### 2026-09-21 — Unblocker routed producer to native nine-branch authoring
 
 The failure review classified both R2 attempts as the same implementation class: zone occupancy changes without required copper. Its bounded route is a native KiCad Light authoring attempt implementing In2 raw/fused lanes, In4 branch returns, In1 return plane, and In3 protected J1 approach, with branch-open, targeted DRC, and 8.50 mOhm resistance/thermal evidence. The producer is claimed by `protected_bus_r3_native_router`; no same-class replay or integration is authorized.
+
+The first explicit native nine-net authoring script attempted nearest-neighbour copper/via construction and exited 139 before writing a candidate. Receipt `validation-receipts/protected-bus-r3-native-route-crash-20260921/RECEIPT.md` records the failure; the bulk spanning-tree method is retired pending a safer bounded implementation method.
