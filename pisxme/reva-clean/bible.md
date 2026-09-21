@@ -2214,3 +2214,7 @@ The first replacement producer reached a qualified baseline, then a direct Light
 ### 2026-09-21 — MPA binds F2 placement transform and reachable lanes
 
 MPA reconciled the native F2 geometry contradiction with decision `PISXME-P24-R3-J5.2-F2-LANE-R3`: apply exactly `T_F2=(0,+11.25 mm)` so F2 moves from `(64,15)` to `(64,26.25)`, placing raw/fused pads at `(57.60,25.00)` and `(66.90,25.00)`. J5.2/F2 now uses local F.Cu escapes and unique In2 lanes on `y=25.00` to `(106.00,25.00)`. The previous nonphysical y=26.25 pad endpoints are superseded. The producer dependency is resolved and ready for a fresh isolated implementation.
+
+### 2026-09-21 — F2 transform producer dispatched
+
+The protected-bus producer is claimed by `protected_bus_r3_f2_transform_producer` from canonical HEAD `e4e1ace1`. Its sole implementation hypothesis is the MPA-authorized F2 `+11.25 mm` transform and reachable y=25 In2 lanes; previous north-shifted and nonphysical endpoints are excluded.

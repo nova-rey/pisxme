@@ -3965,7 +3965,7 @@
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "MPA R3 binds T_F2=(0,+11.25mm), placing F2 center at (64,26.25), raw/fused pads at (57.6,25)/(66.9,25); route J5.2/F2 on y=25 In2 lanes.",
-      "owner": null,
+      "owner": "protected_bus_r3_f2_transform_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3982,10 +3982,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "READY",
+      "session_ids": [
+        "root-protected-bus-r3-f2-transform-20260921"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:55:12.523360Z",
+      "updated_at": "2026-09-21T11:00:34.159481Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -7276,5 +7278,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T11:30:00Z"
+  "updated_at": "2026-09-21T11:00:34.160600Z"
 }
