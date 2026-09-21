@@ -2082,3 +2082,7 @@ The via-in-pad/B.Cu gate candidate was independently validated at exact SHA and 
 ### 2026-09-21 — Q1-via gate variant rejected
 
 A third bounded gate corridor variant (F.Cu U1-to-Q1 via, B.Cu Q1 handoff) reported 984 DRC violations and 434 unconnected items. It was rejected before integration. The producer package is returned to READY; Issue #7 remains OPEN/`resolution-ready`, and no Phase 24 acceptance claim is made.
+
+### 2026-09-21 — F.Cu-only gate-loop candidate dispatched
+
+Following the authority review, Root stopped the repeated via/B.Cu gate class and produced one clearance-aware F.Cu-only GATE_A/GATE_B loop candidate. The isolated Light producer reports 980 DRC violations and 434 unconnected items. It is queued for exact-SHA fresh validation; no integrated acceptance claim is made.
