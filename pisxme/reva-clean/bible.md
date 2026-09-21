@@ -2242,3 +2242,7 @@ MPA decision `PISXME-P24-R3-F2-COHORT-RECONCILIATION-20260921` rejects the +11.2
 ### 2026-09-21 — Native F2 corridor probe rejected
 
 The native F2 probe ran in qualified Light without the rejected transform, but the existing P2 corridor family still returned 967 DRC violations and 428 opens. The diagnostic board and raw reports are retained under `validation-receipts/protected-bus-r3-native-f2-probe-20260921/`; no candidate was integrated. Same-class replay is stopped and the queue waits on a changed implementation capability/corridor method.
+
+### 2026-09-21 — Unblocker changes protected-bus capability to Heavy router
+
+The native F2 authority is consistent; scripted P2 geometry is the failure. Unblocker retained the failure census and required a fresh isolated KiCad Heavy interactive-router one-branch fixture. The queue is READY for that capability change; no scripted route geometry may be inherited.
