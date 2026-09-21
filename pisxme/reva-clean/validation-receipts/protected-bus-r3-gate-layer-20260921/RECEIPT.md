@@ -10,3 +10,4 @@
 - Comparison: prior support-local checkpoint `986/434`; improvement is five fewer violations with unchanged unconnected count.
 - Result: candidate evidence only; not canonical integration and not a Phase 24 acceptance pass.
 - Command: `python3 /workspace/project/apply_gate_layer.py`; `kicad-cli pcb drc --severity-all --exit-code-violations -o /workspace/output/gate-layer/gate-layer-drc.rpt /workspace/project/pisxme/reva-clean/PHASE24_PROTECTED_BUS_R3_GATE_LAYER.kicad_pcb`
+Fresh Light validation result: FAIL (983 DRC violations, 434 unconnected; candidate is not an integrated acceptance result).

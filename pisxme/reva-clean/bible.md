@@ -2066,3 +2066,7 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 ### 2026-09-21 — Issue #7 reconciliation and layer-aware producer recovery
 
 Issue #7 remains OPEN with `resolution-ready`; its Sol packet is a precise Q1 resistance contradiction, not a CAD candidate. The signed R3 Product/Power Authority correction is already an ancestor of current HEAD, so the HPQ dependency is resolved for scheduling but the Issue stays open until canonical integration and fresh Light acceptance. A host filesystem-full condition had left a false producer RUNNING claim with no workspace or process; 81 GB of disposable EDA workspaces were released, the claim was reset, and a real Light producer ran from current HEAD. Its bounded gate-layer candidate records 981 DRC violations and 434 unconnected items versus 986/434 for the prior support-local checkpoint. It is retained as candidate evidence only; no canonical CAD or Phase 25 claim is made.
+
+### 2026-09-21 — Layer-aware gate candidate rejected by fresh Light
+
+The gate-layer producer candidate from `97a2c01e` was passed through a fresh detached KiCad Light validation. Producer DRC was 981/434, but exact-SHA fresh validation reported 983 violations and 434 unconnected items. Source/connectivity, targeted DRC, complete path budget, and thermal/DFM requirements are recorded FAIL; the candidate was released and the package returned to READY. This is a bounded method failure, not a campaign hard block; the next attempt must change method and retain the disk-space/process checks.
