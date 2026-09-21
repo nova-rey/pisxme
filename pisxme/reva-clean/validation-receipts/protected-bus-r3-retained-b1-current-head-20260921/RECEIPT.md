@@ -7,3 +7,4 @@
 - Structural checks: J5/J6/J9, F1/F4/F7, and J1 all present after load.
 - Current-head Light DRC: 935 violations, 435 unconnected items, 29 shorting items, exit code 5.
 - This is a retained producer candidate, not canonical integration or Phase 24 closure. Fresh exact-SHA validation is required.
+- Fresh exact-SHA Light: 937 violations, 435 unconnected items, exit code 5; candidate remains producer evidence and is not integrated.

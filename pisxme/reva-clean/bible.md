@@ -2106,3 +2106,7 @@ The exact-SHA fresh validation of the corridor-aware J5/F1 and J6/F4 branch-pair
 ### 2026-09-21 — Retained corridor-aware B1 candidate revalidated
 
 A retained current-head-derived B1 artifact containing the signed nine-branch source correction and R3 fuse-bank placement was reloaded in KiCad Light against the current campaign evidence. J5/J6/J9, F1/F4/F7, and J1 are present; native DRC is 935 violations, 435 unconnected items, and 29 shorts. This is materially better than the rejected 1014/433 pair microbatch and is now queued for exact-SHA fresh validation before any canonical integration.
+
+### 2026-09-21 — Retained B1 candidate fresh validation result
+
+The retained corridor-aware B1 candidate was fresh-checked from exact SHA and reported 937 DRC violations and 435 unconnected items. It remains materially better than the naive branch-pair attempt but fails all producer acceptance rows and was not integrated. Its artifact remains the preferred current producer base for the next bounded branch-extension method.
