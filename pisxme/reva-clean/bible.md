@@ -2110,3 +2110,7 @@ A retained current-head-derived B1 artifact containing the signed nine-branch so
 ### 2026-09-21 — Retained B1 candidate fresh validation result
 
 The retained corridor-aware B1 candidate was fresh-checked from exact SHA and reported 937 DRC violations and 435 unconnected items. It remains materially better than the naive branch-pair attempt but fails all producer acceptance rows and was not integrated. Its artifact remains the preferred current producer base for the next bounded branch-extension method.
+
+### 2026-09-21 — R3 B1 F2 branch extension produced
+
+The preferred retained B1 candidate was extended with the J5.2/F2 source branch and J5.5 return escape. The producer reports 947 DRC violations and 434 unconnected items; it is retained for exact-SHA fresh validation and is not an acceptance result.
