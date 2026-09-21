@@ -625,6 +625,14 @@
       "reference": "validation-receipts/protected-bus-r3-completion-attempt-20260920/TIER2_BLOCKER.md",
       "resolved_at": "2026-09-21T01:23:14.165233Z",
       "status": "RESOLVED"
+    },
+    "unblocker:protected-bus-source-topology-drc": {
+      "created_at": "2026-09-21T04:50:12.424757Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3755,9 +3763,9 @@
       "candidate": {
         "artifact": null,
         "base_sha": "627ec337",
-        "returned_at": "2026-09-21T03:27:46.849031Z",
-        "returned_by": "protected_bus_resume_current_head",
-        "sha": "1443bfda"
+        "returned_at": "2026-09-21T04:49:51.687867Z",
+        "returned_by": "protected_bus_source_topology_implementer",
+        "sha": "9e6b0000"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3798,7 +3806,8 @@
         "authority:protected-bus-effective-network-materials",
         "package:P24-PROTECTED-BUS-MATERIAL-SELECTION",
         "knowledge:protected-bus-foil-fabrication",
-        "authority:protected-bus-r3-target-integration"
+        "authority:protected-bus-r3-target-integration",
+        "unblocker:protected-bus-source-topology-drc"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3811,7 +3820,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": "protected_bus_source_topology_implementer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3828,12 +3837,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "/root/protected_bus_source_topology_implementer"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T04:26:52.580829Z",
+      "updated_at": "2026-09-21T04:50:12.425354Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3843,28 +3850,30 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/MATERIAL_CONSTRUCTION.md",
-            "recorded_at": "2026-09-21T03:27:47.414901Z",
-            "status": "PASS"
+            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T04:49:52.188277Z",
+            "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
-            "recorded_at": "2026-09-21T03:27:47.293579Z",
+            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/source-topology-final-drc.json",
+            "recorded_at": "2026-09-21T04:49:52.043126Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
-            "recorded_at": "2026-09-21T03:27:47.141309Z",
-            "status": "FAIL"
+            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T04:49:51.927703Z",
+            "status": "PASS"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/TIER2_BLOCKER.md",
-            "recorded_at": "2026-09-21T03:27:47.541938Z",
+            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T04:49:52.354160Z",
             "status": "FAIL"
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:protected-bus-source-topology-drc"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6251,7 +6260,8 @@
       "completion_criterion": "One integration candidate or authority conflict is returned with exact base/candidate SHA and raw receipts.",
       "created_at": "2026-09-21T03:59:55.302843Z",
       "dependencies": [
-        "authority:protected-bus-r3-target-integration"
+        "authority:protected-bus-r3-target-integration",
+        "package:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER"
       ],
       "domain": "Canonical CAD Integration",
       "edit_boundaries": [
@@ -6285,9 +6295,9 @@
       ],
       "scope": "Reconcile isolated R3 distributed mesh candidate 86568f8b and its authority receipts against current canonical HEAD 742024a6. Produce one serialized integration candidate only if topology, schematic contract, library/rules context, and protected J1/high-speed corridors remain consistent; otherwise return a precise authority conflict.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Reconcile R3 mesh candidate onto canonical protected-bus target",
-      "updated_at": "2026-09-21T04:16:48.514861Z",
+      "updated_at": "2026-09-21T05:40:00Z",
       "validation": {
         "required": [
           "topology_reconciled",
@@ -6296,7 +6306,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "package:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6366,6 +6378,57 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "9e6b0000",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Bounded blocker packet identifies root cause, next method/authority, and exact resume condition.",
+      "created_at": "2026-09-21T04:51:01.822503Z",
+      "dependencies": [],
+      "domain": "Unblocker",
+      "edit_boundaries": [
+        "read-only evidence review",
+        "no CAD edits"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-SOURCE-DRC-UNBLOCKER",
+      "notes": "",
+      "owner": "protected_bus_source_drc_unblocker",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-COPPER",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Classify candidate 9e6b0000's 940 DRC / 441 unconnected source-topology failure and specify one bounded next capability-level method or authority correction.",
+      "session_ids": [
+        "/root/protected_bus_source_drc_unblocker"
+      ],
+      "status": "RUNNING",
+      "title": "Classify source-topology DRC failure and method change",
+      "updated_at": "2026-09-21T04:51:01.943400Z",
+      "validation": {
+        "required": [
+          "failure_classified",
+          "resume_condition"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -6380,5 +6443,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T04:26:52.582144Z"
+  "updated_at": "2026-09-21T04:51:01.944366Z"
 }

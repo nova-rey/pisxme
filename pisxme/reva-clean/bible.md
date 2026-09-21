@@ -1894,3 +1894,8 @@ Unblocker established that the failure was lineage/integration, not an unresolve
 ### 2026-09-21 — Reassigned current-head source topology implementation
 
 The direct KiCad producer completed a clean baseline but made no source-topology edit during its bounded attempt. It was interrupted and the package reassigned to a direct implementer for the signed nine-branch correction from current HEAD; no CAD candidate was accepted.
+
+
+### 2026-09-21 — Source-topology candidate classified for Unblocker review
+
+Current-head source candidate 9e6b0000 proves the nine-branch source contract but fails integrated native DRC (940 violations, 441 unconnected). The producer is parked on a bounded Unblocker classification; mesh integration remains dependent on producer closure.
