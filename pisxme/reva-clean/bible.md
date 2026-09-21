@@ -2034,3 +2034,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Integrated the current-HEAD-derived R3 B1 producer candidate into `PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb` after reconciling base `4531ec90`. The candidate imports signed J5/J6/J9 and F1-F9 topology, R3 fuse positions, and one B1 corridor-aware pair while preserving J1/unrelated copper. Fresh exact-SHA Light validation is required before downstream queue unlock.
 
 - 2026-09-21: Fresh detached KiCad Light validation of canonical B1 integration commit `7a623b22` parsed successfully and reported 919 violations, 435 unconnected items, and 29 shorts. The candidate is retained as an integrated material batch, not closure. The protected-bus producer base advances to `7a623b22` for the next corridor-aware branch pair.
+
+- 2026-09-21: Root-mediated Light baseline reproduced from c7656c0e; 919 DRC / 435 unconnected; producer remains READY for substantive corridor candidate.
