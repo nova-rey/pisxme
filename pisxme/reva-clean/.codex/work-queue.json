@@ -477,10 +477,10 @@
     "knowledge:protected-bus-molex-0039300060-footprint": {
       "created_at": "2026-09-21T05:29:35.745734Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "pisxme/reva-clean/validation-receipts/molex-0039300060-geometry-reconciliation-20260921/RECEIPT.md",
       "reference": "Pending Librarian exact-variant provenance and geometry audit.",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T05:36:40.893995Z",
+      "status": "RESOLVED"
     },
     "knowledge:protection-assembly-dossier": {
       "created_at": "2026-09-14T00:18:46.377604Z",
@@ -6488,7 +6488,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-R3-CORRIDOR-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "protected_bus_corridor_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6504,10 +6504,12 @@
         }
       ],
       "scope": "From isolated current-head source candidate 9e6b0000, route the authorized nine-branch source/protected corridor with native pcbnew and fresh Light checks. Preserve signed topology, J1/high-speed copper, and no global rule changes.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/protected_bus_corridor_producer"
+      ],
+      "status": "RUNNING",
       "title": "Route authorized R3 source-to-protected corridor",
-      "updated_at": "2026-09-21T05:29:35.745805Z",
+      "updated_at": "2026-09-21T05:36:47.377759Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -6517,9 +6519,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "knowledge:protected-bus-molex-0039300060-footprint"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -6652,7 +6652,13 @@
       },
       "base_sha": "7c3fcfb1",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "pisxme/reva-clean/validation-receipts/molex-0039300060-geometry-reconciliation-20260921/RECEIPT.md",
+        "base_sha": "9b995ad2",
+        "returned_at": "2026-09-21T05:36:39.890265Z",
+        "returned_by": "protected_bus_molex_variant_librarian",
+        "sha": null
+      },
       "completion_criterion": "Indexed evidence brief and bounded authority recommendation sufficient to authorize or reject exact-variant footprint correction.",
       "created_at": "2026-09-21T05:34:55.596821Z",
       "dependencies": [],
@@ -6662,10 +6668,12 @@
         "no public restricted material",
         "no CAD edits"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "pisxme/reva-clean/validation-receipts/molex-0039300060-geometry-reconciliation-20260921/RECEIPT.md"
+      ],
       "id": "P24-PROTECTED-BUS-MOLEX-EXACT-FOOTPRINT-EVIDENCE",
       "notes": "",
-      "owner": "protected_bus_molex_variant_librarian",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6681,19 +6689,33 @@
         }
       ],
       "scope": "Acquire and index authoritative evidence for Molex 0039300060 / 39-30-0060 six-contact connector geometry and reconcile it against the isolated candidate and existing private Library. Return exact pad, hole, pitch, courtyard, body, 3D and mating requirements, or a precise evidence gap.",
-      "session_ids": [
-        "/root/protected_bus_molex_variant_librarian"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Establish exact Molex 0039300060 footprint authority",
-      "updated_at": "2026-09-21T05:34:55.751193Z",
+      "updated_at": "2026-09-21T05:36:40.703367Z",
       "validation": {
         "required": [
           "provenance_hashes",
           "dimensional_audit",
           "applicability_classification"
         ],
-        "results": {}
+        "results": {
+          "applicability_classification": {
+            "receipt": "pisxme/reva-clean/validation-receipts/molex-0039300060-geometry-reconciliation-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T05:36:40.550825Z",
+            "status": "PASS"
+          },
+          "dimensional_audit": {
+            "receipt": "pisxme/reva-clean/validation-receipts/molex-0039300060-geometry-reconciliation-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T05:36:40.430659Z",
+            "status": "PASS"
+          },
+          "provenance_hashes": {
+            "receipt": "pisxme/reva-clean/validation-receipts/molex-0039300060-geometry-reconciliation-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T05:36:40.265198Z",
+            "status": "PASS"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "integrated-power"
@@ -6711,5 +6733,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:34:55.752186Z"
+  "updated_at": "2026-09-21T05:36:47.378672Z"
 }

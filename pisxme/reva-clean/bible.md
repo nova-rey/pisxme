@@ -1936,3 +1936,7 @@ The queue now represents the actionable resolution as `P24-HPQ7-PROTECTED-BUS-AU
 ### 2026-09-21 — Exact Molex footprint evidence made a tracked work package
 
 The queue now tracks `P24-PROTECTED-BUS-MOLEX-EXACT-FOOTPRINT-EVIDENCE`, owned by `protected_bus_molex_variant_librarian`, alongside the HPQ #7 Power Authority revision. Queue state is DONE=87, RUNNING=2, WAITING=10, READY=0, hard_blocked=false. Both active workers are represented by queue packages; the corridor CAD producer remains parked until exact 0039300060 geometry is authoritative.
+
+### 2026-09-21 — Exact Molex 0039300060 evidence resolved and corridor requeued
+
+Librarian returned private Library commit `91ad3be5` with Molex product/drawing provenance for `0039300060 / 39-30-0060`. The exact six-contact pad and peg-hole basis is indexed; manufacturer-authored land/courtyard and verified STEP/WRL remain UNPROVEN and are retained as prototype DFM limitations. The evidence package passed provenance, dimensional, and applicability checks, was marked DONE, and resolved `knowledge:protected-bus-molex-0039300060-footprint`. The R3 corridor producer is claimed for one bounded native-pcbnew attempt from current HEAD `9b995ad2`.
