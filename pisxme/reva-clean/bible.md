@@ -1797,3 +1797,7 @@ Macro Placement Authority decision `PISXME-P24-PROTOTYPE-POWER-BUS-MPA-R3-202609
 ### 2026-09-21 — R3 cohort producer exposes F3-F9 authority gap
 
 Candidate `894fa433` applied the binding corridor for F1/F2 and the Q1/Q2 cohort but could not close the R3 nine-branch contract because F3-F9 geometry and corridor ownership were not defined. The package is waiting on a narrow MPA authority revision; no canonical CAD integration occurred.
+
+### 2026-09-21 — R3 nine-branch corridor authority revision
+
+MPA decision `PISXME-P24-PROTOTYPE-POWER-BUS-MPA-R3-20260921-R1` supersedes the incomplete source-entry placement record and binds all nine fuse positions F1-F9, J5/J6/J9 anchors, ordered In2 raw/fused lanes, In4 returns to x>=104, and the outside-field In3-to-J1 transition. The power topology and R3 product contract are unchanged.
