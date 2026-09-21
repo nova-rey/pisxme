@@ -1,0 +1,71 @@
+{
+  "package": "P24-PROTECTED-BUS-MATERIAL-SELECTION",
+  "construction_workstream": "P24-PROTECTED-BUS-CONSTRUCTION-CORRECTION",
+  "authority_id": "PISXME-P24-FOIL-PACKAGE-DFM-POWER-20260921",
+  "status": "SIGNED_CONDITIONAL_CONSTRUCTION_AUTHORITY",
+  "scope": "bounded local source-field construction; no CAD edit or canonical integration",
+  "bases": {"producer_base": "4e87f09d", "retained_mesh": "86568f8b", "material_candidate": "1443bfda"},
+  "construction": {
+    "material": "C11000 ETP copper foil/strap",
+    "foil_count": "one positive and one return",
+    "thickness_nominal_mm": 1.0,
+    "thickness_min_mm": 0.9,
+    "width_nominal_mm": 8.0,
+    "width_min_mm": 7.9,
+    "length_nominal_mm": 82.0,
+    "length_range_mm": [81.75, 82.25],
+    "positive_bbox_mm": [99, 5, 107, 87],
+    "return_bbox_mm": [113, 5, 121, 87],
+    "bare_positive_return_clearance_min_mm": 6.0,
+    "insulation": {"material": "polyimide", "nominal_thickness_each_face_mm": 0.1, "overhang_min_mm": 1.0, "edge_exposure": "none in installed state"},
+    "landing_rows_mm": [15, 40, 65, 82],
+    "transitions_per_polarity": 4,
+    "board_land_mm": {"finished_diameter": 2.4, "finished_pth": 1.2},
+    "foil_landing_aperture_mm": {"nominal": 1.3, "minimum": 1.2},
+    "attachment": "mechanically retained conductive pin/rivet or documented equivalent through each foil aperture and board PTH; adhesive alone is not electrical",
+    "rail_landing": {"positive": ["F.Cu", "B.Cu", "In2"], "return": ["In1", "In4"]}
+  },
+  "electrical_acceptance": {
+    "effective_neck_max_mohm": 0.65,
+    "complete_hot_path_max_mohm": 8.5,
+    "joint_max_mohm_reference": 0.04,
+    "joint_max_mohm_hot": 0.06,
+    "foil_plus_four_joint_network_max_mohm": 0.33671,
+    "no_passive_sharing_or_n_minus_one_credit": true
+  },
+  "thermal_model": {
+    "rho_ohm_mm2_per_m_at_20C": 0.01724,
+    "tcr_per_K": 0.00395,
+    "electrical_hot_screen_C": 125,
+    "ambient_screen_C": 40,
+    "continuous_rise_max_C": 30,
+    "current_screens_A": {"continuous": 40, "peak": 45, "peak_duration_ms": 100},
+    "current_density_A_per_mm2": {"40A": 5.0, "45A": 5.625},
+    "model_split_current_A": 23.679,
+    "model_split_is_informational_only": true
+  },
+  "clearance": {
+    "bare_positive_return_min_mm": 6.0,
+    "bare_foil_to_unrelated_conductor_min_mm": 1.0,
+    "insulated_edge_to_unrelated_conductor_min_mm": 0.5,
+    "insulation_overhang_min_mm": 1.0
+  },
+  "prototype_dispositions": {
+    "foil_tolerance": "REQUIRES_PROTOTYPE_VALIDATION",
+    "polyimide_grade": "REQUIRES_RELEASED_MATERIAL_SELECTION",
+    "joint_process": "REQUIRES_COUPON_AND_FOUR_WIRE_VALIDATION",
+    "continuous_thermal_rise": "REQUIRES_PROTOTYPE_VALIDATION",
+    "pulse_heating": "ANALYTICAL_PLUS_PROTOTYPE_VALIDATION",
+    "current_balance": "REQUIRES_PROTOTYPE_VALIDATION",
+    "native_drc_dfm_3d": "REQUIRES_FRESH_LIGHT_VALIDATION",
+    "fabricated_hardware_sxm2": "REQUIRES_PROTOTYPE_VALIDATION"
+  },
+  "irreducible_external_blocker": false,
+  "queue": {
+    "material_selection": "DONE",
+    "construction_correction": "READY",
+    "candidate_1443bfda": "REJECTED_VALIDATION_FAILED",
+    "new_unrestricted_routing": false
+  },
+  "signature": {"role": "PiSXMe Package / DFM / Product-Power Authority", "status": "SIGNED_CONDITIONAL_CONSTRUCTION_AUTHORITY", "date": "2026-09-21"}
+}
