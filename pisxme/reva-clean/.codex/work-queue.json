@@ -237,10 +237,10 @@
     "authority:protected-bus-effective-network-materials": {
       "created_at": "2026-09-21T03:04:52.372456Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/protected-bus-effective-network-mpa-architecture-20260921/MPA_DECISION.md",
       "reference": "validation-receipts/protected-bus-r3-distributed-mesh-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T03:08:18.302269Z",
+      "status": "RESOLVED"
     },
     "authority:protected-bus-mpa": {
       "created_at": "2026-09-17T22:27:00.106570Z",
@@ -3779,7 +3779,8 @@
         "authority:protected-bus-r1-fuse-relocation",
         "authority:protected-bus-r3-budget-reassessment",
         "authority:protected-bus-effective-network-architecture",
-        "authority:protected-bus-effective-network-materials"
+        "authority:protected-bus-effective-network-materials",
+        "package:P24-PROTECTED-BUS-MATERIAL-SELECTION"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3812,7 +3813,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T03:04:52.372638Z",
+      "updated_at": "2026-09-21T03:08:35.960837Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3844,7 +3845,7 @@
         }
       },
       "waiting_on": [
-        "authority:protected-bus-effective-network-materials"
+        "package:P24-PROTECTED-BUS-MATERIAL-SELECTION"
       ],
       "workstream": "integrated-power"
     },
@@ -5995,6 +5996,64 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "aa4954b0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "One signed material/construction selection with source revisions, calculations, margins, fabrication/DFM implications, and explicit disposition of whether the existing prototype fabrication basis supports it.",
+      "created_at": "2026-09-21T03:08:08.723517Z",
+      "dependencies": [
+        "authority:protected-bus-effective-network-materials"
+      ],
+      "domain": "Power Authority",
+      "edit_boundaries": [
+        "authority/evidence artifacts only",
+        "no canonical CAD routing",
+        "no global rule changes",
+        "no topology reduction",
+        "preserve nine branch and J1 contracts"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-MATERIAL-SELECTION",
+      "notes": "",
+      "owner": "protected_bus_power_authority",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Evaluate heavier outer copper, local copper reinforcement, qualified busbar/parallel-copper construction, and supplementary lower-resistance fuse/holder options against the signed 0.650 mOhm effective PCB-neck and 8.50 mOhm complete hot-path budgets.",
+      "session_ids": [
+        "/root/protected_bus_power_authority"
+      ],
+      "status": "RUNNING",
+      "title": "Select construction achieving effective PCB neck budget",
+      "updated_at": "2026-09-21T03:08:41.981181Z",
+      "validation": {
+        "required": [
+          "resistance_budget",
+          "current_density",
+          "thermal_dfm",
+          "fabrication_capability"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -6009,5 +6068,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T03:04:52.373631Z"
+  "updated_at": "2026-09-21T03:08:41.982101Z"
 }

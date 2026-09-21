@@ -1827,3 +1827,7 @@ MPA decision PISXME-P24-PROTECTED-BUS-MPA-EFFECTIVE-NETWORK-20260921-R1 binds a 
 ### 2026-09-21 — Distributed mesh still exceeds effective network budget
 
 Candidate `0b821b7c` applied the authorized mesh architecture but fresh Light remained 1526 DRC / 426 unconnected. Extracted effective PCB neck is 0.977 mOhm and complete budget 8.577 mOhm, over the 0.650/8.500 targets. The package waits on the authorized materials decision; no canonical CAD integration occurred.
+
+### 2026-09-21 — Protected-bus materials package dispatched
+
+The distributed mesh candidate exceeded the effective PCB-neck and complete-path budgets. Queue package P24-PROTECTED-BUS-MATERIAL-SELECTION now owns the bounded materials/construction decision; CAD routing remains parked until its signed result.
