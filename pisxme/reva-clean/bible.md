@@ -1952,3 +1952,7 @@ The claimed R3 corridor producer produced only a baseline DRC and no CAD process
 ### 2026-09-21 — Recorded corridor producer launch failure
 
 The first post-evidence corridor attempt returned only a fresh Light baseline (257 DRC violations, 393 unconnected) and no authoring process or candidate. The failure is preserved in `validation-receipts/protected-bus-r3-corridor-producer-launch-stall-20260921/`; the package is already reassigned to a fresh KiCad retry.
+
+### 2026-09-21 — HPQ #7 authority contradiction closed
+
+The existing signed Product/Power Authority R3 artifact and the 2026-09-21 effective-network correction were reconciled and validated. The invalid 2.0 mOhm Q1 allocation is superseded by a 4.32 mOhm Q1 hot bound and an 8.50 mOhm complete effective hot-path cap. Source/protected minima, branch observation/enforcement, and prototype-validation limits remain explicit. The authority package is DONE; its dependency is resolved and `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` is claimed for a fresh current-head R3 source/protection producer. No CAD candidate was accepted from HPQ #7.
