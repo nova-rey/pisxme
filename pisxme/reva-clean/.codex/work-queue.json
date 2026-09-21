@@ -3809,11 +3809,11 @@
       "base_sha": "627ec337",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": null,
-        "base_sha": "627ec337",
-        "returned_at": "2026-09-21T04:49:51.687867Z",
-        "returned_by": "protected_bus_source_topology_implementer",
-        "sha": "9e6b0000"
+        "artifact": "validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md",
+        "base_sha": "588d1b3e",
+        "returned_at": "2026-09-21T06:24:34.220297Z",
+        "returned_by": "root_direct_mpa_attempt",
+        "sha": "b83915fbe34f25a986373e8fbd2f2d6c26d51640"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3871,7 +3871,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": null,
+      "owner": "root_direct_mpa_attempt",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3888,10 +3888,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "READY",
+      "session_ids": [
+        "root-direct-mpa-validation"
+      ],
+      "status": "VALIDATING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T06:21:07.803740Z",
+      "updated_at": "2026-09-21T06:24:45.227532Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3901,23 +3903,23 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T04:49:52.188277Z",
+            "receipt": "validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:24:45.075394Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/source-topology-final-drc.json",
-            "recorded_at": "2026-09-21T04:49:52.043126Z",
+            "receipt": "validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:24:44.869631Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T04:49:51.927703Z",
-            "status": "PASS"
+            "receipt": "validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:24:44.580643Z",
+            "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T04:49:52.354160Z",
+            "receipt": "validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:24:45.227477Z",
             "status": "FAIL"
           }
         }
@@ -6922,5 +6924,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T06:21:07.805129Z"
+  "updated_at": "2026-09-21T06:24:45.228391Z"
 }
