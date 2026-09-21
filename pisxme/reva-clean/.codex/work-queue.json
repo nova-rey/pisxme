@@ -3814,14 +3814,14 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "627ec337",
+      "base_sha": "7a623b22",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/PHASE24_PROTECTED_BUS_R3_BRANCH_J5P1_PAIR.kicad_pcb",
+        "artifact": "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/PHASE24_PROTECTED_BUS_R3_CURRENT_HEAD_B1_PAIR.kicad_pcb",
         "base_sha": "4531ec90a044af446fb66c04d3d7d1451b7e0a2e",
-        "returned_at": "2026-09-21T07:36:33.267497Z",
+        "returned_at": "2026-09-21T07:48:25.648478Z",
         "returned_by": "protected_bus_r3_corridor_execution",
-        "sha": "d62d1ce79ec807719708844f55ef90be2c4f41aa12edada16cdfea4756ed0d68"
+        "sha": "9cc9b010fe665b51fefabb1a87b60cd6805b5808fe8a23f8a5ae8d70337faf9d"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3883,11 +3883,12 @@
         "validation-receipts/protected-bus-r3-mpa-reassessment-20260921/RECEIPT.md",
         "validation-receipts/protected-bus-r3-issue7-unblocker-20260921/RECEIPT.md",
         "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/RECEIPT.md",
-        "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/integration/RECONCILIATION.md"
+        "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/integration/RECONCILIATION.md",
+        "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/fresh-light/RECEIPT.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "First corridor-aware B1 pair candidate improved isolated DRC to 1028/499/27 but was rejected for canonical integration because full-board source was topology-seed based, not current-HEAD derived. Second attempt must import only signed topology/B1 delta onto HEAD 4531ec90.",
-      "owner": "protected_bus_r3_corridor_execution",
+      "notes": "Canonical B1 source/topology integration is commit 7a623b22; fresh Light parsed it at 919/435/29. Package remains READY for next corridor-aware branch pair from this current integrated base; B1 does not close the package.",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3904,12 +3905,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "protected_bus_r3_corridor_execution-20260921-r2"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T07:31:00Z",
+      "updated_at": "2026-09-21T07:51:00Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3919,23 +3918,23 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/integration/RECONCILIATION.md",
-            "recorded_at": "2026-09-21T07:37:14.341569Z",
+            "receipt": "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-21T07:50:22.318566Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/integration/RECONCILIATION.md",
-            "recorded_at": "2026-09-21T07:37:14.218741Z",
+            "receipt": "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-21T07:50:22.200479Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/integration/RECONCILIATION.md",
-            "recorded_at": "2026-09-21T07:37:14.099433Z",
+            "receipt": "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-21T07:50:22.031779Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/protected-bus-r3-branch-j5p1-pair-20260921/integration/RECONCILIATION.md",
-            "recorded_at": "2026-09-21T07:37:14.450643Z",
+            "receipt": "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-21T07:50:22.465587Z",
             "status": "FAIL"
           }
         }
@@ -7183,5 +7182,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T07:37:36.699027Z"
+  "updated_at": "2026-09-21T07:50:22.633608Z"
 }
