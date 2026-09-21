@@ -2052,3 +2052,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Extended support In2/In3 transitions worsened Light DRC to 1013/430; retained as rejected evidence, leaving the shorter local-link checkpoint preferred.
 
 - 2026-09-21: Closed stale source-DRC Unblocker package with bounded implementation-failure classification and R3 corridor resume condition.
+
+- 2026-09-21: Corrected producer queue base from stale 7a623b22 to current canonical HEAD 41e5ffbb; retained B1 integration and evidence references explicitly.
