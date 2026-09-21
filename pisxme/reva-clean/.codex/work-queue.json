@@ -445,10 +445,10 @@
     "knowledge:protected-bus-foil-fabrication": {
       "created_at": "2026-09-21T03:27:54.636687Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "Library/briefs/protected-bus-local-insulated-foil-20260921.md",
       "reference": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/TIER2_BLOCKER.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T03:32:26.741878Z",
+      "status": "RESOLVED"
     },
     "knowledge:protection-assembly-dossier": {
       "created_at": "2026-09-14T00:18:46.377604Z",
@@ -3802,7 +3802,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": null,
+      "owner": "protected_bus_resume_current_head",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3819,10 +3819,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/protected_bus_resume_current_head"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T03:27:54.636827Z",
+      "updated_at": "2026-09-21T03:32:46.400085Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3853,9 +3855,7 @@
           }
         }
       },
-      "waiting_on": [
-        "knowledge:protected-bus-foil-fabrication"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -6098,7 +6098,13 @@
       },
       "base_sha": "4e87f09d",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "4e87f09d",
+        "returned_at": "2026-09-21T03:32:26.030511Z",
+        "returned_by": "protected_bus_foil_research",
+        "sha": "f0a3c8480fe1694f2ac8de11b6ebfe192b99f498"
+      },
       "completion_criterion": "Indexed evidence brief and bounded authority disposition returned to the protected-bus producer.",
       "created_at": "2026-09-21T03:28:32.414252Z",
       "dependencies": [],
@@ -6108,10 +6114,12 @@
         "no public CAD changes",
         "no global rule changes"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "Library/briefs/protected-bus-local-insulated-foil-20260921.md"
+      ],
       "id": "P24-PROTECTED-BUS-FOIL-EVIDENCE-RECONCILIATION",
       "notes": "",
-      "owner": "protected_bus_foil_research",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6127,18 +6135,27 @@
         }
       ],
       "scope": "Index authoritative evidence for the proposed 1.0 mm x 8.0 mm x 82.0 mm C11000 insulated foil source field, its polyimide insulation, attachment, creepage, thermal, SI, and DFM constraints. Return a provenance brief and classify residual gaps.",
-      "session_ids": [
-        "/root/protected_bus_foil_research"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Reconcile protected-bus insulated foil fabrication evidence",
-      "updated_at": "2026-09-21T03:28:37.848353Z",
+      "updated_at": "2026-09-21T03:32:26.563906Z",
       "validation": {
         "required": [
           "provenance_indexed",
           "authority_gap_classified"
         ],
-        "results": {}
+        "results": {
+          "authority_gap_classified": {
+            "receipt": "Library/indexes/protected-bus-local-insulated-foil-20260921.json",
+            "recorded_at": "2026-09-21T03:32:26.419971Z",
+            "status": "PASS"
+          },
+          "provenance_indexed": {
+            "receipt": "Library/briefs/protected-bus-local-insulated-foil-20260921.md",
+            "recorded_at": "2026-09-21T03:32:26.299789Z",
+            "status": "PASS"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "integrated-power"
@@ -6156,5 +6173,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T03:28:37.849540Z"
+  "updated_at": "2026-09-21T03:32:46.400789Z"
 }

@@ -1844,3 +1844,8 @@ With the material authority package complete, the protected-bus producer is re-e
 ### 2026-09-21 — Protected-bus construction candidate parked for evidence
 
 Candidate 1443bfda modeled the authorized insulated C11000 foil source field at 0.499 mOhm effective PCB neck and 8.099 mOhm complete path, but fresh Light validation returned 1550 DRC violations and 426 unconnected items. The producer is WAITING on knowledge:protected-bus-foil-fabrication while Librarian indexes fabrication, attachment, insulation, thermal, SI, and DFM evidence; no canonical CAD integration was performed.
+
+
+### 2026-09-21 — Foil evidence gate resolved and producer requeued
+
+Librarian indexed C11000 and polyimide source evidence in the private Library (commit f0a3c8480fe1694f2ac8de11b6ebfe192b99f498). The remaining work is PiSXMe-owned attachment, joint, clearance, thermal, SI, and DFM authority; knowledge:protected-bus-foil-fabrication is resolved and the protected-bus producer is READY/RUNNING again.
