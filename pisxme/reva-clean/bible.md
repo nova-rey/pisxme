@@ -2158,3 +2158,7 @@ A second implementer left the protected-bus package RUNNING while creating probe
 ### 2026-09-21 — Producer parked for MPA corridor decision
 
 After two stale implementation handoffs and root-executed probe evidence, the protected-bus producer is explicitly WAITING on `authority:mpa-r3-corridor-20260921`. Macro Placement Authority is actively resolving the current-head P2/P5 corridor problem; the queue's mechanical hard-idle flag is not a campaign-block claim while that authority work is live.
+
+### 2026-09-21 — MPA R3 reconciled to current HEAD
+
+The existing binding MPA R3 source-entry decision was mechanically reconciled to current HEAD `c4478f70` using fresh pad/net geometry probes. Its anchor and 3x3 fuse-grid coordinates remain unchanged; no stale CAD artifact was imported. The protected-bus producer dependency is resolved and ready for a real isolated implementation under the corrected Product/Power budget.

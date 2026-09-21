@@ -189,10 +189,10 @@
     "authority:mpa-r3-corridor-20260921": {
       "created_at": "2026-09-21T10:06:46.051147Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-current-head-reconciliation-20260921/RECEIPT.md",
       "reference": "Macro Placement Authority decision requested after two dormant producer handoffs; current-head geometry receipt protected-bus-r3-issue7-resume-20260921",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T10:10:16.012520Z",
+      "status": "RESOLVED"
     },
     "authority:power-assembly-qualification": {
       "created_at": "2026-09-14T00:04:59.886421Z",
@@ -3938,9 +3938,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:06:46.051284Z",
+      "updated_at": "2026-09-21T10:10:16.012849Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3971,9 +3971,7 @@
           }
         }
       },
-      "waiting_on": [
-        "authority:mpa-r3-corridor-20260921"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -7233,5 +7231,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T10:06:46.052126Z"
+  "updated_at": "2026-09-21T10:10:16.014407Z"
 }
