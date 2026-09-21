@@ -1,0 +1,105 @@
+{
+  "source": "/workspace/project/pisxme/reva-clean/PHASE24_R3_TOPOLOGY_SEED.kicad_pcb",
+  "required": [
+    "J5",
+    "J6",
+    "J9",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9"
+  ],
+  "missing": [],
+  "rows": [
+    {
+      "ref": "J5",
+      "found": true,
+      "pads": 8,
+      "x": 12.0,
+      "y": 25.0
+    },
+    {
+      "ref": "J6",
+      "found": true,
+      "pads": 8,
+      "x": 12.0,
+      "y": 50.0
+    },
+    {
+      "ref": "J9",
+      "found": true,
+      "pads": 8,
+      "x": 12.0,
+      "y": 75.0
+    },
+    {
+      "ref": "F1",
+      "found": true,
+      "pads": 9,
+      "x": 36.0,
+      "y": 26.25
+    },
+    {
+      "ref": "F2",
+      "found": true,
+      "pads": 9,
+      "x": 64.0,
+      "y": 26.25
+    },
+    {
+      "ref": "F3",
+      "found": true,
+      "pads": 9,
+      "x": 92.0,
+      "y": 26.25
+    },
+    {
+      "ref": "F4",
+      "found": true,
+      "pads": 9,
+      "x": 36.0,
+      "y": 51.25
+    },
+    {
+      "ref": "F5",
+      "found": true,
+      "pads": 9,
+      "x": 64.0,
+      "y": 51.25
+    },
+    {
+      "ref": "F6",
+      "found": true,
+      "pads": 9,
+      "x": 92.0,
+      "y": 51.25
+    },
+    {
+      "ref": "F7",
+      "found": true,
+      "pads": 9,
+      "x": 36.0,
+      "y": 76.25
+    },
+    {
+      "ref": "F8",
+      "found": true,
+      "pads": 9,
+      "x": 64.0,
+      "y": 76.25
+    },
+    {
+      "ref": "F9",
+      "found": true,
+      "pads": 9,
+      "x": 92.0,
+      "y": 76.25
+    }
+  ],
+  "status": "PASS"
+}

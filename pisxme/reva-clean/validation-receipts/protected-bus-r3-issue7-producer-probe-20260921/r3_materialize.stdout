@@ -1,0 +1,53 @@
+./kicad/include/properties/property.h(607): assert "m_choices.GetCount() > 0" failed in PROPERTY_ENUM(): No enum choices defined
+./kicad/include/properties/property.h(607): assert "m_choices.GetCount() > 0" failed in PROPERTY_ENUM(): No enum choices defined
+./kicad/include/properties/property.h(607): assert "m_choices.GetCount() > 0" failed in PROPERTY_ENUM(): No enum choices defined
+{
+  "candidate": "/workspace/project/pisxme/reva-clean/PHASE24_R3_TOPOLOGY_MATERIALIZED.kicad_pcb",
+  "moved": [
+    {
+      "ref": "F1",
+      "x": 36,
+      "y": 15
+    },
+    {
+      "ref": "F2",
+      "x": 64,
+      "y": 15
+    },
+    {
+      "ref": "F3",
+      "x": 92,
+      "y": 15
+    },
+    {
+      "ref": "F4",
+      "x": 36,
+      "y": 40
+    },
+    {
+      "ref": "F5",
+      "x": 64,
+      "y": 40
+    },
+    {
+      "ref": "F6",
+      "x": 92,
+      "y": 40
+    },
+    {
+      "ref": "F7",
+      "x": 36,
+      "y": 65
+    },
+    {
+      "ref": "F8",
+      "x": 64,
+      "y": 65
+    },
+    {
+      "ref": "F9",
+      "x": 92,
+      "y": 65
+    }
+  ]
+}
