@@ -2262,3 +2262,7 @@ The Heavy GUI-control receipt is now an explicit producer dependency, so the que
 ### 2026-09-21 — Heavy interactive-control runtime diagnosis
 
 Issue #7 remains OPEN with `resolution-ready`; its Sol authority result is already reconciled into the signed R3 power authority and is not the active queue dependency. The current protected-bus producer stall is a separate Heavy runtime capability gap: KiCad 10.0.6 launches under Xvfb and opens the disposable board, but the available bridge exposes no supported obstacle-aware interactive-router cursor/path control. No CAD candidate was produced or accepted. The package remains waiting on `other:protected-bus-r3-heavy-interactive-control-20260921` while a bounded capability task tests a qualified local control path; prior scripted geometry is not replayed.
+
+### 2026-09-21 — Heavy GUI-control qualification result
+
+The bounded Heavy capability check completed with `BLOCKED: NO_SUPPORTED_GUI_CONTROL_PATH`. The qualified image provides Xvfb, KiCad IPC, and `libXtst`, but no installed or supported keyboard/mouse/router-control client. The IPC bridge has no interactive-router path and its `run_action` escape is explicitly unstable. A temporary XTest helper was considered but is unqualified and was not used for CAD. Heavy was stopped with no CAD or global configuration change. The protected-bus producer remains waiting on the explicit runtime capability dependency; prior scripted geometry remains rejected evidence.
