@@ -6,3 +6,4 @@
 - Producer DRC: 977 violations, 429 unconnected items, exit code 5.
 - Connectivity movement: 435→429 unconnected items relative to retained B1 current-head checkpoint.
 - Result: candidate awaiting exact-SHA fresh validation; no integration claim.
+- Fresh exact-SHA Light: 979 violations, 429 unconnected items, exit code 5; candidate rejected pending authority budget correction.

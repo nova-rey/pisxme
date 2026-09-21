@@ -2130,3 +2130,7 @@ Fresh exact-SHA Light reported 971 DRC violations and 434 unconnected items for 
 ### 2026-09-21 — R3 F2 geometry-clone candidate produced
 
 A generator-level branch extension cloned the proven B1 source/fused/return geometry into J5.2/F2 with net-aware translation. The isolated producer reduced unconnected items 435→429, at 977 DRC violations. This candidate is queued for exact-SHA fresh validation and may become the next integration base if the result reproduces.
+
+### 2026-09-21 — MPA authority contradiction: 0.65 mOhm branch-neck allocation must yield
+
+MPA reviewed the retained B1 and branch-extension failures and issued `AUTHORITY_LEVEL_FAILURE`: the fixed J5.2/F2 geometry has an approximately 42.9 mm lower-bound path, while the 0.65 mOhm raw branch-neck allocation would require roughly 32 mm of continuous 1 oz copper width. That allocation cannot fit the 28 mm fuse spacing and holder clearances; return resistance worsens it. J1/J5/J6/J9, nine-branch topology, 300/330 W envelope, six-layer stack, and 8.50 mOhm complete-path gate remain binding. The producer now waits on Product/Power Authority for a corrected resistance allocation and placement revision.
