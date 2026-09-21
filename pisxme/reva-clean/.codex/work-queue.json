@@ -197,10 +197,10 @@
     "authority:mpa-r3-corridor-revision-20260921": {
       "created_at": "2026-09-21T10:21:47.584475Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-revision-20260921/MPA_DECISION.md",
       "reference": "Native lane synthesis improved opens 435->379 but failed DRC; one bounded MPA corridor revision required",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T10:26:36.196676Z",
+      "status": "RESOLVED"
     },
     "authority:power-assembly-qualification": {
       "created_at": "2026-09-14T00:04:59.886421Z",
@@ -3956,9 +3956,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:21:47.584616Z",
+      "updated_at": "2026-09-21T10:26:36.197181Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3989,9 +3989,7 @@
           }
         }
       },
-      "waiting_on": [
-        "authority:mpa-r3-corridor-revision-20260921"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -7251,5 +7249,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T10:21:47.585706Z"
+  "updated_at": "2026-09-21T10:26:36.198084Z"
 }

@@ -2178,3 +2178,7 @@ Unblocker classified the all-branch clone as illegal overlap: it reduced opens 4
 ### 2026-09-21 — Native lane synthesis failed DRC; MPA revision requested
 
 The authorized constraint-aware lane synthesizer ran in qualified Light and reduced opens 435→379 using unique In2/In4 lanes and ordinary via transitions. Native DRC still reported 1120 violations, so the candidate was rejected and the producer is waiting on one bounded MPA corridor revision. The exact route family will not be replayed.
+
+### 2026-09-21 — MPA R3 corridor revision bound
+
+MPA issued the required current-head binding revision: F.Cu is limited to local escapes/control loops; all nine fused positives use unique ordered In2.Cu lanes ending at x=103.5..112; all returns use distinct In4.Cu lanes ending at x>=104; In3.Cu is the sole post-protection plane. Anchors, fuse grid, high-speed corridors, six-layer contract, and 8.50 mOhm limit remain fixed.
