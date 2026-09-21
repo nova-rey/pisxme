@@ -2250,3 +2250,7 @@ The native F2 authority is consistent; scripted P2 geometry is the failure. Unbl
 ### 2026-09-21 — Heavy interactive-router fixture dispatched
 
 The protected-bus producer is claimed by `protected_bus_r3_heavy_router_fixture` from canonical HEAD `4681272f`. The isolated fixture must use KiCad Heavy's obstacle-aware interactive router for one native-F2 branch; scripted P2 geometry and all rejected transforms remain excluded.
+
+### 2026-09-21 — Heavy GUI control capability gap retained
+
+The qualified Heavy image and Xvfb/pcbnew runtime launch successfully, but the Heavy producer returned no route or receipt because this Root context has no supported GUI-control bridge for interactive routing. The runtime receipt is retained under `validation-receipts/protected-bus-r3-heavy-router-runtime-20260921/`; the queue parks only the producer on a bounded Unblocker capability review.
