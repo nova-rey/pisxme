@@ -1812,3 +1812,7 @@ Product/Power Authority decision `PISXME-P24-PROTOTYPE-POWER-BUS-POWER-AUTHORITY
 ### 2026-09-21 — R3 fuse-bank relocation authority
 
 MPA decision PISXME-P24-PROTECTED-BUS-MPA-20260921-R3 supersedes the R1 grid and binds the nine fuse positions near J5/J6/J9 at y=15/40/65, short local F.Cu raw escapes, distinct In2 fused joins, ordered In4 returns, and the existing Q1-to-J1 transition. The 0.65 mOhm raw branch allocation and all R3 product invariants remain governing.
+
+### 2026-09-21 — R3 relocated fuse candidate remains over budget
+
+Candidate `2bb75c9` applied the R3 relocation plan but fresh Light validation remained 1256 DRC / 431 unconnected, with 161 shorting items. Corrected trace-only estimates are 9.170–18.922 mOhm per branch against the 0.65 mOhm allocation. The package waits on Product/Power budget reassessment; no canonical CAD integration occurred.

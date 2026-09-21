@@ -250,6 +250,14 @@
       "resolved_at": "2026-09-21T02:12:10.267544Z",
       "status": "RESOLVED"
     },
+    "authority:protected-bus-r3-budget-reassessment": {
+      "created_at": "2026-09-21T02:33:34.953742Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-r3-fuse-relocation-producer-20260921/TIER2_BLOCKER.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:protected-bus-r3-corridor-mpa": {
       "created_at": "2026-09-21T01:23:14.300578Z",
       "kind": "authority",
@@ -3715,9 +3723,9 @@
       "candidate": {
         "artifact": null,
         "base_sha": "627ec337",
-        "returned_at": "2026-09-21T01:57:24.419835Z",
+        "returned_at": "2026-09-21T02:33:33.951769Z",
         "returned_by": "protected_bus_resume_current_head",
-        "sha": "426bc7e1050e6edfe0f04387cb928aa26b2f53bf"
+        "sha": "2bb75c960a140260ace896ec119061e58a775d3b"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3752,7 +3760,8 @@
         "authority:protected-bus-r3-f3-f9",
         "unblocker:protected-bus-r1-nine-branch",
         "authority:protected-bus-r1-constraint-yield",
-        "authority:protected-bus-r1-fuse-relocation"
+        "authority:protected-bus-r1-fuse-relocation",
+        "authority:protected-bus-r3-budget-reassessment"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3765,7 +3774,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": "protected_bus_resume_current_head",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3782,12 +3791,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "/root/protected_bus_resume_current_head"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T02:12:10.423048Z",
+      "updated_at": "2026-09-21T02:33:34.953852Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3797,28 +3804,30 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/protected-bus-r1-nine-branch-producer-20260921/TIER2_BLOCKER.md",
-            "recorded_at": "2026-09-21T01:57:25.026534Z",
+            "receipt": "validation-receipts/protected-bus-r3-fuse-relocation-producer-20260921/DFM_THERMAL_RESISTANCE.md",
+            "recorded_at": "2026-09-21T02:33:34.629661Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/protected-bus-r1-nine-branch-producer-20260921/TIER2_BLOCKER.md",
-            "recorded_at": "2026-09-21T01:57:24.871735Z",
+            "receipt": "validation-receipts/protected-bus-r3-fuse-relocation-producer-20260921/FRESH_FINAL_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-21T02:33:34.496829Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/protected-bus-r1-nine-branch-producer-20260921/TIER2_BLOCKER.md",
-            "recorded_at": "2026-09-21T01:57:24.755946Z",
+            "receipt": "validation-receipts/protected-bus-r3-fuse-relocation-producer-20260921/TIER2_BLOCKER.md",
+            "recorded_at": "2026-09-21T02:33:34.302040Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/protected-bus-r1-nine-branch-producer-20260921/TIER2_BLOCKER.md",
-            "recorded_at": "2026-09-21T01:57:25.226579Z",
+            "receipt": "validation-receipts/protected-bus-r3-fuse-relocation-producer-20260921/DFM_THERMAL_RESISTANCE.md",
+            "recorded_at": "2026-09-21T02:33:34.821848Z",
             "status": "FAIL"
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:protected-bus-r3-budget-reassessment"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -5982,5 +5991,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T02:12:10.423996Z"
+  "updated_at": "2026-09-21T02:33:34.954530Z"
 }
