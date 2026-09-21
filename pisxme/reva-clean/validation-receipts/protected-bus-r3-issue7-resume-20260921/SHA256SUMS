@@ -1,5 +1,7 @@
 10474fbbbe902cbb9bbe98638801e0b46bb28212b4b531788f044f9f64e5d7f5  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/PHASE24_PROTECTED_BUS_R3_F2_GEOMETRY_CLONE.kicad_pcb
-269731bcd3df113ffd6ea1faf63c10587560170940f4fbd026b0786249c0b714  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/RECEIPT.md
-157f2992a80c6415e6da3303ec9890adbf07a16662c59522b177fcaad75c4a30  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/SHA256SUMS
+ed5f824abbd19cc98f5c3367075ba860d17b2e9c786a123f07df82ea18fdb07d  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/RECEIPT.md
+fcf1f5523f3f76d15a0f2363ae00158dff22d58f44668d45076587f5597912b3  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/SHA256SUMS
 159c00e1ea1ada4997bb24b81adafb58a2bc775a755323424d963e04c4bfecb2  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/budget-audit.json
 33cbf80a84eba0b796d60ae4b16672ec75bf32ca5d36b7ef1e89c073e4ec8c54  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/budgeted-clone-drc.json
+516fff0c794e3fa32dc5a56bd63b6525318982739f75d203a3ac6de95c504bed  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/current-head-layer-probe.stdout
+47531b065bde4ce42cc32bb7841718101c8622bdf9aa6cd6539a2fc6fc32f1b6  /home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-resume-20260921/current-head-power-probe.stdout

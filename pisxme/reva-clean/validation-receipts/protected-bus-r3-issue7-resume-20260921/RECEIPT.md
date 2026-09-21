@@ -17,3 +17,7 @@ A second current-head Light method ran a budget/topology audit after the failed 
 ## Root-mediated source-topology check
 
 The Supervisor handoff was interrupted after leaving the queue RUNNING without a live CAD process. Root released that stale claim and executed a bounded current-head/source-topology Light check. The signed nine-branch source-topology artifact produced 1041 native DRC violations and 499 unconnected items; it is a source fixture, not a production candidate. This confirms that source-topology materialization cannot substitute for an integrated producer and that the next method must author against the current canonical board with explicit corridor geometry.
+
+## Current-head producer handoff repair
+
+A second implementer also left the queue RUNNING while only creating probe scripts. Root ran the probes in the prepared qualified Light workspace, captured current-head J5/F1/F2/J6/F4/J9/F7 pad/net geometry and allowed-layer tracks, then interrupted the idle handoff and released the package. No producer candidate was authored. The captured geometry confirms P2/P5 remain unrouted and the existing F1/F4 corridors are F.Cu-heavy, with returns on F.Cu/In4; this is the evidence base for the next placement/corridor-authority dispatch.

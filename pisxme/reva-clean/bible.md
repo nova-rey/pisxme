@@ -2150,3 +2150,7 @@ A second bounded qualified-Light run audited the current-head protected-bus geom
 ### 2026-09-21 — Stale Supervisor claim repaired
 
 A Supervisor left the protected-bus package RUNNING without a live CAD process. Root interrupted the stale owner, released the queue claim, and ran a root-mediated Light source-topology check. The source fixture reported 1041 DRC violations and 499 unconnected items, so it remains non-production evidence. The queue is READY for a fresh current-head implementation method.
+
+### 2026-09-21 — Current-head implementer handoff repaired
+
+A second implementer left the protected-bus package RUNNING while creating probes without starting a CAD job. Root executed the probes in qualified Light, captured current pad/net/layer evidence, interrupted the idle handoff, and released the package. No candidate was claimed; the producer remains READY with concrete geometry evidence for a fresh authority-level corridor method.
