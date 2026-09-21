@@ -106,6 +106,14 @@
       "resolved_at": "2026-09-17T23:32:18.619604Z",
       "status": "RESOLVED"
     },
+    "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY-REVISION-20260919": {
+      "created_at": "2026-09-19T22:56:26.238309Z",
+      "kind": "authority",
+      "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+      "reference": "validation-receipts/hpq-issue7-resolution-20260919/RESOLUTION.md",
+      "resolved_at": "2026-09-19T23:13:29.629787Z",
+      "status": "RESOLVED"
+    },
     "authority:P24-STORAGE-PLACEMENT-CORRIDOR": {
       "created_at": "2026-09-18T22:38:50.765386Z",
       "kind": "authority",
@@ -210,12 +218,28 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:protected-bus-corrective-authority-r3-20260919": {
+      "created_at": "2026-09-19T23:04:34.821921Z",
+      "kind": "authority",
+      "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+      "reference": "validation-receipts/protected-bus-corrective-authority-r3-20260919/PROTECTED_BUS_AUTHORITY_R3.md",
+      "resolved_at": "2026-09-19T23:12:38.209383Z",
+      "status": "RESOLVED"
+    },
     "authority:protected-bus-mpa": {
       "created_at": "2026-09-17T22:27:00.106570Z",
       "kind": "authority",
       "receipt": "validation-receipts/protected-bus-mpa-binding-20260917/RECEIPT.md",
       "reference": "validation-receipts/protected-bus-producer-unblocker-20260917.md",
       "resolved_at": "2026-09-17T22:37:12.040995Z",
+      "status": "RESOLVED"
+    },
+    "authority:protected-bus-r3-corridor-mpa": {
+      "created_at": "2026-09-21T01:23:14.300578Z",
+      "kind": "authority",
+      "receipt": "validation-receipts/protected-bus-r3-mpa-corridor-20260921/MPA_DECISION.md",
+      "reference": "protected-bus_mpa_corridor",
+      "resolved_at": "2026-09-21T01:29:49.704875Z",
       "status": "RESOLVED"
     },
     "authority:protection-assembly-qualification": {
@@ -293,10 +317,10 @@
     "hpq:nova-rey/codex-config-backup#7": {
       "created_at": "2026-09-18T23:50:08.117577Z",
       "kind": "hpq",
-      "receipt": null,
+      "receipt": "https://github.com/nova-rey/codex-config-backup/issues/7",
       "reference": "https://github.com/nova-rey/codex-config-backup/issues/7",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-19T22:54:30.586597Z",
+      "status": "RESOLVED"
     },
     "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES": {
       "created_at": "2026-09-19T00:18:45.517573Z",
@@ -384,6 +408,22 @@
       "receipt": "validation-receipts/prototype-mechanical-validation-plan-20260919/RECEIPT.md",
       "reference": "validation-receipts/mechanics-l10-cm5-model-reconciled-20260919/RECEIPT.md",
       "resolved_at": "2026-09-19T02:19:45.320083Z",
+      "status": "RESOLVED"
+    },
+    "other:worker-execution-runtime": {
+      "created_at": "2026-09-19T23:31:45.204181Z",
+      "kind": "other",
+      "receipt": "HPQ #7 is resolution-ready and user-directed resumption. Qualified KiCad Light runtime was verified at 10.0.6; re-open producer for current-head reconciliation.",
+      "reference": "Three delegated producer sessions and direct implementer handoff produced no CAD process, workspace artifact, or candidate. Qualified launcher independently returns KiCad 10.0.6. Resume requires a supported agent-to-launcher execution path.",
+      "resolved_at": "2026-09-21T00:06:34.274256Z",
+      "status": "RESOLVED"
+    },
+    "other:worker-execution-runtime-r2": {
+      "created_at": "2026-09-21T00:10:24.051993Z",
+      "kind": "other",
+      "receipt": "Root session-log audit proved protected_bus_resume_current_head was actively executing source/netlist reconciliation; prior no-process observation was premature. Resume same worker without interruption.",
+      "reference": "Current-head resume created workspace from 627ec337 but returned no CAD process, artifact, or receipts; requires supported producer execution.",
+      "resolved_at": "2026-09-21T00:29:50.972279Z",
       "status": "RESOLVED"
     },
     "protected-bus-direct-producer-stall": {
@@ -482,12 +522,36 @@
       "resolved_at": "2026-09-18T13:02:07.613114Z",
       "status": "RESOLVED"
     },
+    "unblocker:protected-bus-agent-handoff": {
+      "created_at": "2026-09-19T23:30:20.144255Z",
+      "kind": "other",
+      "receipt": "Root verified direct launcher; re-routed to implementer role with explicit immediate tool execution.",
+      "reference": "Qualified launcher verified 10.0.6, but three delegated producer sessions produced no CAD process/artifact. Root requires supported direct worker handoff or capability diagnosis.",
+      "resolved_at": "2026-09-19T23:30:32.344153Z",
+      "status": "RESOLVED"
+    },
+    "unblocker:protected-bus-direct-r3-launch": {
+      "created_at": "2026-09-19T23:24:34.624812Z",
+      "kind": "other",
+      "receipt": "pisxme-worker kicad-light launch probe returned KiCad 10.0.6 on workspace protected-bus-direct-r3 from base 627ec337; Root verified launcher and workspace.",
+      "reference": "Root observed two claimed producer sessions with no active CAD process or candidate artifacts; diagnose supported launch path.",
+      "resolved_at": "2026-09-19T23:26:39.535580Z",
+      "status": "RESOLVED"
+    },
     "unblocker:protected-bus-r2-producer-stall": {
       "created_at": "2026-09-18T23:02:06.365280Z",
       "kind": "other",
       "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r2-method-change-20260918/RECEIPT.md",
       "reference": "Implementation-method stall after repeated live attempts with no candidate or bounded failure; review worker/tool path only, preserve R2 authority.",
       "resolved_at": "2026-09-18T23:04:15.072200Z",
+      "status": "RESOLVED"
+    },
+    "unblocker:protected-bus-r3-corridor": {
+      "created_at": "2026-09-21T01:19:43.202726Z",
+      "kind": "other",
+      "receipt": "validation-receipts/protected-bus-r3-completion-attempt-20260920/TIER2_BLOCKER.md",
+      "reference": "validation-receipts/protected-bus-r3-completion-attempt-20260920/TIER2_BLOCKER.md",
+      "resolved_at": "2026-09-21T01:23:14.165233Z",
       "status": "RESOLVED"
     }
   },
@@ -3614,14 +3678,14 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "a18d6d47",
+      "base_sha": "627ec337",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/PHASE24_MOLEX_NINE_BRANCH_MPA_CANDIDATE_20260918.kicad_pcb",
-        "base_sha": "39498cc5",
-        "returned_at": "2026-09-18T21:50:39.426234Z",
-        "returned_by": "molex_nine_branch_direct_execution",
-        "sha": "cfb7d8a1851de5b7db4d448c08ac561b2d5a25ef84eed367fc2f086cb10a3ede"
+        "artifact": null,
+        "base_sha": "627ec337",
+        "returned_at": "2026-09-21T01:10:01.282725Z",
+        "returned_by": "protected_bus_resume_current_head",
+        "sha": "f5e873b66a941c45e0b0d73d852859a69293246b"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3645,7 +3709,14 @@
         "unblocker:protected-bus-r2-producer-stall",
         "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION",
         "protected-bus-direct-producer-stall",
-        "hpq:nova-rey/codex-config-backup#7"
+        "hpq:nova-rey/codex-config-backup#7",
+        "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY-REVISION-20260919",
+        "unblocker:protected-bus-direct-r3-launch",
+        "unblocker:protected-bus-agent-handoff",
+        "other:worker-execution-runtime",
+        "other:worker-execution-runtime-r2",
+        "unblocker:protected-bus-r3-corridor",
+        "authority:protected-bus-r3-corridor-mpa"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3657,8 +3728,8 @@
       ],
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": null,
+      "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
+      "owner": "protected_bus_resume_current_head",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3675,10 +3746,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/protected_bus_resume_current_head"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:50:08.117609Z",
+      "updated_at": "2026-09-21T01:29:49.836028Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3688,30 +3761,28 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:50:45.487086Z",
+            "receipt": "validation-receipts/protected-bus-r3-producer-20260920/PATH_BUDGET.json",
+            "recorded_at": "2026-09-21T01:10:15.269212Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:50:45.437211Z",
+            "receipt": "validation-receipts/protected-bus-r3-producer-20260920/FRESH_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-21T01:10:15.034906Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:50:45.390952Z",
+            "receipt": "validation-receipts/protected-bus-r3-producer-20260920/FRESH_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-21T01:10:14.880220Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:50:45.546390Z",
+            "receipt": "validation-receipts/protected-bus-r3-producer-20260920/THERMAL_DFM_RECEIPT.md",
+            "recorded_at": "2026-09-21T01:10:15.499286Z",
             "status": "FAIL"
           }
         }
       },
-      "waiting_on": [
-        "hpq:nova-rey/codex-config-backup#7"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -5693,6 +5764,174 @@
       },
       "waiting_on": [],
       "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-corrective-authority-r3-20260919/",
+        "base_sha": "0b1b08af",
+        "returned_at": "2026-09-19T23:13:29.225945Z",
+        "returned_by": "power_authority_r3",
+        "sha": "627ec337"
+      },
+      "completion_criterion": "Signed/versioned authority artifact with machine-readable table, calculations, assumptions, margins, source provenance, and explicit producer resumption instructions.",
+      "created_at": "2026-09-19T22:56:52.530189Z",
+      "dependencies": [
+        "authority:protected-bus-corrective-authority-r3-20260919"
+      ],
+      "domain": "Product/Power Authority",
+      "edit_boundaries": [
+        "authority artifacts and receipts only",
+        "no canonical CAD edits",
+        "no speculative routing",
+        "preserve HPQ evidence"
+      ],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+        "validation-receipts/protected-bus-corrective-authority-r3-20260919/SHA256SUMS"
+      ],
+      "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY-REVISION-20260919",
+      "notes": "Created from HPQ #7 resolution-ready contradiction; Q1 CSD19536KCS 2.3 mOhm typical/2.7 mOhm max conflicts with fixed 2.0 mOhm hot allocation.",
+      "owner": null,
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Reconcile HPQ #7 resolution against current HEAD and issue one signed/versioned authority correction before any protected-bus CAD. Select a feasible protection device/topology or reallocate the 10.0 mOhm end-to-end budget with worst-case hot proof. Bind source voltage, 40 A continuous/45 A peak behavior, branch enforcement/current sharing, protected-voltage minima, connector/fuse/contact limits, thermal assumptions, and complete positive/return resistance budget. Preserve 300 W sustained, 330 W peak, six-independent-loop product invariants and prototype assurance level.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Issue corrected protected-bus source and resistance authority",
+      "updated_at": "2026-09-19T23:13:29.575972Z",
+      "validation": {
+        "required": [
+          "authority_completeness",
+          "worst_case_hot_budget",
+          "branch_enforcement",
+          "product_invariant_compatibility"
+        ],
+        "results": {
+          "authority_completeness": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:29.347929Z",
+            "status": "PASS"
+          },
+          "branch_enforcement": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:29.453343Z",
+            "status": "PASS"
+          },
+          "product_invariant_compatibility": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:29.519090Z",
+            "status": "PASS"
+          },
+          "worst_case_hot_budget": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:29.397020Z",
+            "status": "PASS"
+          }
+        }
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-corrective-authority-r3-20260919/",
+        "base_sha": "0b1b08af",
+        "returned_at": "2026-09-19T23:13:05.640778Z",
+        "returned_by": "power_authority_r3",
+        "sha": "627ec337"
+      },
+      "completion_criterion": "R3 MD/JSON authority artifact, receipt, hashes, and producer resumption instructions exist and pass internal consistency checks.",
+      "created_at": "2026-09-19T23:05:00.091795Z",
+      "dependencies": [],
+      "domain": "Product/Power Authority",
+      "edit_boundaries": [
+        "authority artifacts and receipts only",
+        "no canonical CAD edits"
+      ],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+        "validation-receipts/protected-bus-corrective-authority-r3-20260919/SHA256SUMS"
+      ],
+      "id": "P24-PROTECTED-BUS-AUTHORITY-R3",
+      "notes": "Root-dispatched after Unblocker classified HPQ #7 as domain-authority dependency.",
+      "owner": null,
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Issue the bounded signed/versioned R3 correction required by HPQ #7 before protected-bus CAD resumes.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Author R3 protected-bus authority correction",
+      "updated_at": "2026-09-19T23:13:06.007503Z",
+      "validation": {
+        "required": [
+          "authority_completeness",
+          "worst_case_hot_budget",
+          "branch_enforcement",
+          "product_invariant_compatibility"
+        ],
+        "results": {
+          "authority_completeness": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:05.776661Z",
+            "status": "PASS"
+          },
+          "branch_enforcement": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:05.891693Z",
+            "status": "PASS"
+          },
+          "product_invariant_compatibility": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:05.945107Z",
+            "status": "PASS"
+          },
+          "worst_case_hot_budget": {
+            "receipt": "validation-receipts/protected-bus-corrective-authority-r3-20260919/RECEIPT.md",
+            "recorded_at": "2026-09-19T23:13:05.835942Z",
+            "status": "PASS"
+          }
+        }
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -5707,5 +5946,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-19T02:19:57.566803Z"
+  "updated_at": "2026-09-21T01:29:49.836739Z"
 }

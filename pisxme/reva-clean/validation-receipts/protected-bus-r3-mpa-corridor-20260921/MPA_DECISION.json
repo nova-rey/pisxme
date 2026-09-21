@@ -1,0 +1,10 @@
+{
+  "decision_id": "PISXME-P24-PROTOTYPE-POWER-BUS-MPA-R3-20260921",
+  "base_sha": "627ec337a28ce0c732df7744dc3ba360414464db",
+  "fixed_anchors": ["J1@150,90 top 0", "J5@12,25 top 0", "J6@12,45 top 0", "board outline", "six-layer stack", "existing high-speed/timing corridors", "existing return planes"],
+  "cohort": {"F1":[32,22,0],"F2":[32,54,0],"D1":[49,8,0],"D2":[49,70,0],"U1":[49,22,0],"U2":[49,54,0],"Q1":[61,22,0],"Q2":[61,54,0],"C3":[47,24,0],"C4":[47,56,0]},
+  "layers": {"positive_local":"F.Cu", "protected_plane":"In3.Cu", "return":"F.Cu/In1.Cu/In4.Cu", "high_speed":"B.Cu preserved", "existing_pwr":"In2.Cu preserved"},
+  "j1_transition": "outside SMD field via ladder to F.Cu fanout; no B.Cu terminal, via-in-pad, or single-via 40 A path",
+  "contract": {"source_v": "11.4-12.6", "sustained_w": 300, "peak_w": 330, "peak_ms": 100, "continuous_a": 40, "peak_a": 45, "hot_path_mohm": 8.5},
+  "integration_gate": "isolated producer then fresh KiCad Light validation; no canonical integration from authority decision alone"
+}

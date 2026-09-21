@@ -1790,3 +1790,6 @@ Hardware Validation issued `validation-receipts/prototype-mechanical-validation-
 ## 2026-09-19 — Protected-bus R3 authority correction
 
 HPQ #7 resolution was reconciled into the signed Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-CORRECTIVE-20260919-R3` at canonical HEAD `0b1b08af`. The decision retains the conventional nine-branch protected 12-V topology, replaces the inconsistent 2.0 mOhm Q1 allocation with a 4.32 mOhm calculated hot design bound, and tightens the complete source-to-J1 implementation screen to 8.50 mOhm inside the 10.0 mOhm product cap. It binds branch-current/imbalance enforcement and prototype-validation limits; no CAD or hardware result is claimed. The isolated producer may resume only against this artifact and must return every resistance, thermal, protection, connectivity, and sequencing receipt.
+### 2026-09-21 — Protected-bus R3 corridor authority
+
+Macro Placement Authority decision `PISXME-P24-PROTOTYPE-POWER-BUS-MPA-R3-20260921` binds the J1/J5/J6 anchors, ten-reference source/protection cohort, staged In3.Cu protected-plane transition, and distributed return hierarchy for the next isolated producer. It preserves the R3 8.50 mOhm hot-path contract and does not authorize canonical integration.
