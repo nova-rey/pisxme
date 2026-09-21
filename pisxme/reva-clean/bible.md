@@ -1996,3 +1996,5 @@ The supervised attempt again produced no live CAD process or authoring artifact 
 ### 2026-09-21 — First real R2 authoring candidate rejected by native validation
 
 The one-shot Light launcher was finally invoked directly with an explicit authoring script. Isolated candidate commit `b83915fbe34f25a986373e8fbd2f2d6c26d51640` removed one F.Cu `POWER_GND` zone under MPA R2, but native Light DRC reported 264 violations and 499 unconnected items. Receipt `validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md` records the failure. The candidate is rejected for integration; the next attempt must implement complete positive/return routing and the 8.50 mOhm budget rather than zone removal alone.
+
+The failed candidate was returned to READY after validation; no integration slot was consumed and the corridor package remains unclaimed because the source producer has not produced an acceptable candidate.

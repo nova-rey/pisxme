@@ -3871,7 +3871,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": "root_direct_mpa_attempt",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3888,12 +3888,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-direct-mpa-validation"
-      ],
-      "status": "VALIDATING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T06:24:45.227532Z",
+      "updated_at": "2026-09-21T06:25:10.244481Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -6924,5 +6922,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T06:24:45.228391Z"
+  "updated_at": "2026-09-21T06:25:10.245417Z"
 }
