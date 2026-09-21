@@ -2238,3 +2238,7 @@ MPA decision `PISXME-P24-R3-F2-COHORT-RECONCILIATION-20260921` rejects the +11.2
 ### 2026-09-21 — Native F2 protected-bus producer dispatched
 
 `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` is claimed by `protected_bus_r3_native_f2_producer` from canonical HEAD `17fe31b4`. This producer implements only the final MPA-authorized native F2 cohort plan; all transformed and north-shifted variants are excluded.
+
+### 2026-09-21 — Native F2 corridor probe rejected
+
+The native F2 probe ran in qualified Light without the rejected transform, but the existing P2 corridor family still returned 967 DRC violations and 428 opens. The diagnostic board and raw reports are retained under `validation-receipts/protected-bus-r3-native-f2-probe-20260921/`; no candidate was integrated. Same-class replay is stopped and the queue waits on a changed implementation capability/corridor method.

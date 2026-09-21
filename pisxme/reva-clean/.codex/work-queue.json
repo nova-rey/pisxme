@@ -769,6 +769,14 @@
       "reference": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
       "resolved_at": "2026-09-21T05:28:56.841756Z",
       "status": "RESOLVED"
+    },
+    "unblocker:protected-bus-r3-native-f2-corridor-20260921": {
+      "created_at": "2026-09-21T13:00:00Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "Native F2 probe 967 DRC / 428 opens; route family must change capability before replay",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3958,7 +3966,8 @@
         "authority:mpa-r3-lane-placement-20260921",
         "authority:mpa-r3-f2-placement-reconciliation-20260921",
         "unblocker:protected-bus-r3-f2-transform-conflict-20260921",
-        "authority:mpa-r3-f2-cohort-reconciliation-20260921"
+        "authority:mpa-r3-f2-cohort-reconciliation-20260921",
+        "unblocker:protected-bus-r3-native-f2-corridor-20260921"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3982,8 +3991,8 @@
         "validation-receipts/protected-bus-r3-support-local-links-20260921/DELTA.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "MPA freezes F2 native at (64,15,0deg); transform rejected. Route actual pads via In2/In4, preserve fixed support cohort and <=8.50mOhm.",
-      "owner": "protected_bus_r3_native_f2_producer",
+      "notes": "Native F2 probe failed 967 DRC / 428 opens. Route family parked; Unblocker must define changed capability or corridor method.",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4000,10 +4009,8 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-protected-bus-r3-native-f2-20260921"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
       "updated_at": "2026-09-21T11:11:52.421377Z",
       "validation": {
@@ -4036,7 +4043,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:protected-bus-r3-native-f2-corridor-20260921"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7296,5 +7305,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T11:11:52.422294Z"
+  "updated_at": "2026-09-21T13:00:00Z"
 }
