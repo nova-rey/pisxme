@@ -1998,3 +1998,7 @@ The supervised attempt again produced no live CAD process or authoring artifact 
 The one-shot Light launcher was finally invoked directly with an explicit authoring script. Isolated candidate commit `b83915fbe34f25a986373e8fbd2f2d6c26d51640` removed one F.Cu `POWER_GND` zone under MPA R2, but native Light DRC reported 264 violations and 499 unconnected items. Receipt `validation-receipts/protected-bus-r3-direct-authoring-20260921/RECEIPT.md` records the failure. The candidate is rejected for integration; the next attempt must implement complete positive/return routing and the 8.50 mOhm budget rather than zone removal alone.
 
 The failed candidate was returned to READY after validation; no integration slot was consumed and the corridor package remains unclaimed because the source producer has not produced an acceptable candidate.
+
+### 2026-09-21 — Escalated after second materially distinct R2 failure
+
+Applying the MPA R2 F.Cu occupancy correction to the retained routed producer artifact produced a real Light candidate with 314 DRC violations and 499 unconnected items. This is a second distinct implementation failure, retained at `validation-receipts/protected-bus-r3-routed-r2-attempt-20260921/RECEIPT.md`. The producer is parked on `protected-bus-r3-failure-review`; Unblocker must classify the obsolete topology and prescribe one capability-level change before another route attempt.
