@@ -2190,3 +2190,7 @@ Under the bound MPA corridor, a focused J5.2/F2 positive-return probe reported 9
 ### 2026-09-21 — Topology-first one-branch probe authorized
 
 Unblocker found no structural contradiction in the binding MPA corridor. The next producer must use exact SHA `57332e98`, prove one branch with pcbnew net-graph and occupancy checks, reserve it, and only then expand to the remaining lanes.
+
+### 2026-09-21 — Topology-first P2 probe exposes lane conflict
+
+The exact-SHA one-branch probe connected additional F2 pads and reduced opens to 428, but native DRC exposed P2/P1 source/fused conflicts. The producer is waiting on MPA to bind conflict-free lane coordinates before expanding the topology.
