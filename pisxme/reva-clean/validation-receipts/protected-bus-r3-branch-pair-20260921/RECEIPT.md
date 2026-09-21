@@ -7,3 +7,4 @@
 - Producer DRC: 1012 violations, 433 unconnected items, exit code 5.
 - Connectivity movement: one fewer unconnected item than the 434-item support-local checkpoint; DRC worsened by 30 compared with 982 gate-loop checkpoint.
 - Result: candidate awaiting exact-SHA fresh validation; no integration claim.
+- Fresh exact-SHA Light: 1014 violations, 433 unconnected items, exit code 5; candidate rejected for integration.
