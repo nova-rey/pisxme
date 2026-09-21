@@ -1823,3 +1823,7 @@ Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260
 ### 2026-09-21 — Effective-network mesh architecture authority
 
 MPA decision PISXME-P24-PROTECTED-BUS-MPA-EFFECTIVE-NETWORK-20260921-R1 binds a distributed laminated copper mesh: branch-independent fuse cells, parallel F.Cu/B.Cu/In2 positive paths, dedicated In1/In4 return mesh, branch-owned via arrays, distributed joins, and a four-column Q1-to-In3 transition. Same-geometry replay, passive-sharing, N-1 credit, J1 remap, and global rule changes remain prohibited.
+
+### 2026-09-21 — Distributed mesh still exceeds effective network budget
+
+Candidate `0b821b7c` applied the authorized mesh architecture but fresh Light remained 1526 DRC / 426 unconnected. Extracted effective PCB neck is 0.977 mOhm and complete budget 8.577 mOhm, over the 0.650/8.500 targets. The package waits on the authorized materials decision; no canonical CAD integration occurred.
