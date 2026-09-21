@@ -1,0 +1,16 @@
+{
+  "decision_id":"PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260921-R3",
+  "status":"SIGNED_CONDITIONAL_PRODUCT_POWER_AUTHORITY",
+  "qualification":"REQUIRES_PROTOTYPE_VALIDATION",
+  "package":"P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "effective_neck_cap_mohm":0.65,
+  "branch_count":9,
+  "derived_symmetric_branch_screen_mohm":5.85,
+  "complete_path_cap_mohm":8.5,
+  "source":{"window_v":[11.4,12.6],"continuous_a":40,"peak_a":45},
+  "product":{"sustained_w":300,"peak_w":330},
+  "invariants":["J1/J5/J6/J9 anchors","six-layer stack","nine independent branches","no passive-sharing or N-1 credit"],
+  "hot_budget_mohm":{"source_harness_contacts_crimps":1.8,"fuse_holder_contacts":0.55,"effective_nine_branch_pcb_neck":0.65,"branch_joins_transitions_vias":0.45,"q1_hot_channel":4.32,"q1_leads_pads":0.15,"protected_copper_to_j1":0.25,"j1_field_spreading":0.25,"residual":0.08,"total":8.5},
+  "balance_screen_fraction":0.10,
+  "qualification_gates":["extract all nine positive/return branches","complete source-to-J1 hot extraction","source/contact/fuse thermal qualification","return continuity and PDN/load-step","sequencing and brownout","prototype thermal/DFM validation"]
+}

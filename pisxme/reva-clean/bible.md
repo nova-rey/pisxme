@@ -2134,3 +2134,7 @@ A generator-level branch extension cloned the proven B1 source/fused/return geom
 ### 2026-09-21 — MPA authority contradiction: 0.65 mOhm branch-neck allocation must yield
 
 MPA reviewed the retained B1 and branch-extension failures and issued `AUTHORITY_LEVEL_FAILURE`: the fixed J5.2/F2 geometry has an approximately 42.9 mm lower-bound path, while the 0.65 mOhm raw branch-neck allocation would require roughly 32 mm of continuous 1 oz copper width. That allocation cannot fit the 28 mm fuse spacing and holder clearances; return resistance worsens it. J1/J5/J6/J9, nine-branch topology, 300/330 W envelope, six-layer stack, and 8.50 mOhm complete-path gate remain binding. The producer now waits on Product/Power Authority for a corrected resistance allocation and placement revision.
+
+### 2026-09-21 — Product/Power corrected R3 resistance interpretation
+
+Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260921-R3` supersedes the erroneous interpretation that 0.650 mOhm applied to every branch. It is the effective nine-branch PCB-neck network cap; the symmetric derived per-branch planning screen is 5.850 mOhm. The complete 8.500 mOhm source-to-J1 hot cap and all 300/330 W, 40/45 A, nine-branch, anchor, six-layer, and no-sharing invariants remain binding. Exact branch extraction, source/contact/fuse, PDN, sequencing, thermal, DFM, and prototype validation remain open.
