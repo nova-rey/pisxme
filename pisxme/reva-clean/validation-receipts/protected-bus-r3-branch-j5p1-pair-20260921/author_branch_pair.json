@@ -1,0 +1,39 @@
+{
+  "base": "/workspace/project/pisxme/reva-clean/validation-receipts/protected-bus-source-topology-materialization-20260921/PHASE24_SIGNED_NINE_BRANCH_SOURCE_TOPOLOGY.kicad_pcb",
+  "candidate": "/workspace/project/pisxme/reva-clean/PHASE24_PROTECTED_BUS_R3_BRANCH_J5P1_PAIR.kicad_pcb",
+  "mpa_positions": {
+    "F1": 15.0,
+    "F2": 15.0,
+    "F3": 15.0,
+    "F4": 40.0,
+    "F5": 40.0,
+    "F6": 40.0,
+    "F7": 65.0,
+    "F8": 65.0,
+    "F9": 65.0
+  },
+  "changed_nets": [
+    "PWR_SRC_J5_P1",
+    "PWR_FUSED_J5_P1",
+    "PWR_RET_J5_P4"
+  ],
+  "raw_branch": {
+    "source_pad": "J5.1",
+    "fuse": "F1",
+    "width_mm": 2.0,
+    "layer": "F.Cu"
+  },
+  "fused_handoff": {
+    "fuse": "F1",
+    "join_field_boundary_x_mm": 103.5,
+    "layer": "In2.Cu",
+    "width_mm": 2.0
+  },
+  "return_handoff": {
+    "source_pad": "J5.4",
+    "join_field_boundary_x_mm": 103.5,
+    "layer": "In4.Cu",
+    "width_mm": 1.0,
+    "via_count": 2
+  }
+}
