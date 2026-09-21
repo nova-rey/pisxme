@@ -2194,3 +2194,7 @@ Unblocker found no structural contradiction in the binding MPA corridor. The nex
 ### 2026-09-21 — Topology-first P2 probe exposes lane conflict
 
 The exact-SHA one-branch probe connected additional F2 pads and reduced opens to 428, but native DRC exposed P2/P1 source/fused conflicts. The producer is waiting on MPA to bind conflict-free lane coordinates before expanding the topology.
+
+### 2026-09-21 — Refilled protected-bus producer after stale dependency diagnosis
+
+Issue #7's resolution-ready authority contradiction had already been reconciled by the signed R3 power-budget artifacts. The actual queue stall was a separate unresolved MPA lane-placement dependency with no active CAD process. The dependency was resolved against the binding current-head corridor authority, and `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` was claimed for a fresh topology-first isolated producer session `root-protected-bus-r3-producer-20260921`. The producer must prove conflict-free J5.2/F2 topology before expansion; no rejected route variant is being replayed.
