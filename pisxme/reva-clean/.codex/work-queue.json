@@ -7134,8 +7134,28 @@
       "title": "Materialize signed nine-branch source topology",
       "updated_at": "2026-09-21T07:11:01.134608Z",
       "validation": {
-        "required": [],
-        "results": {}
+        "required": [
+          "exact_topology",
+          "native_netlist",
+          "source_contract_parity"
+        ],
+        "results": {
+          "exact_topology": {
+            "receipt": "validation-receipts/protected-bus-source-topology-materialization-20260921/signed_source_topology.json",
+            "status": "PASS",
+            "recorded_at": "2026-09-21T07:11:00Z"
+          },
+          "native_netlist": {
+            "receipt": "validation-receipts/protected-bus-source-topology-materialization-20260921/native_net_census.json",
+            "status": "PASS",
+            "recorded_at": "2026-09-21T07:11:05Z"
+          },
+          "source_contract_parity": {
+            "receipt": "validation-receipts/protected-bus-source-topology-materialization-20260921/RECEIPT.md",
+            "status": "PASS",
+            "recorded_at": "2026-09-21T07:11:10Z"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": ""
