@@ -1835,3 +1835,7 @@ The distributed mesh candidate exceeded the effective PCB-neck and complete-path
 ### 2026-09-21 — Power material authority complete
 
 P24-PROTECTED-BUS-MATERIAL-SELECTION completed with a signed construction decision: use local insulated copper reinforcement or a defined busbar/parallel-copper source field to reduce the effective PCB neck by at least 0.327 mOhm to <=0.650 mOhm. Lower-resistance fuse changes are supplementary only; CAD remains gated on the construction evidence.
+
+### 2026-09-21 — Protected-bus construction correction dispatched
+
+With the material authority package complete, the protected-bus producer is re-enabled for one construction-level attempt: insulated copper reinforcement or explicit busbar/parallel copper, with no fuse-only shortcut.
