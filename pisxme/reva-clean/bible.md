@@ -1980,3 +1980,7 @@ The source/protection producer package is claimed by `protected_bus_source_r3_pr
 ### 2026-09-21 — Cleared phantom producer state after HPQ #7 resolution check
 
 HPQ Issue #7 remains OPEN with `resolution-ready`, not closed; its authority packet is already reconciled and its queue dependency is no longer blocking. The claimed source producer had no live `pisxme-worker`, KiCad process, authoring script, candidate, or new artifact, so the stale RUNNING claim was released to READY. A new attempt must claim only at actual direct-argv authoring start and return a candidate or a concrete failure receipt.
+
+### 2026-09-21 — Re-dispatched protected-bus producer with live execution ownership
+
+The first retry again held a RUNNING claim without any live worker or KiCad process and was interrupted. The package was released and claimed by `protected_bus_source_direct_exec` for one bounded direct-argv Light authoring attempt. This is an execution correction, not an HPQ7 state change; Issue #7 remains OPEN/`resolution-ready` until canonical integration succeeds.
