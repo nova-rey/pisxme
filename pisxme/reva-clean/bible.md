@@ -1805,3 +1805,6 @@ MPA decision `PISXME-P24-PROTOTYPE-POWER-BUS-MPA-R3-20260921-R1` supersedes the 
 ### 2026-09-21 — R1 nine-branch corridor candidate remains structurally open
 
 Candidate `426bc7e` applied the complete R1 fuse grid and layer plan but fresh Light validation remained 1220 DRC / 391 unconnected. The package is parked for Unblocker classification; no canonical CAD integration occurred.
+### 2026-09-21 — R1 fuse geometry superseded by resistance invariant
+
+Product/Power Authority decision `PISXME-P24-PROTOTYPE-POWER-BUS-POWER-AUTHORITY-20260921` retains the nine-branch R3 topology and product envelope but supersedes the exact R1 fuse grid and long ordered In2 raw lanes because they contradict the 0.65 mOhm raw branch positive-plus-return allocation. A revised local MPA plan is required; no topology reduction or global rule relaxation is authorized.
