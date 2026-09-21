@@ -205,8 +205,8 @@
     "authority:mpa-r3-lane-placement-20260921": {
       "created_at": "2026-09-21T10:36:42.218046Z",
       "kind": "authority",
-      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-corridor-revision-20260921/MPA_DECISION.md",
-      "reference": "P2 topology-first probe exposes exact existing-copper lane conflicts; MPA must bind conflict-free lane coordinates",
+      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-lane-coordinate-20260921/MPA_DECISION.md",
+      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-lane-coordinate-20260921/MPA_DECISION.md",
       "resolved_at": "2026-09-21T10:46:34.545310Z",
       "status": "RESOLVED"
     },
@@ -3870,7 +3870,7 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "93da8062",
+      "base_sha": "78d4d29b",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
         "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/PHASE24_PROTECTED_BUS_R3_F2_GEOMETRY_CLONE.kicad_pcb",
@@ -3955,7 +3955,7 @@
         "validation-receipts/protected-bus-r3-support-local-links-20260921/DELTA.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Canonical B1 source/topology integration remains 7a623b22; current HEAD 93da8062 contains evidence-only commits. Support local-link delta identified 593 new violations, dominated by local F.Cu/zone clearance and gate/fused pad crossings. Next producer must branch from current HEAD and use layer-aware support escapes.",
+      "notes": "Current canonical queue/bible head 78d4d29b; CAD geometry base 57332e98. Binding J5.2/F2 lane correction is recorded under protected-bus-r3-mpa-lane-coordinate-20260921.",
       "owner": "protected_bus_r3_topology_first_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
@@ -7269,5 +7269,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T10:46:39.656514Z"
+  "updated_at": "2026-09-21T11:00:00Z"
 }

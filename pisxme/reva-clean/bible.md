@@ -2198,3 +2198,7 @@ The exact-SHA one-branch probe connected additional F2 pads and reduced opens to
 ### 2026-09-21 — Refilled protected-bus producer after stale dependency diagnosis
 
 Issue #7's resolution-ready authority contradiction had already been reconciled by the signed R3 power-budget artifacts. The actual queue stall was a separate unresolved MPA lane-placement dependency with no active CAD process. The dependency was resolved against the binding current-head corridor authority, and `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` was claimed for a fresh topology-first isolated producer session `root-protected-bus-r3-producer-20260921`. The producer must prove conflict-free J5.2/F2 topology before expansion; no rejected route variant is being replayed.
+
+### 2026-09-21 — MPA corrected J5.2/F2 lane coordinates
+
+MPA decision `PISXME-P24-R3-J5.2-F2-LANE-R2` supersedes the failed north-shifted probe coordinates. J5.2/F2 now binds to the F2 row `y=26.25`: local F.Cu escapes `(16.20,25.00)->(24.00,25.00)` and `(66.90,26.25)->(72.00,26.25)`, unique In2 lanes to `(57.60,26.25)` and `(106.00,26.25)`, with no residual P2 segments at `y=13.75` or `y=10.00`. The producer package was rebased to queue/bible HEAD `78d4d29b`; CAD remains isolated and must reconcile geometry base `57332e98`.
