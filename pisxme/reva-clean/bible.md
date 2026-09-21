@@ -2102,3 +2102,7 @@ After Unblocker escalation, a complete corridor-aware source branch pair was aut
 ### 2026-09-21 — R3 branch pair rejected by fresh Light
 
 The exact-SHA fresh validation of the corridor-aware J5/F1 and J6/F4 branch-pair candidate reported 1014 DRC violations and 433 unconnected items. The one-open reduction did not offset the clearance/DRC increase; all producer acceptance rows remain FAIL. The candidate was released and the result is escalated to placement/corridor authority; no canonical integration or Phase 24 closure is claimed.
+
+### 2026-09-21 — Retained corridor-aware B1 candidate revalidated
+
+A retained current-head-derived B1 artifact containing the signed nine-branch source correction and R3 fuse-bank placement was reloaded in KiCad Light against the current campaign evidence. J5/J6/J9, F1/F4/F7, and J1 are present; native DRC is 935 violations, 435 unconnected items, and 29 shorts. This is materially better than the rejected 1014/433 pair microbatch and is now queued for exact-SHA fresh validation before any canonical integration.
