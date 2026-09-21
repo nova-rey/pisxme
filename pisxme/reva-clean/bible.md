@@ -1919,3 +1919,8 @@ The native corridor producer exposed a concrete package-construction defect: cop
 ### 2026-09-21 — Reassigned stalled footprint authority review
 
 The initial footprint authority handoff returned no geometry packet during its bounded window. It was interrupted and reassigned to a fresh Footprint Authority retry; the corridor remains parked and no CAD changed.
+
+
+### 2026-09-21 — Footprint coordinate authority resolved
+
+The isolated probe was audited: cloned pads remained in the wrong coordinate frame after pcbnew footprint copying. Root recorded the binding local-coordinate correction and resolved authority:protected-bus-footprint-correction. The corridor producer is requeued for one corrected native-pcbnew attempt; no manufacturer geometry or architecture changed.
