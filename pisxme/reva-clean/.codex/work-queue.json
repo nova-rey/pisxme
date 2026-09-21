@@ -242,6 +242,14 @@
       "resolved_at": "2026-09-21T02:51:35.919110Z",
       "status": "RESOLVED"
     },
+    "authority:protected-bus-effective-network-architecture-revision": {
+      "created_at": "2026-09-21T06:03:02.481753Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "Existing R3 source/corridor candidates remain incomplete or DRC-failed; MPA must bind one materially new effective-network corridor before another producer attempt.",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:protected-bus-effective-network-materials": {
       "created_at": "2026-09-21T03:04:52.372456Z",
       "kind": "authority",
@@ -629,10 +637,10 @@
     "unblocker:protected-bus-cad-authoring-runtime": {
       "created_at": "2026-09-21T05:51:41.723235Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-cad-authoring-runtime-20260921/RECEIPT.md",
       "reference": "Two bounded fresh KiCad producer handoffs produced no authoring process or candidate; inspect launch/runtime path and propose one supported method.",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T06:01:50.532098Z",
+      "status": "RESOLVED"
     },
     "unblocker:protected-bus-direct-r3-launch": {
       "created_at": "2026-09-19T23:24:34.624812Z",
@@ -3849,7 +3857,8 @@
         "authority:protected-bus-r3-target-integration",
         "unblocker:protected-bus-source-topology-drc",
         "authority:hpq7-protected-bus-power-revision",
-        "unblocker:protected-bus-cad-authoring-runtime"
+        "unblocker:protected-bus-cad-authoring-runtime",
+        "authority:protected-bus-effective-network-architecture-revision"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3882,7 +3891,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T05:51:41.723363Z",
+      "updated_at": "2026-09-21T06:03:02.481896Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3914,7 +3923,7 @@
         }
       },
       "waiting_on": [
-        "unblocker:protected-bus-cad-authoring-runtime"
+        "authority:protected-bus-effective-network-architecture-revision"
       ],
       "workstream": "integrated-power"
     },
@@ -6487,7 +6496,8 @@
       "dependencies": [
         "authority:protected-bus-footprint-correction",
         "knowledge:protected-bus-molex-0039300060-footprint",
-        "unblocker:protected-bus-cad-authoring-runtime"
+        "unblocker:protected-bus-cad-authoring-runtime",
+        "authority:protected-bus-effective-network-architecture-revision"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -6517,7 +6527,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Route authorized R3 source-to-protected corridor",
-      "updated_at": "2026-09-21T05:51:41.883020Z",
+      "updated_at": "2026-09-21T06:03:02.611012Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -6528,7 +6538,7 @@
         "results": {}
       },
       "waiting_on": [
-        "unblocker:protected-bus-cad-authoring-runtime"
+        "authority:protected-bus-effective-network-architecture-revision"
       ],
       "workstream": "integrated-power"
     },
@@ -6759,7 +6769,13 @@
       },
       "base_sha": "ed698069",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-cad-authoring-runtime-20260921/RECEIPT.md",
+        "base_sha": "ff8c20b7",
+        "returned_at": "2026-09-21T06:01:49.675627Z",
+        "returned_by": "protected_bus_runtime_inspector",
+        "sha": null
+      },
       "completion_criterion": "A bounded Unblocker receipt classifies the failures and gives one executable next method or an explicit unresolved runtime dependency.",
       "created_at": "2026-09-21T05:52:06.709292Z",
       "dependencies": [],
@@ -6769,10 +6785,12 @@
         "no CAD edits",
         "no global configuration"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "pisxme/reva-clean/validation-receipts/protected-bus-cad-authoring-runtime-20260921/RECEIPT.md"
+      ],
       "id": "P24-PROTECTED-BUS-CAD-AUTHORING-UNBLOCKER",
       "notes": "",
-      "owner": "protected_bus_runtime_inspector",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6788,17 +6806,85 @@
         }
       ],
       "scope": "Review the two bounded producer launch failures and identify one supported, reproducible authoring method for the protected-bus producer and corridor. Preserve exact worker/runtime evidence; do not edit CAD or global configuration.",
-      "session_ids": [
-        "/root/protected_bus_runtime_inspector"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Classify protected-bus CAD authoring runtime failure",
-      "updated_at": "2026-09-21T05:56:18.266421Z",
+      "updated_at": "2026-09-21T06:01:50.410960Z",
       "validation": {
         "required": [
           "failure_classification",
           "supported_method",
           "receipt"
+        ],
+        "results": {
+          "failure_classification": {
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-cad-authoring-runtime-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:01:49.969372Z",
+            "status": "PASS"
+          },
+          "receipt": {
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-cad-authoring-runtime-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:01:50.268733Z",
+            "status": "PASS"
+          },
+          "supported_method": {
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-cad-authoring-runtime-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T06:01:50.107015Z",
+            "status": "PASS"
+          }
+        }
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "ff8c20b7",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "One signed MPA/Power authority decision resolves the next physical architecture or proves a specific frozen constraint must yield; all retained failed candidates are cross-referenced.",
+      "created_at": "2026-09-21T06:03:23.141506Z",
+      "dependencies": [],
+      "domain": "Macro Placement Authority / Power Integrity",
+      "edit_boundaries": [
+        "authority decision artifacts only",
+        "no CAD edits",
+        "no global rule changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-EFFECTIVE-NETWORK-MPA-REVISION",
+      "notes": "",
+      "owner": "protected_bus_effective_network_mpa",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-COPPER",
+        "INV-THERMAL",
+        "INV-INPUT-CAPACITY"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Review all retained R3 producer failures and the signed 8.50 mOhm effective-network contract. Bind one materially new physical architecture/corridor plan for the nine-branch protected bus, specifying fixed anchors, movable cohorts, copper/foil/plane/via construction, layer intent, protected corridors, and extraction/DFM acceptance. Do not replay same-geometry variants or relax rules.",
+      "session_ids": [
+        "/root/protected_bus_effective_network_mpa"
+      ],
+      "status": "RUNNING",
+      "title": "Bind one materially new protected-bus effective-network corridor",
+      "updated_at": "2026-09-21T06:03:23.277377Z",
+      "validation": {
+        "required": [
+          "failure-reconciliation",
+          "binding-corridor-plan",
+          "resistance-budget-method"
         ],
         "results": {}
       },
@@ -6818,5 +6904,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:56:18.267767Z"
+  "updated_at": "2026-09-21T06:03:23.278408Z"
 }

@@ -1964,3 +1964,7 @@ Both fresh R3 producer handoffs were stopped after bounded observation showed no
 ### 2026-09-21 — Changed capability level for CAD launch diagnosis
 
 The Unblocker handoff did not return a packet during its bounded window. Root released it and reassigned the tracked runtime package to `protected_bus_runtime_inspector` (Build Engineer) for one supported-launcher inspection. The producer packages remain WAITING on the shared runtime dependency; no global configuration or CAD was changed.
+
+### 2026-09-21 — Runtime fixed; producer work escalated to new corridor authority
+
+The supported one-shot launcher was proven with KiCad 10.0.6 and direct argv execution. Existing producer packets show the remaining issue is physical: incomplete return/protected paths, DRC/DFM failures, and effective hot-neck budget misses across materially distinct candidates. Both producer packages are therefore parked on `authority:protected-bus-effective-network-architecture-revision`. A tracked Macro Placement/Power Authority package is RUNNING to bind one materially new corridor plan; no same-geometry replay is authorized.
