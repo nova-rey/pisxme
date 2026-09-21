@@ -2118,3 +2118,7 @@ The preferred retained B1 candidate was extended with the J5.2/F2 source branch 
 ### 2026-09-21 — R3 B1 F2 extension rejected by fresh Light
 
 The J5.2/F2 extension of the preferred B1 candidate was fresh-checked at 949 DRC violations and 434 unconnected items. It failed all producer acceptance rows and was released. The retained B1 artifact remains the best known producer checkpoint; no canonical integration or Phase 24 closure is claimed.
+
+### 2026-09-21 — R3 B1 F2 In2 handoff candidate
+
+The preferred B1 candidate received an authorized short-F.Cu/In2 source handoff for J5.2→F2 plus a distinct J5.5 return escape. The producer reports 969 DRC violations and 434 unconnected items. It is queued for exact-SHA fresh validation; no integration claim is made.
