@@ -1,0 +1,50 @@
+{
+  "outcome": "resolution-ready",
+  "summary": "HPQ #7 is resolved by a precise authority-level contradiction, not a CAD candidate. R2 fixes Q1=CSD19536KCS inside a 2.0 mOhm hot protection allocation, but Q1 alone is specified at 2.3 mOhm typical and 2.7 mOhm maximum at 25 C. No routing can satisfy that contract. CAD authoring stopped with no source, board, rule, or library changes.",
+  "proposed_decision": "Preserve R2 geometry, but require Product/Power Authority to revise the protection component/topology or resistance allocation before production resumes. Separately bind qualified branch balancing or enforceable per-branch limiting, and clarify whether protected-voltage minima govern the 40/45 A tests.",
+  "evidence": [
+    "Base SHA verified: a7d559a087a01d25abbeca4f3ec3b1c8b1b9c9ad.",
+    "Locally hashed TI datasheet confirms CSD19536KCS RDS(on) of 2.3 mOhm typical and 2.7 mOhm maximum versus the fixed 2.0 mOhm allocation.",
+    "Non-decisive favorable screen: nine 4.58 mOhm typical-cold fuses contribute 0.508889 mOhm ideally, producing 2.808889\u20133.208889 mOhm before holders and hot penalties.",
+    "The 15 A fuse does not enforce the 7 A contact screen; installed branch balance remains an unresolved authority gate.",
+    "The retained nine-branch fixture is malformed: it omits four positive branches, chains adjacent fuses, and violates connector polarity and required net naming.",
+    "Raw baseline evidence records 300 DRC violations, 499 unconnected pads, zero footprint errors, and 293 ERC violations; these are baseline facts, not passes.",
+    "Independent verifier verdict: PASS WITH RESERVATIONS; all material reservations were incorporated.",
+    "Artifact manifest SHA-256: 7c9ab32f02fd703744a5f8d750c0d0c532d457b8d078be464780b253803e7b7b.",
+    ""
+  ],
+  "candidate": "Hash-manifested artifact directory: /home/nyx/.local/state/codex-hard-problems/workspaces/20260919T175244Z-7-sol/pisxme/reva-clean/validation-receipts/protected-bus-r2-source-producer-20260919. No candidate commit exists because the disposable checkout exposes .git read-only; commit and push were not performed.",
+  "validation": [
+    "Authority-bound reproducer: PASS_CONTRADICTION_REPRODUCED.",
+    "Packet SHA256SUMS: all entries pass.",
+    "Raw-report SHA256SUMS: all entries pass.",
+    "All JSON documents parse successfully; git diff --check passes.",
+    "No KiCad schematic, PCB, project, rule, symbol, or footprint files changed.",
+    "Qualified Light could not start because sandbox no-new-privileges blocked the launcher; the denial is retained and no Light result is claimed."
+  ],
+  "changed_assumptions": [
+    "The cited nine-branch fixture is not a valid topology oracle.",
+    "The admitted blocker is an internally inconsistent authority contract, not merely producer-capability exhaustion.",
+    "The fuse/contact issue is an unresolved enforcement gate; the decisive contradiction is Q1 versus the fixed 2.0 mOhm allocation.",
+    "The artifact is uncommitted because Git metadata is read-only in this disposable workspace."
+  ],
+  "integration_instructions": [
+    "Harvest the artifact directory and verify both SHA256SUMS manifests.",
+    "Run work-queue sync-hpq at the next natural scheduling boundary, then route the packet to Product/Power Authority.",
+    "Require a signed revision that changes the protection device/topology or explicitly reallocates the 10.0 mOhm budget with worst-case hot proof.",
+    "Regenerate the source from the revised authority tables, never from the malformed fixture.",
+    "Reconcile against current reva-clean, integrate serially, and run fresh exact-SHA qualified-Light validation before closing Issue #7."
+  ],
+  "risks": [
+    "Littelfuse web bytes are not retained locally; those typical fuse values are explicitly non-decisive.",
+    "No fresh qualified-Light validation exists for this packet, though the decisive contradiction is pre-layout.",
+    "The HPQ wrapper must preserve the uncommitted artifact directory because Git could not record it."
+  ],
+  "acceptance_rows": [
+    "INV-INPUT-CAPACITY: authority contradiction evidenced; branch enforcement remains unresolved.",
+    "INV-PROTECTED-BUS: fixed Q1 cannot satisfy the fixed protection allocation.",
+    "INV-COPPER: waits on revised authority and released fabrication stackup.",
+    "INV-THERMAL: Q1/fuse/contact thermal closure remains open and requires prototype validation."
+  ],
+  "exhaustion": []
+}

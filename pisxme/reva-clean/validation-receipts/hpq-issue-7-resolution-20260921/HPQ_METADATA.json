@@ -1,0 +1,49 @@
+{
+  "issue": 7,
+  "queue_repo": "nova-rey/codex-config-backup",
+  "project": "nova-rey/pisxme",
+  "sha": "a7d559a087a01d25abbeca4f3ec3b1c8b1b9c9ad",
+  "tier": "sol",
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "codex_version": "codex-cli 0.154.0",
+  "started": "2026-09-19T17:52:44.869799Z",
+  "packet": "f54e9eec83e3361b",
+  "test_mode": false,
+  "disposable_workspace_sha": "a7d559a087a01d25abbeca4f3ec3b1c8b1b9c9ad",
+  "ended": "2026-09-19T18:17:03.974789Z",
+  "exit_state": "resolution-ready",
+  "usage_telemetry": [
+    {
+      "input_tokens": 11060064,
+      "cached_input_tokens": 10730496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 35946,
+      "reasoning_output_tokens": 9681
+    }
+  ],
+  "issue_state_label": "resolution-ready",
+  "foreman_notification": {
+    "key": "0714437aa8c667caac31c35a",
+    "issue": 7,
+    "generation": "20260919T175244Z-7-sol",
+    "terminal_state": "resolution-ready",
+    "foreman_thread_id": "01a09660-8596-7313-9634-1ae73b19d46f",
+    "origin": {
+      "admitted_at": "2026-09-18T23:50:05.035816Z",
+      "campaign": "phase24-phase25-acreage",
+      "dependency": "hpq:nova-rey/codex-config-backup#7",
+      "foreman_goal_id": "phase24-phase25-acreage",
+      "foreman_thread_id": "01a09660-8596-7313-9634-1ae73b19d46f",
+      "issue_url": "https://github.com/nova-rey/codex-config-backup/issues/7",
+      "package_id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+      "project": "nova-rey/pisxme",
+      "queue_path": "/home/nyx/PiSXMe/pisxme/reva-clean/.codex/work-queue.json",
+      "version": 1
+    },
+    "initial_goal_state": "BLOCKED_STOPPED_GOAL",
+    "updated_at": "2026-09-19T18:17:08.077977Z",
+    "delivery_state": "COALESCED",
+    "reason": "an actionable HPQ result already woke this Foreman"
+  }
+}

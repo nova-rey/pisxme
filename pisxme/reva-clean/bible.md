@@ -1924,3 +1924,7 @@ The initial footprint authority handoff returned no geometry packet during its b
 ### 2026-09-21 — Footprint coordinate authority resolved
 
 The isolated probe was audited: cloned pads remained in the wrong coordinate frame after pcbnew footprint copying. Root recorded the binding local-coordinate correction and resolved authority:protected-bus-footprint-correction. The corridor producer is requeued for one corrected native-pcbnew attempt; no manufacturer geometry or architecture changed.
+
+### 2026-09-21 — HPQ Issue #7 reconciled; protected-bus authority revision dispatched
+
+Issue #7 is `resolution-ready` with an authority contradiction, not a CAD candidate: Q1 CSD19536KCS is 2.3 mOhm typical / 2.7 mOhm maximum at 25 C against the prior fixed 2.0 mOhm hot allocation, and the retained nine-branch fixture is malformed. The durable packet was harvested into `validation-receipts/hpq-issue-7-resolution-20260921/`; the HPQ dependency was resolved, the stale source-topology wait was superseded, and the protected-bus producer now waits only on `authority:hpq7-protected-bus-power-revision`. A Power Integrity Authority work package is active. The corridor producer was released and parked because the later footprint audit shows coordinate correction alone is insufficient pending exact Molex 0039300060 evidence. No CAD candidate was integrated.
