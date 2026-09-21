@@ -1976,3 +1976,7 @@ Macro Placement Authority decision `PISXME-P24-PROTECTED-BUS-MPA-20260921-R2` is
 ### 2026-09-21 — Dispatched serialized producer under MPA R2
 
 The source/protection producer package is claimed by `protected_bus_source_r3_producer_retry` for one direct-argv Light authoring attempt from current HEAD `b372c75f`. It must implement the MPA R2 F.Cu zone clipping and complete R3 source/return scope before any corridor producer is dispatched; no parallel CAD container is authorized.
+
+### 2026-09-21 — Cleared phantom producer state after HPQ #7 resolution check
+
+HPQ Issue #7 remains OPEN with `resolution-ready`, not closed; its authority packet is already reconciled and its queue dependency is no longer blocking. The claimed source producer had no live `pisxme-worker`, KiCad process, authoring script, candidate, or new artifact, so the stale RUNNING claim was released to READY. A new attempt must claim only at actual direct-argv authoring start and return a candidate or a concrete failure receipt.
