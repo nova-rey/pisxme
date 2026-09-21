@@ -2202,3 +2202,7 @@ Issue #7's resolution-ready authority contradiction had already been reconciled 
 ### 2026-09-21 — MPA corrected J5.2/F2 lane coordinates
 
 MPA decision `PISXME-P24-R3-J5.2-F2-LANE-R2` supersedes the failed north-shifted probe coordinates. J5.2/F2 now binds to the F2 row `y=26.25`: local F.Cu escapes `(16.20,25.00)->(24.00,25.00)` and `(66.90,26.25)->(72.00,26.25)`, unique In2 lanes to `(57.60,26.25)` and `(106.00,26.25)`, with no residual P2 segments at `y=13.75` or `y=10.00`. The producer package was rebased to queue/bible HEAD `78d4d29b`; CAD remains isolated and must reconcile geometry base `57332e98`.
+
+### 2026-09-21 — MPA lane correction contradicted by native F2 geometry
+
+The qualified Light execution reached the actual topology probe, but native board geometry disproved the assumed lane row: frozen F2 is at `(64.00,15.00)` with raw/fused pad centers `(57.60,13.75)` and `(66.90,13.75)`, while the MPA correction asserted pad-side coordinates at `y=26.25`. The free lane segments were therefore not physically reachable from F2. The diagnostic board/JSON and hashes are retained under `validation-receipts/protected-bus-r3-mpa-f2-placement-conflict-20260921/`; no candidate was integrated. The producer is parked on one new MPA placement/orientation reconciliation dependency, and speculative routing is stopped.

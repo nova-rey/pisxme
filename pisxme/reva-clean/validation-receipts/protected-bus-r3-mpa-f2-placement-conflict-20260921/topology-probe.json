@@ -1,0 +1,80 @@
+[
+  {
+    "net": "PWR_SRC_J5_P2",
+    "layer": "F.Cu",
+    "start": [
+      16.2,
+      25.0
+    ],
+    "end": [
+      24.0,
+      25.0
+    ],
+    "conflicts": []
+  },
+  {
+    "net": "PWR_SRC_J5_P2",
+    "layer": "In2.PWR",
+    "start": [
+      24.0,
+      25.0
+    ],
+    "end": [
+      57.6,
+      13.75
+    ],
+    "conflicts": []
+  },
+  {
+    "net": "PWR_FUSED_J5_P2",
+    "layer": "F.Cu",
+    "start": [
+      66.9,
+      13.75
+    ],
+    "end": [
+      72.0,
+      26.25
+    ],
+    "conflicts": []
+  },
+  {
+    "net": "PWR_FUSED_J5_P2",
+    "layer": "In2.PWR",
+    "start": [
+      72.0,
+      26.25
+    ],
+    "end": [
+      106.0,
+      26.25
+    ],
+    "conflicts": []
+  },
+  {
+    "net": "PWR_RET_J5_P5",
+    "layer": "F.Cu",
+    "start": [
+      16.2,
+      30.5
+    ],
+    "end": [
+      24.0,
+      28.0
+    ],
+    "conflicts": []
+  },
+  {
+    "net": "PWR_RET_J5_P5",
+    "layer": "In4.GND",
+    "start": [
+      24.0,
+      28.0
+    ],
+    "end": [
+      106.0,
+      42.0
+    ],
+    "conflicts": []
+  }
+]

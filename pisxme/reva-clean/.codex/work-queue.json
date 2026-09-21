@@ -745,6 +745,14 @@
       "reference": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
       "resolved_at": "2026-09-21T05:28:56.841756Z",
       "status": "RESOLVED"
+    },
+    "authority:mpa-r3-f2-placement-reconciliation-20260921": {
+      "created_at": "2026-09-21T11:10:00Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-f2-placement-conflict-20260921/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3955,8 +3963,8 @@
         "validation-receipts/protected-bus-r3-support-local-links-20260921/DELTA.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Current canonical queue/bible head 78d4d29b; CAD geometry base 57332e98. Binding J5.2/F2 lane correction is recorded under protected-bus-r3-mpa-lane-coordinate-20260921.",
-      "owner": "protected_bus_r3_topology_first_producer",
+      "notes": "Qualified Light probe on current HEAD exposed that MPA y=26.25 pad-side coordinates do not match native F2 footprint at (64,15): actual raw/fused pads are y=13.75. Await MPA physical placement/orientation reconciliation; do not route speculative segments.",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3973,12 +3981,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-protected-bus-r3-producer-20260921"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:46:39.655502Z",
+      "updated_at": "2026-09-21T10:52:46.583372Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4009,7 +4015,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:mpa-r3-f2-placement-reconciliation-20260921"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7269,5 +7277,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T11:00:00Z"
+  "updated_at": "2026-09-21T11:10:00Z"
 }
