@@ -2094,3 +2094,7 @@ The authority-directed F.Cu-only gate-loop candidate was independently validated
 ### 2026-09-21 — Unblocker escalated from gate loops to complete branch-pair authoring
 
 Unblocker classified the four fresh gate-loop failures as one exhausted local implementation class, not a placement contradiction or runtime blocker. The producer dependency is resolved with `SELF_UNBLOCK`; the next method is one exact-current-HEAD corridor-aware R3 source branch pair with ordered positive escape, fused In2 handoff, distinct In4 returns, save/reload, and targeted net validation. No further gate variants are authorized.
+
+### 2026-09-21 — R3 branch-pair microbatch produced
+
+After Unblocker escalation, a complete corridor-aware source branch pair was authored for J5/F1 and J6/F4 with distinct return-via escapes. The producer reduced unconnected items 434→433 but increased DRC to 1012. The candidate is retained for exact-SHA fresh validation; it is not an integrated acceptance result.
