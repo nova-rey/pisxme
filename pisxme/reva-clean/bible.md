@@ -2234,3 +2234,7 @@ The F2 transform failure is classified as physical congestion in the local F2/P1
 ### 2026-09-21 — MPA freezes native F2 cohort and rejects transform
 
 MPA decision `PISXME-P24-R3-F2-COHORT-RECONCILIATION-20260921` rejects the +11.25 mm F2 transform after its Light DRC conflict. F2 remains top-side at `(64,15,0deg)` with native raw/fused pad geometry; the local support cohort and all fuse rows remain fixed. The producer must use short F.Cu escapes, In2.Cu raw/fused lanes, and an independent In4.Cu J5.5 return around existing copper. The authority dependency is resolved and the producer is ready.
+
+### 2026-09-21 — Native F2 protected-bus producer dispatched
+
+`P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` is claimed by `protected_bus_r3_native_f2_producer` from canonical HEAD `17fe31b4`. This producer implements only the final MPA-authorized native F2 cohort plan; all transformed and north-shifted variants are excluded.
