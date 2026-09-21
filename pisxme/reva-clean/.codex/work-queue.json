@@ -6611,7 +6611,7 @@
       "evidence_refs": [],
       "id": "P24-HPQ7-PROTECTED-BUS-AUTHORITY-REVISION",
       "notes": "",
-      "owner": "hpq7_power_authority_reconciliation",
+      "owner": "hpq7_power_authority_reconciliation_retry",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6629,11 +6629,11 @@
       ],
       "scope": "Produce a signed/versioned authority revision resolving HPQ #7 before any protected-bus CAD regeneration: revise Q1/topology or hot resistance allocation, bind branch balance/contact enforcement, and define protected-voltage minima for 40 A continuous and 45 A peak checks. Preserve 300 W sustained and 330 W peak product invariants.",
       "session_ids": [
-        "/root/hpq7_power_authority_reconciliation"
+        "/root/hpq7_power_authority_reconciliation_retry"
       ],
       "status": "RUNNING",
       "title": "Reconcile HPQ #7 protection resistance contradiction",
-      "updated_at": "2026-09-21T05:30:41.572669Z",
+      "updated_at": "2026-09-21T05:39:30.564493Z",
       "validation": {
         "required": [
           "authority_review",
@@ -6733,5 +6733,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:36:47.378672Z"
+  "updated_at": "2026-09-21T05:39:30.565181Z"
 }

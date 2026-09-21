@@ -1940,3 +1940,7 @@ The queue now tracks `P24-PROTECTED-BUS-MOLEX-EXACT-FOOTPRINT-EVIDENCE`, owned b
 ### 2026-09-21 — Exact Molex 0039300060 evidence resolved and corridor requeued
 
 Librarian returned private Library commit `91ad3be5` with Molex product/drawing provenance for `0039300060 / 39-30-0060`. The exact six-contact pad and peg-hole basis is indexed; manufacturer-authored land/courtyard and verified STEP/WRL remain UNPROVEN and are retained as prototype DFM limitations. The evidence package passed provenance, dimensional, and applicability checks, was marked DONE, and resolved `knowledge:protected-bus-molex-0039300060-footprint`. The R3 corridor producer is claimed for one bounded native-pcbnew attempt from current HEAD `9b995ad2`.
+
+### 2026-09-21 — Reassigned stalled HPQ #7 authority package
+
+The first HPQ #7 Power Authority worker returned no packet during its bounded attempt. Its queue claim was released and a focused retry was claimed by `hpq7_power_authority_reconciliation_retry`; the R3 corridor producer remains active independently. No CAD or authority decision was fabricated from the stalled handoff.
