@@ -2126,3 +2126,7 @@ The preferred B1 candidate received an authorized short-F.Cu/In2 source handoff 
 ### 2026-09-21 — R3 B1 F2 In2 handoff rejected
 
 Fresh exact-SHA Light reported 971 DRC violations and 434 unconnected items for the J5.2/F2 short-F.Cu/In2 handoff candidate. It failed all producer acceptance rows and was released. Further branch extensions now require MPA corridor review; no canonical integration or Phase 24 closure is claimed.
+
+### 2026-09-21 — R3 F2 geometry-clone candidate produced
+
+A generator-level branch extension cloned the proven B1 source/fused/return geometry into J5.2/F2 with net-aware translation. The isolated producer reduced unconnected items 435→429, at 977 DRC violations. This candidate is queued for exact-SHA fresh validation and may become the next integration base if the result reproduces.
