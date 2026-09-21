@@ -2086,3 +2086,7 @@ A third bounded gate corridor variant (F.Cu U1-to-Q1 via, B.Cu Q1 handoff) repor
 ### 2026-09-21 — F.Cu-only gate-loop candidate dispatched
 
 Following the authority review, Root stopped the repeated via/B.Cu gate class and produced one clearance-aware F.Cu-only GATE_A/GATE_B loop candidate. The isolated Light producer reports 980 DRC violations and 434 unconnected items. It is queued for exact-SHA fresh validation; no integrated acceptance claim is made.
+
+### 2026-09-21 — F.Cu-only gate loops rejected by fresh Light
+
+The authority-directed F.Cu-only gate-loop candidate was independently validated at exact SHA and reported 982 DRC violations and 434 unconnected items. All producer acceptance rows remain FAIL; the candidate was released and no integrated change was accepted. The next step is capability escalation to Unblocker/MPA, not another same-class gate route.
