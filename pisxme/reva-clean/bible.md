@@ -2154,3 +2154,7 @@ A Supervisor left the protected-bus package RUNNING without a live CAD process. 
 ### 2026-09-21 — Current-head implementer handoff repaired
 
 A second implementer left the protected-bus package RUNNING while creating probes without starting a CAD job. Root executed the probes in qualified Light, captured current pad/net/layer evidence, interrupted the idle handoff, and released the package. No candidate was claimed; the producer remains READY with concrete geometry evidence for a fresh authority-level corridor method.
+
+### 2026-09-21 — Producer parked for MPA corridor decision
+
+After two stale implementation handoffs and root-executed probe evidence, the protected-bus producer is explicitly WAITING on `authority:mpa-r3-corridor-20260921`. Macro Placement Authority is actively resolving the current-head P2/P5 corridor problem; the queue's mechanical hard-idle flag is not a campaign-block claim while that authority work is live.

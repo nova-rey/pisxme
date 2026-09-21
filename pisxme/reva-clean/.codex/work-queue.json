@@ -186,6 +186,14 @@
       "resolved_at": "2026-09-18T21:54:30.847921Z",
       "status": "RESOLVED"
     },
+    "authority:mpa-r3-corridor-20260921": {
+      "created_at": "2026-09-21T10:06:46.051147Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "Macro Placement Authority decision requested after two dormant producer handoffs; current-head geometry receipt protected-bus-r3-issue7-resume-20260921",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:power-assembly-qualification": {
       "created_at": "2026-09-14T00:04:59.886421Z",
       "kind": "authority",
@@ -3886,7 +3894,8 @@
         "protected-bus-r3-failure-review",
         "package:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-MATERIALIZATION",
         "protected-bus-unblocker",
-        "product-power-authority-budget"
+        "product-power-authority-budget",
+        "authority:mpa-r3-corridor-20260921"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3929,9 +3938,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:06:18.232728Z",
+      "updated_at": "2026-09-21T10:06:46.051284Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3962,7 +3971,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:mpa-r3-corridor-20260921"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7222,5 +7233,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T10:06:18.234024Z"
+  "updated_at": "2026-09-21T10:06:46.052126Z"
 }
