@@ -1932,3 +1932,7 @@ Issue #7 is `resolution-ready` with an authority contradiction, not a CAD candid
 ### 2026-09-21 — HPQ #7 authority revision work package made active
 
 The queue now represents the actionable resolution as `P24-HPQ7-PROTECTED-BUS-AUTHORITY-REVISION`, owned by `hpq7_power_authority_reconciliation`. The protected-bus producer remains WAITING only on `authority:hpq7-protected-bus-power-revision`; the R3 corridor producer was released and waits on exact Molex 0039300060 footprint evidence. Queue hard-idle is false while the authority package runs.
+
+### 2026-09-21 — Exact Molex footprint evidence made a tracked work package
+
+The queue now tracks `P24-PROTECTED-BUS-MOLEX-EXACT-FOOTPRINT-EVIDENCE`, owned by `protected_bus_molex_variant_librarian`, alongside the HPQ #7 Power Authority revision. Queue state is DONE=87, RUNNING=2, WAITING=10, READY=0, hard_blocked=false. Both active workers are represented by queue packages; the corridor CAD producer remains parked until exact 0039300060 geometry is authoritative.
