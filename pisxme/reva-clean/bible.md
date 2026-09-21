@@ -1904,3 +1904,8 @@ Current-head source candidate 9e6b0000 proves the nine-branch source contract bu
 ### 2026-09-21 — Changed method to native R3 corridor routing
 
 The source-topology candidate passed source-contract evidence but failed integrated DRC because its branches were not yet routed into the protected bus. The Unblocker handoff did not return within its bounded window, so Root dispatched one direct native-pcbnew corridor producer from candidate 9e6b0000; no same-class source replay is authorized.
+
+
+### 2026-09-21 — Stale Unblocker claim released
+
+The source-DRC Unblocker did not return within its bounded window. Its service package was released and parked on other:unblocker-timeout; the active native corridor producer owns the actionable method-change work.

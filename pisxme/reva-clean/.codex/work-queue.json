@@ -474,6 +474,14 @@
       "resolved_at": "2026-09-19T02:19:45.320083Z",
       "status": "RESOLVED"
     },
+    "other:unblocker-timeout": {
+      "created_at": "2026-09-21T04:59:00.161638Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "other:worker-execution-runtime": {
       "created_at": "2026-09-19T23:31:45.204181Z",
       "kind": "other",
@@ -6389,7 +6397,9 @@
       "candidate": null,
       "completion_criterion": "Bounded blocker packet identifies root cause, next method/authority, and exact resume condition.",
       "created_at": "2026-09-21T04:51:01.822503Z",
-      "dependencies": [],
+      "dependencies": [
+        "other:unblocker-timeout"
+      ],
       "domain": "Unblocker",
       "edit_boundaries": [
         "read-only evidence review",
@@ -6398,7 +6408,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-SOURCE-DRC-UNBLOCKER",
       "notes": "",
-      "owner": "protected_bus_source_drc_unblocker",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6414,12 +6424,10 @@
         }
       ],
       "scope": "Classify candidate 9e6b0000's 940 DRC / 441 unconnected source-topology failure and specify one bounded next capability-level method or authority correction.",
-      "session_ids": [
-        "/root/protected_bus_source_drc_unblocker"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Classify source-topology DRC failure and method change",
-      "updated_at": "2026-09-21T04:51:01.943400Z",
+      "updated_at": "2026-09-21T04:59:00.161747Z",
       "validation": {
         "required": [
           "failure_classified",
@@ -6427,7 +6435,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "other:unblocker-timeout"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6497,5 +6507,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T04:58:49.567248Z"
+  "updated_at": "2026-09-21T04:59:00.162582Z"
 }
