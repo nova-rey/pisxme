@@ -1972,3 +1972,7 @@ The supported one-shot launcher was proven with KiCad 10.0.6 and direct argv exe
 ### 2026-09-21 — MPA R2 released the protected-bus corridor constraint
 
 Macro Placement Authority decision `PISXME-P24-PROTECTED-BUS-MPA-20260921-R2` is now integrated as authority evidence. It preserves J1/J5/J6/J9, fuse/support positions, nine branches, and the 8.50 mOhm contract, while superseding only the full-board F.Cu `POWER_GND` zone occupancy inside source/fuse/protection/J1 corridors; In1.Cu and In4.Cu remain continuous returns. The authority package passed reconciliation, corridor-plan, and resistance-method checks. Both producer packages are READY for one serialized producer attempt under this decision.
+
+### 2026-09-21 — Dispatched serialized producer under MPA R2
+
+The source/protection producer package is claimed by `protected_bus_source_r3_producer_retry` for one direct-argv Light authoring attempt from current HEAD `b372c75f`. It must implement the MPA R2 F.Cu zone clipping and complete R3 source/return scope before any corridor producer is dispatched; no parallel CAD container is authorized.
