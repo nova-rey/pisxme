@@ -1899,3 +1899,8 @@ The direct KiCad producer completed a clean baseline but made no source-topology
 ### 2026-09-21 — Source-topology candidate classified for Unblocker review
 
 Current-head source candidate 9e6b0000 proves the nine-branch source contract but fails integrated native DRC (940 violations, 441 unconnected). The producer is parked on a bounded Unblocker classification; mesh integration remains dependent on producer closure.
+
+
+### 2026-09-21 — Changed method to native R3 corridor routing
+
+The source-topology candidate passed source-contract evidence but failed integrated DRC because its branches were not yet routed into the protected bus. The Unblocker handoff did not return within its bounded window, so Root dispatched one direct native-pcbnew corridor producer from candidate 9e6b0000; no same-class source replay is authorized.
