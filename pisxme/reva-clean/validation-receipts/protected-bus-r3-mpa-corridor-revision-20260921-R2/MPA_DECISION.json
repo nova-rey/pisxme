@@ -1,0 +1,29 @@
+{
+  "originating_work_package": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "decision_id": "PISXME-P24-PROTECTED-BUS-MPA-20260921-R2",
+  "authority": "Macro Placement Authority",
+  "status": "BINDING_DECISION_FOR_PRODUCER; REQUIRES_PROTOTYPE_VALIDATION",
+  "decision": "Retain R1 anchors and local component positions; supersede only the full-board F.Cu POWER_GND zone occupancy in the nine-branch/protection/J1 corridors.",
+  "minimum_constraint_yield": "REV_A_TOP_POWER_GND_RETURN_FULL on F.Cu must be clipped from the protected-bus corridors; In1.Cu and In4.Cu return hierarchy remains continuous.",
+  "anchors_mm": {"J1":[150,90],"J5":[12,25],"J6":[12,50],"J9":[12,75]},
+  "components_mm": {
+    "F1":[36,26.25],"F2":[64,26.25],"F3":[92,26.25],
+    "F4":[36,51.25],"F5":[64,51.25],"F6":[92,51.25],
+    "F7":[36,76.25],"F8":[64,76.25],"F9":[92,76.25],
+    "D1":[108,10],"C3":[108,29],"U1":[108,34],"Q1":[111,42],
+    "U2":[108,62],"Q2":[111,70],"C4":[108,77],"D2":[108,96],"TP2":[114,60]
+  },
+  "layers": {
+    "F.Cu":"local pad escapes/protection/control only; global POWER_GND zone clipped from corridors",
+    "In1.Cu":"continuous POWER_GND return/reference plane",
+    "In2.Cu":"ordered raw and fused branch lanes",
+    "In3.Cu":"sole post-protection 12V_PROTECTED J1 approach",
+    "In4.Cu":"ordered branch returns to POWER_RETURN_JOIN",
+    "B.Cu":"no J1 power terminal and no new high-current trunk"
+  },
+  "preserved_contract": {"source_voltage_V":[11.4,12.6],"sustained_W":300,"peak_W":330,"peak_ms":100,"source_continuous_A":40,"source_peak_A":45,"hot_path_max_mOhm":8.5,"branches":9,"passive_sharing_credit":false,"n_minus_one_credit":false},
+  "evidence": {"r1_drc":1220,"r1_unconnected":391,"other_attempts":[{"drc":997,"unconnected":383},{"drc":1013,"unconnected":364},{"drc":679,"unconnected":390}],"zone_name":"REV_A_TOP_POWER_GND_RETURN_FULL","zone_layer":"F.Cu","zone_polygon_mm":[[1,1],[299,1],[299,179],[1,179]],"r1_candidate_commit":"426bc7e1050e6edfe0f04387cb928aa26b2f53bf"},
+  "cad_changed": false,
+  "hardware_operated": false,
+  "validation_required": ["targeted native DRC/connectivity after zone clipping","serialized canonical integration","fresh KiCad Light validation","complete R3 resistance/thermal/branch evidence"]
+}

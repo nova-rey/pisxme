@@ -1968,3 +1968,7 @@ The Unblocker handoff did not return a packet during its bounded window. Root re
 ### 2026-09-21 — Runtime fixed; producer work escalated to new corridor authority
 
 The supported one-shot launcher was proven with KiCad 10.0.6 and direct argv execution. Existing producer packets show the remaining issue is physical: incomplete return/protected paths, DRC/DFM failures, and effective hot-neck budget misses across materially distinct candidates. Both producer packages are therefore parked on `authority:protected-bus-effective-network-architecture-revision`. A tracked Macro Placement/Power Authority package is RUNNING to bind one materially new corridor plan; no same-geometry replay is authorized.
+
+### 2026-09-21 — MPA R2 released the protected-bus corridor constraint
+
+Macro Placement Authority decision `PISXME-P24-PROTECTED-BUS-MPA-20260921-R2` is now integrated as authority evidence. It preserves J1/J5/J6/J9, fuse/support positions, nine branches, and the 8.50 mOhm contract, while superseding only the full-board F.Cu `POWER_GND` zone occupancy inside source/fuse/protection/J1 corridors; In1.Cu and In4.Cu remain continuous returns. The authority package passed reconciliation, corridor-plan, and resistance-method checks. Both producer packages are READY for one serialized producer attempt under this decision.
