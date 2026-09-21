@@ -6,3 +6,4 @@
 - Scope: J5.2 short F.Cu escape, PWR_SRC_J5_P2 In2 handoff to F2 source, distinct J5.5 return-via escape; no J1/high-speed edits.
 - Producer DRC: 969 violations, 434 unconnected items, exit code 5.
 - Result: candidate awaiting exact-SHA fresh validation.
+- Fresh exact-SHA Light: 971 violations, 434 unconnected items, exit code 5; candidate rejected for integration.

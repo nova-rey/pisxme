@@ -2122,3 +2122,7 @@ The J5.2/F2 extension of the preferred B1 candidate was fresh-checked at 949 DRC
 ### 2026-09-21 — R3 B1 F2 In2 handoff candidate
 
 The preferred B1 candidate received an authorized short-F.Cu/In2 source handoff for J5.2→F2 plus a distinct J5.5 return escape. The producer reports 969 DRC violations and 434 unconnected items. It is queued for exact-SHA fresh validation; no integration claim is made.
+
+### 2026-09-21 — R3 B1 F2 In2 handoff rejected
+
+Fresh exact-SHA Light reported 971 DRC violations and 434 unconnected items for the J5.2/F2 short-F.Cu/In2 handoff candidate. It failed all producer acceptance rows and was released. Further branch extensions now require MPA corridor review; no canonical integration or Phase 24 closure is claimed.
