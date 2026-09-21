@@ -530,6 +530,14 @@
       "resolved_at": "2026-09-21T00:29:50.972279Z",
       "status": "RESOLVED"
     },
+    "product-power-authority-budget": {
+      "created_at": "2026-09-21T09:42:16.670899Z",
+      "kind": "authority",
+      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-power-budget-correction-20260921/POWER_AUTHORITY_DECISION.md",
+      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-budget-contradiction-20260921/MPA_DECISION.md",
+      "resolved_at": "2026-09-21T09:50:59.126002Z",
+      "status": "RESOLVED"
+    },
     "protected-bus-direct-producer-stall": {
       "created_at": "2026-09-18T23:27:23.369988Z",
       "kind": "other",
@@ -544,6 +552,14 @@
       "receipt": "validation-receipts/protected-bus-r3-failure-unblocker-20260921/RECEIPT.md",
       "reference": "/root/protected_bus_r3_failure_unblocker",
       "resolved_at": "2026-09-21T06:33:22.156514Z",
+      "status": "RESOLVED"
+    },
+    "protected-bus-unblocker": {
+      "created_at": "2026-09-21T09:19:02.949902Z",
+      "kind": "authority",
+      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-unblocker-20260921/RECEIPT.md",
+      "reference": "validation-receipts/protected-bus-r3-fcu-gate-loops-20260921/RECEIPT.md",
+      "resolved_at": "2026-09-21T09:19:55.807427Z",
       "status": "RESOLVED"
     },
     "unblocker:cm5-ethernet-edge-dfm-reconciliation": {
@@ -3817,11 +3833,11 @@
       "base_sha": "93da8062",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": null,
-        "base_sha": "41e5ffbb",
-        "returned_at": "2026-09-21T08:47:28.628423Z",
-        "returned_by": "root-mediated-d1-primitive",
-        "sha": "0a7526475bc90b1e90f5d9ad96dddf53b58bc476a012d1739885b18caa82675b"
+        "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/PHASE24_PROTECTED_BUS_R3_F2_GEOMETRY_CLONE.kicad_pcb",
+        "base_sha": "6f3edfd7",
+        "returned_at": "2026-09-21T09:41:27.007263Z",
+        "returned_by": "root-mediated-r3-f2-geometry-clone",
+        "sha": "HEAD"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3868,7 +3884,9 @@
         "unblocker:protected-bus-cad-authoring-runtime",
         "authority:protected-bus-effective-network-architecture-revision",
         "protected-bus-r3-failure-review",
-        "package:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-MATERIALIZATION"
+        "package:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-MATERIALIZATION",
+        "protected-bus-unblocker",
+        "product-power-authority-budget"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3913,7 +3931,7 @@
       "session_ids": [],
       "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T08:47:29.652444Z",
+      "updated_at": "2026-09-21T09:53:50.500101Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3923,23 +3941,23 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:47:29.289108Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T09:42:13.997649Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:47:29.170786Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T09:42:13.850481Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:47:28.986734Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T09:42:13.708215Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:47:29.496823Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T09:42:14.211944Z",
             "status": "FAIL"
           }
         }
@@ -7204,5 +7222,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T08:47:29.653620Z"
+  "updated_at": "2026-09-21T09:53:50.501449Z"
 }

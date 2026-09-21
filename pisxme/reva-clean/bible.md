@@ -2138,3 +2138,7 @@ MPA reviewed the retained B1 and branch-extension failures and issued `AUTHORITY
 ### 2026-09-21 — Product/Power corrected R3 resistance interpretation
 
 Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260921-R3` supersedes the erroneous interpretation that 0.650 mOhm applied to every branch. It is the effective nine-branch PCB-neck network cap; the symmetric derived per-branch planning screen is 5.850 mOhm. The complete 8.500 mOhm source-to-J1 hot cap and all 300/330 W, 40/45 A, nine-branch, anchor, six-layer, and no-sharing invariants remain binding. Exact branch extraction, source/contact/fuse, PDN, sequencing, thermal, DFM, and prototype validation remain open.
+
+### 2026-09-21 — Issue #7 resumed; producer dispatch repaired
+
+Issue #7 remains OPEN with `resolution-ready`; its Sol result is an authority contradiction and contains no CAD candidate. The corrected R3 producer package was claimed from current HEAD `769dc15b`, executed in qualified Light, and returned a native result of 977 DRC violations and 429 unconnected items. The package was released back to READY with retained evidence for the next bounded method change; no integration or closure claim is made.
