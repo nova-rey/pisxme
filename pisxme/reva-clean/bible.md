@@ -2230,3 +2230,7 @@ The new transform-conflict dependency is recorded as the supported `other` kind.
 ### 2026-09-21 — Unblocker routes F2 transform conflict to MPA cohort authority
 
 The F2 transform failure is classified as physical congestion in the local F2/P1/P3/12V_IN_A macro, not a runtime failure or proof of architectural impossibility. Unblocker returned `SELF_UNBLOCK` to one bounded MPA cohort/corridor decision. The queue parks only the protected-bus producer on `authority:mpa-r3-f2-cohort-reconciliation-20260921`; no route replay is authorized.
+
+### 2026-09-21 — MPA freezes native F2 cohort and rejects transform
+
+MPA decision `PISXME-P24-R3-F2-COHORT-RECONCILIATION-20260921` rejects the +11.25 mm F2 transform after its Light DRC conflict. F2 remains top-side at `(64,15,0deg)` with native raw/fused pad geometry; the local support cohort and all fuse rows remain fixed. The producer must use short F.Cu escapes, In2.Cu raw/fused lanes, and an independent In4.Cu J5.5 return around existing copper. The authority dependency is resolved and the producer is ready.

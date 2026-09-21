@@ -1,0 +1,1 @@
+{"decision_id":"PISXME-P24-R3-F2-COHORT-RECONCILIATION-20260921","f2":{"center":[64,15],"rotation":0,"raw_pads":[[57.6,13.75],[57.6,16.25],[61.1,13.75],[61.1,16.25]],"fused_pads":[[66.9,13.75],[66.9,16.25],[70.4,13.75],[70.4,16.25]},"transform_rejected":[0,11.25],"layers":{"raw":"F.Cu escape then In2.Cu","fused":"In2.Cu","return":"In4.Cu"},"hot_path_max_mohm":8.5}

@@ -765,10 +765,10 @@
     "authority:mpa-r3-f2-cohort-reconciliation-20260921": {
       "created_at": "2026-09-21T12:00:00Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-cohort-reconciliation-20260921/MPA_DECISION.md",
       "reference": "F2 transform is physically reachable but conflicts with P1/P3/12V_IN_A; MPA must bind local cohort placement/corridor",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T12:30:00Z",
+      "status": "RESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3894,7 +3894,7 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "4c2b63af",
+      "base_sha": "c2aed9eb",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
         "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-geometry-clone-20260921/PHASE24_PROTECTED_BUS_R3_F2_GEOMETRY_CLONE.kicad_pcb",
@@ -3982,7 +3982,7 @@
         "validation-receipts/protected-bus-r3-support-local-links-20260921/DELTA.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Unblocker SELF_UNBLOCK: physical F2 transform congestion requires one MPA local cohort/corridor decision; no route replay.",
+      "notes": "MPA freezes F2 native at (64,15,0deg); transform rejected. Route actual pads via In2/In4, preserve fixed support cohort and <=8.50mOhm.",
       "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
@@ -4001,7 +4001,7 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
       "updated_at": "2026-09-21T11:00:34.159481Z",
       "validation": {
@@ -4034,9 +4034,7 @@
           }
         }
       },
-      "waiting_on": [
-        "authority:mpa-r3-f2-cohort-reconciliation-20260921"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -7296,5 +7294,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T12:00:00Z"
+  "updated_at": "2026-09-21T12:30:00Z"
 }
