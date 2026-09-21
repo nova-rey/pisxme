@@ -1928,3 +1928,7 @@ The isolated probe was audited: cloned pads remained in the wrong coordinate fra
 ### 2026-09-21 — HPQ Issue #7 reconciled; protected-bus authority revision dispatched
 
 Issue #7 is `resolution-ready` with an authority contradiction, not a CAD candidate: Q1 CSD19536KCS is 2.3 mOhm typical / 2.7 mOhm maximum at 25 C against the prior fixed 2.0 mOhm hot allocation, and the retained nine-branch fixture is malformed. The durable packet was harvested into `validation-receipts/hpq-issue-7-resolution-20260921/`; the HPQ dependency was resolved, the stale source-topology wait was superseded, and the protected-bus producer now waits only on `authority:hpq7-protected-bus-power-revision`. A Power Integrity Authority work package is active. The corridor producer was released and parked because the later footprint audit shows coordinate correction alone is insufficient pending exact Molex 0039300060 evidence. No CAD candidate was integrated.
+
+### 2026-09-21 — HPQ #7 authority revision work package made active
+
+The queue now represents the actionable resolution as `P24-HPQ7-PROTECTED-BUS-AUTHORITY-REVISION`, owned by `hpq7_power_authority_reconciliation`. The protected-bus producer remains WAITING only on `authority:hpq7-protected-bus-power-revision`; the R3 corridor producer was released and waits on exact Molex 0039300060 footprint evidence. Queue hard-idle is false while the authority package runs.

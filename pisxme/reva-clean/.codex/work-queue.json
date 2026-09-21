@@ -6590,6 +6590,60 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "27d21cd1",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Versioned authority artifact with calculations, assumptions, margins, explicit disposition of the HPQ #7 contradiction, and downstream source-generation contract.",
+      "created_at": "2026-09-21T05:30:41.389875Z",
+      "dependencies": [],
+      "domain": "Power Authority",
+      "edit_boundaries": [
+        "authority artifacts and receipts only",
+        "no CAD edits",
+        "no global rule changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-HPQ7-PROTECTED-BUS-AUTHORITY-REVISION",
+      "notes": "",
+      "owner": "hpq7_power_authority_reconciliation",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTED-BUS",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Produce a signed/versioned authority revision resolving HPQ #7 before any protected-bus CAD regeneration: revise Q1/topology or hot resistance allocation, bind branch balance/contact enforcement, and define protected-voltage minima for 40 A continuous and 45 A peak checks. Preserve 300 W sustained and 330 W peak product invariants.",
+      "session_ids": [
+        "/root/hpq7_power_authority_reconciliation"
+      ],
+      "status": "RUNNING",
+      "title": "Reconcile HPQ #7 protection resistance contradiction",
+      "updated_at": "2026-09-21T05:30:41.572669Z",
+      "validation": {
+        "required": [
+          "authority_review",
+          "budget_consistency",
+          "source_regeneration_inputs"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -6604,5 +6658,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:29:35.746634Z"
+  "updated_at": "2026-09-21T05:30:41.574207Z"
 }
