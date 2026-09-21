@@ -2226,3 +2226,7 @@ The MPA-authorized `T_F2=(0,+11.25 mm)` transform was exercised in qualified Lig
 ### 2026-09-21 — Queue schema corrected for F2 transform Unblocker
 
 The new transform-conflict dependency is recorded as the supported `other` kind. The queue remains parked on that single Unblocker review; no hard-block conclusion is made while the bounded authority/escalation path is active.
+
+### 2026-09-21 — Unblocker routes F2 transform conflict to MPA cohort authority
+
+The F2 transform failure is classified as physical congestion in the local F2/P1/P3/12V_IN_A macro, not a runtime failure or proof of architectural impossibility. Unblocker returned `SELF_UNBLOCK` to one bounded MPA cohort/corridor decision. The queue parks only the protected-bus producer on `authority:mpa-r3-f2-cohort-reconciliation-20260921`; no route replay is authorized.
