@@ -194,6 +194,14 @@
       "resolved_at": "2026-09-21T10:10:16.012520Z",
       "status": "RESOLVED"
     },
+    "authority:mpa-r3-corridor-revision-20260921": {
+      "created_at": "2026-09-21T10:21:47.584475Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "Native lane synthesis improved opens 435->379 but failed DRC; one bounded MPA corridor revision required",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:power-assembly-qualification": {
       "created_at": "2026-09-14T00:04:59.886421Z",
       "kind": "authority",
@@ -3904,7 +3912,8 @@
         "protected-bus-unblocker",
         "product-power-authority-budget",
         "authority:mpa-r3-corridor-20260921",
-        "authority:unblocker-r3-20260921"
+        "authority:unblocker-r3-20260921",
+        "authority:mpa-r3-corridor-revision-20260921"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3947,9 +3956,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:16:13.325780Z",
+      "updated_at": "2026-09-21T10:21:47.584616Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3980,7 +3989,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:mpa-r3-corridor-revision-20260921"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7240,5 +7251,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T10:16:13.326612Z"
+  "updated_at": "2026-09-21T10:21:47.585706Z"
 }

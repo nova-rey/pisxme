@@ -2174,3 +2174,7 @@ The all-branch clone improved connectivity but worsened native DRC. The producer
 ### 2026-09-21 — Constraint-aware lane synthesis authorized
 
 Unblocker classified the all-branch clone as illegal overlap: it reduced opens 435→391 while adding 44 shorts and 26 crossings. The package is unblocked for one materially different producer method using unique ordered In2/In4 lanes, the authorized F.Cu clip, legal via arrays, and actual net-graph geometry.
+
+### 2026-09-21 — Native lane synthesis failed DRC; MPA revision requested
+
+The authorized constraint-aware lane synthesizer ran in qualified Light and reduced opens 435→379 using unique In2/In4 lanes and ordinary via transitions. Native DRC still reported 1120 violations, so the candidate was rejected and the producer is waiting on one bounded MPA corridor revision. The exact route family will not be replayed.
