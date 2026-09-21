@@ -242,6 +242,14 @@
       "resolved_at": "2026-09-21T03:08:18.302269Z",
       "status": "RESOLVED"
     },
+    "authority:protected-bus-footprint-correction": {
+      "created_at": "2026-09-21T05:08:09.278454Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "/home/nyx/eda-workspaces/p24-protected-bus-corridor-producer/output/pad-geometry.txt",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:protected-bus-mpa": {
       "created_at": "2026-09-17T22:27:00.106570Z",
       "kind": "authority",
@@ -6450,7 +6458,9 @@
       "candidate": null,
       "completion_criterion": "One bounded corridor candidate or precise implementation blocker with raw receipts.",
       "created_at": "2026-09-21T04:58:49.418581Z",
-      "dependencies": [],
+      "dependencies": [
+        "authority:protected-bus-footprint-correction"
+      ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
         "isolated producer only",
@@ -6460,7 +6470,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-R3-CORRIDOR-PRODUCER",
       "notes": "",
-      "owner": "protected_bus_corridor_producer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6476,18 +6486,70 @@
         }
       ],
       "scope": "From isolated current-head source candidate 9e6b0000, route the authorized nine-branch source/protected corridor with native pcbnew and fresh Light checks. Preserve signed topology, J1/high-speed copper, and no global rule changes.",
-      "session_ids": [
-        "/root/protected_bus_corridor_producer"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Route authorized R3 source-to-protected corridor",
-      "updated_at": "2026-09-21T04:58:49.566454Z",
+      "updated_at": "2026-09-21T05:08:09.278568Z",
       "validation": {
         "required": [
           "source_connectivity",
           "native_targeted_drc",
           "complete_path_budget",
           "thermal_dfm"
+        ],
+        "results": {}
+      },
+      "waiting_on": [
+        "authority:protected-bus-footprint-correction"
+      ],
+      "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "9e6b0000",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed footprint geometry authority or precise external/package blocker returned.",
+      "created_at": "2026-09-21T05:08:32.324217Z",
+      "dependencies": [],
+      "domain": "Footprint / Package Authority",
+      "edit_boundaries": [
+        "authority artifact only",
+        "no canonical CAD",
+        "no global rule changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-FOOTPRINT-CORRECTION-AUTHORITY",
+      "notes": "",
+      "owner": "protected_bus_footprint_authority",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-COPPER",
+        "INV-DFM",
+        "INV-MECHANICAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Audit and bind the project-local geometry correction for J5/J6/J9 Molex headers and F1-F9 fuse holders after isolated native pcbnew copy construction produced incorrect pad coordinates.",
+      "session_ids": [
+        "/root/protected_bus_footprint_authority"
+      ],
+      "status": "RUNNING",
+      "title": "Correct isolated protected-bus footprint geometry",
+      "updated_at": "2026-09-21T05:08:32.476169Z",
+      "validation": {
+        "required": [
+          "geometry_audited",
+          "resume_condition"
         ],
         "results": {}
       },
@@ -6507,5 +6569,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T04:59:00.162582Z"
+  "updated_at": "2026-09-21T05:08:32.477372Z"
 }

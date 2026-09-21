@@ -1909,3 +1909,8 @@ The source-topology candidate passed source-contract evidence but failed integra
 ### 2026-09-21 — Stale Unblocker claim released
 
 The source-DRC Unblocker did not return within its bounded window. Its service package was released and parked on other:unblocker-timeout; the active native corridor producer owns the actionable method-change work.
+
+
+### 2026-09-21 — Footprint geometry authority dispatched
+
+The native corridor producer exposed a concrete package-construction defect: copied Molex/fuse footprints have incorrect absolute pad coordinates in the isolated board. The corridor package is parked on a footprint authority review; no routing or canonical CAD changed.
