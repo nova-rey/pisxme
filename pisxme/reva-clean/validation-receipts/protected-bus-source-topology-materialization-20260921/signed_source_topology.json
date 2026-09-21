@@ -1,0 +1,68 @@
+{
+  "candidate": "/workspace/project/pisxme/reva-clean/PHASE24_SIGNED_NINE_BRANCH_SOURCE_TOPOLOGY.kicad_pcb",
+  "removed_inherited_branch_tracks": 27,
+  "connectors": {
+    "J5": {
+      "1": "PWR_SRC_J5_P1",
+      "2": "PWR_SRC_J5_P2",
+      "3": "PWR_SRC_J5_P3",
+      "4": "PWR_RET_J5_P4",
+      "5": "PWR_RET_J5_P5",
+      "6": "PWR_RET_J5_P6"
+    },
+    "J6": {
+      "1": "PWR_SRC_J6_P1",
+      "2": "PWR_SRC_J6_P2",
+      "3": "PWR_SRC_J6_P3",
+      "4": "PWR_RET_J6_P4",
+      "5": "PWR_RET_J6_P5",
+      "6": "PWR_RET_J6_P6"
+    },
+    "J9": {
+      "1": "PWR_SRC_J9_P1",
+      "2": "PWR_SRC_J9_P2",
+      "3": "PWR_SRC_J9_P3",
+      "4": "PWR_RET_J9_P4",
+      "5": "PWR_RET_J9_P5",
+      "6": "PWR_RET_J9_P6"
+    }
+  },
+  "fuses": {
+    "F1": {
+      "1": "PWR_SRC_J5_P1",
+      "5": "PWR_FUSED_J5_P1"
+    },
+    "F2": {
+      "1": "PWR_SRC_J5_P2",
+      "5": "PWR_FUSED_J5_P2"
+    },
+    "F3": {
+      "1": "PWR_SRC_J5_P3",
+      "5": "PWR_FUSED_J5_P3"
+    },
+    "F4": {
+      "1": "PWR_SRC_J6_P1",
+      "5": "PWR_FUSED_J6_P1"
+    },
+    "F5": {
+      "1": "PWR_SRC_J6_P2",
+      "5": "PWR_FUSED_J6_P2"
+    },
+    "F6": {
+      "1": "PWR_SRC_J6_P3",
+      "5": "PWR_FUSED_J6_P3"
+    },
+    "F7": {
+      "1": "PWR_SRC_J9_P1",
+      "5": "PWR_FUSED_J9_P1"
+    },
+    "F8": {
+      "1": "PWR_SRC_J9_P2",
+      "5": "PWR_FUSED_J9_P2"
+    },
+    "F9": {
+      "1": "PWR_SRC_J9_P3",
+      "5": "PWR_FUSED_J9_P3"
+    }
+  }
+}

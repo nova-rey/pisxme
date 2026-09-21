@@ -3867,7 +3867,8 @@
         "authority:hpq7-protected-bus-power-revision",
         "unblocker:protected-bus-cad-authoring-runtime",
         "authority:protected-bus-effective-network-architecture-revision",
-        "protected-bus-r3-failure-review"
+        "protected-bus-r3-failure-review",
+        "package:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-MATERIALIZATION"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3900,11 +3901,11 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [
-        "root-protected-bus-r3-20260921"
+        "root-protected-bus-r3-20260921-r2"
       ],
       "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T07:02:00Z",
+      "updated_at": "2026-09-21T07:11:59.194030Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -7079,6 +7080,65 @@
       },
       "waiting_on": [],
       "workstream": ""
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-source-topology-materialization-20260921/PHASE24_SIGNED_NINE_BRANCH_SOURCE_TOPOLOGY.kicad_pcb",
+        "base_sha": "627ec337a28ce0c732df7744dc3ba360414464db",
+        "returned_at": "2026-09-21T07:10:12.897821Z",
+        "returned_by": "root_protected_bus_source_topology",
+        "sha": "627ec337a28ce0c732df7744dc3ba360414464db"
+      },
+      "completion_criterion": "Exact nine-branch references, pads, and net names match the signed source contract; native netlist/parity receipt is present; no routing claim is made.",
+      "created_at": "2026-09-21T07:06:10.059241Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
+        "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION"
+      ],
+      "domain": "source-schematic/PCB topology",
+      "edit_boundaries": [
+        "isolated producer only",
+        "source/protection topology only",
+        "no canonical integration",
+        "no global rules"
+      ],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-source-topology-materialization-20260921/RECEIPT.md"
+      ],
+      "id": "P24-PROTECTED-BUS-SOURCE-TOPOLOGY-MATERIALIZATION",
+      "notes": "",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-INPUT-CAPACITY",
+        "schematic_source_contract"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "In an isolated committed-base workspace, materialize the signed J5/J6/J9 and F1-F9 source topology with exact PWR_SRC/PWR_RET/PWR_FUSED net identities and footprint/pad ownership. Preserve the signed 300 W/330 W contract, no six-loop regulation, and no canonical edits. Return a candidate source/PCB topology plus native netlist and exact topology receipt.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Materialize signed nine-branch source topology",
+      "updated_at": "2026-09-21T07:11:01.134608Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": ""
     }
   ],
   "project": "nova-rey/pisxme",
@@ -7093,5 +7153,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T06:59:28.488581Z"
+  "updated_at": "2026-09-21T07:11:59.195132Z"
 }
