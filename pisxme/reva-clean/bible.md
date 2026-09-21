@@ -1854,3 +1854,8 @@ Librarian indexed C11000 and polyimide source evidence in the private Library (c
 ### 2026-09-21 — Reassigned protected-bus producer after stalled handoff
 
 The first post-evidence producer handoff initialized a workspace but returned no execution artifacts. It was interrupted after a bounded no-progress check and reassigned to protected_bus_producer_retry for one documented Light attempt from ec24437c; the prior owner made no canonical changes.
+
+
+### 2026-09-21 — Changed capability level to direct KiCad authority
+
+The retry implementer also produced no worker or artifact during its bounded launch window. The package was released and reassigned to direct kicad_engineer execution through Root-mediated dispatch, preserving the same scope and canonical integration boundary.
