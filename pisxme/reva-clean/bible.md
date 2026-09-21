@@ -2222,3 +2222,7 @@ The protected-bus producer is claimed by `protected_bus_r3_f2_transform_producer
 ### 2026-09-21 — F2 transform probe failed native DRC
 
 The MPA-authorized `T_F2=(0,+11.25 mm)` transform was exercised in qualified Light. The isolated candidate produced 977 native DRC violations and 428 unconnected items, including shorts between P2 and P1/P3 source nets and existing 12V_IN_A around the transformed fuse field. The candidate is rejected and retained under `validation-receipts/protected-bus-r3-f2-transform-probe-20260921/`. The producer is parked on Unblocker classification of the transform-versus-existing-copper conflict; no route variant is replayed.
+
+### 2026-09-21 — Queue schema corrected for F2 transform Unblocker
+
+The new transform-conflict dependency is recorded as the supported `other` kind. The queue remains parked on that single Unblocker review; no hard-block conclusion is made while the bounded authority/escalation path is active.

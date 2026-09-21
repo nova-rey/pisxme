@@ -756,7 +756,7 @@
     },
     "unblocker:protected-bus-r3-f2-transform-conflict-20260921": {
       "created_at": "2026-09-21T11:40:00Z",
-      "kind": "unblocker",
+      "kind": "other",
       "receipt": null,
       "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-transform-probe-20260921/RECEIPT.md",
       "resolved_at": null,
