@@ -2162,3 +2162,7 @@ After two stale implementation handoffs and root-executed probe evidence, the pr
 ### 2026-09-21 — MPA R3 reconciled to current HEAD
 
 The existing binding MPA R3 source-entry decision was mechanically reconciled to current HEAD `c4478f70` using fresh pad/net geometry probes. Its anchor and 3x3 fuse-grid coordinates remain unchanged; no stale CAD artifact was imported. The protected-bus producer dependency is resolved and ready for a real isolated implementation under the corrected Product/Power budget.
+
+### 2026-09-21 — All-branch geometry clone retained
+
+A current-head Light producer cloned the authoritative J5/P1 and J5/P4 geometry into all nine MPA-ordered source branches. The candidate reduced unconnected items from 435 to 391 but still reported 1040 DRC violations, so it remains rejected producer evidence and was not integrated. The package is READY for the next bounded method.
