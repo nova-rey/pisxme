@@ -2170,3 +2170,7 @@ A current-head Light producer cloned the authoritative J5/P1 and J5/P4 geometry 
 ### 2026-09-21 — Geometry clone routed to Unblocker
 
 The all-branch clone improved connectivity but worsened native DRC. The producer is explicitly WAITING on `authority:unblocker-r3-20260921` for one bounded root-cause/method decision; same-class speculative routing is paused while that review runs.
+
+### 2026-09-21 — Constraint-aware lane synthesis authorized
+
+Unblocker classified the all-branch clone as illegal overlap: it reduced opens 435→391 while adding 44 shorts and 26 crossings. The package is unblocked for one materially different producer method using unique ordered In2/In4 lanes, the authorized F.Cu clip, legal via arrays, and actual net-graph geometry.
