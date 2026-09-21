@@ -1,0 +1,72 @@
+# R3 construction correction material census
+
+{
+  "status": "PRODUCER_CANDIDATE_REQUIRES_NATIVE_VALIDATION",
+  "base_ref": "4e87f09d",
+  "source_mesh_candidate": "86568f8b",
+  "source_mesh_sha256": "05431a6c2807f8a6d24a08055dc6fae99182941b0670fe96b98af9cf7ff72bb7",
+  "authority": "PISXME-P24-PROTECTED-BUS-MATERIAL-SELECTION-20260921",
+  "construction": {
+    "material": "C11000 copper foil/strap, proposed prototype construction",
+    "thickness_mm": 1.0,
+    "width_mm": 8.0,
+    "length_mm": 82.0,
+    "insulation": "0.10 mm polyimide film, top and bottom, proposed",
+    "positive_bbox_mm": [
+      99,
+      5,
+      107,
+      87
+    ],
+    "return_bbox_mm": [
+      113,
+      5,
+      121,
+      87
+    ],
+    "positive_return_separation_mm": 6.0,
+    "bond_rows_mm": [
+      15,
+      40,
+      65,
+      82
+    ],
+    "bond_joint_model_mOhm_each": 0.04,
+    "bond_pad_size_mm": 2.4,
+    "bond_drill_mm": 1.2,
+    "attachment": "four bonded through-hole landing transitions per polarity; mechanical adhesive/retainer and service sequence require Package/DFM signoff"
+  },
+  "resistance_model": {
+    "rho_ohm_mm2_per_mm": 1.724e-05,
+    "foil_trace_mOhm": 0.17671,
+    "foil_with_four_bonds_mOhm": 0.33671,
+    "prior_effective_pcb_neck_mOhm": 0.977,
+    "parallel_positive_or_return_half_mOhm": 0.19932239672325833,
+    "transition_spreading_margin_mOhm": 0.1,
+    "new_effective_pcb_neck_mOhm": 0.4986447934465167,
+    "required_max_mOhm": 0.65,
+    "margin_mOhm": 0.15135520655348333,
+    "complete_hot_path_mOhm": 8.098644793446516,
+    "complete_max_mOhm": 8.5,
+    "complete_margin_mOhm": 0.4013552065534842
+  },
+  "current_density": {
+    "source_A": 40,
+    "peak_A": 45,
+    "foil_current_at_40A_model_A": 23.678821148556125,
+    "foil_current_density_A_per_mm2": 2.9598526435695156,
+    "foil_power_at_40A_W": 0.18878877531646332,
+    "pulse_energy_at_45A_100ms_J": 0.068183775,
+    "foil_mass_g": 5.87776,
+    "foil_heat_capacity_J_per_K": 2.2629376000000003,
+    "pulse_deltaT_model_K": 0.030130647438091088,
+    "continuous_temperature_rise": "UNPROVEN; requires thermal/mechanical qualification"
+  },
+  "preserved": [
+    "nine branch cells and fuse identity",
+    "J1 mapping and high-speed copper",
+    "six-layer signal/reference stack",
+    "ordinary through-via contract",
+    "DFM source/fuse clearances subject to native validation"
+  ]
+}

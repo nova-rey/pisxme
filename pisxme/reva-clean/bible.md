@@ -1839,3 +1839,8 @@ P24-PROTECTED-BUS-MATERIAL-SELECTION completed with a signed construction decisi
 ### 2026-09-21 — Protected-bus construction correction dispatched
 
 With the material authority package complete, the protected-bus producer is re-enabled for one construction-level attempt: insulated copper reinforcement or explicit busbar/parallel copper, with no fuse-only shortcut.
+
+
+### 2026-09-21 — Protected-bus construction candidate parked for evidence
+
+Candidate 1443bfda modeled the authorized insulated C11000 foil source field at 0.499 mOhm effective PCB neck and 8.099 mOhm complete path, but fresh Light validation returned 1550 DRC violations and 426 unconnected items. The producer is WAITING on knowledge:protected-bus-foil-fabrication while Librarian indexes fabrication, attachment, insulation, thermal, SI, and DFM evidence; no canonical CAD integration was performed.

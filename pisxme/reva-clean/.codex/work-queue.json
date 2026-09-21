@@ -442,6 +442,14 @@
       "resolved_at": "2026-09-17T13:23:53.269617Z",
       "status": "RESOLVED"
     },
+    "knowledge:protected-bus-foil-fabrication": {
+      "created_at": "2026-09-21T03:27:54.636687Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/TIER2_BLOCKER.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:protection-assembly-dossier": {
       "created_at": "2026-09-14T00:18:46.377604Z",
       "kind": "knowledge",
@@ -3739,9 +3747,9 @@
       "candidate": {
         "artifact": null,
         "base_sha": "627ec337",
-        "returned_at": "2026-09-21T03:04:51.299644Z",
+        "returned_at": "2026-09-21T03:27:46.849031Z",
         "returned_by": "protected_bus_resume_current_head",
-        "sha": "0b821b7c"
+        "sha": "1443bfda"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3780,7 +3788,8 @@
         "authority:protected-bus-r3-budget-reassessment",
         "authority:protected-bus-effective-network-architecture",
         "authority:protected-bus-effective-network-materials",
-        "package:P24-PROTECTED-BUS-MATERIAL-SELECTION"
+        "package:P24-PROTECTED-BUS-MATERIAL-SELECTION",
+        "knowledge:protected-bus-foil-fabrication"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3793,7 +3802,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": "protected_bus_resume_current_head",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3810,12 +3819,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "/root/protected_bus_resume_current_head"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T03:13:59.733954Z",
+      "updated_at": "2026-09-21T03:27:54.636827Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3825,28 +3832,30 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/protected-bus-r3-distributed-mesh-producer-20260921/DFM_THERMAL_RESISTANCE.md",
-            "recorded_at": "2026-09-21T03:04:52.004986Z",
-            "status": "FAIL"
+            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/MATERIAL_CONSTRUCTION.md",
+            "recorded_at": "2026-09-21T03:27:47.414901Z",
+            "status": "PASS"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/protected-bus-r3-distributed-mesh-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
-            "recorded_at": "2026-09-21T03:04:51.867250Z",
+            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-21T03:27:47.293579Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/protected-bus-r3-distributed-mesh-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
-            "recorded_at": "2026-09-21T03:04:51.703516Z",
+            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/FRESH_VALIDATION_RECEIPT.md",
+            "recorded_at": "2026-09-21T03:27:47.141309Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/protected-bus-r3-distributed-mesh-producer-20260921/DFM_THERMAL_RESISTANCE.md",
-            "recorded_at": "2026-09-21T03:04:52.210024Z",
+            "receipt": "validation-receipts/protected-bus-r3-construction-correction-producer-20260921/TIER2_BLOCKER.md",
+            "recorded_at": "2026-09-21T03:27:47.541938Z",
             "status": "FAIL"
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "knowledge:protected-bus-foil-fabrication"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6081,6 +6090,58 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "4e87f09d",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Indexed evidence brief and bounded authority disposition returned to the protected-bus producer.",
+      "created_at": "2026-09-21T03:28:32.414252Z",
+      "dependencies": [],
+      "domain": "Librarian / Power / DFM",
+      "edit_boundaries": [
+        "private Library and authority receipts only",
+        "no public CAD changes",
+        "no global rule changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-FOIL-EVIDENCE-RECONCILIATION",
+      "notes": "",
+      "owner": "protected_bus_foil_research",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-COPPER",
+        "INV-THERMAL",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Index authoritative evidence for the proposed 1.0 mm x 8.0 mm x 82.0 mm C11000 insulated foil source field, its polyimide insulation, attachment, creepage, thermal, SI, and DFM constraints. Return a provenance brief and classify residual gaps.",
+      "session_ids": [
+        "/root/protected_bus_foil_research"
+      ],
+      "status": "RUNNING",
+      "title": "Reconcile protected-bus insulated foil fabrication evidence",
+      "updated_at": "2026-09-21T03:28:37.848353Z",
+      "validation": {
+        "required": [
+          "provenance_indexed",
+          "authority_gap_classified"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -6095,5 +6156,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T03:13:59.734871Z"
+  "updated_at": "2026-09-21T03:28:37.849540Z"
 }
