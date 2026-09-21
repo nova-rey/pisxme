@@ -2070,3 +2070,7 @@ Issue #7 remains OPEN with `resolution-ready`; its Sol packet is a precise Q1 re
 ### 2026-09-21 — Layer-aware gate candidate rejected by fresh Light
 
 The gate-layer producer candidate from `97a2c01e` was passed through a fresh detached KiCad Light validation. Producer DRC was 981/434, but exact-SHA fresh validation reported 983 violations and 434 unconnected items. Source/connectivity, targeted DRC, complete path budget, and thermal/DFM requirements are recorded FAIL; the candidate was released and the package returned to READY. This is a bounded method failure, not a campaign hard block; the next attempt must change method and retain the disk-space/process checks.
+
+### 2026-09-21 — Via-in-pad gate method dispatched
+
+After fresh Light rejected the prior gate-layer candidate, Root dispatched a materially different via-in-pad/B.Cu gate method from current HEAD. The isolated producer reports 980 DRC violations and 434 unconnected items; it remains a candidate pending exact-SHA fresh validation. The package remains RUNNING under `root-mediated-gate-via-pad`; Issue #7 remains open and no acceptance row is closed.
