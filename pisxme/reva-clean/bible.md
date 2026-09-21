@@ -2062,3 +2062,7 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Compared support-local candidate against fresh current-head baseline; 593 new violations are dominated by local F.Cu/zone clearance and gate/fused pad crossings, identifying the next layer/escape correction.
 
 - 2026-09-21: Refreshed producer queue base to current HEAD 93da8062 after support-local delta analysis.
+
+### 2026-09-21 — Issue #7 reconciliation and layer-aware producer recovery
+
+Issue #7 remains OPEN with `resolution-ready`; its Sol packet is a precise Q1 resistance contradiction, not a CAD candidate. The signed R3 Product/Power Authority correction is already an ancestor of current HEAD, so the HPQ dependency is resolved for scheduling but the Issue stays open until canonical integration and fresh Light acceptance. A host filesystem-full condition had left a false producer RUNNING claim with no workspace or process; 81 GB of disposable EDA workspaces were released, the claim was reset, and a real Light producer ran from current HEAD. Its bounded gate-layer candidate records 981 DRC violations and 434 unconnected items versus 986/434 for the prior support-local checkpoint. It is retained as candidate evidence only; no canonical CAD or Phase 25 claim is made.
