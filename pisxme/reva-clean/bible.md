@@ -2048,3 +2048,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Support-cohort fanout map captured for reroute ownership; legacy nets are VCAP_A/B, 12V_IN_A/B, FUSED_12V_A/B, 12V_PROTECTED, GATE_A/B, and POWER_GND.
 
 - 2026-09-21: Support local-link candidate connected moved cohort nets and reduced unconnected items to 434; full integrated gates remain open.
+
+- 2026-09-21: Extended support In2/In3 transitions worsened Light DRC to 1013/430; retained as rejected evidence, leaving the shorter local-link checkpoint preferred.
