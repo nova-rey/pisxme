@@ -6,3 +6,4 @@
 - Scope: add J5.2→F2 positive source path and J5.5 return escape/via; preserve existing B1 and J1/high-speed copper.
 - Producer DRC: 947 violations, 434 unconnected items, exit code 5.
 - Result: producer checkpoint only; exact-SHA fresh validation required.
+- Fresh exact-SHA Light: 949 violations, 434 unconnected items, exit code 5; candidate rejected for integration.
