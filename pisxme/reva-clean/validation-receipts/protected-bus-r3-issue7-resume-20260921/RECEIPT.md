@@ -9,3 +9,7 @@
 - Producer output: cloned P1/P4 geometry to P2/P5; counts 10/12/9 cloned items.
 - Native DRC: 977 violations, 429 unconnected items, exit code 5.
 - Result: no acceptance candidate and no integration claim. Evidence is retained for the next bounded method change.
+
+## Follow-up bounded method
+
+A second current-head Light method ran a budget/topology audit after the failed clone. It confirmed the canonical board has no routed P2/P5 segments before the producer (P1 source 40.700 mm, P1 fused 90.400 mm, P4 return 178.500 mm; P2/P5 zero). This is actionable geometry evidence for the next placement/corridor method, not a closure result.

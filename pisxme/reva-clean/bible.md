@@ -2142,3 +2142,7 @@ Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260
 ### 2026-09-21 — Issue #7 resumed; producer dispatch repaired
 
 Issue #7 remains OPEN with `resolution-ready`; its Sol result is an authority contradiction and contains no CAD candidate. The corrected R3 producer package was claimed from current HEAD `769dc15b`, executed in qualified Light, and returned a native result of 977 DRC violations and 429 unconnected items. The package was released back to READY with retained evidence for the next bounded method change; no integration or closure claim is made.
+
+### 2026-09-21 — Issue #7 follow-up budget audit
+
+A second bounded qualified-Light run audited the current-head protected-bus geometry after the failed clone. P2/P5 had no routed segments on the canonical board; source P1, fused P1, and return P4 measured 40.700 mm, 90.400 mm, and 178.500 mm respectively. The result is retained as method-change evidence; the producer remains READY and Phase 24 remains open.

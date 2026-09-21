@@ -1,0 +1,40 @@
+{
+  "PWR_SRC_J5_P1": {
+    "track_mm": 40.7,
+    "segments": 10,
+    "layers": {
+      "F.Cu": 10
+    }
+  },
+  "PWR_SRC_J5_P2": {
+    "track_mm": 0,
+    "segments": 0,
+    "layers": {}
+  },
+  "PWR_FUSED_J5_P1": {
+    "track_mm": 90.4,
+    "segments": 10,
+    "layers": {
+      "F.Cu": 6,
+      "In2.PWR": 4
+    }
+  },
+  "PWR_FUSED_J5_P2": {
+    "track_mm": 0,
+    "segments": 0,
+    "layers": {}
+  },
+  "PWR_RET_J5_P4": {
+    "track_mm": 178.5,
+    "segments": 7,
+    "layers": {
+      "F.Cu": 5,
+      "In4.GND": 2
+    }
+  },
+  "PWR_RET_J5_P5": {
+    "track_mm": 0,
+    "segments": 0,
+    "layers": {}
+  }
+}
