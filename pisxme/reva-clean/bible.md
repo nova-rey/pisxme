@@ -1986,3 +1986,7 @@ HPQ Issue #7 remains OPEN with `resolution-ready`, not closed; its authority pac
 The first retry again held a RUNNING claim without any live worker or KiCad process and was interrupted. The package was released and claimed by `protected_bus_source_direct_exec` for one bounded direct-argv Light authoring attempt. This is an execution correction, not an HPQ7 state change; Issue #7 remains OPEN/`resolution-ready` until canonical integration succeeds.
 
 The replacement dispatch also produced no live worker, KiCad process, script, or candidate. It was interrupted and released immediately; the package is READY again. No CAD result is claimed. The supported launcher/runtime path is proven, but the producer handoff still needs a real authoring invocation before it may be RUNNING.
+
+### 2026-09-21 — Assigned supervised protected-bus authoring attempt
+
+The protected-bus producer is assigned to `protected_bus_r3_authoring_supervisor` for one bounded execution from current HEAD. The supervisor must demonstrate a live direct-argv KiCad Light authoring process before retaining ownership and must return an isolated candidate with raw checks or a precise blocker. HPQ Issue #7 remains OPEN/`resolution-ready`; no Issue closure or Phase 24 completion is implied.
