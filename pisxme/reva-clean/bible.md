@@ -2012,3 +2012,5 @@ The failure review classified both R2 attempts as the same implementation class:
 The first explicit native nine-net authoring script attempted nearest-neighbour copper/via construction and exited 139 before writing a candidate. Receipt `validation-receipts/protected-bus-r3-native-route-crash-20260921/RECEIPT.md` records the failure; the bulk spanning-tree method is retired pending a safer bounded implementation method.
 
 A second bounded Unblocker package now owns the KiCad API-method review. The protected-bus producer remains READY but will not replay the crashed bulk script; it resumes only after a safe authoring method is returned.
+
+The S-expression fallback did execute and produced a parseable candidate, but native Light validation reported 938 violations and 499 unconnected items. Receipt `validation-receipts/protected-bus-r3-sexpr-authoring-20260921/RECEIPT.md` records the failure; no integration is authorized.
