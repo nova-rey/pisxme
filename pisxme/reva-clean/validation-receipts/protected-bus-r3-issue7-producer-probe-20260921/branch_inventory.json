@@ -1,0 +1,140 @@
+{
+  "branches": [
+    {
+      "net": "PWR_SRC_J5_P1",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J5_P1",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J5_P4",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J5_P2",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J5_P2",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J5_P5",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J5_P3",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J5_P3",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J5_P6",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J6_P1",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J6_P1",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J6_P4",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J6_P2",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J6_P2",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J6_P5",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J6_P3",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J6_P3",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J6_P6",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J9_P1",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J9_P1",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J9_P4",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J9_P2",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J9_P2",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J9_P5",
+      "pads": 1,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_SRC_J9_P3",
+      "pads": 5,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_FUSED_J9_P3",
+      "pads": 4,
+      "tracks": 0
+    },
+    {
+      "net": "PWR_RET_J9_P6",
+      "pads": 1,
+      "tracks": 0
+    }
+  ],
+  "all_nets_present": true
+}

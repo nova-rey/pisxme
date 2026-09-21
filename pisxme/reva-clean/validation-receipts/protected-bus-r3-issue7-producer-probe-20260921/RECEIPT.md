@@ -33,3 +33,11 @@ The retained nine-branch authority and rejected topology fixture remain evidence
 The retained rejected nine-branch fixture was loaded in the same fresh Light workspace and mechanically asserted to contain J5/J6/J9 and F1-F9. The assertion passed with J5/J6/J9 at (12,25)/(12,50)/(12,75) and the nine fuse references present. A disposable R3 topology materialization then moved F1-F3 to y=15, F4-F6 to y=40, and F7-F9 to y=65 at x=36/64/92, as required by the R3 MPA decision.
 
 Native Light DRC on that materialized seed is `1077` violations and `499` unconnected items. It is rejected as a routed candidate: the result proves the seed contains the required topology but its inherited copper cannot be reused after the authoritative placement change. The next bounded step is explicit per-branch native micro-batch authoring from this topology seed, with save/reload checkpoints; no bulk nearest-neighbor mutation is authorized.
+
+## Critical topology mismatch
+
+The rejected seed is not an authoritative source replacement. Its J5 pad contract uses `B1_R`, `B2_R`, and `B3_R` on pads 4/6/5, while the signed source contract requires distinct `PWR_RET_J5_P4`, `PWR_RET_J5_P5`, and `PWR_RET_J5_P6` identities paired with B1/B2/B3. It also lacks the canonical schematic source for F3-F9/J9. Therefore the seed may supply package geometry evidence only; it cannot be routed or integrated as the source candidate. A bounded source-topology materialization package is required before the producer can continue.
+
+## Corrected source consumer and first R3 micro-batch
+
+The corrected topology candidate was loaded natively and all 27 branch nets had pad ownership. A bounded B1 raw native micro-batch then added four explicit F.Cu segments from J5.1 to F1 pads 1-4 while preserving J5.4 as the named `PWR_RET_J5_P4` return anchor. The candidate saved successfully, but native DRC remained `1055` violations / `499` unconnected items because the complete positive/return/protected path and inherited board cleanup are still open. It is rejected as an integrated candidate. This is the first actual R3 producer micro-batch; further branches remain queued behind its evidence and must use the same save/reload, exact-net, no-bulk-mutation method.

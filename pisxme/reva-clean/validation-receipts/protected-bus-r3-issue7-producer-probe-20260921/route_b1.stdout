@@ -1,0 +1,13 @@
+./kicad/include/properties/property.h(607): assert "m_choices.GetCount() > 0" failed in PROPERTY_ENUM(): No enum choices defined
+./kicad/include/properties/property.h(607): assert "m_choices.GetCount() > 0" failed in PROPERTY_ENUM(): No enum choices defined
+./kicad/include/properties/property.h(607): assert "m_choices.GetCount() > 0" failed in PROPERTY_ENUM(): No enum choices defined
+{
+  "candidate": "/workspace/project/pisxme/reva-clean/PHASE24_R3_B1_RAW_MICROBATCH.kicad_pcb",
+  "net": "PWR_SRC_J5_P1",
+  "segments_added": 4,
+  "return_anchor": {
+    "net": "PWR_RET_J5_P4",
+    "x": 12.0,
+    "y": 30.5
+  }
+}

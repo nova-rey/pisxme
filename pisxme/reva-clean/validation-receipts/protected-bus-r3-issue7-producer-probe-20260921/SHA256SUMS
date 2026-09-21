@@ -1,7 +1,11 @@
-be1305b99cca407949a973a2ccd925cae450eb4364f83f8f388a3cd539e45178  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/RECEIPT.md
-e3e74cdd2dd9d6d96722e3819558036e8cc07b7086ef9fb59e4ee8700aa80e97  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/SHA256SUMS
+56f169f846f194b98c342b3cb528bfe4e6cdc66dbf6bc7ba8c975b18c0b06ea8  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/RECEIPT.md
+2e5ef1575772effd010b9119c4241539073d405d8a116b9e0356e13055f258ee  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/SHA256SUMS
+06e908d782e2ede152b260a7fbf084ca5bf81e3a8b2f64ace1a1ac6dfb1a6539  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/branch_inventory.json
+8da3186fba1df15c5b4d4e1209ed465f841022e41c1cd5c77509096bc3b64851  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/branch_inventory.stdout
 c560b2ed8fc310dd1864151164d491bd4b055a0344247c288ea8330576c376f0  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/probe_power.stdout
 9c8b3aad7e93fc89f8a3e1769668378a78eb9761d31a7e43e250f79778d1f900  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/r3_materialize.stdout
 63ae4981cb226f85fd946642beb8a0b5b18839e44f446931f5914958d4ab59b5  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/r3_materialized-drc.json
 c4c87df08d23600cd0dafb4725fd74773227eaea0a23d1abd57a03da025e68e9  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/r3_topology_assertion.json
 3b1079789ba08d788cef1b2b7ea34bee5ce133e4c69fccf5dd61a861c484aa3c  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/r3_topology_assertion.stdout
+3ece84d19a322cd4959a3d693490118b312bacb16226fe8bfc342f518c1866df  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/route-b1-drc.json
+8ed013d452739e79c0ed4c8d5a012438e56dbfdb41ad285bb4cca4230a537bb8  pisxme/reva-clean/validation-receipts/protected-bus-r3-issue7-producer-probe-20260921/route_b1.stdout
