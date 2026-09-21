@@ -6321,7 +6321,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-R3-TARGET-AUTHORITY",
       "notes": "",
-      "owner": "protected_bus_mpa_corridor",
+      "owner": "protected_bus_r1_unblocker",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6337,11 +6337,11 @@
       ],
       "scope": "Review canonical legacy two-branch protected input topology versus isolated R3 nine-branch mesh candidate 86568f8b and issue one binding target-topology decision for serialized integration.",
       "session_ids": [
-        "/root/protected_bus_mpa_corridor"
+        "/root/protected_bus_r1_unblocker"
       ],
       "status": "RUNNING",
       "title": "Bind R3 target topology for canonical integration",
-      "updated_at": "2026-09-21T04:08:46.758246Z",
+      "updated_at": "2026-09-21T04:13:33.928699Z",
       "validation": {
         "required": [
           "target_topology_decision",
@@ -6365,5 +6365,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T04:08:46.759280Z"
+  "updated_at": "2026-09-21T04:13:33.929901Z"
 }

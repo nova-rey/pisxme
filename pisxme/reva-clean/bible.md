@@ -1879,3 +1879,8 @@ Fresh Light baseline from canonical e981385c (KiCad 10.0.6) proved the board rem
 ### 2026-09-21 — R3 target-topology authority dispatched
 
 The direct integration attempt confirmed no safe target existed on the legacy two-branch HEAD. Its package is parked on authority:protected-bus-r3-target-integration. MPA now owns a bounded target-topology decision comparing canonical 742024a6 with isolated mesh candidate 86568f8b; no CAD was merged.
+
+
+### 2026-09-21 — Escalated R3 target topology authority
+
+The MPA handoff produced no decision during its bounded attempt. The target-topology package was reassigned to Unblocker for a one-shot capability-level classification; dependent CAD remains parked and no topology was changed.
