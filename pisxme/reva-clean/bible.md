@@ -2042,3 +2042,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: MPA retained R3 placement after B1/B2 review; primitive B2 pad-edge checkpoint saved/reloaded but did not improve opens (938/435), so no integration.
 
 - 2026-09-21: Joint B1/B2 reroute applied MPA-identified pad/return separation; Light result 972 DRC / 430 unconnected, rejected for integration, route class requires further authority-level method change.
+
+- 2026-09-21: MPA support cohort coordinates were mechanically applied in isolation; current canonical support positions were previously inconsistent. Candidate awaits support-net reroute and fresh validation.
