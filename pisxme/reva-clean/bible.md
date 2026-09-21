@@ -2218,3 +2218,7 @@ MPA reconciled the native F2 geometry contradiction with decision `PISXME-P24-R3
 ### 2026-09-21 — F2 transform producer dispatched
 
 The protected-bus producer is claimed by `protected_bus_r3_f2_transform_producer` from canonical HEAD `e4e1ace1`. Its sole implementation hypothesis is the MPA-authorized F2 `+11.25 mm` transform and reachable y=25 In2 lanes; previous north-shifted and nonphysical endpoints are excluded.
+
+### 2026-09-21 — F2 transform probe failed native DRC
+
+The MPA-authorized `T_F2=(0,+11.25 mm)` transform was exercised in qualified Light. The isolated candidate produced 977 native DRC violations and 428 unconnected items, including shorts between P2 and P1/P3 source nets and existing 12V_IN_A around the transformed fuse field. The candidate is rejected and retained under `validation-receipts/protected-bus-r3-f2-transform-probe-20260921/`. The producer is parked on Unblocker classification of the transform-versus-existing-copper conflict; no route variant is replayed.

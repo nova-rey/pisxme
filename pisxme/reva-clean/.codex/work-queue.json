@@ -753,6 +753,14 @@
       "reference": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
       "resolved_at": "2026-09-21T05:28:56.841756Z",
       "status": "RESOLVED"
+    },
+    "unblocker:protected-bus-r3-f2-transform-conflict-20260921": {
+      "created_at": "2026-09-21T11:40:00Z",
+      "kind": "unblocker",
+      "receipt": null,
+      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-f2-transform-probe-20260921/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3940,7 +3948,8 @@
         "authority:mpa-r3-corridor-revision-20260921",
         "authority:unblocker-r3-structural-20260921",
         "authority:mpa-r3-lane-placement-20260921",
-        "authority:mpa-r3-f2-placement-reconciliation-20260921"
+        "authority:mpa-r3-f2-placement-reconciliation-20260921",
+        "unblocker:protected-bus-r3-f2-transform-conflict-20260921"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3964,8 +3973,8 @@
         "validation-receipts/protected-bus-r3-support-local-links-20260921/DELTA.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "MPA R3 binds T_F2=(0,+11.25mm), placing F2 center at (64,26.25), raw/fused pads at (57.6,25)/(66.9,25); route J5.2/F2 on y=25 In2 lanes.",
-      "owner": "protected_bus_r3_f2_transform_producer",
+      "notes": "F2 +11.25mm transform probe failed native DRC: 977 violations, 428 opens, P2/P1/raw/12V shorts. Unblocker must classify transform-vs-copper conflict before another MPA decision.",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3982,10 +3991,8 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-protected-bus-r3-f2-transform-20260921"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
       "updated_at": "2026-09-21T11:00:34.159481Z",
       "validation": {
@@ -4018,7 +4025,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:protected-bus-r3-f2-transform-conflict-20260921"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7278,5 +7287,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T11:00:34.160600Z"
+  "updated_at": "2026-09-21T11:40:00Z"
 }
