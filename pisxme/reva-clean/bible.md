@@ -2182,3 +2182,7 @@ The authorized constraint-aware lane synthesizer ran in qualified Light and redu
 ### 2026-09-21 — MPA R3 corridor revision bound
 
 MPA issued the required current-head binding revision: F.Cu is limited to local escapes/control loops; all nine fused positives use unique ordered In2.Cu lanes ending at x=103.5..112; all returns use distinct In4.Cu lanes ending at x>=104; In3.Cu is the sole post-protection plane. Anchors, fuse grid, high-speed corridors, six-layer contract, and 8.50 mOhm limit remain fixed.
+
+### 2026-09-21 — Focused P2 diagnostic retained
+
+Under the bound MPA corridor, a focused J5.2/F2 positive-return probe reported 961 DRC violations and 434 unconnected items. Omitting fuse pad-field bridges reduced incremental DRC burden but did not close the branch. The evidence is routed to Unblocker for a structural contradiction assessment; no candidate was integrated.
