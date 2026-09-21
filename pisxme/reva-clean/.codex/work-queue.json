@@ -6488,7 +6488,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-R3-CORRIDOR-PRODUCER",
       "notes": "",
-      "owner": "protected_bus_corridor_producer",
+      "owner": "protected_bus_corridor_kicad_retry",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6505,11 +6505,11 @@
       ],
       "scope": "From isolated current-head source candidate 9e6b0000, route the authorized nine-branch source/protected corridor with native pcbnew and fresh Light checks. Preserve signed topology, J1/high-speed copper, and no global rule changes.",
       "session_ids": [
-        "/root/protected_bus_corridor_producer"
+        "/root/protected_bus_corridor_kicad_retry"
       ],
       "status": "RUNNING",
       "title": "Route authorized R3 source-to-protected corridor",
-      "updated_at": "2026-09-21T05:36:47.377759Z",
+      "updated_at": "2026-09-21T05:41:52.265995Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -6733,5 +6733,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:39:30.565181Z"
+  "updated_at": "2026-09-21T05:41:52.266722Z"
 }

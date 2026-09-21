@@ -1944,3 +1944,7 @@ Librarian returned private Library commit `91ad3be5` with Molex product/drawing 
 ### 2026-09-21 — Reassigned stalled HPQ #7 authority package
 
 The first HPQ #7 Power Authority worker returned no packet during its bounded attempt. Its queue claim was released and a focused retry was claimed by `hpq7_power_authority_reconciliation_retry`; the R3 corridor producer remains active independently. No CAD or authority decision was fabricated from the stalled handoff.
+
+### 2026-09-21 — Replaced corridor handoff with an executable KiCad retry
+
+The claimed R3 corridor producer produced only a baseline DRC and no CAD process or candidate. Root released that stale claim and reassigned the package to `protected_bus_corridor_kicad_retry`, a KiCad Engineer tasked to prove process launch, apply the now-indexed exact Molex geometry, and return one bounded candidate or a precise failure packet. HPQ #7 authority retry continues independently.
