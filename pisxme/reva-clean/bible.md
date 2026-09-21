@@ -2014,3 +2014,5 @@ The first explicit native nine-net authoring script attempted nearest-neighbour 
 A second bounded Unblocker package now owns the KiCad API-method review. The protected-bus producer remains READY but will not replay the crashed bulk script; it resumes only after a safe authoring method is returned.
 
 The S-expression fallback did execute and produced a parseable candidate, but native Light validation reported 938 violations and 499 unconnected items. Receipt `validation-receipts/protected-bus-r3-sexpr-authoring-20260921/RECEIPT.md` records the failure; no integration is authorized.
+
+Because the safe API review has not returned, one bounded MPA reassessment is now queued to distinguish a true R2 geometric contradiction from implementation-method failure. It is read-only and may change the corridor authority only with direct evidence; no further CAD variant is authorized while it runs.
