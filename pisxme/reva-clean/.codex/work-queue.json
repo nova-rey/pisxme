@@ -226,6 +226,14 @@
       "resolved_at": "2026-09-19T23:12:38.209383Z",
       "status": "RESOLVED"
     },
+    "authority:protected-bus-effective-network-architecture": {
+      "created_at": "2026-09-21T02:43:57.318856Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-effective-network-budget-20260921/POWER_AUTHORITY_DECISION.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:protected-bus-mpa": {
       "created_at": "2026-09-17T22:27:00.106570Z",
       "kind": "authority",
@@ -253,10 +261,10 @@
     "authority:protected-bus-r3-budget-reassessment": {
       "created_at": "2026-09-21T02:33:34.953742Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/protected-bus-effective-network-budget-20260921/POWER_AUTHORITY_DECISION.md",
       "reference": "validation-receipts/protected-bus-r3-fuse-relocation-producer-20260921/TIER2_BLOCKER.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T02:43:57.126510Z",
+      "status": "RESOLVED"
     },
     "authority:protected-bus-r3-corridor-mpa": {
       "created_at": "2026-09-21T01:23:14.300578Z",
@@ -3761,7 +3769,8 @@
         "unblocker:protected-bus-r1-nine-branch",
         "authority:protected-bus-r1-constraint-yield",
         "authority:protected-bus-r1-fuse-relocation",
-        "authority:protected-bus-r3-budget-reassessment"
+        "authority:protected-bus-r3-budget-reassessment",
+        "authority:protected-bus-effective-network-architecture"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3794,7 +3803,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T02:33:34.953852Z",
+      "updated_at": "2026-09-21T02:43:57.319010Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3826,7 +3835,7 @@
         }
       },
       "waiting_on": [
-        "authority:protected-bus-r3-budget-reassessment"
+        "authority:protected-bus-effective-network-architecture"
       ],
       "workstream": "integrated-power"
     },
@@ -5991,5 +6000,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T02:33:34.954530Z"
+  "updated_at": "2026-09-21T02:43:57.319949Z"
 }

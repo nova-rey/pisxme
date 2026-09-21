@@ -1816,3 +1816,6 @@ MPA decision PISXME-P24-PROTECTED-BUS-MPA-20260921-R3 supersedes the R1 grid and
 ### 2026-09-21 — R3 relocated fuse candidate remains over budget
 
 Candidate `2bb75c9` applied the R3 relocation plan but fresh Light validation remained 1256 DRC / 431 unconnected, with 161 shorting items. Corrected trace-only estimates are 9.170–18.922 mOhm per branch against the 0.65 mOhm allocation. The package waits on Product/Power budget reassessment; no canonical CAD integration occurred.
+### 2026-09-21 — Effective network budget correction
+
+Product/Power Authority decision `PISXME-P24-PROTECTED-BUS-POWER-AUTHORITY-20260921-R2` supersedes the per-branch 0.650 mOhm raw-neck and derived 1.80 mOhm per-branch hot-loop rules. The 8.50 mOhm budget is retained as an effective network contract; the rejected candidate's 1.43 mOhm extracted PCB network requires a materially new architecture/corridor plan before further routing.
