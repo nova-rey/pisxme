@@ -6524,7 +6524,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-FOOTPRINT-CORRECTION-AUTHORITY",
       "notes": "",
-      "owner": "protected_bus_footprint_authority",
+      "owner": "protected_bus_footprint_authority_retry",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6541,11 +6541,11 @@
       ],
       "scope": "Audit and bind the project-local geometry correction for J5/J6/J9 Molex headers and F1-F9 fuse holders after isolated native pcbnew copy construction produced incorrect pad coordinates.",
       "session_ids": [
-        "/root/protected_bus_footprint_authority"
+        "/root/protected_bus_footprint_authority_retry"
       ],
       "status": "RUNNING",
       "title": "Correct isolated protected-bus footprint geometry",
-      "updated_at": "2026-09-21T05:08:32.476169Z",
+      "updated_at": "2026-09-21T05:17:06.785307Z",
       "validation": {
         "required": [
           "geometry_audited",
@@ -6569,5 +6569,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:08:32.477372Z"
+  "updated_at": "2026-09-21T05:17:06.786276Z"
 }

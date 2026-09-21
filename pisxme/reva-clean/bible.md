@@ -1914,3 +1914,8 @@ The source-DRC Unblocker did not return within its bounded window. Its service p
 ### 2026-09-21 — Footprint geometry authority dispatched
 
 The native corridor producer exposed a concrete package-construction defect: copied Molex/fuse footprints have incorrect absolute pad coordinates in the isolated board. The corridor package is parked on a footprint authority review; no routing or canonical CAD changed.
+
+
+### 2026-09-21 — Reassigned stalled footprint authority review
+
+The initial footprint authority handoff returned no geometry packet during its bounded window. It was interrupted and reassigned to a fresh Footprint Authority retry; the corridor remains parked and no CAD changed.
