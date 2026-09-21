@@ -1956,3 +1956,7 @@ The first post-evidence corridor attempt returned only a fresh Light baseline (2
 ### 2026-09-21 — HPQ #7 authority contradiction closed
 
 The existing signed Product/Power Authority R3 artifact and the 2026-09-21 effective-network correction were reconciled and validated. The invalid 2.0 mOhm Q1 allocation is superseded by a 4.32 mOhm Q1 hot bound and an 8.50 mOhm complete effective hot-path cap. Source/protected minima, branch observation/enforcement, and prototype-validation limits remain explicit. The authority package is DONE; its dependency is resolved and `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` is claimed for a fresh current-head R3 source/protection producer. No CAD candidate was accepted from HPQ #7.
+
+### 2026-09-21 — Parked phantom CAD claims and dispatched runtime Unblocker
+
+Both fresh R3 producer handoffs were stopped after bounded observation showed no KiCad authoring process or candidate; only setup/baseline artifacts existed. Their packages are WAITING on shared `unblocker:protected-bus-cad-authoring-runtime`. A tracked `P24-PROTECTED-BUS-CAD-AUTHORING-UNBLOCKER` package is RUNNING to classify the supported launcher/runtime path. No CAD claim or hard block was made.

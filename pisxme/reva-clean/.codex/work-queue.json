@@ -626,6 +626,14 @@
       "resolved_at": "2026-09-19T23:30:32.344153Z",
       "status": "RESOLVED"
     },
+    "unblocker:protected-bus-cad-authoring-runtime": {
+      "created_at": "2026-09-21T05:51:41.723235Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "Two bounded fresh KiCad producer handoffs produced no authoring process or candidate; inspect launch/runtime path and propose one supported method.",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:protected-bus-direct-r3-launch": {
       "created_at": "2026-09-19T23:24:34.624812Z",
       "kind": "other",
@@ -3840,7 +3848,8 @@
         "knowledge:protected-bus-foil-fabrication",
         "authority:protected-bus-r3-target-integration",
         "unblocker:protected-bus-source-topology-drc",
-        "authority:hpq7-protected-bus-power-revision"
+        "authority:hpq7-protected-bus-power-revision",
+        "unblocker:protected-bus-cad-authoring-runtime"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3853,7 +3862,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": "protected_bus_source_r3_producer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3870,12 +3879,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "/root/protected_bus_source_r3_producer"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T05:46:47.002429Z",
+      "updated_at": "2026-09-21T05:51:41.723363Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3906,7 +3913,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:protected-bus-cad-authoring-runtime"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6477,7 +6486,8 @@
       "created_at": "2026-09-21T04:58:49.418581Z",
       "dependencies": [
         "authority:protected-bus-footprint-correction",
-        "knowledge:protected-bus-molex-0039300060-footprint"
+        "knowledge:protected-bus-molex-0039300060-footprint",
+        "unblocker:protected-bus-cad-authoring-runtime"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -6488,7 +6498,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTED-BUS-R3-CORRIDOR-PRODUCER",
       "notes": "",
-      "owner": "protected_bus_corridor_kicad_retry",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6504,12 +6514,10 @@
         }
       ],
       "scope": "From isolated current-head source candidate 9e6b0000, route the authorized nine-branch source/protected corridor with native pcbnew and fresh Light checks. Preserve signed topology, J1/high-speed copper, and no global rule changes.",
-      "session_ids": [
-        "/root/protected_bus_corridor_kicad_retry"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Route authorized R3 source-to-protected corridor",
-      "updated_at": "2026-09-21T05:41:52.265995Z",
+      "updated_at": "2026-09-21T05:51:41.883020Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -6519,7 +6527,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:protected-bus-cad-authoring-runtime"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6741,6 +6751,59 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "ed698069",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "A bounded Unblocker receipt classifies the failures and gives one executable next method or an explicit unresolved runtime dependency.",
+      "created_at": "2026-09-21T05:52:06.709292Z",
+      "dependencies": [],
+      "domain": "Unblocker / EDA Runtime",
+      "edit_boundaries": [
+        "runtime/receipt analysis only",
+        "no CAD edits",
+        "no global configuration"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-CAD-AUTHORING-UNBLOCKER",
+      "notes": "",
+      "owner": "protected_bus_cad_authoring_unblocker",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Review the two bounded producer launch failures and identify one supported, reproducible authoring method for the protected-bus producer and corridor. Preserve exact worker/runtime evidence; do not edit CAD or global configuration.",
+      "session_ids": [
+        "/root/protected_bus_cad_authoring_unblocker"
+      ],
+      "status": "RUNNING",
+      "title": "Classify protected-bus CAD authoring runtime failure",
+      "updated_at": "2026-09-21T05:52:06.862966Z",
+      "validation": {
+        "required": [
+          "failure_classification",
+          "supported_method",
+          "receipt"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -6755,5 +6818,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T05:46:47.003389Z"
+  "updated_at": "2026-09-21T05:52:06.863862Z"
 }
