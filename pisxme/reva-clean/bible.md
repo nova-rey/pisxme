@@ -1869,3 +1869,8 @@ In parallel with the direct KiCad producer retry, Power Authority now owns a bou
 ### 2026-09-21 — Foil package/DFM authority completed
 
 Power Authority bound the local insulated C11000 foil construction: 1.00 x 8.00 x 82.00 mm, 0.10 mm polyimide both faces with 1.00 mm edge overhang, 6.00 mm bare-copper separation, mechanically retained conductive attachment, joint limits, complete path budgets, and explicit prototype-validation dispositions. The authority package passed validation; the direct KiCad producer may proceed from the fresh baseline.
+
+
+### 2026-09-21 — Canonical topology boundary identified
+
+Fresh Light baseline from canonical e981385c (KiCad 10.0.6) proved the board remains the legacy two-branch J3/J4/F1/F2/Q1/Q2 topology with no R3 mesh nets. The foil producer was parked on authority:protected-bus-r3-target-integration. A separate serialized package now reconciles isolated R3 mesh candidate 86568f8b against current HEAD before any foil CAD work resumes.
