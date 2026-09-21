@@ -2146,3 +2146,7 @@ Issue #7 remains OPEN with `resolution-ready`; its Sol result is an authority co
 ### 2026-09-21 — Issue #7 follow-up budget audit
 
 A second bounded qualified-Light run audited the current-head protected-bus geometry after the failed clone. P2/P5 had no routed segments on the canonical board; source P1, fused P1, and return P4 measured 40.700 mm, 90.400 mm, and 178.500 mm respectively. The result is retained as method-change evidence; the producer remains READY and Phase 24 remains open.
+
+### 2026-09-21 — Stale Supervisor claim repaired
+
+A Supervisor left the protected-bus package RUNNING without a live CAD process. Root interrupted the stale owner, released the queue claim, and ran a root-mediated Light source-topology check. The source fixture reported 1041 DRC violations and 499 unconnected items, so it remains non-production evidence. The queue is READY for a fresh current-head implementation method.

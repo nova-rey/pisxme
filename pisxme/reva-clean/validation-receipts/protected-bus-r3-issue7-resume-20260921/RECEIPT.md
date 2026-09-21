@@ -13,3 +13,7 @@
 ## Follow-up bounded method
 
 A second current-head Light method ran a budget/topology audit after the failed clone. It confirmed the canonical board has no routed P2/P5 segments before the producer (P1 source 40.700 mm, P1 fused 90.400 mm, P4 return 178.500 mm; P2/P5 zero). This is actionable geometry evidence for the next placement/corridor method, not a closure result.
+
+## Root-mediated source-topology check
+
+The Supervisor handoff was interrupted after leaving the queue RUNNING without a live CAD process. Root released that stale claim and executed a bounded current-head/source-topology Light check. The signed nine-branch source-topology artifact produced 1041 native DRC violations and 499 unconnected items; it is a source fixture, not a production candidate. This confirms that source-topology materialization cannot substitute for an integrated producer and that the next method must author against the current canonical board with explicit corridor geometry.
