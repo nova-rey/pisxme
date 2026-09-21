@@ -3814,14 +3814,14 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "41e5ffbb",
+      "base_sha": "40ec2d21",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
         "artifact": null,
-        "base_sha": "7a623b22",
-        "returned_at": "2026-09-21T08:39:42.551792Z",
-        "returned_by": "root-mediated-support-local",
-        "sha": "f60017ca95671689116b3972be6b12a19ea4badf0cb47cfbad3146cc713dcbf5"
+        "base_sha": "41e5ffbb",
+        "returned_at": "2026-09-21T08:47:28.628423Z",
+        "returned_by": "root-mediated-d1-primitive",
+        "sha": "0a7526475bc90b1e90f5d9ad96dddf53b58bc476a012d1739885b18caa82675b"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3887,10 +3887,11 @@
         "validation-receipts/protected-bus-r3-current-head-b1-pair-20260921/fresh-light/RECEIPT.md",
         "validation-receipts/protected-bus-r3-support-cohort-placement-20260921/RECEIPT.md",
         "validation-receipts/protected-bus-r3-support-local-links-20260921/RECEIPT.md",
-        "validation-receipts/protected-bus-source-drc-unblocker-20260921/RECEIPT.md"
+        "validation-receipts/protected-bus-source-drc-unblocker-20260921/RECEIPT.md",
+        "validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md"
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "Canonical B1 source/topology integration remains commit 7a623b22; current canonical HEAD 41e5ffbb contains documentation/evidence only after that integration. Fresh B1 Light was 919/435/29. Support-cohort authority mismatch and isolated local-link candidates are recorded; next producer must branch from current HEAD and preserve all retained authority evidence.",
+      "notes": "Canonical B1 source/topology integration remains commit 7a623b22; current canonical HEAD 40ec2d21 contains evidence-only commits after that integration. Fresh B1 Light was 919/435/29. Support cohort mismatch and isolated support-link/D1 primitive candidates are recorded; next producer must branch from current HEAD and preserve all authority evidence.",
       "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
@@ -3911,7 +3912,7 @@
       "session_ids": [],
       "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T08:39:43.409547Z",
+      "updated_at": "2026-09-21T08:47:29.652444Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3921,23 +3922,23 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-support-local-links-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:39:43.168823Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T08:47:29.289108Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-support-local-links-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:39:43.047337Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T08:47:29.170786Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-support-local-links-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:39:42.909046Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T08:47:28.986734Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-support-local-links-20260921/RECEIPT.md",
-            "recorded_at": "2026-09-21T08:39:43.294542Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-d1-primitive-20260921/RECEIPT.md",
+            "recorded_at": "2026-09-21T08:47:29.496823Z",
             "status": "FAIL"
           }
         }
@@ -7202,5 +7203,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T08:42:56.398336Z"
+  "updated_at": "2026-09-21T08:47:29.653620Z"
 }

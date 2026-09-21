@@ -2056,3 +2056,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Corrected producer queue base from stale 7a623b22 to current canonical HEAD 41e5ffbb; retained B1 integration and evidence references explicitly.
 
 - 2026-09-21: Root-mediated D1 fused pad-edge primitive was tested from current HEAD; 987/434, rejected with no improvement.
+
+- 2026-09-21: Refreshed producer queue base to current canonical HEAD 40ec2d21 after D1 primitive evidence commit.
