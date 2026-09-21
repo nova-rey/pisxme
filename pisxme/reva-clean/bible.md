@@ -1831,3 +1831,7 @@ Candidate `0b821b7c` applied the authorized mesh architecture but fresh Light re
 ### 2026-09-21 — Protected-bus materials package dispatched
 
 The distributed mesh candidate exceeded the effective PCB-neck and complete-path budgets. Queue package P24-PROTECTED-BUS-MATERIAL-SELECTION now owns the bounded materials/construction decision; CAD routing remains parked until its signed result.
+
+### 2026-09-21 — Power material authority complete
+
+P24-PROTECTED-BUS-MATERIAL-SELECTION completed with a signed construction decision: use local insulated copper reinforcement or a defined busbar/parallel-copper source field to reduce the effective PCB neck by at least 0.327 mOhm to <=0.650 mOhm. Lower-resistance fuse changes are supplementary only; CAD remains gated on the construction evidence.

@@ -1,0 +1,31 @@
+{
+  "package": "P24-PROTECTED-BUS-MATERIAL-SELECTION",
+  "authority_id": "PISXME-P24-PROTECTED-BUS-MATERIAL-SELECTION-20260921",
+  "status": "SIGNED_ENGINEERING_AUTHORITY",
+  "scope": "material and fabrication selection only; no CAD routing or placement",
+  "candidate": {"producer_base": "c574c287", "fresh_light": "86568f8b", "drc": 1526, "unconnected": 426},
+  "measured_or_extracted": {"effective_pcb_neck_mohm": 0.977, "target_effective_pcb_neck_mohm": 0.65, "complete_hot_path_mohm": 8.577, "target_complete_hot_path_mohm": 8.5, "required_neck_reduction_mohm": 0.327, "required_neck_reduction_fraction": 0.3347, "minimum_total_recovery_mohm": 0.077},
+  "decision": {
+    "preferred": "local insulated copper reinforcement or defined busbar/parallel-copper source field",
+    "minimum_construction_target": "effective PCB neck <= 0.650 mOhm hot",
+    "heavier_outer_copper": "conditional on revised order-specific stackup, impedance, via and DFM evidence",
+    "lower_resistance_fuse_holder": "supplementary only; cannot replace PCB correction",
+    "new_routing_variant_authorized": false
+  },
+  "retained_invariants": {
+    "source_voltage": "11.4-12.6 V",
+    "sustained_power": "300 W",
+    "peak_power": "330 W for 100 ms",
+    "source_capability": "40 A continuous / 45 A bounded peak",
+    "protected_minima": "11.05 V sustained / 11.00 V peak",
+    "branches": 9,
+    "contact_screen": "7 A",
+    "balance": "<=10% after independent qualification",
+    "total_hot_path_mohm": 8.5,
+    "parallel_credit": "none before all nine paths are independently qualified"
+  },
+  "fixed_hot_terms_mohm": {"q1_channel": 4.32, "q1_leads_pads_transition": 0.15, "protected_bus_to_j1": 0.25, "j1_field": 0.25, "residual": 0.08, "subtotal": 5.05},
+  "required_release_evidence": ["exact material and joint drawing", "source revisions and hashes", "four-wire positive/return extraction", "temperature and current-density calculation", "SI and return-plane review", "DFM/mechanical/clearance review", "complete <=8.500 mOhm budget with margin", "fresh Light validation after material integration"],
+  "limits": ["no fabricated-hardware evidence", "no load-step measurement", "no connector or SXM2 contact thermal measurement", "no production qualification claim"],
+  "signature": {"role": "Product / Power Authority", "state": "SIGNED_ENGINEERING_AUTHORITY", "date": "2026-09-21"}
+}
