@@ -1948,3 +1948,7 @@ The first HPQ #7 Power Authority worker returned no packet during its bounded at
 ### 2026-09-21 — Replaced corridor handoff with an executable KiCad retry
 
 The claimed R3 corridor producer produced only a baseline DRC and no CAD process or candidate. Root released that stale claim and reassigned the package to `protected_bus_corridor_kicad_retry`, a KiCad Engineer tasked to prove process launch, apply the now-indexed exact Molex geometry, and return one bounded candidate or a precise failure packet. HPQ #7 authority retry continues independently.
+
+### 2026-09-21 — Recorded corridor producer launch failure
+
+The first post-evidence corridor attempt returned only a fresh Light baseline (257 DRC violations, 393 unconnected) and no authoring process or candidate. The failure is preserved in `validation-receipts/protected-bus-r3-corridor-producer-launch-stall-20260921/`; the package is already reassigned to a fresh KiCad retry.
