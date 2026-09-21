@@ -2036,3 +2036,5 @@ Because the safe API review has not returned, one bounded MPA reassessment is no
 - 2026-09-21: Fresh detached KiCad Light validation of canonical B1 integration commit `7a623b22` parsed successfully and reported 919 violations, 435 unconnected items, and 29 shorts. The candidate is retained as an integrated material batch, not closure. The protected-bus producer base advances to `7a623b22` for the next corridor-aware branch pair.
 
 - 2026-09-21: Root-mediated Light baseline reproduced from c7656c0e; 919 DRC / 435 unconnected; producer remains READY for substantive corridor candidate.
+
+- 2026-09-21: B2 corridor candidate from current-head B1 was rejected after native Light validation at 984 DRC / 428 unconnected; branch ownership passed but geometry worsened, so producer remains READY for a changed method.
