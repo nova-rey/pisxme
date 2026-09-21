@@ -1793,3 +1793,7 @@ HPQ #7 resolution was reconciled into the signed Product/Power Authority decisio
 ### 2026-09-21 — Protected-bus R3 corridor authority
 
 Macro Placement Authority decision `PISXME-P24-PROTOTYPE-POWER-BUS-MPA-R3-20260921` binds the J1/J5/J6 anchors, ten-reference source/protection cohort, staged In3.Cu protected-plane transition, and distributed return hierarchy for the next isolated producer. It preserves the R3 8.50 mOhm hot-path contract and does not authorize canonical integration.
+
+### 2026-09-21 — R3 cohort producer exposes F3-F9 authority gap
+
+Candidate `894fa433` applied the binding corridor for F1/F2 and the Q1/Q2 cohort but could not close the R3 nine-branch contract because F3-F9 geometry and corridor ownership were not defined. The package is waiting on a narrow MPA authority revision; no canonical CAD integration occurred.
