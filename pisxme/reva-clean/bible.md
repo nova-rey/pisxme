@@ -2166,3 +2166,7 @@ The existing binding MPA R3 source-entry decision was mechanically reconciled to
 ### 2026-09-21 — All-branch geometry clone retained
 
 A current-head Light producer cloned the authoritative J5/P1 and J5/P4 geometry into all nine MPA-ordered source branches. The candidate reduced unconnected items from 435 to 391 but still reported 1040 DRC violations, so it remains rejected producer evidence and was not integrated. The package is READY for the next bounded method.
+
+### 2026-09-21 — Geometry clone routed to Unblocker
+
+The all-branch clone improved connectivity but worsened native DRC. The producer is explicitly WAITING on `authority:unblocker-r3-20260921` for one bounded root-cause/method decision; same-class speculative routing is paused while that review runs.
