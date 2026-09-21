@@ -1990,3 +1990,5 @@ The replacement dispatch also produced no live worker, KiCad process, script, or
 ### 2026-09-21 — Assigned supervised protected-bus authoring attempt
 
 The protected-bus producer is assigned to `protected_bus_r3_authoring_supervisor` for one bounded execution from current HEAD. The supervisor must demonstrate a live direct-argv KiCad Light authoring process before retaining ownership and must return an isolated candidate with raw checks or a precise blocker. HPQ Issue #7 remains OPEN/`resolution-ready`; no Issue closure or Phase 24 completion is implied.
+
+The supervised attempt again produced no live CAD process or authoring artifact and was released. The queue now truthfully shows both protected-bus packages READY with no owner. No further phantom claim is retained.
