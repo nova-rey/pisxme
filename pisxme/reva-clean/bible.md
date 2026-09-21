@@ -2078,3 +2078,7 @@ After fresh Light rejected the prior gate-layer candidate, Root dispatched a mat
 ### 2026-09-21 — Via-in-pad gate candidate rejected
 
 The via-in-pad/B.Cu gate candidate was independently validated at exact SHA and reported 982 DRC violations and 434 unconnected items. It failed all producer acceptance requirements and was released; the package is READY for a further changed method. No Issue #7 closure or Phase 24 acceptance claim was made.
+
+### 2026-09-21 — Q1-via gate variant rejected
+
+A third bounded gate corridor variant (F.Cu U1-to-Q1 via, B.Cu Q1 handoff) reported 984 DRC violations and 434 unconnected items. It was rejected before integration. The producer package is returned to READY; Issue #7 remains OPEN/`resolution-ready`, and no Phase 24 acceptance claim is made.
