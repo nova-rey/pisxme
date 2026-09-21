@@ -2002,3 +2002,5 @@ The failed candidate was returned to READY after validation; no integration slot
 ### 2026-09-21 — Escalated after second materially distinct R2 failure
 
 Applying the MPA R2 F.Cu occupancy correction to the retained routed producer artifact produced a real Light candidate with 314 DRC violations and 499 unconnected items. This is a second distinct implementation failure, retained at `validation-receipts/protected-bus-r3-routed-r2-attempt-20260921/RECEIPT.md`. The producer is parked on `protected-bus-r3-failure-review`; Unblocker must classify the obsolete topology and prescribe one capability-level change before another route attempt.
+
+The corridor producer is also parked behind the source producer because its prior input candidate is not an acceptable current-head source. A dedicated queued Unblocker package now owns the bounded failure review, so the queue remains live rather than falsely declaring campaign block.

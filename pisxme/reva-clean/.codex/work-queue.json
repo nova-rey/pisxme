@@ -6506,7 +6506,8 @@
         "authority:protected-bus-footprint-correction",
         "knowledge:protected-bus-molex-0039300060-footprint",
         "unblocker:protected-bus-cad-authoring-runtime",
-        "authority:protected-bus-effective-network-architecture-revision"
+        "authority:protected-bus-effective-network-architecture-revision",
+        "package:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -6534,9 +6535,9 @@
       ],
       "scope": "From isolated current-head source candidate 9e6b0000, route the authorized nine-branch source/protected corridor with native pcbnew and fresh Light checks. Preserve signed topology, J1/high-speed copper, and no global rule changes.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Route authorized R3 source-to-protected corridor",
-      "updated_at": "2026-09-21T06:05:47.403533Z",
+      "updated_at": "2026-09-21T06:29:34.693182Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -6546,7 +6547,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "package:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -6919,6 +6922,54 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Return root-cause classification, retained evidence, and one bounded resume method or authority escalation.",
+      "created_at": "2026-09-21T06:30:04.498789Z",
+      "dependencies": [],
+      "domain": "Unblocker",
+      "edit_boundaries": [
+        "read-only evidence review",
+        "no canonical CAD edits"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-R3-FAILURE-REVIEW",
+      "notes": "",
+      "owner": "protected_bus_r3_failure_unblocker",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "native_drc",
+        "physical_opens_shorts",
+        "power_current_transient_thermal"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Read-only review of two native Light failures and one capability-level method change; no CAD edits.",
+      "session_ids": [
+        "/root/protected_bus_r3_failure_unblocker"
+      ],
+      "status": "RUNNING",
+      "title": "Classify second R2 protected-bus producer failure",
+      "updated_at": "2026-09-21T06:30:10.594330Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": ""
     }
   ],
   "project": "nova-rey/pisxme",
@@ -6933,5 +6984,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T06:27:29.800687Z"
+  "updated_at": "2026-09-21T06:30:10.596063Z"
 }
