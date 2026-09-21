@@ -2210,3 +2210,7 @@ The qualified Light execution reached the actual topology probe, but native boar
 ### 2026-09-21 — Corrected probe closed the stale producer session
 
 The first replacement producer reached a qualified baseline, then a direct Light execution applied the authorized row correction. Native F2 geometry showed the asserted `(57.60,26.25)/(66.90,26.25)` pad-side points are not pads; the actual footprint is `(64.00,15.00)` with pad centers at `y=13.75`. The producer was released and the queue now waits on `authority:mpa-r3-f2-placement-reconciliation-20260921`; no CAD candidate is claimed.
+
+### 2026-09-21 — MPA binds F2 placement transform and reachable lanes
+
+MPA reconciled the native F2 geometry contradiction with decision `PISXME-P24-R3-J5.2-F2-LANE-R3`: apply exactly `T_F2=(0,+11.25 mm)` so F2 moves from `(64,15)` to `(64,26.25)`, placing raw/fused pads at `(57.60,25.00)` and `(66.90,25.00)`. J5.2/F2 now uses local F.Cu escapes and unique In2 lanes on `y=25.00` to `(106.00,25.00)`. The previous nonphysical y=26.25 pad endpoints are superseded. The producer dependency is resolved and ready for a fresh isolated implementation.
