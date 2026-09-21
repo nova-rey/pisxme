@@ -541,10 +541,10 @@
     "protected-bus-r3-failure-review": {
       "created_at": "2026-09-21T06:27:29.799108Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/protected-bus-r3-failure-unblocker-20260921/RECEIPT.md",
       "reference": "/root/protected_bus_r3_failure_unblocker",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-21T06:33:22.156514Z",
+      "status": "RESOLVED"
     },
     "unblocker:cm5-ethernet-edge-dfm-reconciliation": {
       "created_at": "2026-09-19T00:13:25.494610Z",
@@ -3880,7 +3880,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "R3 authority producer dispatch; canonical base 627ec337; isolated native pcbnew workspace required.",
-      "owner": null,
+      "owner": "protected_bus_r3_native_router",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3897,10 +3897,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/protected_bus_r3_native_router"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T06:27:29.799286Z",
+      "updated_at": "2026-09-21T06:34:16.359563Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3931,9 +3933,7 @@
           }
         }
       },
-      "waiting_on": [
-        "protected-bus-r3-failure-review"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -6930,7 +6930,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-r3-failure-unblocker-20260921/RECEIPT.md",
+        "base_sha": "fa0ebe4b",
+        "returned_at": "2026-09-21T06:33:58.652093Z",
+        "returned_by": "protected_bus_r3_failure_unblocker",
+        "sha": "fa0ebe4b"
+      },
       "completion_criterion": "Return root-cause classification, retained evidence, and one bounded resume method or authority escalation.",
       "created_at": "2026-09-21T06:30:04.498789Z",
       "dependencies": [],
@@ -6939,10 +6945,12 @@
         "read-only evidence review",
         "no canonical CAD edits"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-r3-failure-unblocker-20260921/RECEIPT.md"
+      ],
       "id": "P24-PROTECTED-BUS-R3-FAILURE-REVIEW",
       "notes": "",
-      "owner": "protected_bus_r3_failure_unblocker",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -6958,12 +6966,10 @@
         }
       ],
       "scope": "Read-only review of two native Light failures and one capability-level method change; no CAD edits.",
-      "session_ids": [
-        "/root/protected_bus_r3_failure_unblocker"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Classify second R2 protected-bus producer failure",
-      "updated_at": "2026-09-21T06:30:10.594330Z",
+      "updated_at": "2026-09-21T06:33:58.937149Z",
       "validation": {
         "required": [],
         "results": {}
@@ -6984,5 +6990,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T06:30:10.596063Z"
+  "updated_at": "2026-09-21T06:34:16.360571Z"
 }

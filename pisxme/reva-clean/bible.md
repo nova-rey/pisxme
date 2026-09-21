@@ -2004,3 +2004,7 @@ The failed candidate was returned to READY after validation; no integration slot
 Applying the MPA R2 F.Cu occupancy correction to the retained routed producer artifact produced a real Light candidate with 314 DRC violations and 499 unconnected items. This is a second distinct implementation failure, retained at `validation-receipts/protected-bus-r3-routed-r2-attempt-20260921/RECEIPT.md`. The producer is parked on `protected-bus-r3-failure-review`; Unblocker must classify the obsolete topology and prescribe one capability-level change before another route attempt.
 
 The corridor producer is also parked behind the source producer because its prior input candidate is not an acceptable current-head source. A dedicated queued Unblocker package now owns the bounded failure review, so the queue remains live rather than falsely declaring campaign block.
+
+### 2026-09-21 — Unblocker routed producer to native nine-branch authoring
+
+The failure review classified both R2 attempts as the same implementation class: zone occupancy changes without required copper. Its bounded route is a native KiCad Light authoring attempt implementing In2 raw/fused lanes, In4 branch returns, In1 return plane, and In3 protected J1 approach, with branch-open, targeted DRC, and 8.50 mOhm resistance/thermal evidence. The producer is claimed by `protected_bus_r3_native_router`; no same-class replay or integration is authorized.
