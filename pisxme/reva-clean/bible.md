@@ -2206,3 +2206,7 @@ MPA decision `PISXME-P24-R3-J5.2-F2-LANE-R2` supersedes the failed north-shifted
 ### 2026-09-21 — MPA lane correction contradicted by native F2 geometry
 
 The qualified Light execution reached the actual topology probe, but native board geometry disproved the assumed lane row: frozen F2 is at `(64.00,15.00)` with raw/fused pad centers `(57.60,13.75)` and `(66.90,13.75)`, while the MPA correction asserted pad-side coordinates at `y=26.25`. The free lane segments were therefore not physically reachable from F2. The diagnostic board/JSON and hashes are retained under `validation-receipts/protected-bus-r3-mpa-f2-placement-conflict-20260921/`; no candidate was integrated. The producer is parked on one new MPA placement/orientation reconciliation dependency, and speculative routing is stopped.
+
+### 2026-09-21 — Corrected probe closed the stale producer session
+
+The first replacement producer reached a qualified baseline, then a direct Light execution applied the authorized row correction. Native F2 geometry showed the asserted `(57.60,26.25)/(66.90,26.25)` pad-side points are not pads; the actual footprint is `(64.00,15.00)` with pad centers at `y=13.75`. The producer was released and the queue now waits on `authority:mpa-r3-f2-placement-reconciliation-20260921`; no CAD candidate is claimed.

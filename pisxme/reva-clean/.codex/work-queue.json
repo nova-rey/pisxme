@@ -202,6 +202,14 @@
       "resolved_at": "2026-09-21T10:26:36.196676Z",
       "status": "RESOLVED"
     },
+    "authority:mpa-r3-f2-placement-reconciliation-20260921": {
+      "created_at": "2026-09-21T11:10:00Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-f2-placement-conflict-20260921/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:mpa-r3-lane-placement-20260921": {
       "created_at": "2026-09-21T10:36:42.218046Z",
       "kind": "authority",
@@ -745,14 +753,6 @@
       "reference": "validation-receipts/protected-bus-source-topology-current-head-20260921/RECEIPT.md",
       "resolved_at": "2026-09-21T05:28:56.841756Z",
       "status": "RESOLVED"
-    },
-    "authority:mpa-r3-f2-placement-reconciliation-20260921": {
-      "created_at": "2026-09-21T11:10:00Z",
-      "kind": "authority",
-      "receipt": null,
-      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-mpa-f2-placement-conflict-20260921/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3939,7 +3939,8 @@
         "authority:unblocker-r3-20260921",
         "authority:mpa-r3-corridor-revision-20260921",
         "authority:unblocker-r3-structural-20260921",
-        "authority:mpa-r3-lane-placement-20260921"
+        "authority:mpa-r3-lane-placement-20260921",
+        "authority:mpa-r3-f2-placement-reconciliation-20260921"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3984,7 +3985,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-21T10:52:46.583372Z",
+      "updated_at": "2026-09-21T10:55:12.523360Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -7277,5 +7278,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-21T11:10:00Z"
+  "updated_at": "2026-09-21T11:12:00Z"
 }
