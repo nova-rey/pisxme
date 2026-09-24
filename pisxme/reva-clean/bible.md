@@ -2346,3 +2346,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer reopened for bounded In2 layer-change route.
 
 2026-09-24: Protected-bus In2 Heavy v2 attempt reached GUI route but OOM-killed at first layer transition; queued Tier-2 capability reassessment with preserved receipt.
+
+2026-09-24: Tier-2 Unblocker classified protected-bus failure as Heavy resource exhaustion, authorized one 2.75 GiB attempt only after host-headroom gate; current 2.6 GiB available with exhausted swap is insufficient, so package remains waiting without CAD retry.
