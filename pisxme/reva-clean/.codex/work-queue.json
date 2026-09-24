@@ -813,10 +813,10 @@
     "unblocker:protected-bus-r3-v2-f2-collocated-via-20260924": {
       "created_at": "2026-09-24T16:17:08.234267Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-f2-via-unblocker-20260924/UNBLOCKER_REPORT.md",
       "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-failure-review-20260924/DECISION.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-24T16:18:43.330458Z",
+      "status": "RESOLVED"
     },
     "unblocker:protected-bus-r3-v2-failure-20260924": {
       "created_at": "2026-09-24T15:02:52.402322Z",
@@ -4064,7 +4064,7 @@
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Issue #7 authority packet is reconciled; HPQ dependency is not blocking. The previous Heavy/Xvfb/pcbnew fixture was an orphan with no GUI-control path and was stopped. A bounded capability repair must provide a qualified controller before any new route attempt.",
-      "owner": null,
+      "owner": "protected_bus_r3_heavy_f2_in2",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4081,10 +4081,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-protected-bus-r3-f2-in2-20260924"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T16:17:08.234326Z",
+      "updated_at": "2026-09-24T16:18:43.399061Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4115,9 +4117,7 @@
           }
         }
       },
-      "waiting_on": [
-        "unblocker:protected-bus-r3-v2-f2-collocated-via-20260924"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -7377,5 +7377,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T16:17:08.234703Z"
+  "updated_at": "2026-09-24T16:18:43.399693Z"
 }

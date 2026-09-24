@@ -2342,3 +2342,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer returned to WAITING for bounded F2 via/corridor method change after fresh Light rejection.
 
 - 2026-09-24: Unblocker selected one bounded In2 layer-change route to remove the co-located F2 via defect.
+
+- 2026-09-24: Protected-bus producer reopened for bounded In2 layer-change route.
