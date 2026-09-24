@@ -2334,3 +2334,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: One 2304 MiB Heavy retry authorized from measured host headroom after 2 GiB OOM.
 
 - 2026-09-24: Protected-bus producer reopened for one measured 2304 MiB Heavy attempt.
+
+- 2026-09-24: Fresh Light rejected Heavy 2304m candidate at 927 DRC/434 unconnected versus 919/435 baseline; no integration.
