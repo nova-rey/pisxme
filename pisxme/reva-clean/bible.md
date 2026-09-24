@@ -2304,3 +2304,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer reopened after execution unblocker; Heavy preflight specialist dispatched with saved-diff/reopen evidence requirement.
 
 - 2026-09-24: Heavy preflight reproduced first-run KiCad startup-default failure before session acquisition; no PCB candidate produced.
+
+- 2026-09-24: Heavy preflight reproduced startup-default failure; producer parked on explicit runtime dependency and no CAD candidate claimed.
