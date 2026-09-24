@@ -2274,3 +2274,7 @@ The prior Heavy runtime dependency is resolved by the qualified `pisxme-kicad-he
 ### 2026-09-24 — Protected-bus producer resumed on qualified Heavy v2
 
 The imported Heavy GUI-control qualification resolved the prior runtime dependency. `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` is claimed by `protected_bus_r3_v2_heavy_producer` from committed base `d5a872cf`, using `pisxme-kicad-heavy:v2` image digest `sha256:39fdae0176135aec42a0dacc8fb250bf8cbf915e01ad67a342e8f8bb2de44344`. The producer must use the private Xvfb session and `Route -> Route Single Track`, return an isolated candidate, and pass fresh Light validation before any canonical integration. Stale qualification processes were released; no canonical CAD changed.
+
+### 2026-09-24 — Heavy v2 F2 candidate rejected by fresh Light
+
+Candidate `2c75d09e` was independently validated from a fresh detached checkout with KiCad Light `10.0.6` (image `sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9`). It connected the selected J5.2-to-F2 raw pad and reduced unconnected items from 435 to 434, but native DRC rose from the exact-base 920 to 929 violations. The candidate is rejected for canonical integration; the raw Heavy GUI route and fresh Light reports are retained as bounded method evidence. The producer returns to READY for a materially changed method, with no architecture or authority change.
