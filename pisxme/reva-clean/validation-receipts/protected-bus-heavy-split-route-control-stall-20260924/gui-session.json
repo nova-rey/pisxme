@@ -1,0 +1,16 @@
+{
+  "board": "/workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256_before": "9cc9b010fe665b51fefabb1a87b60cd6805b5808fe8a23f8a5ae8d70337faf9d",
+  "display": ":99",
+  "geometry": {
+    "height": 881,
+    "width": 1280,
+    "x": 0,
+    "y": 38
+  },
+  "kicad_version": "10.0.6",
+  "pcbnew_pid": 41,
+  "schema": 1,
+  "started_at": "2026-09-24T16:43:58.091902Z",
+  "window_id": "4194340"
+}

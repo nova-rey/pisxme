@@ -2356,3 +2356,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: The one authorized 2.75 GiB Heavy run survived without OOM but stalled after the via before completing the In2-to-F2.1 route. Preserved GUI evidence, parked the producer, and escalated the interaction method; no canonical CAD changed.
 
 2026-09-24: Tier-2 Unblocker changed protected-bus method to split native route transactions; dispatched one fresh 2.75 GiB Heavy attempt after resource gate reopened.
+
+2026-09-24: Split-route Heavy session stayed alive but the assigned operator produced only pre-route state and no first transaction. Parked the producer and changed execution capability; no CAD changed.
