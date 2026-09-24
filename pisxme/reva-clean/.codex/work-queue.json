@@ -466,6 +466,14 @@
       "resolved_at": "2026-09-21T06:59:28.484164Z",
       "status": "RESOLVED"
     },
+    "implementation": {
+      "created_at": "2026-09-24T17:47:50.344641Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "unblocker:heavy-v2-route-timeout-20260924",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:P24-MECHANICAL-3D-MODEL-ENVELOPES": {
       "created_at": "2026-09-19T00:18:45.517573Z",
       "kind": "knowledge",
@@ -4093,7 +4101,8 @@
         "other:protected-bus-heavy-split-route-control-stall-20260924",
         "other:protected-bus-split-route-wrong-net-20260924",
         "other:protected-bus-via-overlap-route-initiation-20260924",
-        "authority:protected-bus-mpa-replacement-waypoint-20260924"
+        "authority:protected-bus-mpa-replacement-waypoint-20260924",
+        "implementation"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -4136,9 +4145,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T17:41:53.525944Z",
+      "updated_at": "2026-09-24T17:47:50.344719Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4169,7 +4178,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "implementation"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7429,5 +7440,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T17:41:53.526347Z"
+  "updated_at": "2026-09-24T17:47:50.345328Z"
 }
