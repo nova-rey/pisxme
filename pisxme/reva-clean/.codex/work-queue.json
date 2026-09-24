@@ -466,6 +466,14 @@
       "resolved_at": "2026-09-21T06:59:28.484164Z",
       "status": "RESOLVED"
     },
+    "hpq:nova-rey/codex-config-backup#8": {
+      "created_at": "2026-09-24T18:17:46.917585Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/8",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "implementation": {
       "created_at": "2026-09-24T17:47:50.344641Z",
       "kind": "other",
@@ -4102,7 +4110,8 @@
         "other:protected-bus-split-route-wrong-net-20260924",
         "other:protected-bus-via-overlap-route-initiation-20260924",
         "authority:protected-bus-mpa-replacement-waypoint-20260924",
-        "implementation"
+        "implementation",
+        "hpq:nova-rey/codex-config-backup#8"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -4147,7 +4156,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T17:47:50.344719Z",
+      "updated_at": "2026-09-24T18:17:57.316674Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4179,7 +4188,8 @@
         }
       },
       "waiting_on": [
-        "implementation"
+        "implementation",
+        "hpq:nova-rey/codex-config-backup#8"
       ],
       "workstream": "integrated-power"
     },
@@ -7440,5 +7450,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T17:47:50.345328Z"
+  "updated_at": "2026-09-24T18:17:57.317093Z"
 }
