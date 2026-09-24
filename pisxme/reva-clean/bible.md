@@ -2282,3 +2282,7 @@ Candidate `2c75d09e` was independently validated from a fresh detached checkout 
 ### 2026-09-24 — Heavy v2 F2 candidate returned to READY
 
 The first qualified Heavy v2 producer candidate connected one J5.2-to-F2 raw branch, but fresh Light validation found 929 DRC violations versus 920 on the exact base. Source connectivity passed in its scoped branch; native DRC, complete-path budget, and thermal/DFM requirements failed because the candidate added nine findings and left the remaining F2 cohort open. The candidate was not integrated. Queue state records the failure receipts and returns `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` to READY for a materially changed bounded method.
+
+### 2026-09-24 — Bounded method change after Heavy v2 route failure
+
+The first v2 GUI route was rejected after fresh Light validation because it added nine native DRC findings despite closing one F2 source open. The producer is parked on `unblocker:protected-bus-r3-v2-failure-20260924` for a precise geometry/obstacle review. This is a method-change pause, not a campaign hard block; no prior scripted route is authorized for replay.
