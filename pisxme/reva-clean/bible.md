@@ -2336,3 +2336,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer reopened for one measured 2304 MiB Heavy attempt.
 
 - 2026-09-24: Fresh Light rejected Heavy 2304m candidate at 927 DRC/434 unconnected versus 919/435 baseline; no integration.
+
+- 2026-09-24: Heavy 2304m candidate saved/reopened but fresh Light rejected co-located F2 via; next route must change layer near 24.5,24.5 and approach F2 on In2.
