@@ -2290,3 +2290,7 @@ The first v2 GUI route was rejected after fresh Light validation because it adde
 ### 2026-09-24 — F2 route failure method change selected
 
 Review of failed candidate `2c75d09e` localizes the DRC increase to the first via at `(16.276786,23.762484)`, which violates J5.2 hole/zone clearance and leaves a dangling B.Cu endpoint. The MPA R3 cohort remains consistent. The next bounded producer method keeps the GUI-native route and exact F2 endpoints but moves the ordinary source via farther along the authorized corridor near `(24.5,24.5)` and requires a closed In2 route with no dangling endpoint.
+
+### 2026-09-24 — Protected-bus F2 retry dispatched
+
+The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_retry` for the one bounded GUI-native retry selected by the failure review. It starts from current canonical HEAD `3d4f833d`, uses Heavy v2, and moves the ordinary source via away from the J5.2 hole while preserving the MPA R3 corridor. Queue remains RUNNING=1; no canonical CAD has been changed.
