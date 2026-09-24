@@ -2270,3 +2270,7 @@ The bounded Heavy capability check completed with `BLOCKED: NO_SUPPORTED_GUI_CON
 ### 2026-09-24 — Heavy GUI-control v2 qualification imported
 
 The prior Heavy runtime dependency is resolved by the qualified `pisxme-kicad-heavy:v2` image (`sha256:39fdae0176135aec42a0dacc8fb250bf8cbf915e01ad67a342e8f8bb2de44344`) and its private Xvfb controls `/usr/local/bin/pisxme-heavy-session` and `/usr/local/bin/pisxme-heavy-gui`. Qualification records obstacle-aware `ROUTE_A`, completed `ROUTE_B`, fresh Light zero-unconnected validation, and named-via evidence. The protected-bus producer is authorized to resume from current committed HEAD in an isolated workspace; existing MPA and electrical constraints remain unchanged.
+
+### 2026-09-24 — Protected-bus producer resumed on qualified Heavy v2
+
+The imported Heavy GUI-control qualification resolved the prior runtime dependency. `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` is claimed by `protected_bus_r3_v2_heavy_producer` from committed base `d5a872cf`, using `pisxme-kicad-heavy:v2` image digest `sha256:39fdae0176135aec42a0dacc8fb250bf8cbf915e01ad67a342e8f8bb2de44344`. The producer must use the private Xvfb session and `Route -> Route Single Track`, return an isolated candidate, and pass fresh Light validation before any canonical integration. Stale qualification processes were released; no canonical CAD changed.
