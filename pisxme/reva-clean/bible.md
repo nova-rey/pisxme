@@ -2266,3 +2266,7 @@ Issue #7 remains OPEN with `resolution-ready`; its Sol authority result is alrea
 ### 2026-09-21 — Heavy GUI-control qualification result
 
 The bounded Heavy capability check completed with `BLOCKED: NO_SUPPORTED_GUI_CONTROL_PATH`. The qualified image provides Xvfb, KiCad IPC, and `libXtst`, but no installed or supported keyboard/mouse/router-control client. The IPC bridge has no interactive-router path and its `run_action` escape is explicitly unstable. A temporary XTest helper was considered but is unqualified and was not used for CAD. Heavy was stopped with no CAD or global configuration change. The protected-bus producer remains waiting on the explicit runtime capability dependency; prior scripted geometry remains rejected evidence.
+
+### 2026-09-24 — Heavy GUI-control v2 qualification imported
+
+The prior Heavy runtime dependency is resolved by the qualified `pisxme-kicad-heavy:v2` image (`sha256:39fdae0176135aec42a0dacc8fb250bf8cbf915e01ad67a342e8f8bb2de44344`) and its private Xvfb controls `/usr/local/bin/pisxme-heavy-session` and `/usr/local/bin/pisxme-heavy-gui`. Qualification records obstacle-aware `ROUTE_A`, completed `ROUTE_B`, fresh Light zero-unconnected validation, and named-via evidence. The protected-bus producer is authorized to resume from current committed HEAD in an isolated workspace; existing MPA and electrical constraints remain unchanged.
