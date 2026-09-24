@@ -2278,3 +2278,7 @@ The imported Heavy GUI-control qualification resolved the prior runtime dependen
 ### 2026-09-24 — Heavy v2 F2 candidate rejected by fresh Light
 
 Candidate `2c75d09e` was independently validated from a fresh detached checkout with KiCad Light `10.0.6` (image `sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9`). It connected the selected J5.2-to-F2 raw pad and reduced unconnected items from 435 to 434, but native DRC rose from the exact-base 920 to 929 violations. The candidate is rejected for canonical integration; the raw Heavy GUI route and fresh Light reports are retained as bounded method evidence. The producer returns to READY for a materially changed method, with no architecture or authority change.
+
+### 2026-09-24 — Heavy v2 F2 candidate returned to READY
+
+The first qualified Heavy v2 producer candidate connected one J5.2-to-F2 raw branch, but fresh Light validation found 929 DRC violations versus 920 on the exact base. Source connectivity passed in its scoped branch; native DRC, complete-path budget, and thermal/DFM requirements failed because the candidate added nine findings and left the remaining F2 cohort open. The candidate was not integrated. Queue state records the failure receipts and returns `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER` to READY for a materially changed bounded method.
