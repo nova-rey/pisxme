@@ -33,3 +33,5 @@ Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolve
 2026-09-24: After the resumed Heavy launch/control stall, the protected-bus producer was reassigned to a fresh direct-control method with launch-health bounds. The package is RUNNING again; no CAD candidate has been accepted.
 
 2026-09-24: A second corrected-corridor Heavy attempt used a 45-second direct launch bound but produced no session file or candidate before timeout. The worker was released and the repeated launch/control failure was routed to Unblocker; no physical-impossibility conclusion is permitted.
+
+2026-09-24: Unblocker traced the Heavy launch failure to worker session lifecycle: the qualified method requires a persistent `bash` shell under `pisxme-heavy-session`, followed by `heavy-gui launch --timeout 120`. The protected-bus producer was resumed with that documented method; no CAD candidate yet.
