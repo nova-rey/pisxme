@@ -29,3 +29,5 @@ Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolve
 2026-09-24: HPQ #8 reached resolution-ready after the runner restart. Its authority-only MPA semantic correction is reconciled at current HEAD; the corrected protected-bus producer is claimed for isolated implementation and fresh Light validation. No CAD candidate or Phase 24 closure is claimed.
 
 2026-09-24: The corrected protected-bus producer's first resumed Heavy v2 launch stalled for over 40 minutes with no candidate or receipt beyond workspace initialization. The supervisor and disposable worker were stopped/released; this is a bounded GUI-launch/control failure, not a physical impossibility claim. Queue package returned READY for a materially different bounded control method.
+
+2026-09-24: After the resumed Heavy launch/control stall, the protected-bus producer was reassigned to a fresh direct-control method with launch-health bounds. The package is RUNNING again; no CAD candidate has been accepted.
