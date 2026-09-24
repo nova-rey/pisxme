@@ -2344,3 +2344,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Unblocker selected one bounded In2 layer-change route to remove the co-located F2 via defect.
 
 - 2026-09-24: Protected-bus producer reopened for bounded In2 layer-change route.
+
+2026-09-24: Protected-bus In2 Heavy v2 attempt reached GUI route but OOM-killed at first layer transition; queued Tier-2 capability reassessment with preserved receipt.
