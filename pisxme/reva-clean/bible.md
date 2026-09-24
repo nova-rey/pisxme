@@ -2328,3 +2328,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer dispatched at 2 GiB Heavy CAD budget after OOM root cause confirmation.
 
 - 2026-09-24: Heavy 2 GiB container OOM-killed after PiSXMe board load; no route or candidate produced.
+
+- 2026-09-24: Protected-bus producer parked after measured 2 GiB Heavy OOM; next resource change requires explicit headroom check.
