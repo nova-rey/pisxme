@@ -610,6 +610,14 @@
       "resolved_at": "2026-09-24T14:47:24.339698Z",
       "status": "RESOLVED"
     },
+    "other:protected-bus-split-route-wrong-net-20260924": {
+      "created_at": "2026-09-24T16:58:42.611827Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-split-route-wrong-net-20260924/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "other:prototype-mechanical-validation": {
       "created_at": "2026-09-19T02:13:42.280169Z",
       "kind": "other",
@@ -4066,7 +4074,8 @@
         "unblocker:protected-bus-r3-v2-f2-collocated-via-20260924",
         "other:protected-bus-r3-heavy-f2-in2-oom-20260924",
         "other:protected-bus-r3-heavy-f2-2750-stall-20260924",
-        "other:protected-bus-heavy-split-route-control-stall-20260924"
+        "other:protected-bus-heavy-split-route-control-stall-20260924",
+        "other:protected-bus-split-route-wrong-net-20260924"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -4111,7 +4120,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T16:47:04.241225Z",
+      "updated_at": "2026-09-24T16:58:42.611882Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4143,7 +4152,8 @@
         }
       },
       "waiting_on": [
-        "other:protected-bus-heavy-split-route-control-stall-20260924"
+        "other:protected-bus-heavy-split-route-control-stall-20260924",
+        "other:protected-bus-split-route-wrong-net-20260924"
       ],
       "workstream": "integrated-power"
     },
@@ -7404,5 +7414,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T16:47:04.241549Z"
+  "updated_at": "2026-09-24T16:58:42.612206Z"
 }

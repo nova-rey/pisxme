@@ -2358,3 +2358,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: Tier-2 Unblocker changed protected-bus method to split native route transactions; dispatched one fresh 2.75 GiB Heavy attempt after resource gate reopened.
 
 2026-09-24: Split-route Heavy session stayed alive but the assigned operator produced only pre-route state and no first transaction. Parked the producer and changed execution capability; no CAD changed.
+
+2026-09-24: Split-route Heavy first transaction succeeded, but second transaction selected 12V_IN_A instead of PWR_SRC_J5_P2; cancelled without save. Parked producer and escalated explicit net-selection control.
