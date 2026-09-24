@@ -15,3 +15,5 @@
 
 Macro Placement Authority rejected the failed J5.2-to-F2.1 via route and bound one
 replacement top-side F.Cu corridor: `(16.20,25.00) -> (18.35,27.15) -> (50.00,27.15) -> (50.00,13.75) -> (57.60,13.75)`, with no via or raw In2 lane. The decision preserves fixed 12V_PROTECTED geometry, In1/In4 returns, and all R3 resistance/current/DFM/DRC gates. The producer may resume only through one isolated Heavy v2 candidate and fresh Light validation.
+
+Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolved by the MPA receipt; only the protected-bus producer subtree is eligible to resume, subject to the isolated Heavy v2 producer and fresh Light validation gates.
