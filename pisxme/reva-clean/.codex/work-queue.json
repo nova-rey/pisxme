@@ -474,6 +474,14 @@
       "resolved_at": "2026-09-24T18:50:54.471952Z",
       "status": "RESOLVED"
     },
+    "hpq:nova-rey/codex-config-backup#9": {
+      "created_at": "2026-09-24T19:06:33.313350Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/9",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "implementation": {
       "created_at": "2026-09-24T17:47:50.344641Z",
       "kind": "other",
@@ -4120,7 +4128,8 @@
         "authority:protected-bus-mpa-replacement-waypoint-20260924",
         "implementation",
         "hpq:nova-rey/codex-config-backup#8",
-        "other:protected-bus-heavy-launch-control"
+        "other:protected-bus-heavy-launch-control",
+        "hpq:nova-rey/codex-config-backup#9"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -4163,9 +4172,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T19:04:46.910233Z",
+      "updated_at": "2026-09-24T19:06:33.313402Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4196,7 +4205,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "hpq:nova-rey/codex-config-backup#9"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7456,5 +7467,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T19:04:46.910619Z"
+  "updated_at": "2026-09-24T19:06:33.313738Z"
 }
