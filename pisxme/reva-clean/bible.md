@@ -2294,3 +2294,5 @@ Review of failed candidate `2c75d09e` localizes the DRC increase to the first vi
 ### 2026-09-24 — Protected-bus F2 retry dispatched
 
 The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_retry` for the one bounded GUI-native retry selected by the failure review. It starts from current canonical HEAD `3d4f833d`, uses Heavy v2, and moves the ordinary source via away from the J5.2 hole while preserving the MPA R3 corridor. Queue remains RUNNING=1; no canonical CAD has been changed.
+
+- 2026-09-24: Heavy v2 retry execution failure recorded; no PCB candidate was produced, so the protected-bus producer remains unresolved.
