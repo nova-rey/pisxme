@@ -2332,3 +2332,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer parked after measured 2 GiB Heavy OOM; next resource change requires explicit headroom check.
 
 - 2026-09-24: One 2304 MiB Heavy retry authorized from measured host headroom after 2 GiB OOM.
+
+- 2026-09-24: Protected-bus producer reopened for one measured 2304 MiB Heavy attempt.
