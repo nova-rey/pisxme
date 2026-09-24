@@ -35,3 +35,5 @@ Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolve
 2026-09-24: A second corrected-corridor Heavy attempt used a 45-second direct launch bound but produced no session file or candidate before timeout. The worker was released and the repeated launch/control failure was routed to Unblocker; no physical-impossibility conclusion is permitted.
 
 2026-09-24: Unblocker traced the Heavy launch failure to worker session lifecycle: the qualified method requires a persistent `bash` shell under `pisxme-heavy-session`, followed by `heavy-gui launch --timeout 120`. The protected-bus producer was resumed with that documented method; no CAD candidate yet.
+
+2026-09-24: The documented persistent-shell Heavy method acquired a live KiCad session but stalled in repeated first-run Setup dismissal for over an hour without a route or candidate. The worker was released; three bounded Heavy capability/setup methods are now retained as evidence for Tier-3 escalation.
