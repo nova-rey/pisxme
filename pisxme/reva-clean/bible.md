@@ -2354,3 +2354,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: Resource gate reopened with ~2.4 GiB RAM plus ~746 MiB swap; one 2.75 GiB Heavy v2 attempt dispatched for protected-bus In2 route.
 
 2026-09-24: The one authorized 2.75 GiB Heavy run survived without OOM but stalled after the via before completing the In2-to-F2.1 route. Preserved GUI evidence, parked the producer, and escalated the interaction method; no canonical CAD changed.
+
+2026-09-24: Tier-2 Unblocker changed protected-bus method to split native route transactions; dispatched one fresh 2.75 GiB Heavy attempt after resource gate reopened.
