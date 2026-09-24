@@ -2352,3 +2352,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: Runtime specialist confirmed no safe 2.75 GiB Heavy allocation: 2.6 GiB available RAM and ~63 MiB swap remain, with no campaign-owned idle consumer to release. Protected-bus package remains waiting; no CAD or shared-service mutation performed.
 
 2026-09-24: Resource gate reopened with ~2.4 GiB RAM plus ~746 MiB swap; one 2.75 GiB Heavy v2 attempt dispatched for protected-bus In2 route.
+
+2026-09-24: The one authorized 2.75 GiB Heavy run survived without OOM but stalled after the via before completing the In2-to-F2.1 route. Preserved GUI evidence, parked the producer, and escalated the interaction method; no canonical CAD changed.
