@@ -2320,3 +2320,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer reopened for persistent Heavy session lifecycle retry.
 
 - 2026-09-24: Persistent Heavy shell retry still lost pcbnew before qualified interaction; protected-bus producer remains without candidate.
+
+- 2026-09-24: Protected-bus producer parked after persistent Heavy session failure; no candidate claimed.
