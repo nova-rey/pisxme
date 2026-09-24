@@ -25,3 +25,5 @@ Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolve
 2026-09-24: A third Heavy v2 attempt explicitly cleared KiCad Setup and used direct xdotool-assisted Route Single Track control, reached the first MPA waypoint, then failed to advance and was undone. No candidate or canonical CAD change exists; receipt `protected-bus-heavy-direct-xdotool-20260924` is the capability-exhaustion evidence for HPQ escalation.
 
 2026-09-24: MPA corrected the protected-bus corridor semantic conflict. The binding path is all-orthogonal F.Cu: J5.2 `(16.20,25.00)` -> `(16.20,27.40)` -> `(50.00,27.40)` -> `(50.00,13.75)` -> F2.1 `(57.60,13.75)`, with actual courtyard-based clearance. No CAD was edited; HPQ #8 remains the capability-resolution owner.
+
+2026-09-24: HPQ #8 reached resolution-ready after the runner restart. Its authority-only MPA semantic correction is reconciled at current HEAD; the corrected protected-bus producer is claimed for isolated implementation and fresh Light validation. No CAD candidate or Phase 24 closure is claimed.
