@@ -317,10 +317,10 @@
     "authority:protected-bus-mpa-replacement-waypoint-20260924": {
       "created_at": "2026-09-24T17:34:49.559564Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "pisx/reva-clean/validation-receipts/protected-bus-mpa-replacement-waypoint-20260924/MPA_DECISION.md",
       "reference": "/home/nyx/PiSXMe/pisx/reva-clean/validation-receipts/protected-bus-mpa-rejects-failed-waypoint-20260924/MPA_DECISION.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-24T17:41:53.525846Z",
+      "status": "RESOLVED"
     },
     "authority:protected-bus-r1-constraint-yield": {
       "created_at": "2026-09-21T02:00:10.304830Z",
@@ -4136,9 +4136,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T17:34:49.559655Z",
+      "updated_at": "2026-09-24T17:41:53.525944Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4169,9 +4169,7 @@
           }
         }
       },
-      "waiting_on": [
-        "authority:protected-bus-mpa-replacement-waypoint-20260924"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -7431,5 +7429,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T17:34:49.560274Z"
+  "updated_at": "2026-09-24T17:41:53.526347Z"
 }
