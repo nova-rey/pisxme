@@ -19,3 +19,5 @@ replacement top-side F.Cu corridor: `(16.20,25.00) -> (18.35,27.15) -> (50.00,27
 Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolved by the MPA receipt; only the protected-bus producer subtree is eligible to resume, subject to the isolated Heavy v2 producer and fresh Light validation gates.
 
 2026-09-24: Qualified Heavy v2 replacement-corridor attempt launched from `9bda92d4` and produced route screenshots but no saved candidate before bounded GUI control stalled; no CAD was integrated. Receipt `protected-bus-heavy-v2-replacement-timeout-20260924` parks only the producer for Tier-2 method change while preserving the MPA corridor.
+
+2026-09-24: A second Heavy v2 method-change attempt calibrated and dismissed the KiCad Setup modal, loaded the board, and exercised direct GUI routing, but saved no candidate; base hash remained unchanged. Evidence is retained in `protected-bus-heavy-waypoint-method-change-20260924`; producer remains parked for a capability-level escalation.
