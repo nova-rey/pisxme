@@ -2298,3 +2298,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Heavy v2 retry execution failure recorded; no PCB candidate was produced, so the protected-bus producer remains unresolved.
 
 - 2026-09-24: Protected-bus Heavy v2 retry exited before saving; producer parked on explicit execution dependency with raw failure receipt.
+
+- 2026-09-24: Unblocker classified protected-bus Heavy failures as implementation/runtime; one preflighted Heavy attempt remains before structural escalation.
