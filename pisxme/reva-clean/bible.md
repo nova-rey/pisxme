@@ -2310,3 +2310,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Heavy startup repair identified existing qualified launcher timeout; use --timeout 120 for first-run defaults, without changing CAD or rules.
 
 - 2026-09-24: Protected-bus producer reopened with qualified launcher --timeout 120 startup repair.
+
+- 2026-09-24: Heavy --timeout 120 still exited after session acquisition before route interaction; no protected-bus candidate exists.
