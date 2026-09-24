@@ -2302,3 +2302,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Unblocker classified protected-bus Heavy failures as implementation/runtime; one preflighted Heavy attempt remains before structural escalation.
 
 - 2026-09-24: Protected-bus producer reopened after execution unblocker; Heavy preflight specialist dispatched with saved-diff/reopen evidence requirement.
+
+- 2026-09-24: Heavy preflight reproduced first-run KiCad startup-default failure before session acquisition; no PCB candidate produced.
