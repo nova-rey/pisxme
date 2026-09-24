@@ -2316,3 +2316,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Protected-bus producer parked after timeout-120 session-exit failure; no candidate or validation claimed.
 
 - 2026-09-24: Heavy session-exit blocker classified as lifecycle failure; persistent Heavy shell pattern selected for one bounded retry.
+
+- 2026-09-24: Protected-bus producer reopened for persistent Heavy session lifecycle retry.
