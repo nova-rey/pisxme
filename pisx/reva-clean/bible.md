@@ -8,3 +8,5 @@
 2026-09-24: Parked protected-bus producer on explicit MPA replacement-waypoint authority dependency; only tested waypoint is rejected.
 
 2026-09-24: Parked protected-bus producer on explicit MPA replacement-waypoint authority dependency; only tested waypoint is rejected.
+
+2026-09-24: Removed transient work-queue lock from tracked files; queue state remains in work-queue.json.
