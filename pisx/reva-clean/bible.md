@@ -10,3 +10,8 @@
 2026-09-24: Parked protected-bus producer on explicit MPA replacement-waypoint authority dependency; only tested waypoint is rejected.
 
 2026-09-24: Removed transient work-queue lock from tracked files; queue state remains in work-queue.json.
+
+## 2026-09-24 — Protected-bus replacement corridor authority
+
+Macro Placement Authority rejected the failed J5.2-to-F2.1 via route and bound one
+replacement top-side F.Cu corridor: `(16.20,25.00) -> (18.35,27.15) -> (50.00,27.15) -> (50.00,13.75) -> (57.60,13.75)`, with no via or raw In2 lane. The decision preserves fixed 12V_PROTECTED geometry, In1/In4 returns, and all R3 resistance/current/DFM/DRC gates. The producer may resume only through one isolated Heavy v2 candidate and fresh Light validation.
