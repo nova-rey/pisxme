@@ -2350,3 +2350,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: Tier-2 Unblocker classified protected-bus failure as Heavy resource exhaustion, authorized one 2.75 GiB attempt only after host-headroom gate; current 2.6 GiB available with exhausted swap is insufficient, so package remains waiting without CAD retry.
 
 2026-09-24: Runtime specialist confirmed no safe 2.75 GiB Heavy allocation: 2.6 GiB available RAM and ~63 MiB swap remain, with no campaign-owned idle consumer to release. Protected-bus package remains waiting; no CAD or shared-service mutation performed.
+
+2026-09-24: Resource gate reopened with ~2.4 GiB RAM plus ~746 MiB swap; one 2.75 GiB Heavy v2 attempt dispatched for protected-bus In2 route.
