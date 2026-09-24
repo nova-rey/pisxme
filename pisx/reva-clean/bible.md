@@ -27,3 +27,5 @@ Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolve
 2026-09-24: MPA corrected the protected-bus corridor semantic conflict. The binding path is all-orthogonal F.Cu: J5.2 `(16.20,25.00)` -> `(16.20,27.40)` -> `(50.00,27.40)` -> `(50.00,13.75)` -> F2.1 `(57.60,13.75)`, with actual courtyard-based clearance. No CAD was edited; HPQ #8 remains the capability-resolution owner.
 
 2026-09-24: HPQ #8 reached resolution-ready after the runner restart. Its authority-only MPA semantic correction is reconciled at current HEAD; the corrected protected-bus producer is claimed for isolated implementation and fresh Light validation. No CAD candidate or Phase 24 closure is claimed.
+
+2026-09-24: The corrected protected-bus producer's first resumed Heavy v2 launch stalled for over 40 minutes with no candidate or receipt beyond workspace initialization. The supervisor and disposable worker were stopped/released; this is a bounded GUI-launch/control failure, not a physical impossibility claim. Queue package returned READY for a materially different bounded control method.
