@@ -2360,3 +2360,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: Split-route Heavy session stayed alive but the assigned operator produced only pre-route state and no first transaction. Parked the producer and changed execution capability; no CAD changed.
 
 2026-09-24: Split-route Heavy first transaction succeeded, but second transaction selected 12V_IN_A instead of PWR_SRC_J5_P2; cancelled without save. Parked producer and escalated explicit net-selection control.
+
+2026-09-24: Via-only selection method authorized after wrong-net control failure; producer reopened for one clean-base attempt with explicit PWR_SRC_J5_P2 property verification.
