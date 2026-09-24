@@ -4009,11 +4009,11 @@
       "base_sha": "c2aed9eb",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/RECEIPT.md",
-        "base_sha": "3f5acaefe4a9d386c05cc3e4e88247713ccc2619",
-        "returned_at": "2026-09-24T16:15:40.099561Z",
-        "returned_by": "protected_bus_r3_heavy_2304m",
-        "sha": "a19c403ac13897fc7515ed8d57461add61329400"
+        "artifact": "/home/nyx/eda-workspaces/protected-bus-split-route-click-20260924/project/pisxme/reva-clean/validation-receipts/protected-bus-split-route-click-20260924/RECEIPT.md",
+        "base_sha": "f27f892b74c940c3d36b9c6f933bd535ccc16f85",
+        "returned_at": "2026-09-24T17:20:27.282562Z",
+        "returned_by": "protected_bus_split_route_operator",
+        "sha": "5acf732e30a7379eec73a7348150a277d8db0bb6"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -4109,7 +4109,7 @@
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Issue #7 authority packet is reconciled; HPQ dependency is not blocking. The previous Heavy/Xvfb/pcbnew fixture was an orphan with no GUI-control path and was stopped. A bounded capability repair must provide a qualified controller before any new route attempt.",
-      "owner": "protected_bus_r3_heavy_f2_in2",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4126,12 +4126,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-protected-bus-click-via-20260924"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T17:10:38.785569Z",
+      "updated_at": "2026-09-24T17:23:33.337827Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4146,8 +4144,8 @@
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/fresh-light/RECEIPT.md",
-            "recorded_at": "2026-09-24T16:16:40.632244Z",
+            "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-split-route-click-20260924/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-24T17:23:33.286702Z",
             "status": "FAIL"
           },
           "source_connectivity": {
@@ -7422,5 +7420,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T17:10:38.785919Z"
+  "updated_at": "2026-09-24T17:23:33.338220Z"
 }

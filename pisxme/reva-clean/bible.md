@@ -2366,3 +2366,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 2026-09-24: Via-only filter and net-property verification succeeded, but KiCad route initiation still selected overlapping 12V_IN_A copper. Parked the producer and escalated the overlap initiation method; no CAD changed.
 
 2026-09-24: Unblocker changed protected-bus route initiation from x-at-cursor to native left-click on the confirmed PWR_SRC_J5_P2 via; one clean-base attempt dispatched.
+
+2026-09-24: Click-on-via candidate 5acf732e completed GUI/save/reopen but fresh Light found 926 DRC versus 919 baseline (+7); rejected and returned to producer method queue.
