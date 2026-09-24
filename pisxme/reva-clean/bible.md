@@ -2340,3 +2340,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Heavy 2304m candidate saved/reopened but fresh Light rejected co-located F2 via; next route must change layer near 24.5,24.5 and approach F2 on In2.
 
 - 2026-09-24: Protected-bus producer returned to WAITING for bounded F2 via/corridor method change after fresh Light rejection.
+
+- 2026-09-24: Unblocker selected one bounded In2 layer-change route to remove the co-located F2 via defect.
