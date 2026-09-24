@@ -31,3 +31,5 @@ Queue state: `authority:protected-bus-mpa-replacement-waypoint-20260924` resolve
 2026-09-24: The corrected protected-bus producer's first resumed Heavy v2 launch stalled for over 40 minutes with no candidate or receipt beyond workspace initialization. The supervisor and disposable worker were stopped/released; this is a bounded GUI-launch/control failure, not a physical impossibility claim. Queue package returned READY for a materially different bounded control method.
 
 2026-09-24: After the resumed Heavy launch/control stall, the protected-bus producer was reassigned to a fresh direct-control method with launch-health bounds. The package is RUNNING again; no CAD candidate has been accepted.
+
+2026-09-24: A second corrected-corridor Heavy attempt used a 45-second direct launch bound but produced no session file or candidate before timeout. The worker was released and the repeated launch/control failure was routed to Unblocker; no physical-impossibility conclusion is permitted.
