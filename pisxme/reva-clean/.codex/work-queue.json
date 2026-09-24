@@ -810,6 +810,14 @@
       "resolved_at": "2026-09-21T13:30:00Z",
       "status": "RESOLVED"
     },
+    "unblocker:protected-bus-r3-v2-f2-collocated-via-20260924": {
+      "created_at": "2026-09-24T16:17:08.234267Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-failure-review-20260924/DECISION.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:protected-bus-r3-v2-failure-20260924": {
       "created_at": "2026-09-24T15:02:52.402322Z",
       "kind": "other",
@@ -3961,11 +3969,11 @@
       "base_sha": "c2aed9eb",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-r3-v2-heavy-f2-20260924/RECEIPT.md",
-        "base_sha": "d5a872cf",
-        "returned_at": "2026-09-24T15:00:39.454565Z",
-        "returned_by": "protected_bus_r3_v2_heavy_producer",
-        "sha": "2c75d09edb1dccc9718c2e50dd7790dc395b77fd"
+        "artifact": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/RECEIPT.md",
+        "base_sha": "3f5acaefe4a9d386c05cc3e4e88247713ccc2619",
+        "returned_at": "2026-09-24T16:15:40.099561Z",
+        "returned_by": "protected_bus_r3_heavy_2304m",
+        "sha": "a19c403ac13897fc7515ed8d57461add61329400"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -4030,7 +4038,8 @@
         "other:heavy-first-run-startup-20260924",
         "unblocker:protected-bus-heavy-session-exit-20260924",
         "other:heavy-session-lifecycle-20260924",
-        "other:heavy-memory-budget-20260924"
+        "other:heavy-memory-budget-20260924",
+        "unblocker:protected-bus-r3-v2-f2-collocated-via-20260924"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -4055,7 +4064,7 @@
       ],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Issue #7 authority packet is reconciled; HPQ dependency is not blocking. The previous Heavy/Xvfb/pcbnew fixture was an orphan with no GUI-control path and was stopped. A bounded capability repair must provide a qualified controller before any new route attempt.",
-      "owner": "protected_bus_r3_heavy_2304m",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4072,12 +4081,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-protected-bus-r3-heavy-2304m-20260924"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-24T16:02:44.427768Z",
+      "updated_at": "2026-09-24T16:17:08.234326Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4087,28 +4094,30 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-v2-heavy-f2-20260924/fresh-light/RECEIPT.md",
-            "recorded_at": "2026-09-24T15:02:15.365718Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-24T16:16:40.705189Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-v2-heavy-f2-20260924/fresh-light/RECEIPT.md",
-            "recorded_at": "2026-09-24T15:02:15.311433Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-24T16:16:40.632244Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-v2-heavy-f2-20260924/fresh-light/RECEIPT.md",
-            "recorded_at": "2026-09-24T15:02:15.249589Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-24T16:16:40.568819Z",
             "status": "PASS"
           },
           "thermal_dfm": {
-            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-v2-heavy-f2-20260924/fresh-light/RECEIPT.md",
-            "recorded_at": "2026-09-24T15:02:15.418238Z",
+            "receipt": "pisxme/reva-clean/validation-receipts/protected-bus-r3-heavy-2304m-20260924/fresh-light/RECEIPT.md",
+            "recorded_at": "2026-09-24T16:16:40.765647Z",
             "status": "FAIL"
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:protected-bus-r3-v2-f2-collocated-via-20260924"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -7368,5 +7377,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T16:02:44.428370Z"
+  "updated_at": "2026-09-24T16:17:08.234703Z"
 }
