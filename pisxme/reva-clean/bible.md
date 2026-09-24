@@ -2286,3 +2286,7 @@ The first qualified Heavy v2 producer candidate connected one J5.2-to-F2 raw bra
 ### 2026-09-24 — Bounded method change after Heavy v2 route failure
 
 The first v2 GUI route was rejected after fresh Light validation because it added nine native DRC findings despite closing one F2 source open. The producer is parked on `unblocker:protected-bus-r3-v2-failure-20260924` for a precise geometry/obstacle review. This is a method-change pause, not a campaign hard block; no prior scripted route is authorized for replay.
+
+### 2026-09-24 — F2 route failure method change selected
+
+Review of failed candidate `2c75d09e` localizes the DRC increase to the first via at `(16.276786,23.762484)`, which violates J5.2 hole/zone clearance and leaves a dangling B.Cu endpoint. The MPA R3 cohort remains consistent. The next bounded producer method keeps the GUI-native route and exact F2 endpoints but moves the ordinary source via farther along the authorized corridor near `(24.5,24.5)` and requires a closed In2 route with no dangling endpoint.
