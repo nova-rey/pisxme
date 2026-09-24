@@ -2326,3 +2326,5 @@ The protected-bus producer is claimed by `protected_bus_r3_v2_heavy_producer_ret
 - 2026-09-24: Heavy lifecycle root cause confirmed as 1 GiB cgroup OOM; qualified producer reopened at measured 2 GiB CAD budget.
 
 - 2026-09-24: Protected-bus producer dispatched at 2 GiB Heavy CAD budget after OOM root cause confirmation.
+
+- 2026-09-24: Heavy 2 GiB container OOM-killed after PiSXMe board load; no route or candidate produced.
